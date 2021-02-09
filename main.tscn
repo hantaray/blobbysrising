@@ -21,6 +21,12 @@ texture = ExtResource( 1 )
 position = Vector2( 206.51, 371.535 )
 shape = SubResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 514.088, 294.085 )
+current = true
+limit_top = 0
+limit_bottom = 0
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
