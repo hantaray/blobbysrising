@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.4662, 31.3893 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 534.115, 42.1199 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -39,7 +42,7 @@ __meta__ = {
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( 1, -112.246 )
-motion_mirroring = Vector2( 1024, 0 )
+motion_mirroring = Vector2( 2048, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 margin_top = 25.0
@@ -50,3 +53,15 @@ texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ScreenTopBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenTopBorder"]
+position = Vector2( 536.12, 63 )
+shape = SubResource( 2 )
+
+[node name="ScreenButtomBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenButtomBorder"]
+position = Vector2( 532.345, 643.722 )
+shape = SubResource( 2 )
