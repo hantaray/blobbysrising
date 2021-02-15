@@ -28,7 +28,7 @@ onready var MoveDownArea = Rect2(screen_height/2, 0, screen_width, screen_height
 #func _process(delta):
 #    position = position + direction * speed * delta
 
-export (int) var speed = 400
+export (int) var speed = 4000
 #
 var velocity = Vector2()
 #
@@ -40,7 +40,7 @@ func get_input():
 #	if direction == "down":
 	if Input.is_action_pressed('down'):
 #		if position.y <= 300:
-		velocity.y += 1
+		velocity.y = 1
 #	if direction == "up":
 	if Input.is_action_pressed('up'):
 #		if position.y >= -230:
@@ -60,7 +60,7 @@ func get_input():
 #		velocity.y += -1
 #
 func _physics_process(delta):
-#	print(screenSize)
+	print(position)
 #	$Label.text = str(position)
 	var curPos =  position
 	curPos.x = curPos.x + 100 * delta
