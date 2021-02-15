@@ -65,7 +65,7 @@ func _physics_process(delta):
 	var curPos =  position
 	curPos.x = curPos.x + 100 * delta
 	position =  curPos
-#
+
 	get_input()
 #	if move:
 	velocity = move_and_slide(velocity)
