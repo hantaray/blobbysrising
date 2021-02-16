@@ -41,7 +41,7 @@ func _process(delta):
 		speed_x -= DECELERATION * delta
 	speed_x = clamp(speed_x, 0, MAX_SPEED)
  
-	velocity.y = 10000
+	velocity.y = 100
 	move_and_slide(velocity)
 #
 #onready var screen_width = OS.get_screen_size().x
