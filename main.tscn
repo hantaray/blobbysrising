@@ -1,7 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://CityBackground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Player/blob.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Background/city_backgrounds/city_background_night.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.4662, 31.3893 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1079.28, 42.1199 )
