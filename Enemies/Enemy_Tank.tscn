@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Enemies/Enemy_Tank_Animation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemies/Enemy_Tank.gd" type="Script" id=3]
+
+[node name="Enemy_Tank" type="Area2D"]
+script = ExtResource( 3 )
+speed_x = -250
+
+[node name="Enemy_Tank_Animation" parent="." instance=ExtResource( 1 )]
+frame = 1
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -87.4814, 39.9049, -65.0942, 6.47949, -69.0942, -25.5205, -69.0942, -29.5205, -101.094, -29.5205, -105.253, -24.0585, -145.895, -12.2593, -145.708, -23.4966, -134.47, -65.2619, -97.0942, -53.5205, -97.0942, -49.5205, -17.0942, -49.5205, -13.0942, -57.5205, 22.1987, -57.5121, 22.9058, -65.5205, 34.4968, -71.0716, 82.9058, -69.5205, 82.9058, -53.5205, 126.906, -53.5205, 126.906, -21.5205, 142.906, -21.5205, 134.906, 2.47949, 147.186, 52.1804, 114.248, 71.8245, -45.0942, 70.4795, -65.0942, 62.4795, -77.0942, 50.4795, -77.5707, 43.4444 )
