@@ -1,14 +1,16 @@
 extends KinematicBody2D
 
 var motion = Vector2(0,0)
-const SPEED = 500
+const SPEED = 600
 const JUMP_SPEED_X = 1200
-const JUMP_SPEED = 1000
-const GRAVITY = 50
+const JUMP_SPEED = 1200
+const GRAVITY = 70
 const GRAVITY_X = 25
 const GRAVITY_STOP = 400
 const UP = Vector2(0,-1)
 
+
+signal anmiate
 
 onready var game_started = false
  
@@ -17,6 +19,7 @@ func _physics_process(delta):
 	move_forward()
 	jump()
 	apply_gravity()
+	animate()
 	move_and_slide(motion, UP)
 
 func move_forward():
@@ -34,7 +37,15 @@ func apply_gravity():
 		motion.y += GRAVITY
 	if game_started and motion.y >= SPEED:
 		motion.y -= GRAVITY_X
-	
+	# give max gravity
+	# motion.y = max(motion.y, GRAVITY_STOP)
+	# play with a little x push and the camera smoothing and drag marging
 
-# play with a little x push and the camera smoothing and drag marging
+func animate():
+	emit_signal("anmiate", motion)
+
+
+
+
+
 
