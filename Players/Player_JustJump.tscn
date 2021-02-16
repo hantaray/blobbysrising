@@ -27,9 +27,6 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-limit_left = 0
-limit_top = 0
-limit_bottom = 0
 smoothing_speed = 2.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
@@ -37,7 +34,7 @@ scroll_base_offset = Vector2( 0, -540 )
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
-motion_mirroring = Vector2( 2048, 0 )
+motion_mirroring = Vector2( 2048, 2048 )
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
 anchor_right = 1.0
