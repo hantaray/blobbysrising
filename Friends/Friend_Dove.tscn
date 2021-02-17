@@ -12,3 +12,4 @@ playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -70.9631, -28.1746, -68, -36, -52.1618, -42.7666, -28, -44, -20, -56, -12, -60, 24, -64, 60, -64, 44, -8, 56, -8, 48, 16, 56, 16, 72, 36, 56, 56, 32, 56, 28, 64, 12, 40, 16, 32, -8, 40, -28, 40, -44, 36, -52, 28, -56, 20, -56.9323, 9.9891, -56, 4, -59.3175, -3.62076, -58.3354, -8.81215, -64, -16, -70.5422, -15.2663 )
+[connection signal="body_entered" from="." to="." method="_on_Friend_Dove_body_entered"]
