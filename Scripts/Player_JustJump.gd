@@ -43,6 +43,9 @@ func apply_gravity():
 
 func animate():
 	emit_signal("anmiate", motion)
+	
+func gameOver():
+	hide()
 
 
 
