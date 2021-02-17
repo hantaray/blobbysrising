@@ -106,12 +106,12 @@ func _process(delta):
 ##	elif event is InputEventScreenDrag:
 ##		velocity.y += -1
 ##
-#func _physics_process(delta):
-#	print(position)
-##	$Label.text = str(position)
-#	var curPos =  position
-#	curPos.x = curPos.x + 100 * delta
-#	position =  curPos
+func _physics_process(delta):
+	print(position)
+#	$Label.text = str(position)
+	var curPos =  position
+	curPos.x = curPos.x + 100 * delta
+	position =  curPos
 #
 #	get_input()
 ##	if move:
