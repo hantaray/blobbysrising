@@ -10,7 +10,7 @@ func _ready():
 func _on_EnemyTimer_timeout():
 	enemyXPosOffset += 800
 	# Choose a random location on Path2D.
-	$EnemyPath/EnemySpawnLocation.offset = randi()
+	$SpawnPath/SpawnLocation.offset = randi()
 	var mob = enemyTank.instance()
 	if randi() % 2 == 0:
 		mob = friendDove.instance()
@@ -18,5 +18,5 @@ func _on_EnemyTimer_timeout():
 		mob = enemyTank.instance()
 	
 	add_child(mob)
-	mob.position = $EnemyPath/EnemySpawnLocation.position
+	mob.position = $SpawnPath/SpawnLocation.position
 	mob.position.x += enemyXPosOffset
