@@ -14,9 +14,9 @@ func increase_score():
 	$HUD.update_score(score)
 	
 func decrease_score():
-	if score >= 1:
-		score -= 1
-		$HUD.update_score(score)
+	#if score >= 1:
+	score -= 3
+	$HUD.update_score(score)
 
 func _on_EnemyTimer_timeout():
 	enemyXPosOffset += 800
