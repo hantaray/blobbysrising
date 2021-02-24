@@ -1,6 +1,7 @@
 extends Node2D
 
 var score = 0
+var spawningPoints = [Vector2(2300, 100), Vector2(2300, 500), Vector2(2300, 900)]
 
 var enemyXPosOffset = 0
 var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
@@ -20,8 +21,9 @@ func decrease_score():
 
 func _on_EnemyTimer_timeout():
 	enemyXPosOffset += 800
+	var enemyPos = spawningPoints[randi() % 3]
 	# Choose a random location on Path2D.
-	$SpawnPath/SpawnLocation.offset = randi()
+	$SpawnPath/SpawnLocation.offset = randi() % 4
 	var mob = enemyTank.instance()  
 	if randi() % 2 == 0:
 		mob = friendDove.instance()
@@ -29,5 +31,6 @@ func _on_EnemyTimer_timeout():
 		mob = enemyTank.instance()
 	
 	add_child(mob)
-	mob.position = $SpawnPath/SpawnLocation.position
+	mob.position = enemyPos
+#	mob.position = $SpawnPath/SpawnLocation.position
 	mob.position.x += enemyXPosOffset
