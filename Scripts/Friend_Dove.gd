@@ -7,3 +7,4 @@ func _on_Friend_Dove_body_entered(body):
 		var main = get_node('../')
 		main.increase_score()
 		hide()
+		# vielleicht queue_free() statt hide da es die instance des objekts komplett entfernt
