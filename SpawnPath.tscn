@@ -2,12 +2,14 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 2328.59, 876.01, 0, 0, 0, 0, 2328.59, 490.909, 0, 0, 0, 0, 2321.04, 151.114, 0, 0, 0, 0, 2328.59, 876.01 )
+"points": PoolVector2Array( 0, 0, 0, 0, 2337.21, 927.89, 0, 0, 0, 0, 2337.21, 525.294, 0, 0, 0, 0, 2345.68, 93.0327, 0, 0, 0, 0, 2332.97, 923.652 )
 }
 
 [node name="SpawnPath" type="Path2D"]
 curve = SubResource( 1 )
 
 [node name="SpawnLocation" type="PathFollow2D" parent="."]
-position = Vector2( 2328.59, 876.01 )
-rotation = -1.57086
+position = Vector2( 2345.39, 108.045 )
+rotation = -1.5708
+offset = 819.78
+lookahead = 0.001
