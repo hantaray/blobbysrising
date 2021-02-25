@@ -1,11 +1,5 @@
 extends KinematicBody2D
 
-onready var screen_width = OS.get_screen_size().x
-onready var screen_height = OS.get_screen_size().y
-
-onready var MoveUpArea = Rect2(0, 0, screen_width, screen_height/2)
-onready var MoveDownArea = Rect2(0, screen_height/2, screen_width, screen_height)
-
 var motion = Vector2(0,0)
 const SPEED = 600
 const GRAVITY = 50
@@ -32,10 +26,11 @@ func _input(event):
 			screenIsTouched = true
 			var TouchPoint = event.get_position()
 
-			if MoveUpArea.has_point(TouchPoint):
+			print(TouchPoint.y)
+			if TouchPoint.y < 550:
 				position.y = 50
 				game_started = true
-			if MoveDownArea.has_point(TouchPoint):
+			if TouchPoint.y > 550:
 				position.y = 950
 				game_started = true
 		else:
