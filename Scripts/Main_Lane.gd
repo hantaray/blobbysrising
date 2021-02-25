@@ -7,6 +7,8 @@ var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
 var friendDove = preload("res://Friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
 
+var spawningPoints = [Vector2(2300, 150), Vector2(2300, 350), Vector2(2300, 550), Vector2(2300, 750), Vector2(2300, 950)]
+
 func _ready():
 	$EnemyTimer.start()
 	
@@ -23,8 +25,7 @@ func decrease_score(var points):
 
 func _on_EnemyTimer_timeout():
 	enemyXPosOffset += 800
-	# Choose a random location on Path2D.
-	$SpawnPath/SpawnLocation.offset = randi()
+	var enemyPos = spawningPoints[randi() % 5]
 	var mob = enemyTank.instance()
 	var rndFactorSpawn = randi() % 3
 	if rndFactorSpawn == 0:
@@ -33,5 +34,5 @@ func _on_EnemyTimer_timeout():
 		mob = enemyBouncyBlob.instance()
 	
 	add_child(mob)
-	mob.position = $SpawnPath/SpawnLocation.position
+	mob.position = enemyPos
 	mob.position.x += enemyXPosOffset
