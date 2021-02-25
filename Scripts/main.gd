@@ -39,5 +39,5 @@ func _on_EnemyTimer_timeout():
 	add_child(mob)
 	mob.position = enemyPos
 	# hab die Zeile wieder angemacht, scheint jetzt wieder auf dem ganzen Pfad zu spawnen, richtig?
-	mob.position = $SpawnPath/SpawnLocation.position
+#	mob.position = $SpawnPath/SpawnLocation.position
 	mob.position.x += enemyXPosOffset
