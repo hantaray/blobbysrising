@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scripts/main.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Main_JustJump.gd" type="Script" id=1]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ScreenBorder.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Players/Player_JustJump.tscn" type="PackedScene" id=4]
 [ext_resource path="res://EnemyTimer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Background.tscn" type="PackedScene" id=7]
 [ext_resource path="res://SpawnPath.tscn" type="PackedScene" id=8]
+
 
 [node name="JumpMovement" type="Node2D"]
 script = ExtResource( 1 )
