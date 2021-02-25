@@ -7,7 +7,7 @@ var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
 var friendDove = preload("res://Friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
 
-var spawningPoints = [Vector2(2300, 150), Vector2(2300, 350), Vector2(2300, 550), Vector2(2300, 750), Vector2(2300, 950)]
+var spawningPoints = [Vector2(2300, 100), Vector2(2300, 300), Vector2(2300, 500), Vector2(2300, 700), Vector2(2300, 900)]
 
 func _ready():
 	$EnemyTimer.start()
