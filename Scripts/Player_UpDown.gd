@@ -5,7 +5,7 @@ const SPEED = 600
 const GRAVITY = 50
 const UP = Vector2(0,-1)
 
-var isOnFloor = false
+var isOnFloor = true
 
 signal anmiate
 
@@ -13,10 +13,6 @@ onready var game_started = false
  
 
 func _physics_process(delta):
-	if is_on_floor():
-		isOnFloor = true
-	else:
-		isOnFloor = false
 	move_forward()
 	jump()
 	apply_gravity()
