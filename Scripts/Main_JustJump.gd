@@ -14,6 +14,9 @@ func increase_score():
 	score += 1
 	$HUD.update_score(score)
 	
+	if score % 2 == 0:
+		$Player.SPEED += 100
+	
 	
 # hab hier den paramter ergänzt zum einstellen im enemy scripten
 func decrease_score(var points):
@@ -22,7 +25,7 @@ func decrease_score(var points):
 	$HUD.update_score(score)
 
 func _on_EnemyTimer_timeout():
-	enemyXPosOffset += 800
+	enemyXPosOffset += 1000
 	# Choose a random location on Path2D.
 	$SpawnPath/SpawnLocation.offset = randi()
 	var mob = enemyTank.instance()
