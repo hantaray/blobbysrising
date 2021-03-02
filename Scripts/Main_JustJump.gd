@@ -37,4 +37,5 @@ func _on_EnemyTimer_timeout():
 	
 	add_child(mob)
 	mob.position = $SpawnPath/SpawnLocation.position
-	mob.position.x += enemyXPosOffset
+	
+	mob.position.x += $Player.position.x
