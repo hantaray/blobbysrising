@@ -8,6 +8,7 @@ var friendDove = preload("res://Friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
 
 func _ready():
+	randomize()
 	$EnemyTimer.start()
 	
 func increase_score():
