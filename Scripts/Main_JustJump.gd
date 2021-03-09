@@ -1,6 +1,7 @@
 extends Node2D
 
 var score = 0
+signal changeLevel
 
 var enemyXPosOffset = 0
 var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
@@ -15,7 +16,10 @@ func increase_score():
 	score += 1
 	$HUD.update_score(score)
 	
-	if score % 2 == 0:
+	if score == 10:
+		get_tree().change_scene("res://Scenes/UpDownMovement.tscn")
+	
+	if score % 5 == 0:
 		$Player.SPEED += 100
 	
 	

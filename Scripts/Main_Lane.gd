@@ -16,6 +16,12 @@ func increase_score():
 	score += 1
 	$HUD.update_score(score)
 	
+	if score == 10:
+		get_tree().change_scene("res://Scenes/JustJumpMovement.tscn")
+	
+	if score % 5 == 0:
+		$Player.SPEED += 100
+	
 	
 # hab hier den paramter ergänzt zum einstellen im enemy scripten
 func decrease_score(var points):
