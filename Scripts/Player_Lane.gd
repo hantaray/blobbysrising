@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-onready var screen_width = get_viewport().size.x
-onready var screen_height = get_viewport().size.y
+onready var screen_width = get_tree().get_root().get_viewport().size.x
+onready var screen_height = get_tree().get_root().get_viewport().size.y
 
 onready var MoveUpArea = Rect2(0, 0, screen_width, screen_height/2)
 onready var MoveDownArea = Rect2(0, screen_height/2, screen_width, screen_height)

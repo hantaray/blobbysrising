@@ -10,6 +10,7 @@ var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
 var spawningPoints = [Vector2(2300, 100), Vector2(2300, 500), Vector2(2300, 900)]
 
 func _ready():
+	randomize()
 	$EnemyTimer.start()
 	
 func increase_score():
