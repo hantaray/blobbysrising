@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken_16.02.21/Blob/Blob_2.png" type="Texture" id=1]
+
+[node name="LifeIcon1" type="TextureRect"]
+margin_right = 142.0
+margin_bottom = 163.0
+texture = ExtResource( 1 )
+stretch_mode = 5

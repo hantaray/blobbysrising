@@ -53,12 +53,12 @@ onready var MoveDownArea = Rect2(screen_height/2, 0, screen_width, screen_height
 const JUMPFORCE = 800
 const GRAVITY = 2000
 
-#var velocity = Vector2(0.0, 0.0)
-#var speed = 100
-##
-#onready var player = get_node("KinematicBody2D")
+# var velocity = Vector2(0.0, 0.0)
+# var speed = 100
 #
-#func _input(event):
+# onready var player = get_node("KinematicBody2D")
+#
+# func _input(event):
 #	if event is InputEventScreenTouch:
 #		if event.is_pressed():
 #			var TouchPoint = event.get_position()
