@@ -5,6 +5,7 @@ var score = 0
 var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
 var friendDove = preload("res://Friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
+var prevMob = ""
 
 var spawningPoints = [Vector2(2300, 100), Vector2(2300, 300), Vector2(2300, 500), Vector2(2300, 700), Vector2(2300, 900)]
 
@@ -31,12 +32,17 @@ func decrease_score(var points):
 
 func _on_EnemyTimer_timeout():
 	var enemyPos = spawningPoints[randi() % 5]
-	var mob = enemyTank.instance()
+	var mob = friendDove.instance()
 	var rndFactorSpawn = randi() % 3
 	if rndFactorSpawn == 0:
-		mob = friendDove.instance()
+		mob = enemyTank.instance()
 	elif rndFactorSpawn == 1:
 		mob = enemyBouncyBlob.instance()
+	
+	if prevMob == "Enemy_BouncyBlob":
+		mob = enemyTank.instance()
+	
+	prevMob = mob.name
 	
 	add_child(mob)
 	mob.position = enemyPos

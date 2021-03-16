@@ -6,6 +6,7 @@ signal changeLevel
 var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
 var friendDove = preload("res://Friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
+var prevMob = ""
 
 func _ready():
 	randomize()
@@ -29,15 +30,19 @@ func decrease_score(var points):
 	$HUD.update_score(score)
 
 func _on_EnemyTimer_timeout():
-	# Choose a random location on Path2D.
 	$SpawnPath/SpawnLocation.offset = randi()
-	var mob = enemyTank.instance()
+	var mob = friendDove.instance()
 	var rndFactorSpawn = randi() % 3
 	if rndFactorSpawn == 0:
-		mob = friendDove.instance()
+		mob = enemyTank.instance()
 	elif rndFactorSpawn == 1:
 		mob = enemyBouncyBlob.instance()
 	
+	if prevMob == "Enemy_BouncyBlob":
+		mob = enemyTank.instance()
+	
+	prevMob = mob.name
+		
 	add_child(mob)
 	mob.position = $SpawnPath/SpawnLocation.position
 	mob.position.x += $Player.position.x
