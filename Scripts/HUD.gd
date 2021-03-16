@@ -6,7 +6,8 @@ onready var life_icon_list = $LiveLabel.get_children()
 var life_icon = preload("res://Items/LifeIcon1.tscn")
 
 func _ready():
-	update_lives_hud()
+#	update_lives_hud()
+	pass
 
 
 func decrease_lives(life):
@@ -35,5 +36,5 @@ func delete_children(node):
 
 func game_over():
 	print("game over")
-	get_tree().change_scene("res://Scenes/JumpMovement.tscn")
+	get_tree().change_scene("res://levels/JumpMovement.tscn")
 	pass

@@ -9,7 +9,6 @@
 [ext_resource path="res://Scripts/Main_Lane.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Player_Lane.gd" type="Script" id=8]
 
-
 [node name="LaneMovement" type="Node2D"]
 script = ExtResource( 7 )
 
