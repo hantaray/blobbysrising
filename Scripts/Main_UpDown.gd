@@ -2,10 +2,10 @@ extends Node2D
 
 var score = 0
 
-var enemyXPosOffset = 0
-var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
-var friendDove = preload("res://Friends/Friend_Dove.tscn")
-var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
+var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
+var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
+var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
+var prevMob = ""
 
 var spawningPoints = [Vector2(2300, 100), Vector2(2300, 500), Vector2(2300, 900)]
 
@@ -18,7 +18,7 @@ func increase_score():
 	$HUD.update_score(score)
 	
 	if score == 10:
-		get_tree().change_scene("res://Scenes/LaneMovement.tscn")
+		get_tree().change_scene("res://levels/LaneMovement.tscn")
 	
 	if score % 5 == 0:
 		$Player.SPEED += 100
@@ -31,15 +31,19 @@ func decrease_score(var points):
 	$HUD.update_score(score)
 
 func _on_EnemyTimer_timeout():
-	enemyXPosOffset += 800
 	var enemyPos = spawningPoints[randi() % 3]
-	var mob = enemyTank.instance()
+	var mob = friendDove.instance()
 	var rndFactorSpawn = randi() % 3
 	if rndFactorSpawn == 0:
-		mob = friendDove.instance()
+		mob = enemyTank.instance()
 	elif rndFactorSpawn == 1:
 		mob = enemyBouncyBlob.instance()
 	
+	if prevMob == "Enemy_BouncyBlob":
+		mob = enemyTank.instance()
+	
+	prevMob = mob.name
+	
 	add_child(mob)
 	mob.position = enemyPos
-	mob.position.x += enemyXPosOffset
+	mob.position.x += $Player.position.x

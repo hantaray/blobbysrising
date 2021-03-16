@@ -35,5 +35,5 @@ func delete_children(node):
 
 func game_over():
 	print("game over")
-	get_tree().change_scene("res://Scenes/JumpMovement.tscn")
+	get_tree().change_scene("res://levels/JumpMovement.tscn")
 	pass

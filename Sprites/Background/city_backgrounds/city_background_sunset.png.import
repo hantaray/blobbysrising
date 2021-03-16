@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/city_background_sunset.png-09792705a0ada5b2965413b1d02cb2a4.stex"
+path="res://.import/city_background_sunset.png-44ccb793fa984fdc5e1cc0283d4dd540.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/city_backgrounds/city_background_sunset.png"
-dest_files=[ "res://.import/city_background_sunset.png-09792705a0ada5b2965413b1d02cb2a4.stex" ]
+source_file="res://sprites/Background/city_backgrounds/city_background_sunset.png"
+dest_files=[ "res://.import/city_background_sunset.png-44ccb793fa984fdc5e1cc0283d4dd540.stex" ]
 
 [params]
 

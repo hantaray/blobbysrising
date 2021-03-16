@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Panzer_1.png-72802cf769b006eb97ff2261f8aa95a9.stex"
+path="res://.import/Panzer_1.png-7dd16c73fe597e23d83cf60e512a949b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken_16.02.21/Gegner/Panzer/Panzer_1.png"
-dest_files=[ "res://.import/Panzer_1.png-72802cf769b006eb97ff2261f8aa95a9.stex" ]
+source_file="res://sprites/JumpForLeft_Grafiken_16.02.21/Gegner/Panzer/Panzer_1.png"
+dest_files=[ "res://.import/Panzer_1.png-7dd16c73fe597e23d83cf60e512a949b.stex" ]
 
 [params]
 

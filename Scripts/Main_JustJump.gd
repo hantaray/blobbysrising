@@ -3,10 +3,10 @@ extends Node2D
 var score = 0
 signal changeLevel
 
-var enemyXPosOffset = 0
-var enemyTank = preload("res://Enemies/Enemy_Tank.tscn")
-var friendDove = preload("res://Friends/Friend_Dove.tscn")
-var enemyBouncyBlob = preload("res://Enemies/Enemy_BouncyBlob.tscn")
+var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
+var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
+var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
+var prevMob = ""
 
 func _ready():
 	randomize()
@@ -17,7 +17,7 @@ func increase_score():
 	$HUD.update_score(score)
 	
 	if score == 10:
-		get_tree().change_scene("res://Scenes/UpDownMovement.tscn")
+		get_tree().change_scene("res://levels/UpDownMovement.tscn")
 	
 	if score % 5 == 0:
 		$Player.SPEED += 100
@@ -30,17 +30,19 @@ func decrease_score(var points):
 	$HUD.update_score(score)
 
 func _on_EnemyTimer_timeout():
-	enemyXPosOffset += 1000
-	# Choose a random location on Path2D.
 	$SpawnPath/SpawnLocation.offset = randi()
-	var mob = enemyTank.instance()
+	var mob = friendDove.instance()
 	var rndFactorSpawn = randi() % 3
 	if rndFactorSpawn == 0:
-		mob = friendDove.instance()
+		mob = enemyTank.instance()
 	elif rndFactorSpawn == 1:
 		mob = enemyBouncyBlob.instance()
 	
+	if prevMob == "Enemy_BouncyBlob":
+		mob = enemyTank.instance()
+	
+	prevMob = mob.name
+		
 	add_child(mob)
 	mob.position = $SpawnPath/SpawnLocation.position
-	
 	mob.position.x += $Player.position.x

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hintergrund_Bubbles.png-51cbecc4c1eb560a1e2a6801f6871df5.stex"
+path="res://.import/Hintergrund_Bubbles.png-ec9322fcd88a7761d37c4dd011695929.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken_16.02.21/Hintergruende/Hintergrund_Bubbles.png"
-dest_files=[ "res://.import/Hintergrund_Bubbles.png-51cbecc4c1eb560a1e2a6801f6871df5.stex" ]
+source_file="res://sprites/JumpForLeft_Grafiken_16.02.21/Hintergruende/Hintergrund_Bubbles.png"
+dest_files=[ "res://.import/Hintergrund_Bubbles.png-ec9322fcd88a7761d37c4dd011695929.stex" ]
 
 [params]
 

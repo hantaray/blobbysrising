@@ -5,7 +5,7 @@
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ScreenBorder.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Background.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Players/Player_JustJump_Movement.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/Players/Player_JustJump_Movement.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Main_JustJump.gd" type="Script" id=7]
 
 [node name="JumpMovement" type="Node2D"]

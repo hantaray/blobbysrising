@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Area2dMovement",
 "language": "GDScript",
-"path": "res://Scripts/Area2D_Movement.gd"
+"path": "res://scripts/Area2D_Movement.gd"
 } ]
 _global_script_class_icons={
 "Area2dMovement": ""
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="JumpForLeft"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://levels/Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
