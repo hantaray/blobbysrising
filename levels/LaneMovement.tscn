@@ -23,5 +23,6 @@ script = ExtResource( 7 )
 [node name="SpawnPath" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 960, 500 )
 script = ExtResource( 8 )
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]

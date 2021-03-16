@@ -16,8 +16,8 @@ func increase_score():
 	score += 1
 	$HUD.update_score(score)
 	
-#	if score == 10:
-#		get_tree().change_scene("res://levels/UpDownMovement.tscn")
+	if score == 10:
+		get_tree().change_scene("res://levels/UpDownMovement.tscn")
 	
 	if score % 5 == 0:
 		$Player.SPEED += 100

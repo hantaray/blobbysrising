@@ -6,8 +6,7 @@ onready var life_icon_list = $LiveLabel.get_children()
 var life_icon = preload("res://Items/LifeIcon1.tscn")
 
 func _ready():
-#	update_lives_hud()
-	pass
+	update_lives_hud()
 
 
 func decrease_lives(life):
