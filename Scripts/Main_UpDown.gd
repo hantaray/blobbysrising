@@ -6,6 +6,7 @@ var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
 var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
 var prevMob = ""
+var noFriendSpawnCounter = 0
 
 var spawningPoints = [Vector2(2300, 100), Vector2(2300, 500), Vector2(2300, 900)]
 
@@ -17,8 +18,8 @@ func increase_score():
 	score += 1
 	$HUD.update_score(score)
 	
-	if score == 10:
-		get_tree().change_scene("res://levels/LaneMovement.tscn")
+#	if score == 10:
+#		get_tree().change_scene("res://levels/LaneMovement.tscn")
 	
 	if score % 5 == 0:
 		$Player.SPEED += 100
@@ -33,17 +34,23 @@ func decrease_score(var points):
 func _on_EnemyTimer_timeout():
 	var enemyPos = spawningPoints[randi() % 3]
 	var mob = friendDove.instance()
-	var rndFactorSpawn = randi() % 3
-	if rndFactorSpawn == 0:
-		mob = enemyTank.instance()
-	elif rndFactorSpawn == 1:
-		mob = enemyBouncyBlob.instance()
 	
-	if prevMob == "Enemy_BouncyBlob":
-		mob = enemyTank.instance()
-	
+	# Make shure friend is spawned at least all 5 spawns
+	if noFriendSpawnCounter < 5:
+		var rndFactorSpawn = randi() % 3
+		if rndFactorSpawn == 0:
+			mob = enemyTank.instance()
+			noFriendSpawnCounter += 1
+		elif rndFactorSpawn == 1:
+			mob = enemyBouncyBlob.instance()
+			noFriendSpawnCounter += 1
+		if prevMob == "Enemy_BouncyBlob":
+			mob = enemyTank.instance()
+	else:
+		noFriendSpawnCounter = 0
+		
 	prevMob = mob.name
-	
+		
 	add_child(mob)
 	mob.position = enemyPos
 	mob.position.x += $Player.position.x
