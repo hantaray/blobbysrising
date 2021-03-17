@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/city_background_clean.png-1039f06481375a4f3d9a78225781df61.stex"
+path="res://.import/city_background_clean.png-553eae3018145fe513b76cf3d2f45053.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Background/city_backgrounds/city_background_clean.png"
-dest_files=[ "res://.import/city_background_clean.png-1039f06481375a4f3d9a78225781df61.stex" ]
+source_file="res://Sprites/Background/city_backgrounds/city_background_clean.png"
+dest_files=[ "res://.import/city_background_clean.png-553eae3018145fe513b76cf3d2f45053.stex" ]
 
 [params]
 

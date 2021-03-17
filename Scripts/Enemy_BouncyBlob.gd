@@ -1,13 +1,13 @@
-extends Area2dMovement
+extends Area2dEnemy
 
-var life_damage = 2
-
+func _ready():
+	life_damage = 2
 
 func _on_Enemy_BouncyBlob_body_entered(body):
-	if body.name == "ScreenBorder":
+	if body.get_collision_layer_bit(3):
 		velocity.y *= -1
-	if body.name == "Player":
+	if body.get_collision_layer_bit(0) :
 		#var main = get_node('../')
 		#main.decrease_score(3)
 		get_tree().call_group("HUD", "decrease_lives", life_damage)
-		hide()
+		queue_free()
