@@ -6,7 +6,7 @@ var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
 var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
 var prevMob = ""
-noFriendSawnCounter = 0
+var noFriendSpawnCounter = 0
 
 var spawningPoints = [Vector2(2300, 100), Vector2(2300, 300), Vector2(2300, 500), Vector2(2300, 700), Vector2(2300, 900)]
 

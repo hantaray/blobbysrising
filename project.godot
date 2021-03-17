@@ -10,12 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Area2D",
-"class": "Area2dMovement",
+"class": "Area2dEnemy",
 "language": "GDScript",
-"path": "res://scripts/Area2D_Movement.gd"
+"path": "res://Scripts/Area2D_Enemy.gd"
+}, {
+"base": "Area2D",
+"class": "Area2dFriend",
+"language": "GDScript",
+"path": "res://Scripts/Area2D_Friend.gd"
 } ]
 _global_script_class_icons={
-"Area2dMovement": ""
+"Area2dEnemy": "",
+"Area2dFriend": ""
 }
 
 [application]
@@ -67,6 +73,13 @@ jump={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemies"
+2d_physics/layer_3="Friends"
+2d_physics/layer_4="Borders_Up_Down"
 
 [rendering]
 
