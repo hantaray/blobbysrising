@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Blob_Sprung_runter.png-60020892defa0e15b6daa8c1005a044c.stex"
+path="res://.import/Blob_Sprung_runter.png-77faa428d581cd2cc11b247aebfbad93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Blob/Blob_Sprung_runter.png"
-dest_files=[ "res://.import/Blob_Sprung_runter.png-60020892defa0e15b6daa8c1005a044c.stex" ]
+source_file="res://sprites/JumpForLeft_Grafiken/Blob/Blob_Sprung_runter.png"
+dest_files=[ "res://.import/Blob_Sprung_runter.png-77faa428d581cd2cc11b247aebfbad93.stex" ]
 
 [params]
 
