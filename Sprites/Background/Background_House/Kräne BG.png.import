@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Kräne BG.png-3f7e467c3648ead0774d1ea4fae16318.stex"
+path="res://.import/Kräne BG.png-2cbe269dafafcc1babec94463113deb2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Background_House/Kräne BG.png"
-dest_files=[ "res://.import/Kräne BG.png-3f7e467c3648ead0774d1ea4fae16318.stex" ]
+source_file="res://sprites/Background/Background_House/Kräne BG.png"
+dest_files=[ "res://.import/Kräne BG.png-2cbe269dafafcc1babec94463113deb2.stex" ]
 
 [params]
 

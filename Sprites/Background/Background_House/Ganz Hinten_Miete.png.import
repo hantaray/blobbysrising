@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ganz Hinten_Miete.png-3445682864b4f3ce22a6f7eed231233d.stex"
+path="res://.import/Ganz Hinten_Miete.png-938cd83112c627012bad5c0aa8ffb4f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Background_House/Ganz Hinten_Miete.png"
-dest_files=[ "res://.import/Ganz Hinten_Miete.png-3445682864b4f3ce22a6f7eed231233d.stex" ]
+source_file="res://sprites/Background/Background_House/Ganz Hinten_Miete.png"
+dest_files=[ "res://.import/Ganz Hinten_Miete.png-938cd83112c627012bad5c0aa8ffb4f8.stex" ]
 
 [params]
 

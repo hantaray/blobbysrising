@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://title_screen/buttons/Button.tscn" type="PackedScene" id=1]
+
+[node name="JumpButton" instance=ExtResource( 1 )]
+scene_to_load = "res://game/NewGame.tscn"
+
+[node name="Label" parent="." index="0"]
+margin_right = 44.0
+custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
+text = "Jump Movement"

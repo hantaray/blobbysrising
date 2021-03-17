@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Klappe auf.png-ae286b9f7fdf67e6a338804c1a43e894.stex"
+path="res://.import/Klappe auf.png-5f68168cda72d480a0e29effbf5a280e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Gegner/Klappe/Klappe auf.png"
-dest_files=[ "res://.import/Klappe auf.png-ae286b9f7fdf67e6a338804c1a43e894.stex" ]
+source_file="res://sprites/JumpForLeft_Grafiken/Gegner/Klappe/Klappe auf.png"
+dest_files=[ "res://.import/Klappe auf.png-5f68168cda72d480a0e29effbf5a280e.stex" ]
 
 [params]
 
