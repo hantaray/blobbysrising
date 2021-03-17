@@ -4,13 +4,13 @@
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Player_UpDown.gd" type="Script" id=3]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 68.515
 height = 39.1696
 
 [node name="Player_UpDown" type="KinematicBody2D"]
 position = Vector2( 960, 550 )
+collision_mask = 14
 script = ExtResource( 3 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
