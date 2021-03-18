@@ -8,7 +8,8 @@ var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPoints = [Vector2(2300, 100), Vector2(2300, 500), Vector2(2300, 900)]
+var spawningPointsFriend = [Vector2(2300, 275), Vector2(2300, 550), Vector2(2300, 825)]
+var spawningPointsEnemy = [Vector2(-2300, 275), Vector2(-2300, 500), Vector2(-2300, 825)]
 
 func _ready():
 	randomize()
@@ -32,7 +33,7 @@ func decrease_score(var points):
 	$HUD.update_score(score)
 
 func _on_EnemyTimer_timeout():
-	var enemyPos = spawningPoints[randi() % 3]
+	var spawningPos = spawningPointsFriend[randi() % 3]
 	var mob = friendDove.instance()
 	
 	# Make shure friend is spawned at least all 5 spawns
@@ -45,12 +46,14 @@ func _on_EnemyTimer_timeout():
 			mob = enemyBouncyBlob.instance()
 			noFriendSpawnCounter += 1
 		if prevMob == "Enemy_BouncyBlob":
+
 			mob = enemyTank.instance()
+		spawningPos = spawningPointsEnemy[randi() % 3]
 	else:
 		noFriendSpawnCounter = 0
 		
 	prevMob = mob.name
 		
 	add_child(mob)
-	mob.position = enemyPos
+	mob.position = spawningPos
 	mob.position.x += $Player.position.x

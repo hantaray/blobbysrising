@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var motion = Vector2(0,0)
 var SPEED = 600
-const GRAVITY = 50
+const GRAVITY = 25
 const UP = Vector2(0,-1)
 
 var isOnFloor = true
@@ -27,10 +27,10 @@ func _input(event):
 			var TouchPoint = event.get_position()
 
 			if TouchPoint.y < 550:
-				position.y = 50
+				position.y = 275
 				game_started = true
 			if TouchPoint.y > 550:
-				position.y = 950
+				position.y = 825
 				game_started = true
 		else:
 			screenIsTouched = false
