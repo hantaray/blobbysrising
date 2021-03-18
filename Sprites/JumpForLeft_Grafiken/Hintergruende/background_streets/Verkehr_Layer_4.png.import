@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Verkehr_Layer_4.png-8dfca6d294ab38074edaac7544824e85.stex"
+path="res://.import/verkehr_layer_4.png-3f46c55dfb34aea43ee770ad5b44ffdc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/JumpForLeft_Grafiken/Hintergruende/background_streets/Verkehr_Layer_4.png"
-dest_files=[ "res://.import/Verkehr_Layer_4.png-8dfca6d294ab38074edaac7544824e85.stex" ]
+source_file="res://sprites/JumpForLeft_Grafiken/hintergruende/background_streets/verkehr_layer_4.png"
+dest_files=[ "res://.import/verkehr_layer_4.png-3f46c55dfb34aea43ee770ad5b44ffdc.stex" ]
 
 [params]
 

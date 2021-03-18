@@ -4,8 +4,8 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# get_tree().change_scene("res://levels/JumpMovement.tscn")
-	# get_tree().change_scene("res://levels/UpDownMovement.tscn")
-	get_tree().change_scene("res://title_screen/TitleScreen.tscn")
+#	# get_tree().change_scene("res://levels/UpDownMovement.tscn")
+	get_tree().change_scene("res://levels/JumpMovement.tscn")
 	# feedback for scene loaded then call HUD
 	pass
 
