@@ -8,7 +8,6 @@
 [ext_resource path="res://backgrounds/BackgroundWoods.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Main_UpDown.gd" type="Script" id=7]
 
-
 [node name="UpDownMovement" type="Node2D"]
 script = ExtResource( 7 )
 

@@ -11,11 +11,11 @@
 [node name="JumpMovement" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="HUD" parent="." instance=ExtResource( 3 )]
-
 [node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
 
 [node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 

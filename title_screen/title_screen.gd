@@ -5,7 +5,6 @@ var scene_path_to_load
 func _ready():
 	$Menu/CenterRow/Buttons/JumpButton.grab_focus()
 	for button in $Menu/CenterRow/Buttons.get_children():
-		print(button.scene_to_load)
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
 
