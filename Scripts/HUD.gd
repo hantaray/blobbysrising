@@ -1,11 +1,13 @@
 extends CanvasLayer
 
 var lifes = 5
+var level = ""
 onready var life_icon_list = $LiveLabel.get_children()
 
 var life_icon = preload("res://Items/LifeIcon1.tscn")
 
 func _ready():
+	level = get_parent()
 	update_lives_hud()
 
 
@@ -35,5 +37,5 @@ func delete_children(node):
 
 func game_over():
 	print("game over")
-	get_tree().change_scene("res://levels/JumpMovement.tscn")
+	get_tree().change_scene("res://levels/"+ level.name + ".tscn")
 	pass

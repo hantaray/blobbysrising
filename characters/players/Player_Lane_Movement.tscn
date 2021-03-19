@@ -10,7 +10,6 @@ height = 39.1696
 
 [node name="Player_UpDown" type="KinematicBody2D"]
 position = Vector2( 960, 550 )
-collision_mask = 14
 script = ExtResource( 3 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]

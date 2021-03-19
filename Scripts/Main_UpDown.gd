@@ -48,7 +48,7 @@ func _on_EnemyTimer_timeout():
 		if prevMob == "Enemy_BouncyBlob":
 
 			mob = enemyTank.instance()
-		spawningPos = spawningPointsEnemy[randi() % 3]
+		spawningPos = spawningPointsFriend[randi() % 3]
 	else:
 		noFriendSpawnCounter = 0
 		
