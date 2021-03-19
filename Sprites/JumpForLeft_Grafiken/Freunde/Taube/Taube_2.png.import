@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Taube_2.png-1dc216cdf633ec562ba0aed6b098b5c9.stex"
+path="res://.import/Taube_2.png-2dbabd3cc95f8e06696344d551727238.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/JumpForLeft_Grafiken/freunde/Taube/Taube_2.png"
-dest_files=[ "res://.import/Taube_2.png-1dc216cdf633ec562ba0aed6b098b5c9.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Freunde/Taube/Taube_2.png"
+dest_files=[ "res://.import/Taube_2.png-2dbabd3cc95f8e06696344d551727238.stex" ]
 
 [params]
 

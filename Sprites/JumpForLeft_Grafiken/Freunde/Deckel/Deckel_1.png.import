@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Deckel_1.png-aaa6f8a7b0a62c585e98ecc508fcff24.stex"
+path="res://.import/Deckel_1.png-9f3bf48ef94288490d9c33cf1fa0aab4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/JumpForLeft_Grafiken/freunde/Deckel/Deckel_1.png"
-dest_files=[ "res://.import/Deckel_1.png-aaa6f8a7b0a62c585e98ecc508fcff24.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Deckel_1.png"
+dest_files=[ "res://.import/Deckel_1.png-9f3bf48ef94288490d9c33cf1fa0aab4.stex" ]
 
 [params]
 

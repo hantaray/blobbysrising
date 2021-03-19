@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Blob_Sprung_hoch.png-31a70be5fa461a3ca2507947c5653989.stex"
+path="res://.import/Blob_Sprung_hoch.png-6c1549d15ab8a4ab2b1247a138217b62.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/JumpForLeft_Grafiken/blob/Blob_Sprung_hoch.png"
-dest_files=[ "res://.import/Blob_Sprung_hoch.png-31a70be5fa461a3ca2507947c5653989.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Blob/Blob_Sprung_hoch.png"
+dest_files=[ "res://.import/Blob_Sprung_hoch.png-6c1549d15ab8a4ab2b1247a138217b62.stex" ]
 
 [params]
 
