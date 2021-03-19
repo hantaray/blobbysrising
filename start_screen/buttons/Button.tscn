@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://title_screen/fonts/montserrat_eb_48.tres" type="DynamicFont" id=2]
+[ext_resource path="res://start_screen/fonts/montserrat_eb_48.tres" type="DynamicFont" id=2]
+
 
 [node name="MenuButton" type="Button"]
 margin_right = 200.0
