@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panzer_1.png-585a8892ad7df0a5490fbee5b396ba7b.stex"
+path="res://.import/Panzer_1.png-db159c6d1a7b82b1b280c7b2e11644d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/JumpForLeft_Grafiken/gegner/Panzer/panzer_1.png"
-dest_files=[ "res://.import/panzer_1.png-585a8892ad7df0a5490fbee5b396ba7b.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Gegner/Panzer/Panzer_1.png"
+dest_files=[ "res://.import/Panzer_1.png-db159c6d1a7b82b1b280c7b2e11644d5.stex" ]
 
 [params]
 

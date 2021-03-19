@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/haueser_2.png-43562cc492973bcd3cccfccca3ef7b93.stex"
+path="res://.import/haueser_2.png-d9c09493263cfed0f22ba17270fc0201.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/background/background_house/haueser_2.png"
-dest_files=[ "res://.import/haueser_2.png-43562cc492973bcd3cccfccca3ef7b93.stex" ]
+source_file="res://Sprites/Background/background_house/haueser_2.png"
+dest_files=[ "res://.import/haueser_2.png-d9c09493263cfed0f22ba17270fc0201.stex" ]
 
 [params]
 

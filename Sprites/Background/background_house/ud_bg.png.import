@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ud_bg.png-23c28ce4aa28b524f9cd04e2ddaaf799.stex"
+path="res://.import/ud_bg.png-6e0f8a8ea77c95fb0232fc8de0b78345.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/background/background_house/ud_bg.png"
-dest_files=[ "res://.import/ud_bg.png-23c28ce4aa28b524f9cd04e2ddaaf799.stex" ]
+source_file="res://Sprites/Background/background_house/ud_bg.png"
+dest_files=[ "res://.import/ud_bg.png-6e0f8a8ea77c95fb0232fc8de0b78345.stex" ]
 
 [params]
 

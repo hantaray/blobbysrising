@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Area2dEnemy",
 "language": "GDScript",
-"path": "res://scripts/Area2D_Enemy.gd"
+"path": "res://Scripts/Area2D_Enemy.gd"
 }, {
 "base": "Area2D",
 "class": "Area2dFriend",
 "language": "GDScript",
-"path": "res://scripts/Area2D_Friend.gd"
+"path": "res://Scripts/Area2D_Friend.gd"
 } ]
 _global_script_class_icons={
 "Area2dEnemy": "",
