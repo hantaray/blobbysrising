@@ -13,12 +13,14 @@ animations = [ {
 } ]
 
 [node name="deckel_friend" type="Area2D"]
+collision_layer = 4
 script = ExtResource( 1 )
 speed_x = -150
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "move"
+frame = 1
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

@@ -8,6 +8,7 @@ collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="Enemy_Tank_Animation" parent="." instance=ExtResource( 1 )]
+frame = 1
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

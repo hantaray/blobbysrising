@@ -31,7 +31,7 @@ func _input(event):
 			screenIsTouched = true
 			var TouchPoint = event.get_position()
 
-			if position.y > 150:
+			if position.y > 200:
 				if MoveUpArea.has_point(TouchPoint):
 					position.y -= 200
 					game_started = true

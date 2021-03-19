@@ -2,13 +2,14 @@ extends Node2D
 
 var score = 0
 
-var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
-var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
-var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
+var enemyTank = preload("res://characters/enemies/schloss_enemy.tscn")
+var friendDove = preload("res://characters/friends/deckel_friend.tscn")
+var enemyBouncyBlob = preload("res://characters/enemies/klappe_enemy.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPoints = [Vector2(2300, 100), Vector2(2300, 300), Vector2(2300, 500), Vector2(2300, 700), Vector2(2300, 900)]
+var spawningPoints = [Vector2(2300, 175), Vector2(2300, 375), 
+	Vector2(2300, 575), Vector2(2300, 775), Vector2(2300, 975)]
 
 func _ready():
 	randomize()
