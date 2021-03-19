@@ -5,7 +5,7 @@ extends Node
 func _ready():
 	# get_tree().change_scene("res://levels/JumpMovement.tscn")
 #	# get_tree().change_scene("res://levels/UpDownMovement.tscn")
-	get_tree().change_scene("res://title_screen/TitleScreen.tscn")
+	get_tree().change_scene("res://start_screen/StartScreen.tscn")
 	# feedback for scene loaded then call HUD
 	pass
 
