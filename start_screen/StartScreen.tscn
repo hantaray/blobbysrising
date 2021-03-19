@@ -1,13 +1,15 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://title_screen/title_screen.gd" type="Script" id=1]
-[ext_resource path="res://title_screen/buttons/JumpButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://title_screen/buttons/UpDownButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://title_screen/buttons/LaneButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://start_screen/start_screen.gd" type="Script" id=1]
+[ext_resource path="res://start_screen/buttons/JumpButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://start_screen/buttons/UpDownButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://start_screen/buttons/LaneButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sprites/JumpForLeft_Grafiken/Blob/Blob_2.png" type="Texture" id=6]
-[ext_resource path="res://title_screen/fonts/montserrat_eb_24.tres" type="DynamicFont" id=7]
+[ext_resource path="res://start_screen/fonts/montserrat_eb_24.tres" type="DynamicFont" id=7]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=9]
+
+
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
