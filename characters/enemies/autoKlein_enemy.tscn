@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/auto_klein/auto_klein2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/auto_klein/auto_klein.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/enemy_autoKlein.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "move",
+"speed": 6.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 110.141, 84.3863 )
+
+[node name="autoKlein_enemy" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource( 3 )
+speed_x = 800
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_autoKlein_enemy_body_entered"]

@@ -11,7 +11,7 @@ const UP = Vector2(0,-1)
 
 var isOnFloor = false
 
-signal anmiate
+signal animate
 
 onready var game_started = false
  
@@ -49,7 +49,7 @@ func apply_gravity():
 	# play with a little x push and the camera smoothing and drag marging
 
 func animate():
-	emit_signal("anmiate", motion, isOnFloor)
+	emit_signal("animate", motion, isOnFloor)
 	
 func gameOver():
 	hide()

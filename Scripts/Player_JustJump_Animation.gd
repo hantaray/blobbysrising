@@ -6,7 +6,7 @@ const FALL_ANI_BORDER = 350
 
 
 
-func _on_Player_JustJump_anmiate(motion, isOnFloor):
+func _on_Player_JustJump_animate(motion, isOnFloor):
 	if isOnFloor:
 		play("idle")
 	elif motion.y < JUMP_ANI_BORDER:
