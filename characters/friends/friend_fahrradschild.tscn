@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Fahrradschild/FS_ganz.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Fahrradschild/FS_Kaputt.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/friend_fahrradschild.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "intact",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "broken",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 88.6741
+
+[node name="friend_fahrradschild" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 3 )
+speed_x = 0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -6, 0 )
+frames = SubResource( 1 )
+animation = "intact"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+[connection signal="area_shape_entered" from="." to="." method="_on_friend_fahrradschild_area_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_friend_fahrradschild_body_entered"]

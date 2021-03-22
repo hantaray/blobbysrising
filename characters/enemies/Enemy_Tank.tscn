@@ -6,6 +6,7 @@
 [node name="Enemy_Tank" type="Area2D"]
 collision_layer = 2
 script = ExtResource( 2 )
+speed_x = -150
 
 [node name="Enemy_Tank_Animation" parent="." instance=ExtResource( 1 )]
 playing = true

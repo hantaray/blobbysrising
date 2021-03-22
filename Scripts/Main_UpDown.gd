@@ -2,9 +2,9 @@ extends Node2D
 
 var score = 0
 
-var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
-var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
-var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
+var enemyTruck = preload("res://characters/enemies/enemy_truck.tscn")
+var enemyKleinAuto = preload("res://characters/enemies/autoKlein_enemy.tscn")
+var friendFahrradSchild = preload("res://characters/friends/friend_fahrradschild.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
@@ -34,21 +34,21 @@ func decrease_score(var points):
 
 func _on_EnemyTimer_timeout():
 	var spawningPos = spawningPointsFriend[randi() % 3]
-	var mob = friendDove.instance()
+	var mob = friendFahrradSchild.instance()
 	
 	# Make shure friend is spawned at least all 5 spawns
 	if noFriendSpawnCounter < 5:
 		var rndFactorSpawn = randi() % 3
 		if rndFactorSpawn == 0:
-			mob = enemyTank.instance()
+			mob = enemyKleinAuto.instance()
 			noFriendSpawnCounter += 1
 		elif rndFactorSpawn == 1:
-			mob = enemyBouncyBlob.instance()
+			mob = enemyTruck.instance()
 			noFriendSpawnCounter += 1
-		if prevMob == "Enemy_BouncyBlob":
+		if prevMob == "enemy_truck":
 
-			mob = enemyTank.instance()
-		spawningPos = spawningPointsFriend[randi() % 3]
+			mob = enemyKleinAuto.instance()
+		spawningPos = spawningPointsEnemy[randi() % 3]
 	else:
 		noFriendSpawnCounter = 0
 		
