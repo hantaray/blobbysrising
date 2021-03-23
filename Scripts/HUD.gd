@@ -4,6 +4,8 @@ var lifes = 5
 var level = ""
 onready var life_icon_list = $LiveLabel.get_children()
 
+const gameover_path = "res://gameover_screen/GameOverScreen.tscn"
+
 var life_icon = preload("res://Items/LifeIcon1.tscn")
 
 func _ready():
@@ -18,7 +20,7 @@ func decrease_lives(life):
 		game_over()
 
 func update_score(score):
-	$ScoreLabel.text = 'Punkte: ' + str(score)
+	$HBoxContainer/ScoreLabel.text = 'Punkte: ' + str(score)
 
 
 func update_lives_hud():
@@ -36,6 +38,11 @@ func delete_children(node):
 
 
 func game_over():
-	print("game over")
-	get_tree().change_scene("res://levels/"+ level.name + ".tscn")
-	pass
+	get_tree().change_scene(gameover_path)
+#	print("game over")
+#	get_tree().change_scene("res://levels/"+ level.name + ".tscn")
+
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene(MainScript.startscreen_path)
