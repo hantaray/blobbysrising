@@ -1,5 +1,8 @@
 extends Node
 
+const startscreen_path = "res://start_screen/StartScreen.tscn"
+var current_scene_path
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
