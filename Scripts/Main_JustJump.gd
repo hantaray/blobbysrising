@@ -3,9 +3,9 @@ extends Node2D
 var score = 0
 signal changeLevel
 
-var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
-var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
-var enemyBouncyBlob = preload("res://characters/enemies/Enemy_BouncyBlob.tscn")
+var enemyTank = preload("res://characters/enemies/enemy_tank.tscn")
+var friendDove = preload("res://characters/friends/friend_dove.tscn")
+var enemyBouncyBlob = preload("res://characters/enemies/enemy_bouncyblob.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
@@ -35,6 +35,7 @@ func _on_EnemyTimer_timeout():
 	
 	var mob = friendDove.instance()
 	
+	
 	# Make shure friend is spawned at least all 5 spawns
 	if noFriendSpawnCounter < 5:
 		var rndFactorSpawn = randi() % 3
@@ -44,7 +45,7 @@ func _on_EnemyTimer_timeout():
 		elif rndFactorSpawn == 1:
 			mob = enemyBouncyBlob.instance()
 			noFriendSpawnCounter += 1
-		if prevMob == "Enemy_BouncyBlob":
+		if prevMob == "enemy_bouncyblob":
 			mob = enemyTank.instance()
 	else:
 		noFriendSpawnCounter = 0

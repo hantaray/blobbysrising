@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://characters/Players/Player_Lane_Movement.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/players/Player_Lane_Movement.tscn" type="PackedScene" id=1]
 [ext_resource path="res://SpawnPath.tscn" type="PackedScene" id=2]
 [ext_resource path="res://EnemyTimer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
@@ -10,14 +10,13 @@
 [node name="LaneMovement" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="HUD" parent="." instance=ExtResource( 4 )]
-
 [node name="EnemyTimer" parent="." instance=ExtResource( 3 )]
 
 [node name="SpawnPath" parent="." instance=ExtResource( 2 )]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 960, 575 )
-
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
