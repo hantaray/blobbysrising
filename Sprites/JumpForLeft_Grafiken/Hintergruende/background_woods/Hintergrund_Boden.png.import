@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hintergrund_Boden.png-45659b0aea32d28f06537848cb0d0e8d.stex"
+path="res://.import/Hintergrund_Boden.png-3ae152b5924b13b8092c433004468c90.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/background_woods/Hintergrund_Boden.png"
-dest_files=[ "res://.import/Hintergrund_Boden.png-45659b0aea32d28f06537848cb0d0e8d.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Woods/Hintergrund_Boden.png"
+dest_files=[ "res://.import/Hintergrund_Boden.png-3ae152b5924b13b8092c433004468c90.stex" ]
 
 [params]
 
