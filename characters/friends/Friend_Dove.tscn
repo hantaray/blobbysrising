@@ -1,13 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/friend_dove.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Friend_Dove.gd" type="Script" id=1]
 [ext_resource path="res://characters/friends/Friend_Dove_Animation.tscn" type="PackedScene" id=2]
 
-[node name="Friend_Dove" type="Area2D"]
+[node name="friend_dove" type="Area2D"]
 collision_layer = 4
 collision_mask = 2147483649
 script = ExtResource( 1 )
-speed_x = -150
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -70.9631, -28.1746, -68, -36, -52.1618, -42.7666, -28, -44, -20, -56, -12, -60, 24, -64, 60, -64, 44, -8, 56, -8, 48, 16, 56, 16, 72, 36, 56, 56, 32, 56, 28, 64, 12, 40, 16, 32, -8, 40, -28, 40, -44, 36, -52, 28, -56, 20, -56.9323, 9.9891, -56, 4, -59.3175, -3.62076, -58.3354, -8.81215, -64, -16, -70.5422, -15.2663 )
