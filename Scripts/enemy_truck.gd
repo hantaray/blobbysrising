@@ -13,5 +13,10 @@ func _on_Timer_timeout():
 
 
 func _on_enemy_truck_body_entered(body):
-	get_tree().call_group("HUD", "decrease_lives", life_damage)
-	queue_free()
+	if body.name == "Player":
+	#var main = get_node('../')
+	#main.decrease_score(2)
+		get_tree().call_group("HUD", "decrease_lives", life_damage)
+		queue_free()
+	elif body.name == "MobDestructionBorder":
+		queue_free()

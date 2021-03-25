@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Blob/Blob_2.png" type="Texture" id=1]
+[ext_resource path="res://characters/enemies/Sprites/JumpForLeft_Grafiken/Blob/Blob_2.png" type="Texture" id=1]
+
 
 
 [node name="LifeIcon1" type="TextureRect"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Enemy_BouncyBlob.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/blob.png" type="Texture" id=2]
+[ext_resource path="res://characters/enemies/Sprites/blob.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 102.566
@@ -10,7 +10,7 @@ height = 21.3745
 [node name="Enemy_BouncyBlob" type="Area2D"]
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
-collision_mask = 9
+collision_mask = 2147483673
 script = ExtResource( 1 )
 speed_x = -300
 speed_y = -500

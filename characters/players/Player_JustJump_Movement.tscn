@@ -15,7 +15,6 @@ script = ExtResource( 6 )
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 
 [node name="Player_JustJump_Animation2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -451.331, 2.1189 )
 animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
