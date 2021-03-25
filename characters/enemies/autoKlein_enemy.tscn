@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://characters/enemies/Sprites/JumpForLeft_Grafiken/Gegner/auto_klein/auto_klein2.png" type="Texture" id=1]
-[ext_resource path="res://characters/enemies/Sprites/JumpForLeft_Grafiken/Gegner/auto_klein/auto_klein.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/auto_klein/auto_klein2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/auto_klein/auto_klein.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/enemy_autoKlein.gd" type="Script" id=3]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
