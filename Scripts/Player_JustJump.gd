@@ -12,8 +12,6 @@ const UP = Vector2(0,-1)
 var isOnFloor = false
 
 signal animate
-
-onready var game_started = false
  
 
 func _physics_process(delta):
@@ -28,21 +26,19 @@ func _physics_process(delta):
 	move_and_slide(motion, UP)
 
 func move_forward():
-	if game_started:
-		motion.x = SPEED
+	motion.x = SPEED
 
 func jump():
 	if Input.is_action_just_pressed("jump"):
 		motion.y = JUMP_SPEED * -1
 		motion.x += JUMP_SPEED_X;
-		game_started = true
 		
 
 
 func apply_gravity():
-	if game_started and motion.y <= GRAVITY_STOP:
+	if motion.y <= GRAVITY_STOP:
 		motion.y += GRAVITY
-	if game_started and motion.y >= SPEED:
+	if motion.y >= SPEED:
 		motion.y -= GRAVITY_X
 	# give max gravity
 	# motion.y = max(motion.y, GRAVITY_STOP)
