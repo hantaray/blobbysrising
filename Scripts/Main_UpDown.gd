@@ -8,8 +8,8 @@ var friendFahrradSchild = preload("res://characters/friends/friend_fahrradschild
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPointsFriend = [Vector2(2300, 275), Vector2(2300, 550), Vector2(2300, 825)]
-var spawningPointsEnemy = [Vector2(-2300, 275), Vector2(-2300, 500), Vector2(-2300, 825)]
+var spawningPointsFriend = [Vector2(1300, 275), Vector2(1300, 550), Vector2(1300, 825)]
+var spawningPointsEnemy = [Vector2(-1300, 275), Vector2(-1300, 550), Vector2(-1300, 825)]
 
 func _ready():
 	randomize()
@@ -22,8 +22,10 @@ func increase_score():
 #	if score == 10:
 #		get_tree().change_scene("res://levels/LaneMovement.tscn")
 	
-	if score % 5 == 0:
-		$Player.SPEED += 100
+	if score % 2 == 0:
+		MainScript.playerSpeed  += 100
+		MainScript.enemyCarSpeed  += 100
+		MainScript.enemyTruckSpeed  += 100
 	
 	
 # hab hier den paramter ergänzt zum einstellen im enemy scripten
@@ -35,9 +37,12 @@ func decrease_score(var points):
 func _on_EnemyTimer_timeout():
 	var spawningPos = spawningPointsFriend[randi() % 3]
 	var mob = friendFahrradSchild.instance()
+	add_child(mob)
+	mob.position = spawningPos
+	mob.position.x += $Player.position.x
 	
 	# Make shure friend is spawned at least all 5 spawns
-	if noFriendSpawnCounter < 5:
+	if noFriendSpawnCounter < 1:
 		var rndFactorSpawn = randi() % 3
 		if rndFactorSpawn == 0:
 			mob = enemyKleinAuto.instance()

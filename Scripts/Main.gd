@@ -2,6 +2,9 @@ extends Node
 
 const startscreen_path = "res://start_screen/StartScreen.tscn"
 var current_scene_path
+var playerSpeed = 600
+var enemyTruckSpeed = 800
+var enemyCarSpeed = 800
 
 
 # Called when the node enters the scene tree for the first time.
