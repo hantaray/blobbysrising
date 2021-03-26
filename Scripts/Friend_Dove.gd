@@ -8,6 +8,5 @@ func _on_Friend_Dove_body_entered(body):
 		main.increase_score()
 		queue_free()
 	elif body.name == "MobDestructionBorder":
-		print("dove")
 		queue_free()
 
