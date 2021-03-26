@@ -15,8 +15,6 @@ var isOnFloor = true
 
 signal anmiate
 
-onready var game_started = false
-
 var screenIsTouched = false
  
 
@@ -34,17 +32,14 @@ func _input(event):
 			if position.y > 200:
 				if MoveUpArea.has_point(TouchPoint):
 					position.y -= 200
-					game_started = true
 			if position.y < 850:
 				if MoveDownArea.has_point(TouchPoint):
 					position.y += 200
-					game_started = true
 		else:
 			screenIsTouched = false
 
 func move_forward():
-	if game_started:
-		motion.x = SPEED
+	motion.x = SPEED
 
 func animate():
 	emit_signal("anmiate", motion, isOnFloor)

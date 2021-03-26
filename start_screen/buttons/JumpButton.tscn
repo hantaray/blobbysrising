@@ -6,7 +6,6 @@
 [node name="JumpButton" instance=ExtResource( 1 )]
 margin_right = 360.0
 script = ExtResource( 2 )
-scene_to_load = "res://levels/JumpMovement.tscn"
 
 [node name="Label" parent="." index="0"]
 margin_right = 44.0

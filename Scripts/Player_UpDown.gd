@@ -9,8 +9,6 @@ var isOnFloor = true
 
 signal anmiate
 
-onready var game_started = false
-
 var screenIsTouched = false
  
 
@@ -29,16 +27,13 @@ func _input(event):
 
 			if TouchPoint.y < 550:
 				position.y = 275
-				game_started = true
 			if TouchPoint.y > 550:
 				position.y = 825
-				game_started = true
 		else:
 			screenIsTouched = false
 
 func move_forward():
-	if game_started:
-		motion.x = SPEED
+	motion.x = SPEED
 
 func apply_gravity():
 	if !screenIsTouched:
