@@ -21,6 +21,6 @@ func _on_friend_fahrradschild_body_entered(body):
 
 
 func _on_friend_fahrradschild_area_shape_entered(area_id, area, area_shape, self_shape):
-	if area.get_collision_layer_bit(1):
+	if area.get_collision_layer_bit(1) and $VisibilityNotifier2D.is_on_screen():
 		animation.play("broken")
 		intact = false

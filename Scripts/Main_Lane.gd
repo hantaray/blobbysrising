@@ -45,7 +45,7 @@ func _on_EnemyTimer_timeout():
 		elif rndFactorSpawn == 1:
 			mob = enemyBouncyBlob.instance()
 			noFriendSpawnCounter += 1
-		if prevMob == "Enemy_BouncyBlob":
+		if prevMob == "schloss_enemy":
 			mob = enemyTank.instance()
 	else:
 		noFriendSpawnCounter = 0
