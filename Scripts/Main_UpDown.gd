@@ -12,6 +12,9 @@ var spawningPointsFriend = [Vector2(1300, 275), Vector2(1300, 550), Vector2(1300
 var spawningPointsEnemy = [Vector2(-1300, 275), Vector2(-1300, 550), Vector2(-1300, 825)]
 
 func _ready():
+	MainScript.playerSpeed  = 600
+	MainScript.enemyCarSpeed  = 800
+	MainScript.enemyTruckSpeed  = 800
 	randomize()
 	$EnemyTimer.start()
 	
