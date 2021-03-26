@@ -42,6 +42,7 @@ func _on_EnemyTimer_timeout():
 	var mob = friendFahrradSchild.instance()
 	add_child(mob)
 	mob.position = spawningPos
+	mob.z_index = -1
 	mob.position.x += $Player.position.x
 	
 	# Make shure friend is spawned at least all 5 spawns
@@ -58,6 +59,7 @@ func _on_EnemyTimer_timeout():
 			mob = enemyKleinAuto.instance()
 		spawningPos = spawningPointsEnemy[randi() % 3]
 	else:
+		mob.z_index = -1
 		noFriendSpawnCounter = 0
 		
 	prevMob = mob.name
