@@ -99,7 +99,7 @@ size_flags_vertical = 3
 position = Vector2( 400, 350 )
 scale = Vector2( 2, 2 )
 animation = "idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="VersionLabel" type="Label" parent="Menu"]
