@@ -3,7 +3,7 @@ extends Area2dEnemy
 var wolke = preload("res://characters/enemies/enemy_wolke.tscn")
 
 func _physics_process(delta):
-	speed_x = MainScript.enemyTruckSpeed
+	velocity = Vector2(MainScript.enemyTruckSpeed,speed_y)
 
 func _on_Timer_timeout():
 	if $VisibilityNotifier2D.is_on_screen():
