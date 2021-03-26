@@ -12,5 +12,4 @@ onready var velocity = Vector2(speed_x,speed_y)
 
 
 func _process(delta: float) -> void:
-#	velocity = Vector2(speed_x,speed_y)
 	position += velocity * delta
