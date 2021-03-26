@@ -35,9 +35,10 @@ func decrease_score(var points):
 func _on_EnemyTimer_timeout():
 	var spawningPos = spawningPointsFriend[randi() % 3]
 	var mob = friendFahrradSchild.instance()
+	add_child(mob)
 	
 	# Make shure friend is spawned at least all 5 spawns
-	if noFriendSpawnCounter < 5:
+	if noFriendSpawnCounter < 1:
 		var rndFactorSpawn = randi() % 3
 		if rndFactorSpawn == 0:
 			mob = enemyKleinAuto.instance()
