@@ -22,8 +22,10 @@ func increase_score():
 #	if score == 10:
 #		get_tree().change_scene("res://levels/LaneMovement.tscn")
 	
-	if score % 5 == 0:
-		$Player.SPEED += 100
+	if score % 2 == 0:
+		MainScript.playerSpeed  += 100
+		MainScript.enemyCarSpeed  += 100
+		MainScript.enemyTruckSpeed  += 100
 	
 	
 # hab hier den paramter ergänzt zum einstellen im enemy scripten
@@ -36,6 +38,8 @@ func _on_EnemyTimer_timeout():
 	var spawningPos = spawningPointsFriend[randi() % 3]
 	var mob = friendFahrradSchild.instance()
 	add_child(mob)
+	mob.position = spawningPos
+	mob.position.x += $Player.position.x
 	
 	# Make shure friend is spawned at least all 5 spawns
 	if noFriendSpawnCounter < 1:

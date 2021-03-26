@@ -15,6 +15,7 @@ var screenIsTouched = false
  
 
 func _physics_process(delta):
+	SPEED = MainScript.playerSpeed
 	move_forward()
 	apply_gravity()
 	animate()
