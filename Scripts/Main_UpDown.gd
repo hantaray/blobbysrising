@@ -8,8 +8,8 @@ var friendFahrradSchild = preload("res://characters/friends/friend_fahrradschild
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPointsFriend = [Vector2(2300, 275), Vector2(2300, 550), Vector2(2300, 825)]
-var spawningPointsEnemy = [Vector2(-2300, 275), Vector2(-2300, 500), Vector2(-2300, 825)]
+var spawningPointsFriend = [Vector2(1300, 275), Vector2(1300, 550), Vector2(1300, 825)]
+var spawningPointsEnemy = [Vector2(-1300, 275), Vector2(-1300, 500), Vector2(-1300, 825)]
 
 func _ready():
 	randomize()
