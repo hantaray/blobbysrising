@@ -2,9 +2,9 @@ extends Node2D
 
 var score = 0
 
-var enemyTank = preload("res://characters/enemies/schloss_enemy.tscn")
+var enemyTank = preload("res://characters/enemies/klappe_enemy.tscn")
 var friendDove = preload("res://characters/friends/deckel_friend.tscn")
-var enemyBouncyBlob = preload("res://characters/enemies/klappe_enemy.tscn")
+var enemyBouncyBlob = preload("res://characters/enemies/schloss_enemy.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
