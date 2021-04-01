@@ -9,9 +9,15 @@ var enemyBouncyBlob = preload("res://characters/enemies/enemy_bouncyblob.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-func _ready():
+func _enter_tree():
+	MainScript.reset_lifes()
+
+func _ready():	
 	randomize()
 	$EnemyTimer.start()
+
+
+
 	
 func increase_score():
 	score += 1

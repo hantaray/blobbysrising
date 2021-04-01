@@ -11,7 +11,11 @@ var noFriendSpawnCounter = 0
 var spawningPoints = [Vector2(2300, 175), Vector2(2300, 375), 
 	Vector2(2300, 575), Vector2(2300, 775), Vector2(2300, 975)]
 
+func _enter_tree():
+	MainScript.reset_lifes()
+
 func _ready():
+	MainScript.reset_lifes()
 	randomize()
 	$EnemyTimer.start()
 	

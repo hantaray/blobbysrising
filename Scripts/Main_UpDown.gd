@@ -11,7 +11,11 @@ var noFriendSpawnCounter = 0
 var spawningPointsFriend = [Vector2(1300, 275), Vector2(1300, 550), Vector2(1300, 825)]
 var spawningPointsEnemy = [Vector2(-1300, 275), Vector2(-1300, 550), Vector2(-1300, 825)]
 
+func _enter_tree():
+	MainScript.reset_lifes()
+
 func _ready():
+	MainScript.reset_lifes()
 	MainScript.playerSpeed  = 600
 	MainScript.enemyCarSpeed  = 800
 	MainScript.enemyTruckSpeed  = 800
