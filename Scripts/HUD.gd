@@ -28,3 +28,7 @@ func delete_children(node):
 
 func _on_TextureButton_pressed():
 	get_tree().change_scene(MainScript.startscreen_path)
+	
+	
+func update_perfcoll_label(perfcoll_multiplier):
+	$HBoxContainer/PerfectCollLabel.text = 'x' + str(perfcoll_multiplier)

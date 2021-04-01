@@ -12,3 +12,7 @@ var bouncyblob_y = -500
 const speed_increase_just_jump = 100
 const speed_increase_lane = 100
 const speed_increase_up_down = 100
+
+
+# perfect collect
+var perfect_collect_limit = 5

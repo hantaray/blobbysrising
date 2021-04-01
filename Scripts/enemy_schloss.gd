@@ -14,3 +14,4 @@ func _on_schloss_enemy_body_entered(body):
 		queue_free()
 	elif body.name == "MobDestructionBorder":
 		queue_free()
+
