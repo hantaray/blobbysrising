@@ -12,4 +12,13 @@ onready var velocity = Vector2(speed_x,speed_y)
 func _process(delta: float) -> void:
 	position += velocity * delta
 	
+func friend_collides(body):
+	if body.name == "Player":
+		MainScript.add_perfect_collect_counter()
+		MainScript.increase_score()
+		queue_free()		
+	elif body.name == "MobDestructionBorder":
+		MainScript.reset_perfect_collect()
+		queue_free()
+	
 

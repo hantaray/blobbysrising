@@ -11,12 +11,7 @@ func _ready():
 
 
 func _on_friend_fahrradschild_body_entered(body):
-	if body.name == "Player" and intact:
-		var main = get_node('../')
-		main.increase_score()
-		queue_free()
-	elif body.name == "MobDestructionBorder":
-		queue_free()
+	friend_collides(body)
 	
 
 

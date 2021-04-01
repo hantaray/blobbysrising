@@ -1,3 +1,6 @@
+
+##### Player Up Down ######
+
 extends KinematicBody2D
 
 var motion = Vector2(0,0)
@@ -10,10 +13,13 @@ var isOnFloor = true
 signal anmiate
 
 var screenIsTouched = false
+
+func _ready():
+	add_to_group('Player')
  
 
 func _physics_process(delta):
-	SPEED = MainScript.playerSpeed
+	SPEED = GamePlayData.playerSpeed
 	move_forward()
 	apply_gravity()
 	animate()
@@ -24,7 +30,6 @@ func _input(event):
 		if event.is_pressed():
 			screenIsTouched = true
 			var TouchPoint = event.get_position()
-
 			if TouchPoint.y < 550:
 				position.y = 275
 			if TouchPoint.y > 550:
@@ -45,8 +50,8 @@ func apply_gravity():
 func animate():
 	emit_signal("anmiate", motion, isOnFloor)
 
-func gameOver():
-	hide()
+func increase_move_speed():
+	SPEED += GamePlayData.speed_increase_up_down
 
 
 
