@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 func friend_collides(body):
 	if body.name == "Player":
 		MainScript.decrease_lives(life_damage)
+		MainScript.reset_perfect_collect()
 		queue_free()
 	elif body.name == "MobDestructionBorder":
 		queue_free()
