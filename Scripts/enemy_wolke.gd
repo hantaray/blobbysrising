@@ -1,9 +1,5 @@
 extends Area2dEnemy
 
-
-
-
-
 func _on_enemy_wolke_body_entered(body):
 	if body.name == "Player":
 	#var main = get_node('../')

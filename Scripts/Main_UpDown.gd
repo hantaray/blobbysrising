@@ -1,10 +1,9 @@
 extends Node2D
 
-var score = 0
 
-var enemyTruck = preload("res://characters/enemies/enemy_truck.tscn")
-var enemyKleinAuto = preload("res://characters/enemies/autoKlein_enemy.tscn")
-var friendFahrradSchild = preload("res://characters/friends/friend_fahrradschild.tscn")
+var enemy_truck = preload("res://characters/enemies/enemy_truck.tscn")
+var enemy_klein_auto = preload("res://characters/enemies/autoKlein_enemy.tscn")
+var friend_fahrrad_schild = preload("res://characters/friends/friend_fahrradschild.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
@@ -12,62 +11,40 @@ var spawningPointsFriend = [Vector2(1300, 275), Vector2(1300, 550), Vector2(1300
 var spawningPointsEnemy = [Vector2(-1300, 275), Vector2(-1300, 550), Vector2(-1300, 825)]
 
 func _enter_tree():
-	MainScript.reset_lifes()
+	MainScript.reset_level_data()
 
 func _ready():
-	MainScript.reset_lifes()
-	MainScript.playerSpeed  = 600
-	MainScript.enemyCarSpeed  = 800
-	MainScript.enemyTruckSpeed  = 800
+	GamePlayData.playerSpeed  = 600
+	GamePlayData.enemyCarSpeed  = 800
+	GamePlayData.enemyTruckSpeed  = 800
 	randomize()
 	$EnemyTimer.start()
 	
-func increase_score():
-	score += 1
-	$HUD.update_score(score)
-	
-#	if score == 10:
-#		get_tree().change_scene("res://levels/LaneMovement.tscn")
-	
-	if score % 2 == 0:
-		MainScript.playerSpeed  += 100
-		MainScript.enemyCarSpeed  += 100
-		MainScript.enemyTruckSpeed  += 100
-	
-	
-# hab hier den paramter ergänzt zum einstellen im enemy scripten
-func decrease_score(var points):
-	#if score >= 1:
-	score -= points
-	$HUD.update_score(score)
+
 
 func _on_EnemyTimer_timeout():
 	var spawningPos = spawningPointsFriend[randi() % 3]
-	var mob = friendFahrradSchild.instance()
+	var mob = friend_fahrrad_schild.instance()
 	add_child(mob)
 	mob.position = spawningPos
 	mob.z_index = -1
-	mob.position.x += $Player.position.x
-	
+	mob.position.x += $Player.position.x	
 	# Make shure friend is spawned at least all 5 spawns
 	if noFriendSpawnCounter < 1:
 		var rndFactorSpawn = randi() % 3
 		if rndFactorSpawn == 0:
-			mob = enemyKleinAuto.instance()
+			mob = enemy_klein_auto.instance()
 			noFriendSpawnCounter += 1
 		elif rndFactorSpawn == 1:
-			mob = enemyTruck.instance()
+			mob = enemy_truck.instance()
 			noFriendSpawnCounter += 1
 		if prevMob == "enemy_truck":
-
-			mob = enemyKleinAuto.instance()
+			mob = enemy_klein_auto.instance()
 		spawningPos = spawningPointsEnemy[randi() % 3]
 	else:
 		mob.z_index = -1
-		noFriendSpawnCounter = 0
-		
-	prevMob = mob.name
-		
+		noFriendSpawnCounter = 0		
+	prevMob = mob.name		
 	add_child(mob)
 	mob.position = spawningPos
 	mob.position.x += $Player.position.x

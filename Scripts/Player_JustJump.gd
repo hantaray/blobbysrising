@@ -1,3 +1,6 @@
+
+##### Player just jump #####
+
 extends KinematicBody2D
 
 var motion = Vector2(0,0)
@@ -9,9 +12,13 @@ const GRAVITY_X = 25
 const GRAVITY_STOP = 400
 const UP = Vector2(0,-1)
 
+
 var isOnFloor = false
 
 signal animate
+
+func _ready():
+	add_to_group('Player')
  
 
 func _physics_process(delta):
@@ -31,8 +38,7 @@ func move_forward():
 func jump():
 	if Input.is_action_just_pressed("jump"):
 		motion.y = JUMP_SPEED * -1
-		motion.x += JUMP_SPEED_X;
-		
+		motion.x += JUMP_SPEED_X;		
 
 
 func apply_gravity():
@@ -46,10 +52,10 @@ func apply_gravity():
 
 func animate():
 	emit_signal("animate", motion, isOnFloor)
-	
-func gameOver():
-	hide()
 
+
+func increase_move_speed():
+	SPEED += GamePlayData.speed_increase_just_jump
 
 
 

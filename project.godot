@@ -33,6 +33,7 @@ config/icon="res://icon.png"
 [autoload]
 
 MainScript="*res://Scripts/Main.gd"
+GamePlayData="*res://Scripts/GamePlay_Data.gd"
 
 [display]
 

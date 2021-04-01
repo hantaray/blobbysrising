@@ -1,3 +1,7 @@
+#### Player Lane ####
+
+
+
 extends KinematicBody2D
 
 onready var screen_width = get_tree().get_root().get_viewport().size.x
@@ -17,6 +21,9 @@ signal anmiate
 
 var screenIsTouched = false
  
+func _ready():
+	add_to_group('Player')
+
 
 func _physics_process(delta):
 	move_forward()
@@ -28,7 +35,6 @@ func _input(event):
 		if event.is_pressed():
 			screenIsTouched = true
 			var TouchPoint = event.get_position()
-
 			if position.y > 200:
 				if MoveUpArea.has_point(TouchPoint):
 					position.y -= 200
@@ -44,9 +50,8 @@ func move_forward():
 func animate():
 	emit_signal("anmiate", motion, isOnFloor)
 
-func gameOver():
-	hide()
-
+func increase_move_speed():
+	SPEED += GamePlayData.speed_increase_lane
 
 
 
