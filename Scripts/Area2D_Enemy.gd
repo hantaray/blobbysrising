@@ -15,9 +15,9 @@ func _process(delta: float) -> void:
 	position += velocity * delta
 	
 func friend_collides(body):
-	if body.name == "Player":
+	if body.get_collision_layer_bit(0):
 		MainScript.decrease_lives(life_damage)
 		MainScript.reset_perfect_collect()
 		queue_free()
-	elif body.name == "MobDestructionBorder":
+	elif body.get_collision_layer_bit(4):
 		queue_free()
