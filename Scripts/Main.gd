@@ -48,7 +48,7 @@ func increase_score():
 	get_tree().call_group("HUD", "update_score", score)
 	if perfect_collect_counter % GamePlayData.perfect_collect_limit == 0:
 		increase_score_add()
-	if score % 5 == 0:
+	if score % GamePlayData.increase_every_score == 0:
 		increase_player_speed()
 
 func reset_score() :
