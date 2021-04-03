@@ -3,6 +3,12 @@ extends Node
 #### GamePlayData ####
 
 # movement vars
+var enemy_speed_x = -100
+var enemy_speed_y = 0
+
+var friend_speed_x = -100
+var friend_speed_y = 0
+
 var playerSpeed = 600
 var enemyTruckSpeed = 800
 var enemyCarSpeed = 800
