@@ -79,8 +79,3 @@ func game_over():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene(gameover_path)
 	
-func showGameOverScreen():
-	var gameOverScreen = preload("res://gameover_screen/GameOverScreen.tscn")
-	var newGOScreen = gameOverScreen.instance()
-	add_child(newGOScreen)
-	newGOScreen.show()

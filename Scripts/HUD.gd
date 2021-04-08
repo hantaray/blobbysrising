@@ -12,27 +12,20 @@ func _ready():
 func update_score(score):
 	$HBoxContainer/ScoreLabel.text = 'Punkte: ' + str(score)
 
-
 func update_lives_hud(lifes):
 	delete_children($LiveLabel)
 	for n in lifes:
 		var icon_inst = life_icon.instance()
 		$LiveLabel.add_child(icon_inst)
 
-
 func delete_children(node):
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
 
-
 func _on_TextureButton_pressed():
 	get_tree().paused = true
 	$GameOverScreen.show()
-#	MainScript.showGameOverScreen()
-# warning-ignore:return_value_discarded
-#	get_tree().change_scene(MainScript.gameover_path)
-	
 	
 func update_perfcoll_label(perfcoll_multiplier):
 	$HBoxContainer/PerfectCollLabel.text = 'x' + str(perfcoll_multiplier)
