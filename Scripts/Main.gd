@@ -76,6 +76,5 @@ func increase_player_speed():
 
 # game over
 func game_over():
-# warning-ignore:return_value_discarded
-	get_tree().change_scene(gameover_path)
+	get_tree().call_group("HUD", "showGameOverScreen")
 	

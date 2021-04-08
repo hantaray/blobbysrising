@@ -24,8 +24,18 @@ func delete_children(node):
 		n.queue_free()
 
 func _on_TextureButton_pressed():
-	get_tree().paused = true
-	$GameOverScreen.show()
+	showPauseScreen()
 	
 func update_perfcoll_label(perfcoll_multiplier):
 	$HBoxContainer/PerfectCollLabel.text = 'x' + str(perfcoll_multiplier)
+	
+func showGameOverScreen():
+	get_tree().paused = true
+	get_node("HBoxContainer/TextureButton").hide()
+	$GameOverScreen/CenterContainer/HBoxContainer/ResumeButton.hide()
+	$GameOverScreen/TextureRect.modulate = Color(1, 1, 1, 0.5)
+	$GameOverScreen.show()
+	
+func showPauseScreen():
+	get_tree().paused = true
+	$GameOverScreen.show()
