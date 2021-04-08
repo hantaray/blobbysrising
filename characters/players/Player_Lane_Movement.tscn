@@ -20,4 +20,3 @@ position = Vector2( -451.331, 2.119 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -451.331, 2.1189 )
 shape = SubResource( 1 )
-[connection signal="anmiate" from="." to="Player_Lane_Animation" method="_on_Player_JustJump_anmiate"]

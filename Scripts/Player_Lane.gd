@@ -7,8 +7,7 @@ extends KinematicBody2D
 onready var screen_width = get_tree().get_root().get_viewport().size.x
 onready var screen_height = get_tree().get_root().get_viewport().size.y
 
-onready var MoveUpArea = Rect2(0, 0, screen_width, screen_height/2)
-onready var MoveDownArea = Rect2(0, screen_height/2, screen_width, screen_height)
+var shape_height = 0
 
 var motion = Vector2(0,0)
 var SPEED = 600
@@ -17,17 +16,17 @@ const UP = Vector2(0,-1)
 
 var isOnFloor = true
 
-signal anmiate
-
 var screenIsTouched = false
  
 func _ready():
+	shape_height = $CollisionShape2D.shape.height
 	add_to_group('Player')
 
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	move_forward()
-	animate()
+# warning-ignore:return_value_discarded
 	move_and_slide(motion, UP)
 
 func _input(event):
@@ -35,20 +34,19 @@ func _input(event):
 		if event.is_pressed():
 			screenIsTouched = true
 			var TouchPoint = event.get_position()
-			if position.y > 200:
-				if MoveUpArea.has_point(TouchPoint):
-					position.y -= 200
-			if position.y < 850:
-				if MoveDownArea.has_point(TouchPoint):
-					position.y += 200
+			# UpMovement
+			# TopScreenBorder
+			if position.y > 200 and TouchPoint.y < position.y + shape_height/2:
+				position.y -= 200
+			# DownMovement
+			# ButtomScreenBorder
+			elif position.y < 850 and TouchPoint.y > position.y + shape_height/2:
+				position.y += 200
 		else:
 			screenIsTouched = false
 
 func move_forward():
 	motion.x = SPEED
-
-func animate():
-	emit_signal("anmiate", motion, isOnFloor)
 
 func increase_move_speed():
 	SPEED += GamePlayData.speed_increase_lane

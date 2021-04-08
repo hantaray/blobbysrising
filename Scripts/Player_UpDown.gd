@@ -10,19 +10,18 @@ const UP = Vector2(0,-1)
 
 var isOnFloor = true
 
-signal anmiate
-
 var screenIsTouched = false
 
 func _ready():
 	add_to_group('Player')
  
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	SPEED = GamePlayData.playerSpeed
 	move_forward()
 	apply_gravity()
-	animate()
+# warning-ignore:return_value_discarded
 	move_and_slide(motion, UP)
 
 func _input(event):
@@ -46,9 +45,6 @@ func apply_gravity():
 			position.y += GRAVITY
 		if position.y > 550:
 			position.y -= GRAVITY
-
-func animate():
-	emit_signal("anmiate", motion, isOnFloor)
 
 func increase_move_speed():
 	SPEED += GamePlayData.speed_increase_up_down
