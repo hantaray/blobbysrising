@@ -20,6 +20,7 @@ const speed_increase_lane = 100
 const speed_increase_up_down = 100
 
 const increase_every_score = 10
+const add_life_every_score = 20
 
 
 # perfect collect

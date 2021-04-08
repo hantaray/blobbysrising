@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=2]
 [ext_resource path="res://gameover_screen/GUI/gameoverscreen/button_blue_back.png" type="Texture" id=3]
+[ext_resource path="res://gameover_screen/GameOverScreen.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -54,12 +55,15 @@ __meta__ = {
 [node name="LiveLabel" type="HBoxContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -742.018
-margin_top = 16.0181
-margin_right = -16.0182
-margin_bottom = 179.018
+margin_left = -1327.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = 179.0
 alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GameOverScreen" parent="." instance=ExtResource( 4 )]
+visible = false
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
