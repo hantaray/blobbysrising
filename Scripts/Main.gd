@@ -18,8 +18,9 @@ var perfect_collect_counter = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://start_screen/StartScreen.tscn")
-	
+
 
 func reset_level_data():
 	reset_lifes()
@@ -75,5 +76,6 @@ func increase_player_speed():
 
 # game over
 func game_over():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene(gameover_path)
 	

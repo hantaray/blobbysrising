@@ -16,8 +16,6 @@ const UP = Vector2(0,-1)
 
 var isOnFloor = true
 
-signal anmiate
-
 var screenIsTouched = false
  
 func _ready():
@@ -25,8 +23,10 @@ func _ready():
 	add_to_group('Player')
 
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	move_forward()
+# warning-ignore:return_value_discarded
 	move_and_slide(motion, UP)
 
 func _input(event):

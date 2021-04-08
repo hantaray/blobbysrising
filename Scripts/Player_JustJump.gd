@@ -21,6 +21,7 @@ func _ready():
 	add_to_group('Player')
  
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	if is_on_floor():
 		isOnFloor = true
@@ -30,6 +31,7 @@ func _physics_process(delta):
 	jump()
 	apply_gravity()
 	animate()
+# warning-ignore:return_value_discarded
 	move_and_slide(motion, UP)
 
 func move_forward():

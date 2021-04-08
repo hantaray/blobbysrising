@@ -16,10 +16,12 @@ func _ready():
 	add_to_group('Player')
  
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	SPEED = GamePlayData.playerSpeed
 	move_forward()
 	apply_gravity()
+# warning-ignore:return_value_discarded
 	move_and_slide(motion, UP)
 
 func _input(event):

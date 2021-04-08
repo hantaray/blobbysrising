@@ -2,6 +2,7 @@ extends Area2dEnemy
 
 var wolke = preload("res://characters/enemies/enemy_wolke.tscn")
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	velocity = Vector2(GamePlayData.enemyTruckSpeed, speed_y)
 
