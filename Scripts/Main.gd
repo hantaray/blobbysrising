@@ -51,6 +51,10 @@ func increase_score():
 		increase_score_add()
 	if score % GamePlayData.increase_every_score == 0:
 		increase_player_speed()
+	if score % GamePlayData.add_life_every_score == 0:
+		if lifes <= 8:
+			lifes += 1
+			update_lives_hud()
 
 func reset_score() :
 	score = 0
