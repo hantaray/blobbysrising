@@ -27,8 +27,11 @@ func delete_children(node):
 
 
 func _on_TextureButton_pressed():
+	get_tree().paused = true
+	$GameOverScreen.show()
+#	MainScript.showGameOverScreen()
 # warning-ignore:return_value_discarded
-	get_tree().change_scene(MainScript.startscreen_path)
+#	get_tree().change_scene(MainScript.gameover_path)
 	
 	
 func update_perfcoll_label(perfcoll_multiplier):
