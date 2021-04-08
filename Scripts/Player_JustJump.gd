@@ -5,11 +5,11 @@ extends KinematicBody2D
 
 var motion = Vector2(0,0)
 var SPEED = 600
+const JUMP_SPEED = 1800
 const JUMP_SPEED_X = 1200
-const JUMP_SPEED = 1400
-const GRAVITY = 70
+const GRAVITY = 100
 const GRAVITY_X = 25
-const GRAVITY_STOP = 400
+const GRAVITY_STOP = 800
 const UP = Vector2(0,-1)
 
 
@@ -38,7 +38,7 @@ func move_forward():
 func jump():
 	if Input.is_action_just_pressed("jump"):
 		motion.y = JUMP_SPEED * -1
-		motion.x += JUMP_SPEED_X;		
+		motion.x += JUMP_SPEED_X
 
 
 func apply_gravity():
