@@ -10,7 +10,9 @@ var noFriendSpawnCounter = 0
 func _enter_tree():
 	MainScript.reset_level_data()
 
-func _ready():	
+func _ready():
+	MainScript.current_scene = "Forest"
+	print(filename)
 	randomize()
 	$EnemyTimer.start()
 
