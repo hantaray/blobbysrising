@@ -22,6 +22,28 @@ const speed_increase_up_down = 100
 const increase_every_score = 10
 const add_life_every_score = 20
 
-
 # perfect collect
 var perfect_collect_limit = 5
+
+# level score goals
+#var score_goal_forest = 80
+#var score_goal_street = 250
+#var score_goal_city = 50
+
+var score_goal_forest = 2
+var score_goal_street = 2
+var score_goal_city = 2
+
+var score_goal_forest_reached = false
+var score_goal_street_reached = false
+var score_goal_city_reached = false
+
+# highscore
+var highscore_forest = 0
+var highscore_street = 0
+var highscore_city = 0
+
+# levels unlocked
+var locked_forest = false
+var locked_street = true
+var locked_city = true

@@ -15,6 +15,7 @@ func _enter_tree():
 	MainScript.reset_level_data()
 
 func _ready():
+	MainScript.current_scene = "City"
 	randomize()
 	$EnemyTimer.start()
 
