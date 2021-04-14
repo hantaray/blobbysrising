@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/friend_deckel.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Deckel_1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Deckel_2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_unten.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_oben.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "move",
 "speed": 4.0
@@ -24,5 +24,5 @@ frame = 1
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -104, 88, -110.33, -14.4252, -58.711, -70.2866, 9.8784, -86.9037, 53.0119, -83.0146, 56.5475, -58.6194, 88, -48, 112, -24, 106.045, 87.7517 )
+polygon = PoolVector2Array( -107.855, 86.6906, -101.845, -17.9611, -58.711, -70.2866, 9.8784, -86.9037, 53.0119, -83.0146, 56.5475, -58.6194, 88, -48, 108.873, -22.5573, 109.226, 87.3977 )
 [connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]
