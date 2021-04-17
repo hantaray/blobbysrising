@@ -8,8 +8,8 @@ var schloss_enemy = preload("res://characters/enemies/schloss_enemy.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPoints = [Vector2(2300, 175), Vector2(2300, 375), 
-	Vector2(2300, 575), Vector2(2300, 775), Vector2(2300, 975)]
+var spawningPoints = [Vector2(2300, 115), Vector2(2300, 315), 
+	Vector2(2300, 550), Vector2(2300, 765), Vector2(2300, 965)]
 
 func _enter_tree():
 	MainScript.reset_level_data()
@@ -35,8 +35,8 @@ func _on_EnemyTimer_timeout():
 		if prevMob == "schloss_enemy":
 			mob = klappe_enemy.instance()
 	else:
-		noFriendSpawnCounter = 0		
-	prevMob = mob.name		
+		noFriendSpawnCounter = 0
+	prevMob = mob.name
 	add_child(mob)
 	mob.position = enemyPos
 	mob.position.x += $Player.position.x
