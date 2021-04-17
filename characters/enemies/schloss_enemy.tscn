@@ -15,6 +15,7 @@ animations = [ {
 extents = Vector2( 117.091, 136.418 )
 
 [node name="schloss_enemy" type="Area2D"]
+scale = Vector2( 0.75, 0.75 )
 collision_layer = 2
 script = ExtResource( 2 )
 speed_x = -150

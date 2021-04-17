@@ -37,11 +37,11 @@ func _input(event):
 			# UpMovement
 			# TopScreenBorder
 			if position.y > 200 and TouchPoint.y < position.y + shape_height/2:
-				position.y -= 200
+				position.y -= 210
 			# DownMovement
 			# ButtomScreenBorder
 			elif position.y < 850 and TouchPoint.y > position.y + shape_height/2:
-				position.y += 200
+				position.y += 210
 		else:
 			screenIsTouched = false
 
