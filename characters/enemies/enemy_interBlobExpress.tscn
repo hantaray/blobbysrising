@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Enemy_InterBlobExpress.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Inter_blob_express.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/inter_blob_express_quetschie.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.5
+} ]
+
+[node name="enemy_InterBlobExpress" type="Area2D"]
+collision_layer = 2
+collision_mask = 17
+script = ExtResource( 1 )
+speed_x = -250
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -200, 64, -208, 40, -136, -48, -24, -48, -8, -72, 40, -72, 112, -96, 128, -48, 194.086, -46.29, 208, 0, 184, 72, 160, 72, 152, 80, 40, 80, 32, 96, 0, 96, -32, 80, -112, 80, -112, 72, -184, 72 )
+[connection signal="body_entered" from="." to="." method="_on_InterBlobExpress_body_entered"]
