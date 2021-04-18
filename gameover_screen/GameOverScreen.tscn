@@ -15,46 +15,53 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_left = 500.0
+margin_top = 250.0
+margin_right = 2420.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect"]
+margin_left = 60.0
+margin_top = 450.0
+margin_right = 1244.0
+margin_bottom = 578.0
+rect_scale = Vector2( 1.5, 1.5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
-margin_left = 368.0
-margin_top = 476.0
-margin_right = 1552.0
-margin_bottom = 604.0
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/CenterContainer"]
+margin_right = 1184.0
+margin_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/separation = 400
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="BackButton" type="TextureButton" parent="CenterContainer/HBoxContainer"]
+[node name="BackButton" type="TextureButton" parent="TextureRect/CenterContainer/HBoxContainer"]
 margin_right = 128.0
 margin_bottom = 128.0
 texture_normal = ExtResource( 3 )
 
-[node name="ResumeButton" type="TextureButton" parent="CenterContainer/HBoxContainer"]
+[node name="ResumeButton" type="TextureButton" parent="TextureRect/CenterContainer/HBoxContainer"]
 margin_left = 528.0
 margin_right = 656.0
 margin_bottom = 128.0
 texture_normal = ExtResource( 3 )
 
-[node name="ReplayButton" type="TextureButton" parent="CenterContainer/HBoxContainer"]
+[node name="ReplayButton" type="TextureButton" parent="TextureRect/CenterContainer/HBoxContainer"]
 margin_left = 1056.0
 margin_right = 1184.0
 margin_bottom = 128.0
 texture_normal = ExtResource( 2 )
-[connection signal="pressed" from="CenterContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
-[connection signal="pressed" from="CenterContainer/HBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
-[connection signal="pressed" from="CenterContainer/HBoxContainer/ReplayButton" to="." method="_on_ReplayButton_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/ReplayButton" to="." method="_on_ReplayButton_pressed"]
