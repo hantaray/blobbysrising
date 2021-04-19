@@ -9,7 +9,7 @@ _data = {
 curve = SubResource( 1 )
 
 [node name="SpawnLocation" type="PathFollow2D" parent="."]
-position = Vector2( 2100, 500 )
+position = Vector2( 2345.39, 108.045 )
 rotation = -1.5708
 offset = 819.78
 lookahead = 0.001
