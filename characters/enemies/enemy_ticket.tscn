@@ -20,6 +20,7 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "move"
+playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -83.4247, -98.7886, 0, -96, 56, -72, 72, -48, 48, 24, 44.9152, 100.262, -16.6031, 84.3521, -80, 80, -77.4143, 49.3503, -72, -8 )

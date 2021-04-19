@@ -12,16 +12,18 @@ animations = [ {
 "speed": 4.5
 } ]
 
-[node name="enemy_InterBlobExpress" type="Area2D"]
+[node name="enemy_interBlobExpress" type="Area2D"]
 collision_layer = 2
 collision_mask = 17
 script = ExtResource( 1 )
 speed_x = -250
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -110, 100 )
 frames = SubResource( 1 )
 animation = "idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -110, 100 )
 polygon = PoolVector2Array( -200, 64, -208, 40, -136, -48, -24, -48, -8, -72, 40, -72, 112, -96, 128, -48, 194.086, -46.29, 208, 0, 184, 72, 160, 72, 152, 80, 40, 80, 32, 96, 0, 96, -32, 80, -112, 80, -112, 72, -184, 72 )
 [connection signal="body_entered" from="." to="." method="_on_InterBlobExpress_body_entered"]
