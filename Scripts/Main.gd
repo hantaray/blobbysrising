@@ -22,8 +22,7 @@ func _ready():
 # warning-ignore:return_value_discarded
 	# here change to test screen
 	get_tree().change_scene("res://start_screen/StartScreen.tscn")
-	# get_tree().change_scene("res://levels/SubwayLevel.tscn")
-	# get_tree().change_scene("res://levels/LaneMovement.tscn")
+#	get_tree().change_scene("res://levels/SubwayLevel.tscn")
 
 
 func reset_level_data():
@@ -90,37 +89,31 @@ func increase_player_speed():
 # game over
 func game_over():
 	get_tree().call_group("HUD", "showGameOverScreen")
-	
-# level goal reached
-func level_goal_reached():
-	GamePlayData.locked_street = false
-	GamePlayData.score_goal_forest_reached = true
-	get_tree().change_scene(MainScript.startscreen_path)
-	
+
 func update_highscore(level):
 	if level == "Forest":
 		if score > GamePlayData.highscore_forest:
 			GamePlayData.highscore_forest = score
-	if level == "Street":
-		if score > GamePlayData.highscore_street:
-			GamePlayData.highscore_street = score
 	if level == "City":
 		if score > GamePlayData.highscore_city:
 			GamePlayData.highscore_city = score
+	if level == "Street":
+		if score > GamePlayData.highscore_street:
+			GamePlayData.highscore_street = score
 			
 func check_level_goal_reached(level):
 	if level == "Forest":
 		if score >= GamePlayData.score_goal_forest and !GamePlayData.score_goal_forest_reached:
 			GamePlayData.score_goal_forest_reached = true
-			GamePlayData.locked_street = false
-			get_tree().change_scene(MainScript.startscreen_path)
-	if level == "Street":
-		if score >= GamePlayData.score_goal_street and !GamePlayData.score_goal_street_reached:
-			GamePlayData.score_goal_street_reached = true
 			GamePlayData.locked_city = false
 			get_tree().change_scene(MainScript.startscreen_path)
 	if level == "City":
 		if score >= GamePlayData.score_goal_city and !GamePlayData.score_goal_city_reached:
 			GamePlayData.score_goal_city_reached = true
+			GamePlayData.locked_street = false
+			get_tree().change_scene(MainScript.startscreen_path)
+	if level == "Street":
+		if score >= GamePlayData.score_goal_street and !GamePlayData.score_goal_street_reached:
+			GamePlayData.score_goal_street_reached = true
 			get_tree().change_scene(MainScript.startscreen_path)
 	

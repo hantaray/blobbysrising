@@ -4,8 +4,8 @@ var scene_path_to_load
 
 func _ready():
 	update_buttons()
-	$Menu/CenterRow/Buttons/JumpButton.grab_focus()
-	for button in $Menu/CenterRow/Buttons.get_children():
+#	$Menu/CenterRow/JumpButton.grab_focus()
+	for button in $Menu/CenterRow.get_children():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
 
@@ -22,13 +22,13 @@ func _on_FadeIn_fade_finished():
 	get_tree().change_scene(scene_path_to_load)
 	
 func update_buttons():
-	for button in $Menu/CenterRow/Buttons.get_children():
+	for button in $Menu/CenterRow.get_children():
 		if button.name == "JumpButton":
 			if GamePlayData.locked_forest: 
 				button.modulate = Color(1, 1, 1, 0.5)
 				button.set_disabled(true)
 			button.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " Punkte")
-		if button.name == "UpDownButton":
+		if button.name == "StreetLevel":
 			if GamePlayData.locked_street: 
 				button.modulate = Color(1, 1, 1, 0.5)
 				button.set_disabled(true)
