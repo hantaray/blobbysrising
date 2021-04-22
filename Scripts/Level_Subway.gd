@@ -14,7 +14,6 @@ func _enter_tree():
 
 func _ready():
 	MainScript.current_scene = "Subway"
-	print(filename)
 	randomize()
 	$EnemyTimer.start()
 
