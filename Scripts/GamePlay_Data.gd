@@ -2,6 +2,7 @@ extends Node
 
 #### GamePlayData ####
 
+
 # movement vars
 var enemy_speed_x = -100
 var enemy_speed_y = 0
