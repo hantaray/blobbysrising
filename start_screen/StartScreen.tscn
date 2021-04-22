@@ -11,7 +11,7 @@
 [ext_resource path="res://start_screen/buttons/ExitButton.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
-size = 100
+size = 200
 outline_color = Color( 1, 0.596078, 0, 1 )
 font_data = ExtResource( 9 )
 
@@ -41,7 +41,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Menu"]
 margin_right = 3000.0
-margin_bottom = 120.0
+margin_bottom = 240.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
@@ -54,27 +54,27 @@ __meta__ = {
 }
 
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
-margin_top = 140.0
+margin_top = 260.0
 margin_right = 3000.0
 margin_bottom = 1697.0
 size_flags_vertical = 3
 
 [node name="JumpButton" parent="Menu/CenterRow" instance=ExtResource( 3 )]
 margin_right = 913.0
-margin_bottom = 1557.0
+margin_bottom = 1437.0
 scene_to_load = "res://levels/SubwayLevel.tscn"
 
 [node name="LaneButton" parent="Menu/CenterRow" instance=ExtResource( 5 )]
 margin_left = 917.0
 margin_right = 2056.0
-margin_bottom = 1557.0
+margin_bottom = 1437.0
 rect_scale = Vector2( 1, 1 )
 scene_to_load = "res://levels/LaneMovement.tscn"
 
 [node name="StreetLevel" parent="Menu/CenterRow" instance=ExtResource( 4 )]
 margin_left = 2060.0
 margin_right = 2973.0
-margin_bottom = 1557.0
+margin_bottom = 1437.0
 
 [node name="VersionLabel" type="Label" parent="Menu"]
 visible = false
