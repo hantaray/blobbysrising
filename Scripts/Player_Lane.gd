@@ -15,10 +15,13 @@ const GRAVITY = 50
 const UP = Vector2(0,-1)
 
 var isOnFloor = true
+var pauseBtnArea
 
 var screenIsTouched = false
  
 func _ready():
+	var pauseBtn = get_tree().get_root().get_node("LaneMovement/HUD/HBoxContainer/TextureButton")
+	pauseBtnArea = Rect2(0,0, pauseBtn.get_normal_texture().get_height(), pauseBtn.get_normal_texture().get_width())
 	shape_height = $CollisionShape2D.shape.height
 	add_to_group('Player')
 
@@ -36,11 +39,15 @@ func _input(event):
 			var TouchPoint = event.get_position()
 			# UpMovement
 			# TopScreenBorder
-			if position.y > 200 and TouchPoint.y < position.y + shape_height/2:
+			if position.y > 200 \
+			and TouchPoint.y < position.y + shape_height/2 \
+			and !(pauseBtnArea.has_point(TouchPoint)):
 				position.y -= 210
 			# DownMovement
 			# ButtomScreenBorder
-			elif position.y < 850 and TouchPoint.y > position.y + shape_height/2:
+			elif position.y < 850 \
+			and TouchPoint.y > position.y + shape_height/2 \
+			and !(pauseBtnArea.has_point(TouchPoint)):
 				position.y += 210
 		else:
 			screenIsTouched = false
