@@ -32,10 +32,12 @@ func update_perfcoll_label(perfcoll_multiplier):
 func showGameOverScreen():
 	get_tree().paused = true
 	get_node("HBoxContainer/TextureButton").hide()
-	$GameOverScreen/CenterContainer/HBoxContainer/ResumeButton.hide()
-	$GameOverScreen/TextureRect.modulate = Color(1, 1, 1, 0.5)
+	$GameOverScreen/TextureRect/Label.text = "Game Over"
+	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
+	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	$GameOverScreen.show()
 	
 func showPauseScreen():
 	get_tree().paused = true
+	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	$GameOverScreen.show()
