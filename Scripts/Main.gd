@@ -91,7 +91,7 @@ func game_over():
 	get_tree().call_group("HUD", "showGameOverScreen")
 
 func update_highscore(level):
-	if level == "Forest":
+	if level == "Subway":
 		if score > GamePlayData.highscore_forest:
 			GamePlayData.highscore_forest = score
 	if level == "City":
@@ -102,7 +102,7 @@ func update_highscore(level):
 			GamePlayData.highscore_street = score
 			
 func check_level_goal_reached(level):
-	if level == "Forest":
+	if level == "Subway":
 		if score >= GamePlayData.score_goal_forest and !GamePlayData.score_goal_forest_reached:
 			GamePlayData.score_goal_forest_reached = true
 			GamePlayData.locked_city = false

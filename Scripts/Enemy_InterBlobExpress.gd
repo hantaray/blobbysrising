@@ -7,7 +7,6 @@ const swing_limit = 1
 
 func _process(delta):
 	rotate(rotationSpeed * delta * swing_direction)
-	print(rotation)
 	if (rotation * swing_direction) > swing_limit:
 		swing_direction = swing_direction * -1
 
