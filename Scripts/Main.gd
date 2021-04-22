@@ -8,6 +8,8 @@ var current_scene
 var current_scene_path
 const gameover_path = "res://gameover_screen/GameOverScreen.tscn"
 
+#bool for pause button in game
+var pause_button_pressed = false
 
 # life vars 
 var lifes = 5

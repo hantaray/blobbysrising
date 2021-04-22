@@ -24,6 +24,14 @@ func delete_children(node):
 		n.queue_free()
 
 func _on_TextureButton_pressed():
+	pass
+	
+func _on_TextureButton_button_down():
+	MainScript.pause_button_pressed = true
+
+
+func _on_TextureButton_button_up():
+	MainScript.pause_button_pressed = false
 	showPauseScreen()
 	
 func update_perfcoll_label(perfcoll_multiplier):
@@ -44,3 +52,9 @@ func showPauseScreen():
 	get_tree().paused = true
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	$GameOverScreen.show()
+
+
+
+
+
+

@@ -28,10 +28,11 @@ func _physics_process(delta):
 	else:
 		isOnFloor = false
 	move_forward()
-	jump()
+	if not MainScript.pause_button_pressed:
+		jump()
 	apply_gravity()
 	animate()
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	move_and_slide(motion, UP)
 
 func move_forward():
