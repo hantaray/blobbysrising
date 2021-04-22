@@ -4,8 +4,6 @@
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/wolke/wolke2.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/enemy_wolke.gd" type="Script" id=3]
 
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
@@ -25,6 +23,7 @@ speed_x = 0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

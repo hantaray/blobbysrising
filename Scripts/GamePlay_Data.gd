@@ -11,6 +11,7 @@ var friend_speed_y = 0
 
 var playerSpeed = 600
 var enemyTruckSpeed = 800
+var enemyLkwSpeed = 700
 var enemyCarSpeed = 800
 var bouncyblob_y = -500
 

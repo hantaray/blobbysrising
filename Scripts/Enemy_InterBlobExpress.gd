@@ -1,9 +1,9 @@
 extends Area2dEnemy
 
 
-export (int) var rotationSpeed = 2
+export (int) var rotationSpeed = 1
 var swing_direction = 1
-const swing_limit = 1
+const swing_limit = 0.5
 
 func _process(delta):
 	rotate(rotationSpeed * delta * swing_direction)
