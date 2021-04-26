@@ -58,20 +58,20 @@ __meta__ = {
 
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
 margin_right = 3056.0
-margin_bottom = 1257.0
+margin_bottom = 1337.0
 size_flags_vertical = 3
 alignment = 1
 
 [node name="JumpButton" parent="Menu/CenterRow" instance=ExtResource( 3 )]
 margin_left = 154.0
 margin_right = 1067.0
-margin_bottom = 1257.0
+margin_bottom = 1337.0
 scene_to_load = "res://levels/SubwayLevel.tscn"
 
 [node name="LaneButton" parent="Menu/CenterRow" instance=ExtResource( 5 )]
 margin_left = 1071.0
 margin_right = 1984.0
-margin_bottom = 1257.0
+margin_bottom = 1337.0
 rect_scale = Vector2( 1, 1 )
 icon = ExtResource( 2 )
 scene_to_load = "res://levels/LaneMovement.tscn"
@@ -79,7 +79,7 @@ scene_to_load = "res://levels/LaneMovement.tscn"
 [node name="StreetLevel" parent="Menu/CenterRow" instance=ExtResource( 4 )]
 margin_left = 1988.0
 margin_right = 2901.0
-margin_bottom = 1257.0
+margin_bottom = 1337.0
 
 [node name="VersionLabel" type="Label" parent="Menu"]
 visible = false
@@ -91,6 +91,7 @@ size_flags_stretch_ratio = 1.01
 custom_fonts/font = ExtResource( 7 )
 
 [node name="ExitButton" parent="Menu" instance=ExtResource( 10 )]
+visible = false
 margin_top = 1277.0
 margin_right = 3056.0
 margin_bottom = 1337.0

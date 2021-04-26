@@ -12,7 +12,11 @@ var isOnFloor = true
 
 var screenIsTouched = false
 
+var pauseBtnArea
+
 func _ready():
+	var pauseBtn = get_tree().get_root().get_node("UpDownMovement/HUD/HBoxContainer/TextureButton")
+	pauseBtnArea = Rect2(0,0, pauseBtn.get_normal_texture().get_height(), pauseBtn.get_normal_texture().get_width())
 	add_to_group('Player')
  
 
@@ -29,9 +33,11 @@ func _input(event):
 		if event.is_pressed():
 			screenIsTouched = true
 			var TouchPoint = event.get_position()
-			if TouchPoint.y < 550:
+			if TouchPoint.y < 550  \
+			and !(pauseBtnArea.has_point(TouchPoint)):
 				position.y = 275
-			if TouchPoint.y > 550:
+			if TouchPoint.y > 550  \
+			and !(pauseBtnArea.has_point(TouchPoint)):
 				position.y = 825
 		else:
 			screenIsTouched = false
