@@ -1,14 +1,13 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://start_screen/start_screen.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start.png" type="Texture" id=2]
 [ext_resource path="res://start_screen/buttons/JumpButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://start_screen/buttons/UpDownButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://start_screen/buttons/LaneButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://backgrounds/BackgroundWoods.tscn" type="PackedScene" id=6]
 [ext_resource path="res://start_screen/fonts/montserrat_eb_24.tres" type="DynamicFont" id=7]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=8]
-[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://start_screen/buttons/ExitButton.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
@@ -73,7 +72,6 @@ margin_left = 1071.0
 margin_right = 1984.0
 margin_bottom = 1337.0
 rect_scale = Vector2( 1, 1 )
-icon = ExtResource( 2 )
 scene_to_load = "res://levels/LaneMovement.tscn"
 
 [node name="StreetLevel" parent="Menu/CenterRow" instance=ExtResource( 4 )]

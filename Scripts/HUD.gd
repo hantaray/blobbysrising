@@ -35,15 +35,14 @@ func _on_TextureButton_button_up():
 	showPauseScreen()
 	
 func update_perfcoll_label(perfcoll_multiplier):
-	$HBoxContainer/PerfectCollLabel.text = 'x' + str(perfcoll_multiplier)
+	$HBoxContainer/PerfectCollLabel.text = 'x ' + str(perfcoll_multiplier)
 	
 func showGameOverScreen():
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Game Over"
 	$GameOverScreen/TextureRect/ScoreLabel.visible = true
-	$GameOverScreen/TextureRect/ScoreLabel.text = "Punkte: " \
-	+ str($HBoxContainer/ScoreLabel.text)
+	$GameOverScreen/TextureRect/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	$GameOverScreen.show()
