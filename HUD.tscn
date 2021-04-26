@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/pause.png" type="Texture" id=3]
 [ext_resource path="res://gameover_screen/GameOverScreen.tscn" type="PackedScene" id=4]
@@ -30,9 +30,9 @@ texture_normal = ExtResource( 3 )
 
 [node name="ScoreLabel" type="Label" parent="HBoxContainer"]
 margin_left = 204.0
-margin_top = 56.0
-margin_right = 524.0
-margin_bottom = 134.0
+margin_top = 52.0
+margin_right = 489.0
+margin_bottom = 138.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Punkte: 0"
@@ -41,13 +41,13 @@ __meta__ = {
 }
 
 [node name="PerfectCollLabel" type="Label" parent="HBoxContainer"]
-margin_left = 544.0
-margin_top = 56.0
-margin_right = 628.0
-margin_bottom = 134.0
+margin_left = 509.0
+margin_top = 52.0
+margin_right = 591.0
+margin_bottom = 138.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "x1"
+text = "x 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }

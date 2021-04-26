@@ -6,16 +6,15 @@
 [ext_resource path="res://gameover_screen/gameover_screen.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Menu/Background/full_rahmen.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/menu.png" type="Texture" id=6]
-[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=7]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 100
 outline_color = Color( 1, 0.596078, 0, 1 )
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
-outline_color = Color( 1, 0.596078, 0, 1 )
 font_data = ExtResource( 7 )
 
 [node name="GameOverScreen" type="Control"]
@@ -51,7 +50,7 @@ __meta__ = {
 [node name="MenuLabel" type="Label" parent="TextureRect"]
 margin_right = 1538.0
 margin_bottom = 318.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
 custom_constants/shadow_offset_y = 5
@@ -73,7 +72,6 @@ custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
 custom_constants/shadow_offset_y = 5
-text = "Punkte: "
 align = 1
 valign = 1
 __meta__ = {
