@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://start_screen/start_screen.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start.png" type="Texture" id=2]
 [ext_resource path="res://start_screen/buttons/JumpButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://start_screen/buttons/UpDownButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://start_screen/buttons/LaneButton.tscn" type="PackedScene" id=5]
@@ -11,7 +12,7 @@
 [ext_resource path="res://start_screen/buttons/ExitButton.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
-size = 200
+size = 150
 outline_color = Color( 1, 0.596078, 0, 1 )
 font_data = ExtResource( 9 )
 
@@ -28,20 +29,10 @@ __meta__ = {
 
 [node name="FadeIn" parent="." instance=ExtResource( 8 )]
 
-[node name="Menu" type="VBoxContainer" parent="."]
-margin_left = 200.0
-margin_top = 80.0
-margin_right = 3200.0
-margin_bottom = 1857.0
-rect_scale = Vector2( 0.5, 0.5 )
-custom_constants/separation = 20
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Menu"]
-margin_right = 3000.0
-margin_bottom = 240.0
+[node name="Label" type="Label" parent="."]
+margin_top = -4.0
+margin_right = 1928.0
+margin_bottom = 292.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
@@ -50,31 +41,45 @@ text = "Jump For Left"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 200.0
+margin_top = 300.0
+margin_right = 3256.0
+margin_bottom = 1637.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CenterRow" type="HBoxContainer" parent="Menu"]
-margin_top = 260.0
-margin_right = 3000.0
-margin_bottom = 1697.0
+margin_right = 3056.0
+margin_bottom = 1257.0
 size_flags_vertical = 3
+alignment = 1
 
 [node name="JumpButton" parent="Menu/CenterRow" instance=ExtResource( 3 )]
-margin_right = 913.0
-margin_bottom = 1437.0
+margin_left = 154.0
+margin_right = 1067.0
+margin_bottom = 1257.0
 scene_to_load = "res://levels/SubwayLevel.tscn"
 
 [node name="LaneButton" parent="Menu/CenterRow" instance=ExtResource( 5 )]
-margin_left = 917.0
-margin_right = 2056.0
-margin_bottom = 1437.0
+margin_left = 1071.0
+margin_right = 1984.0
+margin_bottom = 1257.0
 rect_scale = Vector2( 1, 1 )
+icon = ExtResource( 2 )
 scene_to_load = "res://levels/LaneMovement.tscn"
 
 [node name="StreetLevel" parent="Menu/CenterRow" instance=ExtResource( 4 )]
-margin_left = 2060.0
-margin_right = 2973.0
-margin_bottom = 1437.0
+margin_left = 1988.0
+margin_right = 2901.0
+margin_bottom = 1257.0
 
 [node name="VersionLabel" type="Label" parent="Menu"]
 visible = false
@@ -86,9 +91,9 @@ size_flags_stretch_ratio = 1.01
 custom_fonts/font = ExtResource( 7 )
 
 [node name="ExitButton" parent="Menu" instance=ExtResource( 10 )]
-margin_top = 1717.0
-margin_right = 3000.0
-margin_bottom = 1777.0
+margin_top = 1277.0
+margin_right = 3056.0
+margin_bottom = 1337.0
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
