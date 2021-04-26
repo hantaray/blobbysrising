@@ -2,7 +2,7 @@ extends Area2D
 class_name Area2dFriend
 
 
-export var speed_x = -100
+export var speed_x = 0
 export var speed_y = 0
 
 
