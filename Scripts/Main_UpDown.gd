@@ -24,6 +24,7 @@ func _ready():
 	GamePlayData.enemyTruckSpeed  = 800
 	randomize()
 	$EnemyTimer.start()
+	get_tree().paused = true
 	
 
 

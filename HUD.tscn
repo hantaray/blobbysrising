@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/pause.png" type="Texture" id=3]
 [ext_resource path="res://gameover_screen/GameOverScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gameover_screen/LevelInfo.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -66,6 +67,8 @@ __meta__ = {
 
 [node name="GameOverScreen" parent="." instance=ExtResource( 4 )]
 visible = false
+
+[node name="LevelInfo" parent="." instance=ExtResource( 5 )]
 [connection signal="button_down" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_button_down"]
 [connection signal="button_up" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_button_up"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

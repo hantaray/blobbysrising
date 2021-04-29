@@ -16,6 +16,7 @@ func _ready():
 	MainScript.current_scene = "Subway"
 	randomize()
 	$EnemyTimer.start()
+	get_tree().paused = true
 
 func _on_EnemyTimer_timeout():
 	$SpawnPath/SpawnLocation.offset = randi()	

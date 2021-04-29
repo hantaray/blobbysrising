@@ -18,6 +18,7 @@ func _ready():
 	MainScript.current_scene = "City"
 	randomize()
 	$EnemyTimer.start()
+	get_tree().paused = true
 
 
 func _on_EnemyTimer_timeout():

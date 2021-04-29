@@ -57,6 +57,44 @@ func showWinScreen():
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	$GameOverScreen.show()
+	
+func updateLevelInfo():
+	var currentLevel = MainScript.current_scene
+	print(currentLevel)
+	if currentLevel == "Subway":
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_Links.png")
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Screw/Schraube_unten.png")
+		
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Ticket/Ticket_auf.png")
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect2.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Inter_blob_express.png")
+		
+	if currentLevel == "City":
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_oben.png")
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.visible = false
+		
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietenfalle_auf.png")
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect2.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privatisierung.png")
+		
+	if currentLevel == "Street":
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Fahrradschild/FS_ganz.png")
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.visible = false
+		
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch.png")
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect2.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/SpurBlocker/Spur_blocker_blinker.png")
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect3.visible = true
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect4.visible = true
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect5.visible = true
+	
 
 
 
