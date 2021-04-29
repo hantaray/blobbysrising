@@ -13,7 +13,13 @@ const GRAVITY_STOP = 800
 const UP = Vector2(0,-1)
 
 
+
 var isOnFloor = false
+
+var showEnemyHitAnimation = false
+const enemyHitAnimationTime = 1.5
+var showFriendHitAnimation = false
+const friendHitAnimationTime = 1.5
 
 signal animate
 
@@ -54,8 +60,18 @@ func apply_gravity():
 	# play with a little x push and the camera smoothing and drag marging
 
 func animate():
-	emit_signal("animate", motion, isOnFloor)
+	emit_signal("animate", motion, isOnFloor, showEnemyHitAnimation, showFriendHitAnimation)
+	
 
+func play_enemy_hit_animation():
+	showEnemyHitAnimation = true
+	yield(get_tree().create_timer(enemyHitAnimationTime), "timeout")
+	showEnemyHitAnimation = false
+
+func play_friend_hit_animation():
+	showFriendHitAnimation = true
+	yield(get_tree().create_timer(friendHitAnimationTime), "timeout")
+	showFriendHitAnimation = false
 
 func increase_move_speed():
 	SPEED += GamePlayData.speed_increase_just_jump
