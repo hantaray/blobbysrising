@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Menu/Background/full_BG.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_Links.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://gameover_screen/LevelInfo.gd" type="Script" id=10]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/truck/blob_truck.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/menu.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -63,9 +64,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 385.0
-margin_top = 237.0
+margin_top = 235.0
 margin_right = 1540.0
-margin_bottom = 852.0
+margin_bottom = 854.0
 
 [node name="CollectContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 1155.0
@@ -150,11 +151,22 @@ texture = ExtResource( 4 )
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 421.0
 margin_right = 1155.0
-margin_bottom = 615.0
+margin_bottom = 619.0
 
-[node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_left = 482.0
-margin_right = 672.0
-margin_bottom = 194.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 383.0
+margin_right = 771.0
+margin_bottom = 198.0
+
+[node name="MenuBotton" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 194.0
+margin_bottom = 198.0
+texture_normal = ExtResource( 13 )
+
+[node name="PlayButton" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_left = 198.0
+margin_right = 388.0
+margin_bottom = 198.0
 texture_normal = ExtResource( 9 )
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer/MenuBotton" to="." method="_on_MenuBotton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]

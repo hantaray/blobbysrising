@@ -7,6 +7,7 @@ const startscreen_path = "res://start_screen/StartScreen.tscn"
 const levelselection_path = "res://start_screen/LevelSelection.tscn"
 var current_scene
 var current_scene_path
+var current_level = 1
 const gameover_path = "res://gameover_screen/GameOverScreen.tscn"
 
 #bool for pause button in game

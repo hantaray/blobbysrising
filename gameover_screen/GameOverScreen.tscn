@@ -99,7 +99,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackButton" type="TextureButton" parent="TextureRect/CenterContainer/HBoxContainer"]
+[node name="MenuButton" type="TextureButton" parent="TextureRect/CenterContainer/HBoxContainer"]
 margin_right = 194.0
 margin_bottom = 198.0
 texture_normal = ExtResource( 6 )
@@ -115,6 +115,6 @@ margin_left = 1184.0
 margin_right = 1376.0
 margin_bottom = 198.0
 texture_normal = ExtResource( 3 )
-[connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/MenuButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/ReplayButton" to="." method="_on_ReplayButton_pressed"]
