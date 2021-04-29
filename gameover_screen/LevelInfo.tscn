@@ -16,7 +16,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
-outline_color = Color( 1, 0.596078, 0, 1 )
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -36,8 +36,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+margin_left = 221.0
+margin_top = 79.0
+margin_right = 1723.0
+margin_bottom = 979.0
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -45,10 +47,10 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="TextureRect"]
-margin_left = -14.0
-margin_top = -11.0
-margin_right = 1945.0
-margin_bottom = 1100.0
+margin_left = -3.0
+margin_top = -5.0
+margin_right = 1517.0
+margin_bottom = 915.0
 texture = ExtResource( 5 )
 expand = true
 __meta__ = {
@@ -64,9 +66,10 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 385.0
-margin_top = 235.0
+margin_top = 296.0
 margin_right = 1540.0
-margin_bottom = 854.0
+margin_bottom = 793.0
+custom_constants/separation = 80
 
 [node name="CollectContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 1155.0
@@ -77,8 +80,7 @@ margin_top = 33.0
 margin_right = 607.0
 margin_bottom = 166.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
 text = "Sammel ein: "
 __meta__ = {
@@ -98,75 +100,89 @@ margin_bottom = 200.0
 texture = ExtResource( 3 )
 
 [node name="DodgeContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 204.0
+margin_top = 280.0
 margin_right = 1155.0
-margin_bottom = 417.0
+margin_bottom = 497.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/DodgeContainer"]
-margin_top = 40.0
+margin_top = 42.0
 margin_right = 592.0
-margin_bottom = 173.0
+margin_bottom = 175.0
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
 text = "Weiche aus: "
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/DodgeContainer"]
 margin_left = 596.0
-margin_right = 858.0
+margin_right = 1155.0
+margin_bottom = 217.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer"]
+margin_right = 559.0
+margin_bottom = 213.0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer"]
+margin_right = 262.0
 margin_bottom = 213.0
 texture = ExtResource( 11 )
 
-[node name="TextureRect2" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer"]
-margin_left = 862.0
-margin_right = 1155.0
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer"]
+margin_left = 266.0
+margin_right = 559.0
 margin_bottom = 213.0
 texture = ExtResource( 8 )
 
-[node name="TextureRect3" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer"]
+[node name="TextureRect3" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer"]
 visible = false
-margin_left = 1159.0
-margin_right = 1380.0
+margin_left = 563.0
+margin_right = 784.0
 margin_bottom = 213.0
 texture = ExtResource( 6 )
 
-[node name="TextureRect4" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer"]
-visible = false
-margin_left = 1159.0
-margin_right = 1380.0
-margin_bottom = 213.0
-texture = ExtResource( 12 )
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer"]
+margin_top = 217.0
+margin_right = 559.0
+margin_bottom = 217.0
 
-[node name="TextureRect5" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer"]
+[node name="TextureRect5" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2"]
 visible = false
-margin_left = 1159.0
-margin_right = 1380.0
-margin_bottom = 213.0
+margin_right = 221.0
+margin_bottom = 175.0
 texture = ExtResource( 4 )
 
-[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 421.0
-margin_right = 1155.0
-margin_bottom = 619.0
+[node name="TextureRect4" type="TextureRect" parent="CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+margin_right = 221.0
+margin_bottom = 175.0
+texture = ExtResource( 12 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_left = 383.0
-margin_right = 771.0
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+margin_left = 570.0
+margin_top = 819.902
+margin_right = 1354.0
+margin_bottom = 1017.9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer2"]
+margin_right = 784.0
 margin_bottom = 198.0
+custom_constants/separation = 400
 
-[node name="MenuBotton" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+[node name="MenuBotton" type="TextureButton" parent="CenterContainer2/HBoxContainer"]
 margin_right = 194.0
 margin_bottom = 198.0
 texture_normal = ExtResource( 13 )
 
-[node name="PlayButton" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
-margin_left = 198.0
-margin_right = 388.0
+[node name="PlayButton" type="TextureButton" parent="CenterContainer2/HBoxContainer"]
+margin_left = 594.0
+margin_right = 784.0
 margin_bottom = 198.0
 texture_normal = ExtResource( 9 )
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer/MenuBotton" to="." method="_on_MenuBotton_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="CenterContainer2/HBoxContainer/MenuBotton" to="." method="_on_MenuBotton_pressed"]
+[connection signal="pressed" from="CenterContainer2/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]

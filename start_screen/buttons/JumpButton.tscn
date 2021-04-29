@@ -7,9 +7,13 @@
 [ext_resource path="res://Items/Medals/1.tscn" type="PackedScene" id=5]
 
 [node name="JumpButton" instance=ExtResource( 1 )]
-margin_right = 0.0
-margin_bottom = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1140.0
+margin_bottom = -192.0
+rect_min_size = Vector2( 780, 888 )
 icon = ExtResource( 4 )
+expand_icon = true
 script = ExtResource( 2 )
 
 [node name="Label" parent="." index="0"]
@@ -21,15 +25,15 @@ valign = 1
 [node name="HighScoreLabel" type="Label" parent="." index="1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -50.0
+margin_top = 847.094
+margin_bottom = 50.094
 size_flags_horizontal = 2
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 5
+custom_constants/shadow_as_outline = 20
 text = "0 Punkte"
-align = 2
+align = 1
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -37,6 +41,5 @@ __meta__ = {
 }
 
 [node name="Medal" parent="." index="2" instance=ExtResource( 5 )]
-visible = false
 margin_left = 50.0
 texture = null
