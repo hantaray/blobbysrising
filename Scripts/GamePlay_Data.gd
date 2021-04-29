@@ -49,3 +49,11 @@ var highscore_city = 0
 var locked_forest = false
 var locked_street = false
 var locked_city = true
+
+# medals
+var medal_goal_1 = 5
+var medal_goal_2 = 10
+var medal_goal_3 = 15
+var medal_goal_4 = 20
+var medal_goal_5 = 25
+var medal_goal_6 = 30
