@@ -15,8 +15,10 @@ var screenIsTouched = false
 var pauseBtnArea
 
 func _ready():
-	var pauseBtn = get_tree().get_root().get_node("UpDownMovement/HUD/HBoxContainer/TextureButton")
-	pauseBtnArea = Rect2(0,0, pauseBtn.get_normal_texture().get_height(), pauseBtn.get_normal_texture().get_width())
+	var pauseBtn = \
+	get_tree().get_root().get_node("UpDownMovement/HUD/HBoxContainer/TextureButton")
+	pauseBtnArea = Rect2(0,0, pauseBtn.get_normal_texture().get_height(), \
+							pauseBtn.get_normal_texture().get_width())
 	add_to_group('Player')
  
 
@@ -33,12 +35,12 @@ func _input(event):
 		if event.is_pressed():
 			screenIsTouched = true
 			var TouchPoint = event.get_position()
-			if TouchPoint.y < 550  \
+			if TouchPoint.y < 545  \
 			and !(pauseBtnArea.has_point(TouchPoint)):
-				position.y = 300
-			if TouchPoint.y > 550  \
+				position.y = 280
+			if TouchPoint.y > 545  \
 			and !(pauseBtnArea.has_point(TouchPoint)):
-				position.y = 810
+				position.y = 790
 		else:
 			screenIsTouched = false
 
@@ -47,9 +49,9 @@ func move_forward():
 
 func apply_gravity():
 	if !screenIsTouched:
-		if position.y < 550:
+		if position.y < 545:
 			position.y += GRAVITY
-		if position.y > 550:
+		if position.y > 545:
 			position.y -= GRAVITY
 
 func increase_move_speed():

@@ -62,7 +62,7 @@ func increase_score():
 	if score % GamePlayData.increase_every_score == 0:
 		increase_player_speed()
 	if score % GamePlayData.add_life_every_score == 0:
-		if lifes <= 8:
+		if lifes < 8:
 			lifes += 1
 			update_lives_hud()
 
@@ -105,17 +105,20 @@ func update_highscore(level):
 			
 func check_level_goal_reached(level):
 	if level == "Subway":
-		if score >= GamePlayData.score_goal_forest and !GamePlayData.score_goal_forest_reached:
+		if score >= GamePlayData.score_goal_forest and \
+		!GamePlayData.score_goal_forest_reached:
 			GamePlayData.score_goal_forest_reached = true
 			GamePlayData.locked_city = false
 			get_tree().change_scene(MainScript.startscreen_path)
 	if level == "City":
-		if score >= GamePlayData.score_goal_city and !GamePlayData.score_goal_city_reached:
+		if score >= GamePlayData.score_goal_city and \
+		!GamePlayData.score_goal_city_reached:
 			GamePlayData.score_goal_city_reached = true
 			GamePlayData.locked_street = false
 			get_tree().change_scene(MainScript.startscreen_path)
 	if level == "Street":
-		if score >= GamePlayData.score_goal_street and !GamePlayData.score_goal_street_reached:
+		if score >= GamePlayData.score_goal_street and \
+		!GamePlayData.score_goal_street_reached:
 			GamePlayData.score_goal_street_reached = true
 			get_tree().change_scene(MainScript.startscreen_path)
 	

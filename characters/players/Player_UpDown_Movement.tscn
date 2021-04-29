@@ -8,7 +8,9 @@
 radius = 60.8666
 height = 93.5768
 
-[node name="Player_UpDown" type="KinematicBody2D"]
+[node name="Player_UpDown" type="KinematicBody2D" groups=[
+"Player",
+]]
 position = Vector2( 960, 550 )
 script = ExtResource( 3 )
 
