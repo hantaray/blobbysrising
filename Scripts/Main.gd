@@ -4,6 +4,7 @@ extends Node
 
 # scene vars
 const startscreen_path = "res://start_screen/StartScreen.tscn"
+const levelselection_path = "res://start_screen/LevelSelection.tscn"
 var current_scene
 var current_scene_path
 const gameover_path = "res://gameover_screen/GameOverScreen.tscn"
@@ -109,16 +110,19 @@ func check_level_goal_reached(level):
 		!GamePlayData.score_goal_forest_reached:
 			GamePlayData.score_goal_forest_reached = true
 			GamePlayData.locked_city = false
-			get_tree().change_scene(MainScript.startscreen_path)
+#			get_tree().change_scene(MainScript.levelselection_path)
+			get_tree().call_group("HUD", "showWinScreen")
 	if level == "City":
 		if score >= GamePlayData.score_goal_city and \
 		!GamePlayData.score_goal_city_reached:
 			GamePlayData.score_goal_city_reached = true
 			GamePlayData.locked_street = false
-			get_tree().change_scene(MainScript.startscreen_path)
+#			get_tree().change_scene(MainScript.levelselection_path)
+			get_tree().call_group("HUD", "showWinScreen")
 	if level == "Street":
 		if score >= GamePlayData.score_goal_street and \
 		!GamePlayData.score_goal_street_reached:
 			GamePlayData.score_goal_street_reached = true
-			get_tree().change_scene(MainScript.startscreen_path)
+#			get_tree().change_scene(MainScript.levelselection_path)
+			get_tree().call_group("HUD", "showWinScreen")
 	

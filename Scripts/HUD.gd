@@ -51,6 +51,15 @@ func showPauseScreen():
 	get_tree().paused = true
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	$GameOverScreen.show()
+	
+func showWinScreen():
+	get_tree().paused = true
+	get_node("HBoxContainer").hide()
+	$GameOverScreen/TextureRect/MenuLabel.text = "Level abgeschlossen"
+	$GameOverScreen/TextureRect/ScoreLabel.visible = false
+	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
+	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
+	$GameOverScreen.show()
 
 
 
