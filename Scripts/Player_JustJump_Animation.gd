@@ -6,8 +6,12 @@ const FALL_ANI_BORDER = 350
 
 
 
-func _on_Player_JustJump_animate(motion, isOnFloor):
-	if isOnFloor:
+func _on_Player_JustJump_animate(motion, isOnFloor, showEnemyHitAnimation, showFriendHitAnimation):
+	if showEnemyHitAnimation:
+		play("hitEnemy")
+	elif showFriendHitAnimation:
+		play("hitFriend")
+	elif isOnFloor:
 		play("idle")
 	elif motion.y < JUMP_ANI_BORDER:
 		play("jump")
