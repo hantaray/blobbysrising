@@ -4,8 +4,9 @@
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/menu.png" type="Texture" id=2]
 
 [node name="MenuButton" type="TextureButton"]
-margin_right = 194.0
-margin_bottom = 198.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
 texture_normal = ExtResource( 2 )
 script = ExtResource( 1 )
 [connection signal="pressed" from="." to="." method="_on_MenuButton_pressed"]

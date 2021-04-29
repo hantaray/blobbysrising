@@ -47,7 +47,7 @@ var highscore_city = 0
 
 # levels unlocked
 var locked_forest = false
-var locked_street = false
+var locked_street = true
 var locked_city = true
 
 # medals

@@ -8,7 +8,7 @@ extends Control
 func _on_BackButton_pressed():
 	#get_tree().change_scene("res://start_screen/StartScreen.tscn")
 # warning-ignore:return_value_discarded
-	get_tree().change_scene(MainScript.startscreen_path)
+	get_tree().change_scene(MainScript.levelselection_path)
 	get_tree().paused = false
 
 

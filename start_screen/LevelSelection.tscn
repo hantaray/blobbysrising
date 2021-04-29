@@ -1,24 +1,17 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://start_screen/level_selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Fahrrad_start.png" type="Texture" id=3]
-[ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/links.png" type="Texture" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://start_screen/buttons/UpDownButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/rechts.png" type="Texture" id=7]
 [ext_resource path="res://start_screen/buttons/LaneButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://backgrounds/BackgroundWoods.tscn" type="PackedScene" id=9]
 [ext_resource path="res://start_screen/buttons/JumpButton.tscn" type="PackedScene" id=10]
 
-[sub_resource type="DynamicFont" id=1]
-size = 200
-outline_color = Color( 1, 0.596078, 0, 1 )
-font_data = ExtResource( 4 )
-
-[sub_resource type="StreamTexture" id=2]
-flags = 4
-
-[node name="TitleScreen" type="Control"]
+[node name="LevelSelection" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -26,77 +19,79 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 2747.0
-margin_bottom = 1546.0
-rect_scale = Vector2( 0.7, 0.7 )
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 106.0
+margin_right = 1922.0
+margin_bottom = 1075.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 2747.0
-margin_bottom = 198.0
-
-[node name="MenuButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
-
-[node name="CenterRow" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 202.0
-margin_right = 2747.0
-margin_bottom = 1546.0
-size_flags_vertical = 3
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="JumpButton" parent="VBoxContainer/CenterRow" instance=ExtResource( 10 )]
-margin_right = 913.0
-margin_bottom = 1344.0
-rect_min_size = Vector2( 360, 60 )
+[node name="JumpButton" parent="CenterContainer" instance=ExtResource( 10 )]
+margin_left = 504.0
+margin_right = 1417.0
+margin_bottom = 969.0
 scene_to_load = "res://levels/SubwayLevel.tscn"
 
-[node name="LaneButton" parent="VBoxContainer/CenterRow" instance=ExtResource( 8 )]
-margin_left = 917.0
-margin_right = 1830.0
-margin_bottom = 1344.0
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+visible = false
+margin_top = 106.0
+margin_right = 1911.0
+margin_bottom = 1075.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LaneButton" parent="CenterContainer2" instance=ExtResource( 8 )]
+margin_left = 499.0
+margin_right = 1412.0
+margin_bottom = 969.0
 rect_min_size = Vector2( 360, 60 )
 scene_to_load = "res://levels/LaneMovement.tscn"
 
-[node name="StreetLevel" parent="VBoxContainer/CenterRow" instance=ExtResource( 6 )]
-margin_left = 1834.0
-margin_right = 2747.0
-margin_bottom = 1344.0
+[node name="CenterContainer3" type="CenterContainer" parent="."]
+visible = false
+margin_top = 106.0
+margin_right = 1911.0
+margin_bottom = 1075.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StreetLevel" parent="CenterContainer3" instance=ExtResource( 6 )]
+margin_left = 499.0
+margin_right = 1412.0
+margin_bottom = 969.0
 rect_min_size = Vector2( 360, 60 )
 icon = ExtResource( 3 )
 
-[node name="FadeIn" parent="." instance=ExtResource( 5 )]
+[node name="ParallaxBackground" parent="." instance=ExtResource( 9 )]
+follow_viewport_enable = true
 
-[node name="Label" type="Label" parent="."]
-visible = false
-margin_top = -4.0
-margin_right = 1928.0
-margin_bottom = 292.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
-custom_constants/shadow_offset_y = 5
-text = "Jump For Left"
-align = 1
-valign = 1
+[node name="NextLevelButton" type="TextureButton" parent="."]
+margin_left = 1600.0
+margin_top = 445.0
+margin_right = 1796.0
+margin_bottom = 645.0
+texture_normal = ExtResource( 7 )
 __meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
+"_edit_use_anchors_": false
 }
 
-[node name="ParallaxBackground" parent="." instance=ExtResource( 9 )]
-
-[node name="Logo" type="TextureRect" parent="."]
+[node name="PrevLevelButton" type="TextureButton" parent="."]
 visible = false
 margin_left = 100.0
-margin_top = 100.0
-margin_right = 1800.0
-margin_bottom = 228.0
-texture = SubResource( 2 )
-stretch_mode = 4
+margin_top = 445.0
+margin_right = 296.0
+margin_bottom = 645.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" parent="." instance=ExtResource( 2 )]
+
+[node name="FadeIn" parent="." instance=ExtResource( 5 )]
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
+[connection signal="pressed" from="PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
