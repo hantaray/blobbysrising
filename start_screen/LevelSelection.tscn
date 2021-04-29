@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://start_screen/level_selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Fahrrad_start.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/links.png" type="Texture" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://start_screen/buttons/UpDownButton.tscn" type="PackedScene" id=6]
@@ -20,50 +19,50 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_top = 106.0
 margin_right = 1922.0
-margin_bottom = 1075.0
+margin_bottom = 969.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="JumpButton" parent="CenterContainer" instance=ExtResource( 10 )]
-margin_left = 504.0
-margin_right = 1417.0
-margin_bottom = 969.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 571.0
+margin_top = 40.0
+margin_right = 1351.0
+margin_bottom = 928.0
 scene_to_load = "res://levels/SubwayLevel.tscn"
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
 visible = false
-margin_top = 106.0
 margin_right = 1911.0
-margin_bottom = 1075.0
+margin_bottom = 969.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LaneButton" parent="CenterContainer2" instance=ExtResource( 8 )]
-margin_left = 499.0
-margin_right = 1412.0
-margin_bottom = 969.0
-rect_min_size = Vector2( 360, 60 )
+margin_left = 565.0
+margin_top = 40.0
+margin_right = 1345.0
+margin_bottom = 928.0
 scene_to_load = "res://levels/LaneMovement.tscn"
 
 [node name="CenterContainer3" type="CenterContainer" parent="."]
 visible = false
-margin_top = 106.0
 margin_right = 1911.0
-margin_bottom = 1075.0
+margin_bottom = 969.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StreetLevel" parent="CenterContainer3" instance=ExtResource( 6 )]
-margin_left = 499.0
-margin_right = 1412.0
-margin_bottom = 969.0
-rect_min_size = Vector2( 360, 60 )
-icon = ExtResource( 3 )
+margin_left = 585.0
+margin_top = 40.0
+margin_right = 1325.0
+margin_bottom = 928.0
+rect_min_size = Vector2( 740, 888 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 9 )]
 follow_viewport_enable = true
@@ -90,6 +89,10 @@ __meta__ = {
 }
 
 [node name="MenuButton" parent="." instance=ExtResource( 2 )]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 220.0
+margin_bottom = 220.0
 
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
 [connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]

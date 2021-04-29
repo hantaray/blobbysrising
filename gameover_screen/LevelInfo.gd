@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	$TextureRect.self_modulate = Color(1, 1, 1, 0.9)
 	get_tree().call_group("HUD", "updateLevelInfo")
 
 

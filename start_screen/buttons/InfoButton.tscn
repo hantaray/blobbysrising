@@ -5,20 +5,22 @@
 [ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 100
+size = 150
 font_data = ExtResource( 3 )
 
 [node name="InfoButton" instance=ExtResource( 1 )]
-margin_right = 360.0
-margin_bottom = 142.0
-rect_min_size = Vector2( 360, 142 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1553.0
+margin_bottom = -881.0
+rect_min_size = Vector2( 367, 199 )
 script = ExtResource( 2 )
 
 [node name="Label" parent="." index="0"]
-margin_right = -24.0
-margin_bottom = -9.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 0, 0.913725, 1 )
+custom_constants/shadow_offset_x = 6
 text = "Info"
 align = 1
 valign = 1

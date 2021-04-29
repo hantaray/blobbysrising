@@ -32,7 +32,10 @@ func _on_TextureButton_button_up():
 	showPauseScreen()
 	
 func update_perfcoll_label(perfcoll_multiplier):
-	$HBoxContainer/PerfectCollLabel.text = 'x ' + str(perfcoll_multiplier)
+	if perfcoll_multiplier > 1:
+		$HBoxContainer/PerfectCollLabel.text = 'x ' + str(perfcoll_multiplier)
+	else:
+		$HBoxContainer/PerfectCollLabel.text = ''
 	
 func showGameOverScreen():
 	get_tree().paused = true
@@ -62,14 +65,15 @@ func updateLevelInfo():
 	var currentLevel = MainScript.current_scene
 	print(currentLevel)
 	if currentLevel == "Subway":
+		
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_Links.png")
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Screw/Schraube_unten.png")
 		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect.texture = \
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Ticket/Ticket_auf.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect2.texture = \
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Inter_blob_express.png")
 		
 	if currentLevel == "City":
@@ -77,9 +81,9 @@ func updateLevelInfo():
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_oben.png")
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.visible = false
 		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect.texture = \
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietenfalle_auf.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect2.texture = \
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privatisierung.png")
 		
 	if currentLevel == "Street":
@@ -87,13 +91,13 @@ func updateLevelInfo():
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Fahrradschild/FS_ganz.png")
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.visible = false
 		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect.texture = \
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect2.texture = \
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/SpurBlocker/Spur_blocker_blinker.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect3.visible = true
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect4.visible = true
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/TextureRect5.visible = true
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect3.visible = true
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect4.visible = true
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.visible = true
 	
 
 
