@@ -6,7 +6,8 @@
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start.png" type="Texture" id=4]
 
 [node name="LaneButton" instance=ExtResource( 1 )]
-rect_scale = Vector2( 0.5, 0.5 )
+margin_right = 0.0
+margin_bottom = 0.0
 icon = ExtResource( 4 )
 script = ExtResource( 2 )
 

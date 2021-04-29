@@ -17,7 +17,7 @@ script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 628.0
-margin_bottom = 191.0
+margin_bottom = 200.0
 custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
@@ -25,14 +25,14 @@ __meta__ = {
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
 margin_right = 184.0
-margin_bottom = 191.0
+margin_bottom = 200.0
 texture_normal = ExtResource( 3 )
 
 [node name="ScoreLabel" type="Label" parent="HBoxContainer"]
 margin_left = 204.0
-margin_top = 52.0
+margin_top = 57.0
 margin_right = 489.0
-margin_bottom = 138.0
+margin_bottom = 143.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Punkte: 0"
@@ -42,9 +42,9 @@ __meta__ = {
 
 [node name="PerfectCollLabel" type="Label" parent="HBoxContainer"]
 margin_left = 509.0
-margin_top = 52.0
+margin_top = 57.0
 margin_right = 591.0
-margin_bottom = 138.0
+margin_bottom = 143.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "x 1"
