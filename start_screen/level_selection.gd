@@ -89,43 +89,43 @@ func updateMedals(button, score):
 
 func showNextLevel():
 	if MainScript.current_level == 1:
-		$CenterContainer.visible = false
-		$CenterContainer2.visible = true
-		$CenterContainer3.visible = false
+		$CenterContainer.set_visible(false)
+		$CenterContainer2.set_visible(true)
+		$CenterContainer3.set_visible(false)
 		MainScript.current_level = 2
-		$PrevLevelButton.visible = true
+		$PrevLevelButton.set_visible(true)
 	elif MainScript.current_level == 2:
-		$CenterContainer.visible = false
-		$CenterContainer2.visible = false
-		$CenterContainer3.visible = true
+		$CenterContainer.set_visible(false)
+		$CenterContainer2.set_visible(false)
+		$CenterContainer3.set_visible(true)
 		MainScript.current_level = 3
-		$NextLevelButton.visible = false
-		$PrevLevelButton.visible = true
+		$NextLevelButton.set_visible(false)
+		$PrevLevelButton.set_visible(true)
 	elif MainScript.current_level == 3:
-		$CenterContainer.visible = false
-		$CenterContainer2.visible = false
-		$CenterContainer3.visible = true
-		$PrevLevelButton.visible = true
+		$CenterContainer.set_visible(false)
+		$CenterContainer2.set_visible(false)
+		$CenterContainer3.set_visible(true)
+		$PrevLevelButton.set_visible(true)
 		
 func showPrevLevel():
 	if MainScript.current_level == 1:
-		$CenterContainer.visible = true
-		$CenterContainer2.visible = false
-		$CenterContainer3.visible = false
-		$NextLevelButton.visible = true
+		$CenterContainer.set_visible(true)
+		$CenterContainer2.set_visible(false)
+		$CenterContainer3.set_visible(false)
+		$NextLevelButton.set_visible(true)
 	elif MainScript.current_level == 2:
-		$CenterContainer.visible = true
-		$CenterContainer2.visible = false
-		$CenterContainer3.visible = false
-		$PrevLevelButton.visible = false
-		$NextLevelButton.visible = true
+		$CenterContainer.set_visible(true)
+		$CenterContainer2.set_visible(false)
+		$CenterContainer3.set_visible(false)
+		$PrevLevelButton.set_visible(false)
+		$NextLevelButton.set_visible(true)
 		MainScript.current_level = 1
 	elif MainScript.current_level == 3:
-		$CenterContainer.visible = false
-		$CenterContainer2.visible = true
-		$CenterContainer3.visible = false
+		$CenterContainer.set_visible(false)
+		$CenterContainer2.set_visible(true)
+		$CenterContainer3.set_visible(false)
 		MainScript.current_level = 2
-		$NextLevelButton.visible = true
+		$NextLevelButton.set_visible(true)
 
 
 
