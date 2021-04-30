@@ -28,8 +28,8 @@ func _ready():
 #	load_game()
 # warning-ignore:return_value_discarded
 	# here change to test screen
-#	get_tree().change_scene(startscreen_path)
-	get_tree().change_scene("res://levels/UpDownMovement.tscn")
+	get_tree().change_scene(startscreen_path)
+#	get_tree().change_scene("res://levels/UpDownMovement.tscn")
 
 
 func reset_level_data():
@@ -64,12 +64,14 @@ func increase_score():
 	get_tree().call_group("HUD", "update_score", score)
 	if perfect_collect_counter % GamePlayData.perfect_collect_limit == 0:
 		increase_score_add()
-	if score % GamePlayData.increase_every_score == 0:
+	if score >= GamePlayData.increase_if_bigger_than:
 		increase_player_speed()
-	if score % GamePlayData.add_life_every_score == 0:
+		GamePlayData.increase_if_bigger_than += GamePlayData.increase_speed_every_score
+	if score >= GamePlayData.add_life_if_bigger_than:
 		if lifes < 8:
 			lifes += 1
 			update_lives_hud()
+			GamePlayData.add_life_if_bigger_than += GamePlayData.add_life_every_score
 
 func reset_score() :
 	score = 0

@@ -55,7 +55,11 @@ func apply_gravity():
 			position.y -= GRAVITY
 
 func increase_move_speed():
-	SPEED += GamePlayData.speed_increase_up_down
+	GamePlayData.playerSpeed += GamePlayData.speed_increase_up_down
+	GamePlayData.enemyTruckSpeed += GamePlayData.speed_increase_up_down
+	GamePlayData.enemyLkwSpeed += GamePlayData.speed_increase_up_down
+	GamePlayData.enemyCarSpeed += GamePlayData.speed_increase_up_down
+#	SPEED += GamePlayData.speed_increase_up_down
 
 
 
