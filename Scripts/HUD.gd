@@ -46,6 +46,7 @@ func showGameOverScreen():
 	$GameOverScreen/TextureRect/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
+	MainScript.save_game()
 	$GameOverScreen.show()
 	
 func showPauseScreen():
@@ -60,6 +61,7 @@ func showWinScreen():
 	$GameOverScreen/TextureRect/ScoreLabel.set_visible(false)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
+	MainScript.save_game()
 	$GameOverScreen.show()
 	
 func updateLevelInfo():

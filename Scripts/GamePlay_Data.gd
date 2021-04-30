@@ -57,3 +57,6 @@ var medal_goal_3 = 15
 var medal_goal_4 = 20
 var medal_goal_5 = 25
 var medal_goal_6 = 30
+
+# save
+const FILE_NAME  = "user://savegame.save"

@@ -21,8 +21,11 @@ var score = 0
 var score_add = 1
 var perfect_collect_counter = 0
 
+var save_data
+
 # Called when the node enters the scene tree for the first time.
-func _ready():	
+func _ready():
+	load_game()
 # warning-ignore:return_value_discarded
 	# here change to test screen
 	get_tree().change_scene(startscreen_path)
@@ -126,4 +129,43 @@ func check_level_goal_reached(level):
 			GamePlayData.score_goal_street_reached = true
 #			get_tree().change_scene(MainScript.levelselection_path)
 			get_tree().call_group("HUD", "showWinScreen")
+
+func save_game():
+	var save_game = File.new()
+	save_game.open(GamePlayData.FILE_NAME, File.WRITE)
 	
+	save_data = {
+		"score_goal_forest_reached" : GamePlayData.score_goal_forest_reached,
+		"score_goal_street_reached" : GamePlayData.score_goal_street_reached,
+		"score_goal_city_reached" : GamePlayData.score_goal_city_reached,
+		"highscore_forest" : GamePlayData.highscore_forest,
+		"highscore_street" : GamePlayData.highscore_street,
+		"highscore_city" : GamePlayData.highscore_city,
+		"locked_forest" : GamePlayData.locked_forest,
+		"locked_street" : GamePlayData.locked_street,
+		"locked_city" : GamePlayData.locked_city
+	}
+	# Store the save dictionary as a new line in the save file.
+	save_game.store_line(to_json(save_data))
+	save_game.close()
+	
+func load_game():
+	var file = File.new()
+	if file.file_exists(GamePlayData.FILE_NAME):
+		file.open(GamePlayData.FILE_NAME, File.READ)
+		var data = parse_json(file.get_as_text())
+		file.close()
+		if typeof(data) == TYPE_DICTIONARY:
+			GamePlayData.score_goal_forest_reached = data["score_goal_forest_reached"]
+			GamePlayData.score_goal_street_reached = data["score_goal_street_reached"]
+			GamePlayData.score_goal_city_reached = data["score_goal_city_reached"]
+			GamePlayData.highscore_forest = data["highscore_forest"]
+			GamePlayData.highscore_street = data["highscore_street"]
+			GamePlayData.highscore_city = data["highscore_city"]
+			GamePlayData.locked_forest = data["locked_forest"]
+			GamePlayData.locked_street = data["locked_street"]
+			GamePlayData.locked_city = data["locked_city"]
+		else:
+			printerr("Corrupted data!")
+	else:
+		printerr("No saved data!")
