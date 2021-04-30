@@ -28,6 +28,7 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
+	SPEED = GamePlayData.playerSpeed
 	move_forward()
 # warning-ignore:return_value_discarded
 	move_and_slide(motion, UP)
@@ -56,7 +57,8 @@ func move_forward():
 	motion.x = SPEED
 
 func increase_move_speed():
-	SPEED += GamePlayData.speed_increase_lane
+	GamePlayData.playerSpeed += GamePlayData.speed_increase_lane
+#	SPEED += GamePlayData.speed_increase_lane
 
 
 

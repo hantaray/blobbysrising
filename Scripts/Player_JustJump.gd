@@ -29,6 +29,7 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
+	SPEED = GamePlayData.playerSpeed
 	if is_on_floor():
 		isOnFloor = true
 	else:
@@ -74,7 +75,8 @@ func play_friend_hit_animation():
 	showFriendHitAnimation = false
 
 func increase_move_speed():
-	SPEED += GamePlayData.speed_increase_just_jump
+	GamePlayData.playerSpeed += GamePlayData.speed_increase_just_jump
+#	SPEED += GamePlayData.speed_increase_just_jump
 
 
 

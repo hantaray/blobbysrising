@@ -6,7 +6,6 @@
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/Layer_3.png-b162556b165a59fe17d9fa219d7d1599.stex"
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 scroll_ignore_camera_zoom = true
@@ -16,8 +15,6 @@ motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 7680, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
-margin_right = 3840.0
-margin_bottom = 545.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 __meta__ = {
@@ -26,7 +23,7 @@ __meta__ = {
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.75, 1 )
-motion_mirroring = Vector2( 3840, 0 )
+motion_mirroring = Vector2( 7680, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
 rect_scale = Vector2( 2, 2 )
@@ -37,7 +34,7 @@ __meta__ = {
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 position = Vector2( 0, 70 )
-motion_mirroring = Vector2( 7655, 0 )
+motion_mirroring = Vector2( 7680, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer3"]
 rect_scale = Vector2( 2, 2 )

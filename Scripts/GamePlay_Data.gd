@@ -21,23 +21,26 @@ const speed_increase_just_jump = 100
 const speed_increase_lane = 100
 const speed_increase_up_down = 100
 
-const increase_every_score = 10
+const increase_speed_every_score = 10
 const add_life_every_score = 20
+
+var increase_if_bigger_than = 10
+var add_life_if_bigger_than = 20
 
 # perfect collect
 var perfect_collect_limit = 5
 
 # level score goals
-#var score_goal_forest = 80
-#var score_goal_street = 250
-#var score_goal_city = 50
+#var score_goal_forest = 140
+#var score_goal_street = 100
+#var score_goal_city = 180
 
 var score_goal_forest = 2
 var score_goal_street = 2
 var score_goal_city = 2
 
 var score_goal_forest_reached = false
-var score_goal_street_reached = false
+var score_goal_street_reached = true
 var score_goal_city_reached = false
 
 # highscore
@@ -47,7 +50,7 @@ var highscore_city = 0
 
 # levels unlocked
 var locked_forest = false
-var locked_street = true
+var locked_street = false
 var locked_city = true
 
 # medals

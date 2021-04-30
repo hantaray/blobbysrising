@@ -25,8 +25,6 @@ func _ready():
 	randomize()
 	$EnemyTimer.start()
 	get_tree().paused = true
-	
-
 
 func _on_EnemyTimer_timeout():
 	var spawningPos = spawningPointsFriend[randi() % 2]
@@ -46,21 +44,24 @@ func _on_EnemyTimer_timeout():
 	mob.z_index = -1
 	mob.position.x += $Player.position.x
 	# Make shure friend is spawned at least all 5 spawns
-	if noFriendSpawnCounter < 1:
-		var rndFactorSpawn = randi() % 3
-		if rndFactorSpawn == 0:
-			mob = enemy_klein_auto.instance()
-			noFriendSpawnCounter += 1
-		elif rndFactorSpawn == 1:
-			mob = enemy_truck.instance()
-			noFriendSpawnCounter += 1
-		if prevMob == "enemy_truck":
-			mob = enemy_klein_auto.instance()
-		spawningPos = spawningPointsEnemy[randi() % 2]
-	else:
-		mob.z_index = -1
-		noFriendSpawnCounter = 0
+#	if noFriendSpawnCounter < 1:
+	var rndFactorSpawn = randi() % 3
+	if rndFactorSpawn == 0:
+		mob = enemy_klein_auto.instance()
+		noFriendSpawnCounter += 1
+	elif rndFactorSpawn == 1:
+		mob = enemy_truck.instance()
+		noFriendSpawnCounter += 1
+	if prevMob == "enemy_truck":
+		mob = enemy_klein_auto.instance()
+	spawningPos = spawningPointsEnemy[randi() % 2]
+#	else:
+#		mob.z_index = -1
+#		noFriendSpawnCounter = 0
 	prevMob = mob.name
 	add_child(mob)
 	mob.position = spawningPos
-	mob.position.x += $Player.position.x
+	if mob.position.x > 0:
+		mob.position.x = $Player.position.x + 1200
+	else:
+		mob.position.x = $Player.position.x - 1200

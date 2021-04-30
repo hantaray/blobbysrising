@@ -12,6 +12,7 @@
 script = ExtResource( 7 )
 
 [node name="EnemyTimer" parent="." instance=ExtResource( 3 )]
+wait_time = 2.0
 
 [node name="SpawnPath" parent="." instance=ExtResource( 2 )]
 
