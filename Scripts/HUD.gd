@@ -41,7 +41,8 @@ func showGameOverScreen():
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Game Over"
-	$GameOverScreen/TextureRect/ScoreLabel.visible = true
+	$GameOverScreen/TextureRect/ScoreLabel.set_visible(true)
+	updateMedal(int($HBoxContainer/ScoreLabel.text))
 	$GameOverScreen/TextureRect/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
@@ -56,7 +57,7 @@ func showWinScreen():
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Level abgeschlossen"
-	$GameOverScreen/TextureRect/ScoreLabel.visible = false
+	$GameOverScreen/TextureRect/ScoreLabel.set_visible(false)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	$GameOverScreen.show()
@@ -79,7 +80,7 @@ func updateLevelInfo():
 	if currentLevel == "City":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_oben.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.visible = false
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
 		
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietenfalle_auf.png")
@@ -89,18 +90,36 @@ func updateLevelInfo():
 	if currentLevel == "Street":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Fahrradschild/FS_ganz.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.visible = false
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
 		
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/SpurBlocker/Spur_blocker_blinker.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect3.visible = true
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect4.visible = true
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.visible = true
-	
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect3.set_visible(true)
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect4.set_visible(true)
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.set_visible(true)
 
-
+func updateMedal(score):
+	if score >= GamePlayData.medal_goal_1:
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Gold_1.png")
+	if score >= GamePlayData.medal_goal_2:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Gold_2.png")
+	if score >= GamePlayData.medal_goal_3:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Gold_3.png")
+	if score >= GamePlayData.medal_goal_4:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_1.png")
+	if score >= GamePlayData.medal_goal_5:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_2.png")
+	if score >= GamePlayData.medal_goal_6:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_3.png")
 
 
 
