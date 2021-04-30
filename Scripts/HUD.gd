@@ -66,7 +66,6 @@ func showWinScreen():
 	
 func updateLevelInfo():
 	var currentLevel = MainScript.current_scene
-	print(currentLevel)
 	if currentLevel == "Subway":
 		
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \

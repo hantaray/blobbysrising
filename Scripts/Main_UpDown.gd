@@ -9,10 +9,10 @@ var friend_fahrrad_schild = preload("res://characters/friends/friend_fahrradschi
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPointsFriend = [Vector2(1300, 280), \
-							Vector2(1300, 790)]
-var spawningPointsEnemy = [Vector2(-1300, 280), \
-							Vector2(-1300, 790)]
+var spawningPointsFriend = [Vector2(1300, 250), \
+							Vector2(1300, 820)]
+var spawningPointsEnemy = [Vector2(-1300, 250), \
+							Vector2(-1300, 820)]
 
 func _enter_tree():
 	MainScript.reset_level_data()
@@ -39,9 +39,9 @@ func _on_EnemyTimer_timeout():
 	blocker.position.x = mob.position.x
 	mob.position = spawningPos
 	if mob.position.y > 545:
-		blocker.position.y = -240
+		blocker.position.y = -280
 	else:
-		blocker.position.y = 260
+		blocker.position.y = 280
 	mob.add_child(blocker)
 	mob.z_index = -1
 	mob.position.x += $Player.position.x

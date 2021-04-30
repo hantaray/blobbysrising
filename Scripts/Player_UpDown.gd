@@ -37,10 +37,10 @@ func _input(event):
 			var TouchPoint = event.get_position()
 			if TouchPoint.y < 545  \
 			and !(pauseBtnArea.has_point(TouchPoint)):
-				position.y = 280
+				position.y = 250
 			if TouchPoint.y > 545  \
 			and !(pauseBtnArea.has_point(TouchPoint)):
-				position.y = 790
+				position.y = 820
 		else:
 			screenIsTouched = false
 
