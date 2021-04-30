@@ -14,6 +14,7 @@ func _ready():
 	btn2.connect("pressed", self, "_on_Button_pressed", [btn2.scene_to_load])
 	var btn3 = $CenterContainer3.get_node("StreetLevel")
 	btn3.connect("pressed", self, "_on_Button_pressed", [btn3.scene_to_load])
+	MainScript.save_game()
 
 
 
