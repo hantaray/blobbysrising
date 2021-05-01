@@ -25,7 +25,7 @@ var save_data
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	load_game()
+	load_game()
 # warning-ignore:return_value_discarded
 	# here change to test screen
 	get_tree().change_scene(startscreen_path)
