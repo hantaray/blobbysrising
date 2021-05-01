@@ -17,11 +17,11 @@ func _enter_tree():
 func _ready():
 	MainScript.current_scene = "City"
 	randomize()
-	$EnemyTimer.start()
+	$EnemySpawnTimer.start()
 	get_tree().paused = true
 
 
-func _on_EnemyTimer_timeout():
+func _on_EnemySpawnTimer_timeout():
 	var enemyPos = spawningPoints[randi() % 5]
 	var mob = deckel_friend.instance()	
 	# Make shure friend is spawned at least all 5 spawns

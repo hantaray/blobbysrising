@@ -23,10 +23,33 @@ func _ready():
 	GamePlayData.enemyCarSpeed  = 800
 	GamePlayData.enemyTruckSpeed  = 800
 	randomize()
-	$EnemyTimer.start()
+	$EnemySpawnTimer.start()
+	$FriendSpawnTimer.start()
 	get_tree().paused = true
 
-func _on_EnemyTimer_timeout():
+func _on_FriendSpawnTimer_timeout():
+	spawn_friend()
+	
+func _on_EnemySpawnTimer_timeout():
+	spawn_enemy()
+
+func spawn_enemy():
+	var mob
+	var spawningPos = spawningPointsEnemy[randi() % 2]
+	var rndFactorSpawn = randi() % 2
+	if rndFactorSpawn == 0:
+		mob = enemy_klein_auto.instance()
+	elif rndFactorSpawn == 1:
+		mob = enemy_truck.instance()
+	if prevMob == "enemy_truck":
+		mob = enemy_klein_auto.instance()
+		
+	prevMob = mob.name
+	add_child(mob)
+	mob.position = spawningPos
+	mob.position.x = $Player.position.x - 1200
+	
+func spawn_friend():
 	var spawningPos = spawningPointsFriend[randi() % 2]
 	var mob = friend_fahrrad_schild.instance()
 	var rndBlockerSpawn = randi() % 2
@@ -43,25 +66,7 @@ func _on_EnemyTimer_timeout():
 	mob.add_child(blocker)
 	mob.z_index = -1
 	mob.position.x += $Player.position.x
-	# Make shure friend is spawned at least all 5 spawns
-#	if noFriendSpawnCounter < 1:
-	var rndFactorSpawn = randi() % 3
-	if rndFactorSpawn == 0:
-		mob = enemy_klein_auto.instance()
-		noFriendSpawnCounter += 1
-	elif rndFactorSpawn == 1:
-		mob = enemy_truck.instance()
-		noFriendSpawnCounter += 1
-	if prevMob == "enemy_truck":
-		mob = enemy_klein_auto.instance()
-	spawningPos = spawningPointsEnemy[randi() % 2]
-#	else:
-#		mob.z_index = -1
-#		noFriendSpawnCounter = 0
-	prevMob = mob.name
-	add_child(mob)
-	mob.position = spawningPos
-	if mob.position.x > 0:
-		mob.position.x = $Player.position.x + 1200
-	else:
-		mob.position.x = $Player.position.x - 1200
+
+#	add_child(mob)
+#	add_child(mob)
+#	mob.position.x = $Player.position.x + 1200
