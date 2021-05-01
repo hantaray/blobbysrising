@@ -41,9 +41,9 @@ func showGameOverScreen():
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Game Over"
-	$GameOverScreen/TextureRect/ScoreLabel.set_visible(true)
+	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(true)
+	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
 	updateMedal(int($HBoxContainer/ScoreLabel.text))
-	$GameOverScreen/TextureRect/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	MainScript.save_game()
@@ -58,7 +58,8 @@ func showWinScreen():
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Level abgeschlossen"
-	$GameOverScreen/TextureRect/ScoreLabel.set_visible(false)
+	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(true)
+	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	MainScript.save_game()

@@ -39,9 +39,9 @@ var score_goal_forest = 2
 var score_goal_street = 2
 var score_goal_city = 2
 
-var score_goal_forest_reached = true
-var score_goal_street_reached = true
-var score_goal_city_reached = true
+var score_goal_forest_reached = false
+var score_goal_street_reached = false
+var score_goal_city_reached = false
 
 # highscore
 var highscore_forest = 0

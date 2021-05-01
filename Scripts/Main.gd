@@ -41,13 +41,9 @@ func reset_level_data():
 func decrease_lives(life):
 	lifes -= life
 	update_lives_hud()
-	if lifes <= 0:
-		game_over()
-		
 
 func reset_lifes() :
 	lifes = 5
-
 
 func update_lives_hud():
 	get_tree().call_group("HUD", "update_lives_hud", lifes)
@@ -59,9 +55,9 @@ func increase_score():
 	var level = MainScript.current_scene
 	
 	update_highscore(level)
+	get_tree().call_group("HUD", "update_score", score)
 	check_level_goal_reached(level)
 	
-	get_tree().call_group("HUD", "update_score", score)
 	if perfect_collect_counter % GamePlayData.perfect_collect_limit == 0:
 		increase_score_add()
 	if score >= GamePlayData.increase_if_bigger_than:
@@ -109,7 +105,13 @@ func update_highscore(level):
 	if level == "Street":
 		if score > GamePlayData.highscore_street:
 			GamePlayData.highscore_street = score
-			
+
+func check_game_over():
+	if lifes <= 0:
+		return true
+	else:
+		return false
+
 func check_level_goal_reached(level):
 	if level == "Subway":
 		if score >= GamePlayData.score_goal_forest and \

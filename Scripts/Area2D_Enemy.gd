@@ -19,6 +19,9 @@ func friend_collides(body):
 		MainScript.decrease_lives(life_damage)
 		MainScript.reset_perfect_collect()
 		get_tree().call_group("Player", "play_enemy_hit_animation")
-		queue_free()
+		if MainScript.check_game_over():
+			MainScript.game_over()
+		else:
+			queue_free()
 	elif body.get_collision_layer_bit(4):
 		queue_free()
