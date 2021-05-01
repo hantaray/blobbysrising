@@ -15,10 +15,10 @@ func _enter_tree():
 func _ready():
 	MainScript.current_scene = "Subway"
 	randomize()
-	$EnemyTimer.start()
+	$EnemySpawnTimer.start()
 	get_tree().paused = true
 
-func _on_EnemyTimer_timeout():
+func _on_EnemySpawnTimer_timeout():
 	$SpawnPath/SpawnLocation.offset = randi()	
 	var mob = friend_station_sign.instance()
 	# rnd spawning for second friend

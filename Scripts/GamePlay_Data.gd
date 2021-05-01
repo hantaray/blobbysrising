@@ -32,7 +32,7 @@ var perfect_collect_limit = 5
 
 # level score goals
 #var score_goal_forest = 140
-#var score_goal_street = 100
+#var score_goal_street = 150
 #var score_goal_city = 180
 
 var score_goal_forest = 2
