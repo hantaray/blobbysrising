@@ -31,7 +31,7 @@ var add_life_if_bigger_than = 20
 var perfect_collect_limit = 5
 
 # level score goals
-#var score_goal_forest = 140
+#var score_goal_forest = 130
 #var score_goal_street = 150
 #var score_goal_city = 180
 
@@ -39,9 +39,9 @@ var score_goal_forest = 2
 var score_goal_street = 2
 var score_goal_city = 2
 
-var score_goal_forest_reached = false
+var score_goal_forest_reached = true
 var score_goal_street_reached = true
-var score_goal_city_reached = false
+var score_goal_city_reached = true
 
 # highscore
 var highscore_forest = 0
@@ -51,7 +51,7 @@ var highscore_city = 0
 # levels unlocked
 var locked_forest = false
 var locked_street = false
-var locked_city = true
+var locked_city = false
 
 # medals
 var medal_goal_1 = 5
