@@ -60,6 +60,16 @@ func increase_move_speed():
 	GamePlayData.playerSpeed += GamePlayData.speed_increase_lane
 #	SPEED += GamePlayData.speed_increase_lane
 
+func play_friend_hit_sound():
+	var sound = get_node("Sound")
+	sound.stream = load("res://Audio/collect.wav")
+	sound.play()
+	
+func play_enemy_hit_sound():
+	var sound = get_node("Sound")
+	sound.stream = load("res://Audio/hit.wav")
+	sound.play()
+
 
 
 

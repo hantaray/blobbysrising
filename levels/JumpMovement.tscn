@@ -9,7 +9,6 @@
 [ext_resource path="res://Scripts/Main_JustJump.gd" type="Script" id=7]
 [ext_resource path="res://MobDestructionBorder.tscn" type="PackedScene" id=8]
 
-
 [node name="JumpMovement" type="Node2D"]
 script = ExtResource( 7 )
 
@@ -28,4 +27,6 @@ position = Vector2( 960, 847.265 )
 [node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
 
 [node name="MobDestructionBorder" parent="." instance=ExtResource( 8 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]

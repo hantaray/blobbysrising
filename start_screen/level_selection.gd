@@ -3,6 +3,7 @@ extends Control
 var scene_path_to_load
 
 func _ready():
+	get_node("Music").play()
 	MainScript.current_level = 1
 	update_buttons()
 #	$Menu/CenterRow/JumpButton.grab_focus()

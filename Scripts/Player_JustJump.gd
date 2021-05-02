@@ -73,6 +73,16 @@ func play_friend_hit_animation():
 	showFriendHitAnimation = true
 	yield(get_tree().create_timer(friendHitAnimationTime), "timeout")
 	showFriendHitAnimation = false
+	
+func play_friend_hit_sound():
+	var sound = get_node("Sound")
+	sound.stream = load("res://Audio/collect.wav")
+	sound.play()
+	
+func play_enemy_hit_sound():
+	var sound = get_node("Sound")
+	sound.stream = load("res://Audio/hit.wav")
+	sound.play()
 
 func increase_move_speed():
 	GamePlayData.playerSpeed += GamePlayData.speed_increase_just_jump

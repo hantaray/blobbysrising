@@ -35,9 +35,9 @@ var perfect_collect_limit = 5
 #var score_goal_street = 150
 #var score_goal_city = 180
 
-var score_goal_forest = 2
-var score_goal_street = 2
-var score_goal_city = 2
+var score_goal_forest = 100
+var score_goal_street = 100
+var score_goal_city = 100
 
 var score_goal_forest_reached = false
 var score_goal_street_reached = false
@@ -50,16 +50,16 @@ var highscore_city = 0
 
 # levels unlocked
 var locked_forest = false
-var locked_street = false
-var locked_city = false
+var locked_street = true
+var locked_city = true
 
 # medals
-var medal_goal_1 = 5
-var medal_goal_2 = 10
-var medal_goal_3 = 15
-var medal_goal_4 = 20
-var medal_goal_5 = 25
-var medal_goal_6 = 30
+var medal_goal_1 = 105
+var medal_goal_2 = 110
+var medal_goal_3 = 115
+var medal_goal_4 = 120
+var medal_goal_5 = 125
+var medal_goal_6 = 130
 
 # save
 const FILE_NAME  = "user://savegame.save"
