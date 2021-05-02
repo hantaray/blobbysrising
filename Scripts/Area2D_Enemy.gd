@@ -19,6 +19,7 @@ func friend_collides(body):
 		MainScript.decrease_lives(life_damage)
 		MainScript.reset_perfect_collect()
 		get_tree().call_group("Player", "play_enemy_hit_animation")
+		get_tree().call_group("Player", "play_enemy_hit_sound")
 		if MainScript.check_game_over():
 			MainScript.game_over()
 		else:

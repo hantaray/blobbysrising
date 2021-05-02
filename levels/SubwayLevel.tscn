@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://characters/players/Player_JustJump_Movement.tscn" type="PackedScene" id=1]
 [ext_resource path="res://SpawnPath.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://EnemySpawnTimer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Level_Subway.gd" type="Script" id=7]
 [ext_resource path="res://MobDestructionBorder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio/Background/SubwayLevel.wav" type="AudioStream" id=9]
 
 [node name="SubWayLevel" type="Node2D"]
 script = ExtResource( 7 )
@@ -21,10 +22,15 @@ position = Vector2( -300, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
+[node name="Sound" type="AudioStreamPlayer" parent="Player"]
+
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 6 )]
 wait_time = 2.0
 
 [node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
 
 [node name="MobDestructionBorder" parent="." instance=ExtResource( 8 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]

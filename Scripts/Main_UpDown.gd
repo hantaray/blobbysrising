@@ -18,6 +18,7 @@ func _enter_tree():
 	MainScript.reset_level_data()
 
 func _ready():
+	get_node("Music").play()
 	MainScript.current_scene = "Street"
 	GamePlayData.playerSpeed  = 600
 	GamePlayData.enemyCarSpeed  = 800

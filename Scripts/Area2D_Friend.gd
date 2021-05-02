@@ -17,6 +17,7 @@ func friend_collides(body):
 		MainScript.add_perfect_collect_counter()
 		MainScript.increase_score()
 		get_tree().call_group("Player", "play_friend_hit_animation")
+		get_tree().call_group("Player", "play_friend_hit_sound")
 		queue_free()
 	elif body.get_collision_layer_bit(4):
 #		MainScript.reset_perfect_collect()

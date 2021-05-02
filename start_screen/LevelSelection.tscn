@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://start_screen/level_selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://start_screen/buttons/LaneButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://backgrounds/BackgroundWoods.tscn" type="PackedScene" id=9]
 [ext_resource path="res://start_screen/buttons/JumpButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Audio/Background/StartScreen.wav" type="AudioStream" id=11]
 
 [node name="LevelSelection" type="Control"]
 anchor_right = 1.0
@@ -95,6 +96,9 @@ margin_right = 220.0
 margin_bottom = 220.0
 
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 [connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

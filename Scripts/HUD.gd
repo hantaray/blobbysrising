@@ -38,6 +38,8 @@ func update_perfcoll_label(perfcoll_multiplier):
 		$HBoxContainer/PerfectCollLabel.text = ''
 	
 func showGameOverScreen():
+	$GameOverScreen/Music.stream = load("res://Audio/gameover_01.wav")
+	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Game Over"
@@ -55,6 +57,8 @@ func showPauseScreen():
 	$GameOverScreen.show()
 	
 func showWinScreen():
+	$GameOverScreen/Music.stream = load("res://Audio/levelcomplete_01.wav")
+	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Level abgeschlossen"

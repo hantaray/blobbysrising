@@ -13,6 +13,7 @@ func _enter_tree():
 	MainScript.reset_level_data()
 
 func _ready():
+	get_node("Music").play()
 	MainScript.current_scene = "Subway"
 	randomize()
 	$EnemySpawnTimer.start()
