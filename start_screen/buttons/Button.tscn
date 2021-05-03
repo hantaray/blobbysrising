@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=1]
 [ext_resource path="res://start_screen/fonts/montserrat_eb_48.tres" type="DynamicFont" id=2]
 
 [node name="MenuButton" type="Button"]
@@ -20,3 +21,6 @@ custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 5
 text = "Label"
 uppercase = true
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

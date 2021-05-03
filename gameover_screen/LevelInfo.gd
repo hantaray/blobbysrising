@@ -6,10 +6,12 @@ func _ready():
 
 
 func _on_PlayButton_pressed():
+	$CenterContainer2/HBoxContainer/PlayButton/Sound.play()
 	hide()
 	get_tree().paused = false
 
 
 func _on_MenuBotton_pressed():
+	$CenterContainer2/HBoxContainer/MenuBotton/Sound.play()
 	get_tree().change_scene(MainScript.levelselection_path)
 	get_tree().paused = false

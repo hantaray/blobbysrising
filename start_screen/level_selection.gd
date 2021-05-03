@@ -21,6 +21,7 @@ func _ready():
 
 
 func _on_Button_pressed(scene_to_load):
+	$CenterContainer/JumpButton/Sound.play()
 	$FadeIn.show()
 	$FadeIn.fade_in()
 	scene_path_to_load = scene_to_load
@@ -131,8 +132,10 @@ func showPrevLevel():
 
 
 func _on_NextLevelButton_pressed():
+	$NextLevelButton/Sound.play()
 	showNextLevel()
 
 
 func _on_PrevLevelButton_pressed():
+	$PrevLevelButton/Sound.play()
 	showPrevLevel()

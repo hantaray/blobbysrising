@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/pause.png" type="Texture" id=3]
 [ext_resource path="res://gameover_screen/GameOverScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gameover_screen/LevelInfo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -29,6 +30,9 @@ __meta__ = {
 margin_right = 184.0
 margin_bottom = 200.0
 texture_normal = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer" parent="HBoxContainer/TextureButton"]
+stream = ExtResource( 6 )
 
 [node name="ScoreLabel" type="Label" parent="HBoxContainer"]
 margin_left = 204.0

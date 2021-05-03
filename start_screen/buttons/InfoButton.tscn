@@ -25,3 +25,4 @@ text = "Info"
 align = 1
 valign = 1
 [connection signal="pressed" from="." to="." method="_on_InfoButton_pressed"]
+[connection signal="finished" from="Sound" to="." method="_on_Sound_finished"]

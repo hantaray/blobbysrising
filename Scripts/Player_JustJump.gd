@@ -47,6 +47,7 @@ func move_forward():
 
 func jump():
 	if Input.is_action_just_pressed("jump"):
+		$JumpSound.play()
 		motion.y = JUMP_SPEED * -1
 		motion.x += JUMP_SPEED_X
 

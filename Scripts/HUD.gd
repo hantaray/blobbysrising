@@ -24,6 +24,7 @@ func delete_children(node):
 		n.queue_free()
 	
 func _on_TextureButton_button_down():
+	$HBoxContainer/TextureButton/Sound.play()
 	MainScript.pause_button_pressed = true
 
 

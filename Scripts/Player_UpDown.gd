@@ -37,9 +37,11 @@ func _input(event):
 			var TouchPoint = event.get_position()
 			if TouchPoint.y < 545  \
 			and !(pauseBtnArea.has_point(TouchPoint)):
+				$MoveSound.play()
 				position.y = 240
 			if TouchPoint.y > 545  \
 			and !(pauseBtnArea.has_point(TouchPoint)):
+				$MoveSound.play()
 				position.y = 820
 		else:
 			screenIsTouched = false

@@ -43,12 +43,14 @@ func _input(event):
 			if position.y > 200 \
 			and TouchPoint.y < position.y - shape_height*2 \
 			and !(pauseBtnArea.has_point(TouchPoint)):
+				$MoveSound.play()
 				position.y -= 210
 			# DownMovement
 			# ButtomScreenBorder
 			elif position.y < 850 \
 			and TouchPoint.y > position.y + shape_height*2 \
 			and !(pauseBtnArea.has_point(TouchPoint)):
+				$MoveSound.play()
 				position.y += 210
 		else:
 			screenIsTouched = false
