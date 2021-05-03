@@ -3,6 +3,15 @@ extends Node
 #### GamePlayData ####
 
 
+var score_goal_forest_reached = true
+var score_goal_street_reached = true
+var score_goal_city_reached = true
+
+# levels unlocked
+var locked_forest = false
+var locked_street = false
+var locked_city = false
+
 # movement vars
 var enemy_speed_x = -100
 var enemy_speed_y = 0
@@ -39,19 +48,10 @@ var score_goal_forest = 100
 var score_goal_street = 100
 var score_goal_city = 100
 
-var score_goal_forest_reached = false
-var score_goal_street_reached = false
-var score_goal_city_reached = false
-
 # highscore
 var highscore_forest = 0
 var highscore_street = 0
 var highscore_city = 0
-
-# levels unlocked
-var locked_forest = false
-var locked_street = true
-var locked_city = true
 
 # medals
 var medal_goal_1 = 105
