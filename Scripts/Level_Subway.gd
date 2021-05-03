@@ -15,6 +15,7 @@ func _enter_tree():
 func _ready():
 	get_node("Music").play()
 	MainScript.current_scene = "Subway"
+	GamePlayData.playerSpeed  = 600
 	randomize()
 	$EnemySpawnTimer.start()
 	get_tree().paused = true

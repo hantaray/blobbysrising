@@ -102,10 +102,14 @@ margin_top = 20.0
 margin_right = 220.0
 margin_bottom = 220.0
 
+[node name="Sound" type="AudioStreamPlayer" parent="MenuButton"]
+stream = ExtResource( 3 )
+
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 [connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
+[connection signal="finished" from="MenuButton/Sound" to="MenuButton" method="_on_Sound_finished"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
