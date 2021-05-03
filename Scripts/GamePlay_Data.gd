@@ -9,8 +9,8 @@ var score_goal_street_reached = false
 
 # levels unlocked
 var locked_forest = false
-var locked_city = false
-var locked_street = false
+var locked_city = true
+var locked_street = true
 
 # movement vars
 var enemy_speed_x = -100
@@ -33,7 +33,7 @@ const speed_increase_up_down = 100
 const increase_speed_every_score = 10
 const add_life_every_score = 20
 
-var increase_if_bigger_than = 10
+var increase_speed_if_bigger_than = 10
 var add_life_if_bigger_than = 20
 
 # perfect collect
