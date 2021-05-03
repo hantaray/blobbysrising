@@ -4,13 +4,13 @@ extends Node
 
 
 var score_goal_forest_reached = false
-var score_goal_street_reached = false
 var score_goal_city_reached = false
+var score_goal_street_reached = false
 
 # levels unlocked
 var locked_forest = false
-var locked_street = true
-var locked_city = true
+var locked_city = false
+var locked_street = false
 
 # movement vars
 var enemy_speed_x = -100
@@ -54,12 +54,12 @@ var highscore_street = 0
 var highscore_city = 0
 
 # medals
-var medal_goal_1 = 105
-var medal_goal_2 = 110
-var medal_goal_3 = 115
-var medal_goal_4 = 120
-var medal_goal_5 = 125
-var medal_goal_6 = 130
+var medal_goal_1 = 110
+var medal_goal_2 = 115
+var medal_goal_3 = 120
+var medal_goal_4 = 125
+var medal_goal_5 = 130
+var medal_goal_6 = 135
 
 # save
 const FILE_NAME  = "user://savegame.save"
