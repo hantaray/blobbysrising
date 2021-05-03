@@ -60,9 +60,9 @@ func increase_score():
 	
 	if perfect_collect_counter % GamePlayData.perfect_collect_limit == 0:
 		increase_score_add()
-	if score >= GamePlayData.increase_if_bigger_than:
+	if score >= GamePlayData.increase_speed_if_bigger_than:
 		increase_player_speed()
-		GamePlayData.increase_if_bigger_than += GamePlayData.increase_speed_every_score
+		GamePlayData.increase_speed_if_bigger_than += GamePlayData.increase_speed_every_score
 	if score >= GamePlayData.add_life_if_bigger_than:
 		if lifes < 8:
 			lifes += 1
