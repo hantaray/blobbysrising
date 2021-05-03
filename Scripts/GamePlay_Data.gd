@@ -3,14 +3,14 @@ extends Node
 #### GamePlayData ####
 
 
-var score_goal_forest_reached = true
-var score_goal_street_reached = true
-var score_goal_city_reached = true
+var score_goal_forest_reached = false
+var score_goal_street_reached = false
+var score_goal_city_reached = false
 
 # levels unlocked
 var locked_forest = false
-var locked_street = false
-var locked_city = false
+var locked_street = true
+var locked_city = true
 
 # movement vars
 var enemy_speed_x = -100
