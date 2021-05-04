@@ -35,6 +35,7 @@ func _ready():
 func reset_level_data():
 	reset_lifes()
 	reset_score()
+	reset_compare_score()
 
 
 # lifes funktions
@@ -68,6 +69,10 @@ func increase_score():
 			lifes += 1
 			update_lives_hud()
 			GamePlayData.add_life_if_bigger_than += GamePlayData.add_life_every_score
+
+func reset_compare_score():
+	GamePlayData.add_life_if_bigger_than = GamePlayData.add_life_every_score
+	GamePlayData.increase_speed_if_bigger_than = GamePlayData.increase_speed_every_score
 
 func reset_score() :
 	score = 0
