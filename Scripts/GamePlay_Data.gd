@@ -55,11 +55,11 @@ var highscore_city = 0
 
 # medals
 var medal_goal_1 = 110
-var medal_goal_2 = 115
-var medal_goal_3 = 120
-var medal_goal_4 = 125
-var medal_goal_5 = 130
-var medal_goal_6 = 135
+var medal_goal_2 = 120
+var medal_goal_3 = 130
+var medal_goal_4 = 140
+var medal_goal_5 = 150
+var medal_goal_6 = 160
 
 # save
 const FILE_NAME  = "user://savegame.save"
