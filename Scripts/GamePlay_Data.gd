@@ -12,6 +12,9 @@ var locked_forest = false
 var locked_city = true
 var locked_street = true
 
+# life
+const max_lifes = 7
+
 # movement vars
 var enemy_speed_x = -100
 var enemy_speed_y = 0
