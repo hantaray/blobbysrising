@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/layer_2.png-a3667ad124c8b627c676b4c54b9073cc.stex"
+path="res://.import/Layer_2.png-0ec763efad229a1105fe23e3141370f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Houses/layer_2.png"
-dest_files=[ "res://.import/layer_2.png-a3667ad124c8b627c676b4c54b9073cc.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Houses/Layer_2.png"
+dest_files=[ "res://.import/Layer_2.png-0ec763efad229a1105fe23e3141370f3.stex" ]
 
 [params]
 
