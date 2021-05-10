@@ -63,7 +63,6 @@ func apply_gravity():
 
 func animate():
 	emit_signal("animate", motion, isOnFloor, showEnemyHitAnimation, showFriendHitAnimation)
-	
 
 func play_enemy_hit_animation():
 	showEnemyHitAnimation = true
@@ -74,12 +73,12 @@ func play_friend_hit_animation():
 	showFriendHitAnimation = true
 	yield(get_tree().create_timer(friendHitAnimationTime), "timeout")
 	showFriendHitAnimation = false
-	
+
 func play_friend_hit_sound():
 	var sound = get_node("Sound")
 	sound.stream = load("res://Audio/collect.wav")
 	sound.play()
-	
+
 func play_enemy_hit_sound():
 	var sound = get_node("Sound")
 	sound.stream = load("res://Audio/hit.wav")
@@ -88,6 +87,9 @@ func play_enemy_hit_sound():
 func increase_move_speed():
 	GamePlayData.playerSpeed += GamePlayData.speed_increase_just_jump
 #	SPEED += GamePlayData.speed_increase_just_jump
+
+
+
 
 
 
