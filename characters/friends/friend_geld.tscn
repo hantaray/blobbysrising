@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/Money.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/more_money.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/friend_geld.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "move",
+"speed": 6.0
+} ]
+
+[node name="friend_geld" type="Area2D"]
+collision_layer = 4
+collision_mask = 19
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "move"
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -25.8679, -6.6306, 7.40287, -24.5251, 25.4341, -9.14548, 26.1412, 1.54951, -6.91604, 25.6795, -25.3892, 6.32248 )
+[connection signal="area_shape_entered" from="." to="." method="_on_friend_geld_area_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_friend_geld_body_entered"]
