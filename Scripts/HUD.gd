@@ -116,7 +116,6 @@ func updateLevelInfo():
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/PanamaBKF/Panama_BKF_offen.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
-		
 
 
 

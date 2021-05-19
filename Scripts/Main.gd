@@ -112,7 +112,7 @@ func update_highscore(level):
 	if level == "Street":
 		if score > GamePlayData.highscore_street:
 			GamePlayData.highscore_street = score
-	if level == "REdis":
+	if level == "Redis":
 		if score > GamePlayData.highscore_redis:
 			GamePlayData.highscore_redis = score
 
@@ -167,7 +167,6 @@ func save_game():
 		"locked_street" : GamePlayData.locked_street,
 		"locked_city" : GamePlayData.locked_city,
 		"locked_redis" : GamePlayData.locked_redis
-		
 	}
 	# Store the save dictionary as a new line in the save file.
 	save_game.store_line(to_json(save_data))
