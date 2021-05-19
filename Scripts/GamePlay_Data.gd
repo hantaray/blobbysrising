@@ -10,9 +10,9 @@ var score_goal_street_reached = false
 
 # levels unlocked
 var locked_forest = false
-var locked_city = true
+var locked_city = false
 var locked_redis = false
-var locked_street = true
+var locked_street = false
 
 # life
 const max_lifes = 7
@@ -49,11 +49,16 @@ var perfect_collect_limit = 5
 #var score_goal_forest = 130
 #var score_goal_street = 150
 #var score_goal_city = 180
+#
+#var score_goal_forest = 100
+#var score_goal_street = 100
+#var score_goal_redis = 100
+#var score_goal_city = 100
 
-var score_goal_forest = 100
-var score_goal_street = 100
-var score_goal_redis = 100
-var score_goal_city = 100
+var score_goal_forest = 20
+var score_goal_street = 20
+var score_goal_redis = 20
+var score_goal_city = 20
 
 # highscore
 var highscore_forest = 0
@@ -61,13 +66,21 @@ var highscore_street = 0
 var highscore_redis = 0
 var highscore_city = 0
 
+## medals
+#var medal_goal_1 = 110
+#var medal_goal_2 = 120
+#var medal_goal_3 = 130
+#var medal_goal_4 = 140
+#var medal_goal_5 = 150
+#var medal_goal_6 = 160
+
 # medals
-var medal_goal_1 = 110
-var medal_goal_2 = 120
-var medal_goal_3 = 130
-var medal_goal_4 = 140
-var medal_goal_5 = 150
-var medal_goal_6 = 160
+var medal_goal_1 = 1
+var medal_goal_2 = 2
+var medal_goal_3 = 4
+var medal_goal_4 = 8
+var medal_goal_5 = 16
+var medal_goal_6 = 32
 
 # save
 const FILE_NAME  = "user://savegame.save"
