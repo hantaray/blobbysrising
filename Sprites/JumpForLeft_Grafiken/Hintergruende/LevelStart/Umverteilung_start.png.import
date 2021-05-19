@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Koffer.png-536a8c9a48c3addc0d9f817748780b9c.stex"
+path="res://.import/Umverteilung_start.png-492869fc2e00883ff8998eced059684c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Freunde/Koffer/Koffer.png"
-dest_files=[ "res://.import/Koffer.png-536a8c9a48c3addc0d9f817748780b9c.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Umverteilung_start.png"
+dest_files=[ "res://.import/Umverteilung_start.png-492869fc2e00883ff8998eced059684c.stex" ]
 
 [params]
 

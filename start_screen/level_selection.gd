@@ -15,6 +15,8 @@ func _ready():
 	btn2.connect("pressed", self, "_on_Button_pressed", [btn2.scene_to_load])
 	var btn3 = $CenterContainer3.get_node("StreetLevel")
 	btn3.connect("pressed", self, "_on_Button_pressed", [btn3.scene_to_load])
+	var btn4 = $CenterContainer4.get_node("RedisLevel")
+	btn4.connect("pressed", self, "_on_Button_pressed", [btn4.scene_to_load])
 	MainScript.save_game()
 
 
@@ -66,6 +68,17 @@ func update_buttons():
 	else:
 		cityBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_city) + " Punkte")
 	updateMedals(cityBtn, GamePlayData.highscore_city)
+	
+	var redisBtn =  $CenterContainer4/RedisLevel
+	if GamePlayData.locked_redis: 
+		redisBtn.modulate = Color(1, 1, 1, 0.75)
+		redisBtn.set_disabled(true)
+		
+	if GamePlayData.highscore_redis < GamePlayData.score_goal_redis:
+		redisBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_redis) + " / " + str(GamePlayData.score_goal_redis) + " Punkte")
+	else:
+		redisBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_redis) + " Punkte")
+	updateMedals(redisBtn, GamePlayData.highscore_redis)
 
 func updateMedals(button, score):
 	if score >= GamePlayData.medal_goal_1:
@@ -94,19 +107,29 @@ func showNextLevel():
 		$CenterContainer.set_visible(false)
 		$CenterContainer2.set_visible(true)
 		$CenterContainer3.set_visible(false)
+		$CenterContainer4.set_visible(false)
 		MainScript.current_level = 2
 		$PrevLevelButton.set_visible(true)
 	elif MainScript.current_level == 2:
 		$CenterContainer.set_visible(false)
 		$CenterContainer2.set_visible(false)
 		$CenterContainer3.set_visible(true)
+		$CenterContainer4.set_visible(false)
 		MainScript.current_level = 3
-		$NextLevelButton.set_visible(false)
-		$PrevLevelButton.set_visible(true)
 	elif MainScript.current_level == 3:
 		$CenterContainer.set_visible(false)
 		$CenterContainer2.set_visible(false)
-		$CenterContainer3.set_visible(true)
+		$CenterContainer3.set_visible(false)
+		$CenterContainer4.set_visible(true)
+		$PrevLevelButton.set_visible(true)
+		MainScript.current_level = 4
+		$NextLevelButton.set_visible(false)
+		$PrevLevelButton.set_visible(true)
+	elif MainScript.current_level == 4:
+		$CenterContainer.set_visible(false)
+		$CenterContainer2.set_visible(false)
+		$CenterContainer3.set_visible(false)
+		$CenterContainer4.set_visible(true)
 		$PrevLevelButton.set_visible(true)
 		
 func showPrevLevel():
@@ -114,11 +137,13 @@ func showPrevLevel():
 		$CenterContainer.set_visible(true)
 		$CenterContainer2.set_visible(false)
 		$CenterContainer3.set_visible(false)
+		$CenterContainer4.set_visible(false)
 		$NextLevelButton.set_visible(true)
 	elif MainScript.current_level == 2:
 		$CenterContainer.set_visible(true)
 		$CenterContainer2.set_visible(false)
 		$CenterContainer3.set_visible(false)
+		$CenterContainer4.set_visible(false)
 		$PrevLevelButton.set_visible(false)
 		$NextLevelButton.set_visible(true)
 		MainScript.current_level = 1
@@ -126,7 +151,14 @@ func showPrevLevel():
 		$CenterContainer.set_visible(false)
 		$CenterContainer2.set_visible(true)
 		$CenterContainer3.set_visible(false)
+		$CenterContainer4.set_visible(false)
 		MainScript.current_level = 2
+	elif MainScript.current_level == 4:
+		$CenterContainer.set_visible(false)
+		$CenterContainer2.set_visible(false)
+		$CenterContainer3.set_visible(true)
+		$CenterContainer4.set_visible(false)
+		MainScript.current_level = 3
 		$NextLevelButton.set_visible(true)
 
 
