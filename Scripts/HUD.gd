@@ -106,6 +106,18 @@ func updateLevelInfo():
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect3.set_visible(true)
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect4.set_visible(true)
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.set_visible(true)
+		
+	if currentLevel == "Redis":
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/Money.png")
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/more_money.png")
+		
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/PanamaBKF/Panama_BKF_offen.png")
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
+
+
 
 func updateMedal(score):
 	if score >= GamePlayData.medal_goal_1:

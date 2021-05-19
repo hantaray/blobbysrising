@@ -5,11 +5,13 @@ extends Node
 
 var score_goal_forest_reached = false
 var score_goal_city_reached = false
+var score_goal_redis_reached = false
 var score_goal_street_reached = false
 
 # levels unlocked
 var locked_forest = false
 var locked_city = true
+var locked_redis = false
 var locked_street = true
 
 # life
@@ -31,6 +33,7 @@ var bouncyblob_y = -500
 # increase speed vars
 const speed_increase_just_jump = 100
 const speed_increase_lane = 100
+const speed_increase_redis = 100
 const speed_increase_up_down = 100
 
 const increase_speed_every_score = 10
@@ -49,11 +52,13 @@ var perfect_collect_limit = 5
 
 var score_goal_forest = 100
 var score_goal_street = 100
+var score_goal_redis = 100
 var score_goal_city = 100
 
 # highscore
 var highscore_forest = 0
 var highscore_street = 0
+var highscore_redis = 0
 var highscore_city = 0
 
 # medals
