@@ -8,7 +8,7 @@
 [ext_resource path="res://EnemySpawnTimer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Level_Redistribution.gd" type="Script" id=7]
 [ext_resource path="res://MobDestructionBorder.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Audio/Background/SubwayLevel.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/Background/RedisLevel.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/jump_11.wav" type="AudioStream" id=10]
 
 [node name="RedistrubtionLevel" type="Node2D"]
