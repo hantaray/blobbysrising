@@ -19,10 +19,9 @@ script = ExtResource( 7 )
 [node name="ScreenBorder" parent="." instance=ExtResource( 5 )]
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 3 )]
-wait_time = 6.0
+wait_time = 4.0
 
 [node name="FriendSpawnTimer" parent="." instance=ExtResource( 8 )]
-wait_time = 2.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 

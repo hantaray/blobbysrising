@@ -24,7 +24,7 @@ var enemy_speed_y = 0
 var friend_speed_x = -100
 var friend_speed_y = 0
 
-var playerSpeed = 600
+var playerSpeed = 900
 var enemyTruckSpeed = 800
 var enemyLkwSpeed = 700
 var enemyCarSpeed = 800

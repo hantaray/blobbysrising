@@ -29,7 +29,6 @@ position = Vector2( -300, 0 )
 stream = ExtResource( 10 )
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 6 )]
-wait_time = 2.0
 
 [node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
 

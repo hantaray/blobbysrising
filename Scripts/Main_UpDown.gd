@@ -20,7 +20,7 @@ func _enter_tree():
 func _ready():
 	get_node("Music").play()
 	MainScript.current_scene = "Street"
-	GamePlayData.playerSpeed  = 600
+	GamePlayData.playerSpeed  = 900
 	GamePlayData.enemyCarSpeed  = 800
 	GamePlayData.enemyTruckSpeed  = 800
 	randomize()
