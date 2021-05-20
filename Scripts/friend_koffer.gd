@@ -14,3 +14,7 @@ func _on_Timer_timeout():
 		var geld_pos = position
 #		geld_pos.x += 100
 		geld_inst.position = geld_pos
+
+
+func _on_friend_koffer_body_entered(body):
+	friend_collides(body)

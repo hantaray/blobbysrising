@@ -15,6 +15,7 @@ func _on_friend_geld_body_entered(body):
 	elif body.get_collision_layer_bit(4):
 		friend_collides(body)
 	
+	
 
 
 

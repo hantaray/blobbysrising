@@ -45,14 +45,15 @@ var add_life_if_bigger_than = 20
 var perfect_collect_limit = 5
 
 # level score goals
-#var score_goal_forest = 130
-#var score_goal_street = 150
-#var score_goal_city = 180
-#
-#var score_goal_forest = 100
+#var score_goal_forest = 250
+#var score_goal_city = 130
 #var score_goal_street = 100
-#var score_goal_redis = 100
-#var score_goal_city = 100
+#var score_goal_redis = 120
+#
+#var score_goal_forest = 180
+#var score_goal_city = 70
+#var score_goal_street = 1000
+#var score_goal_redis = 70
 
 var score_goal_forest = 20
 var score_goal_street = 20
