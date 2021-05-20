@@ -15,7 +15,7 @@ var locked_redis = false
 var locked_street = false
 
 # life
-const max_lifes = 7
+const max_lifes = 8
 
 # movement vars
 var enemy_speed_x = -100
