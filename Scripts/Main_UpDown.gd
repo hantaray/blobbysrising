@@ -21,8 +21,8 @@ func _ready():
 	get_node("Music").play()
 	MainScript.current_scene = "Street"
 	GamePlayData.playerSpeed  = 900
-	GamePlayData.enemyCarSpeed  = 800
-	GamePlayData.enemyTruckSpeed  = 800
+	GamePlayData.enemyCarSpeed  = 1200
+	GamePlayData.enemyTruckSpeed  = 1200
 	randomize()
 	$EnemySpawnTimer.start()
 	$FriendSpawnTimer.start()

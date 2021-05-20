@@ -25,16 +25,15 @@ var friend_speed_x = -100
 var friend_speed_y = 0
 
 var playerSpeed = 900
-var enemyTruckSpeed = 800
-var enemyLkwSpeed = 700
-var enemyCarSpeed = 800
-var bouncyblob_y = -500
+var enemyTruckSpeed = 1200
+var enemyLkwSpeed = 1050
+var enemyCarSpeed = 1200
 
 # increase speed vars
-const speed_increase_just_jump = 100
-const speed_increase_lane = 100
-const speed_increase_redis = 100
-const speed_increase_up_down = 100
+const speed_increase_just_jump = 50
+const speed_increase_lane = 50
+const speed_increase_redis = 50
+const speed_increase_up_down = 50
 
 const increase_speed_every_score = 10
 const add_life_every_score = 20
