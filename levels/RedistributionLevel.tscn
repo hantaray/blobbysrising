@@ -8,7 +8,7 @@
 [ext_resource path="res://EnemySpawnTimer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Level_Redistribution.gd" type="Script" id=7]
 [ext_resource path="res://MobDestructionBorder.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Audio/Background/SubwayLevel.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/Background/RedisLevel.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/jump_11.wav" type="AudioStream" id=10]
 
 [node name="RedistrubtionLevel" type="Node2D"]
@@ -29,7 +29,10 @@ position = Vector2( -300, 0 )
 stream = ExtResource( 10 )
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 6 )]
-wait_time = 2.0
+wait_time = 0.8
+
+[node name="FriendSpawnTimer" parent="." instance=ExtResource( 6 )]
+autostart = true
 
 [node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
 
@@ -38,3 +41,4 @@ wait_time = 2.0
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
+[connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]

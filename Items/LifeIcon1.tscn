@@ -1,12 +1,15 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Blob/Blob_2.png" type="Texture" id=1]
-
-
-
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/Blob_2.png-d5cd0edb11e79feac0366c01cfb7c8bc.stex"
 
 [node name="LifeIcon1" type="TextureRect"]
 margin_right = 142.0
 margin_bottom = 163.0
-texture = ExtResource( 1 )
+rect_scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 1 )
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}

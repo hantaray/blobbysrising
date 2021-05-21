@@ -8,6 +8,8 @@ var enemy_spur_blocker = preload("res://characters/enemies/enemy_spur_blocker.ts
 var friend_fahrrad_schild = preload("res://characters/friends/friend_fahrradschild.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
+var enemySpawnTopCounter = 0
+var enemySpawnDownCounter = 0
 
 var spawningPointsFriend = [Vector2(1300, 250), \
 							Vector2(1300, 820)]
@@ -20,9 +22,9 @@ func _enter_tree():
 func _ready():
 	get_node("Music").play()
 	MainScript.current_scene = "Street"
-	GamePlayData.playerSpeed  = 600
-	GamePlayData.enemyCarSpeed  = 800
-	GamePlayData.enemyTruckSpeed  = 800
+	GamePlayData.playerSpeed  = 900
+	GamePlayData.enemyCarSpeed  = 1200
+	GamePlayData.enemyTruckSpeed  = 1200
 	randomize()
 	$EnemySpawnTimer.start()
 	$FriendSpawnTimer.start()
@@ -37,6 +39,21 @@ func _on_EnemySpawnTimer_timeout():
 func spawn_enemy():
 	var mob
 	var spawningPos = spawningPointsEnemy[randi() % 2]
+	if spawningPos == spawningPointsEnemy[0]:
+		enemySpawnTopCounter += 1
+		enemySpawnDownCounter = 0
+	else:
+		enemySpawnDownCounter += 1
+		enemySpawnTopCounter = 0
+		
+	# Make Top/Down spawning more random
+	if enemySpawnTopCounter >= 3:
+		spawningPos = spawningPointsEnemy[1]
+		enemySpawnTopCounter = 0
+	if enemySpawnDownCounter >= 3:
+		spawningPos = spawningPointsEnemy[0]
+		enemySpawnDownCounter = 0
+		
 	var rndFactorSpawn = randi() % 2
 	if rndFactorSpawn == 0:
 		mob = enemy_klein_auto.instance()
