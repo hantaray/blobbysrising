@@ -105,7 +105,7 @@ func updateLevelInfo():
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/SpurBlocker/Spur_blocker_blinker.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect3.set_visible(true)
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect4.set_visible(true)
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.set_visible(false)
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.set_visible(true)
 		
 	if currentLevel == "Redis":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \

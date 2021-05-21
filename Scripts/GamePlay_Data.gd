@@ -45,20 +45,20 @@ var add_life_if_bigger_than = 20
 var perfect_collect_limit = 5
 
 # level score goals
-#var score_goal_forest = 250
-#var score_goal_city = 130
-#var score_goal_street = 130
-#var score_goal_redis = 150
+#var score_goal_forest = 250 160
+#var score_goal_city = 130 238
+#var score_goal_street = 130  277
+#var score_goal_redis = 150 195
 #
-#var score_goal_forest = 180
-#var score_goal_city = 70
-#var score_goal_street = 1000
-#var score_goal_redis = 150
+var score_goal_forest = 100
+var score_goal_city = 100
+var score_goal_street = 100
+var score_goal_redis = 100
 
-var score_goal_forest = 20
-var score_goal_street = 20
-var score_goal_redis = 20
-var score_goal_city = 20
+#var score_goal_forest = 20
+#var score_goal_street = 20
+#var score_goal_redis = 20
+#var score_goal_city = 20
 
 # highscore
 var highscore_forest = 0
@@ -66,21 +66,21 @@ var highscore_street = 0
 var highscore_redis = 0
 var highscore_city = 0
 
-## medals
-#var medal_goal_1 = 110
-#var medal_goal_2 = 120
-#var medal_goal_3 = 130
-#var medal_goal_4 = 140
-#var medal_goal_5 = 150
-#var medal_goal_6 = 160
-
 # medals
-var medal_goal_1 = 1
-var medal_goal_2 = 2
-var medal_goal_3 = 4
-var medal_goal_4 = 8
-var medal_goal_5 = 16
-var medal_goal_6 = 32
+var medal_goal_1 = 120
+var medal_goal_2 = 140
+var medal_goal_3 = 160
+var medal_goal_4 = 180
+var medal_goal_5 = 200
+var medal_goal_6 = 220
+
+## medals
+#var medal_goal_1 = 1
+#var medal_goal_2 = 2
+#var medal_goal_3 = 4
+#var medal_goal_4 = 8
+#var medal_goal_5 = 16
+#var medal_goal_6 = 32
 
 # save
 const FILE_NAME  = "user://savegame.save"
