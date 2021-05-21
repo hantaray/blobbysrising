@@ -25,9 +25,9 @@ var friend_speed_x = -100
 var friend_speed_y = 0
 
 var playerSpeed = 900
-var enemyTruckSpeed = 1200
+var enemyTruckSpeed = 1600
 var enemyLkwSpeed = 1050
-var enemyCarSpeed = 1200
+var enemyCarSpeed = 1600
 
 # increase speed vars
 const speed_increase_just_jump = 50
@@ -47,13 +47,13 @@ var perfect_collect_limit = 5
 # level score goals
 #var score_goal_forest = 250
 #var score_goal_city = 130
-#var score_goal_street = 100
-#var score_goal_redis = 120
+#var score_goal_street = 130
+#var score_goal_redis = 150
 #
 #var score_goal_forest = 180
 #var score_goal_city = 70
 #var score_goal_street = 1000
-#var score_goal_redis = 70
+#var score_goal_redis = 150
 
 var score_goal_forest = 20
 var score_goal_street = 20
