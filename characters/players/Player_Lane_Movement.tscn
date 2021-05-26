@@ -12,6 +12,7 @@ height = 39.1696
 "Player",
 ]]
 position = Vector2( 960, 550 )
+collision_mask = 14
 script = ExtResource( 3 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
@@ -22,3 +23,4 @@ position = Vector2( -451.331, 2.119 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -451.331, 2.1189 )
 shape = SubResource( 1 )
+[connection signal="animate" from="." to="Player_Lane_Animation" method="_on_Player_Lane_animate"]

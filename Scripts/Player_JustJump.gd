@@ -17,9 +17,9 @@ const UP = Vector2(0,-1)
 var isOnFloor = false
 
 var showEnemyHitAnimation = false
-const enemyHitAnimationTime = 1.5
+const enemyHitAnimationTime = GamePlayData.INVULNERABLE_TIME
 var showFriendHitAnimation = false
-const friendHitAnimationTime = 1.5
+const friendHitAnimationTime = GamePlayData.FRIEND_HIT_ANIMATION_TIME
 
 signal animate
 

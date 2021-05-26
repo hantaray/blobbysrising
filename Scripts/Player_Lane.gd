@@ -14,8 +14,15 @@ var SPEED = 600
 const GRAVITY = 50
 const UP = Vector2(0,-1)
 
-var isOnFloor = true
+
 var pauseBtnArea
+
+var showEnemyHitAnimation = false
+const enemyHitAnimationTime = GamePlayData.INVULNERABLE_TIME
+var showFriendHitAnimation = false
+const friendHitAnimationTime = GamePlayData.FRIEND_HIT_ANIMATION_TIME
+
+signal animate
 
 var screenIsTouched = false
  
@@ -31,6 +38,7 @@ func _physics_process(delta):
 	SPEED = GamePlayData.playerSpeed
 	move_forward()
 # warning-ignore:return_value_discarded
+	animate()
 	move_and_slide(motion, UP)
 
 func _input(event):
@@ -61,6 +69,19 @@ func move_forward():
 func increase_move_speed():
 	GamePlayData.playerSpeed += GamePlayData.speed_increase_lane
 #	SPEED += GamePlayData.speed_increase_lane
+
+func animate():
+	emit_signal("animate", showEnemyHitAnimation, showFriendHitAnimation)
+
+func play_enemy_hit_animation():
+	showEnemyHitAnimation = true
+	yield(get_tree().create_timer(enemyHitAnimationTime), "timeout")
+	showEnemyHitAnimation = false
+
+func play_friend_hit_animation():
+	showFriendHitAnimation = true
+	yield(get_tree().create_timer(friendHitAnimationTime), "timeout")
+	showFriendHitAnimation = false
 
 func play_friend_hit_sound():
 	var sound = get_node("Sound")

@@ -17,6 +17,13 @@ var locked_street = false
 # life
 const max_lifes = 8
 
+# blob is hit and invulnarable
+var enemy_can_hit = true
+const INVULNERABLE_TIME = 1.5
+
+# friend hit animation time
+const FRIEND_HIT_ANIMATION_TIME = 1.5
+
 # movement vars
 var enemy_speed_x = -100
 var enemy_speed_y = 0

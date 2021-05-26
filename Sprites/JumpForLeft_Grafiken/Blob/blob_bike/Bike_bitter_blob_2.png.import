@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Layer_4.png-62af90512d971c289ca6957bcbfd6114.stex"
+path="res://.import/Bike_bitter_blob_2.png-a7ffc90b1b67f71a34c04013b02375f6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Houses/Layer_4.png"
-dest_files=[ "res://.import/Layer_4.png-62af90512d971c289ca6957bcbfd6114.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Blob/blob_bike/Bike_bitter_blob_2.png"
+dest_files=[ "res://.import/Bike_bitter_blob_2.png-a7ffc90b1b67f71a34c04013b02375f6.stex" ]
 
 [params]
 

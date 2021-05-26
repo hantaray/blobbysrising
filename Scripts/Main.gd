@@ -195,3 +195,9 @@ func load_game():
 			printerr("Corrupted data!")
 	else:
 		printerr("No saved data!")
+		
+
+func set_enemy_can_hit_timer():
+	GamePlayData.enemy_can_hit = false
+	yield(get_tree().create_timer(GamePlayData.INVULNERABLE_TIME), "timeout")
+	GamePlayData.enemy_can_hit = true
