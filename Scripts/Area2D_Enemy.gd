@@ -15,7 +15,10 @@ func _process(delta: float) -> void:
 	position += velocity * delta
 	
 func friend_collides(body):
-	if body.get_collision_layer_bit(0):
+	if body.get_collision_layer_bit(4):
+		queue_free()
+	if body.get_collision_layer_bit(0) && GamePlayData.enemy_can_hit:
+		MainScript.set_enemy_can_hit_timer()
 		MainScript.decrease_lives(life_damage)
 		MainScript.reset_perfect_collect()
 		get_tree().call_group("Player", "play_enemy_hit_animation")
@@ -24,5 +27,9 @@ func friend_collides(body):
 			MainScript.game_over()
 		else:
 			queue_free()
-	elif body.get_collision_layer_bit(4):
-		queue_free()
+		
+
+
+
+
+
