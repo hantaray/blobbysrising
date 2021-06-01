@@ -1,9 +1,9 @@
-extends ParallaxLayer
+extends Camera2D
 
 var width = 0
 
 func _ready():
-	width = $TextureRect.texture.get_width()
+#	width = $TextureRect.texture.get_width()
 	pass
 #
 #func _process(delta):
@@ -21,5 +21,5 @@ func _ready():
 
 func _process(delta):
 	var curPos =  position
-	curPos.x = curPos.x - 100 * delta
+	curPos.x = curPos.x + 100 * delta
 	position =  curPos
