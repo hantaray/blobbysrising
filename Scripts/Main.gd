@@ -1,6 +1,6 @@
 extends Node
 
-
+# dieser KommENTAR IST ZU TEST ZWECKEN
 
 # scene vars
 const startscreen_path = "res://start_screen/StartScreen.tscn"
