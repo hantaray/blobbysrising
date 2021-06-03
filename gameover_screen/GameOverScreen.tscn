@@ -145,6 +145,7 @@ stream = ExtResource( 10 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+
 [connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/MenuButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/HBoxContainer/ReplayButton" to="." method="_on_ReplayButton_pressed"]

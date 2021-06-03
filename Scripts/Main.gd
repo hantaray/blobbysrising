@@ -30,6 +30,7 @@ func _ready():
 	# here change to test screen
 	get_tree().change_scene(startscreen_path)
 #	get_tree().change_scene("res://levels/SubwayLevel.tscn")
+#	get_tree().change_scene("res://levels/LaneMovement.tscn")
 #	get_tree().change_scene("res://levels/RedistributionLevel.tscn")
 #	get_tree().change_scene("res://levels/UpDownMovement.tscn")
 
