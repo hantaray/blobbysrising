@@ -23,7 +23,7 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 958.916, 524.407 )
+position = Vector2( 958.916, 540 )
 current = true
 script = ExtResource( 13 )
 
@@ -140,12 +140,10 @@ margin_top = -560.0
 margin_right = 1012.0
 margin_bottom = 556.0
 
-[node name="ParallaxBackground" parent="." instance=ExtResource( 9 )]
-follow_viewport_enable = true
+[node name="ParallaxBackground" parent="Camera" instance=ExtResource( 9 )]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-
 [connection signal="pressed" from="Camera/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="Camera/PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
 [connection signal="finished" from="Camera/MenuButton/Sound" to="Camera/MenuButton" method="_on_Sound_finished"]
