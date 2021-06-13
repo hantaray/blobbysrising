@@ -11,12 +11,15 @@ func _enter_tree():
 	MainScript.reset_level_data()
 
 func _ready():
-	MainScript.current_scene = "Forest"
+	get_node("Music").play()
+	MainScript.current_scene = "Peace"
+	GamePlayData.playerSpeed  = 900
 	randomize()
-	$EnemyTimer.start()
+	$EnemySpawnTimer.start()
+	get_tree().paused = true
 
-func _on_EnemyTimer_timeout():
-	$SpawnPath/SpawnLocation.offset = randi()	
+func _on_EnemySpawnTimer_timeout():
+	$SpawnPath/SpawnLocation.offset = randi()
 	var mob = friendDove.instance()
 	# Make shure friend is spawned at least all 5 spawns
 	if noFriendSpawnCounter < 5:

@@ -7,12 +7,14 @@ var score_goal_forest_reached = false
 var score_goal_city_reached = false
 var score_goal_redis_reached = false
 var score_goal_street_reached = false
+var score_goal_peace_reached = false
 
 # levels unlocked
 var locked_forest = false
 var locked_city = false
 var locked_redis = false
 var locked_street = false
+var locked_peace = false
 
 # life
 const max_lifes = 8
@@ -61,6 +63,7 @@ var score_goal_forest = 100
 var score_goal_city = 100
 var score_goal_street = 100
 var score_goal_redis = 100
+var score_goal_peace = 100
 
 #var score_goal_forest = 20
 #var score_goal_street = 20
@@ -72,6 +75,7 @@ var highscore_forest = 0
 var highscore_street = 0
 var highscore_redis = 0
 var highscore_city = 0
+var highscore_peace = 0
 
 # medals
 var medal_goal_1 = 120
