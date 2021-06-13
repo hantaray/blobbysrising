@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://fonts/arial-black.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Startbildschirm.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/StartScreen/BG.png" type="Texture" id=3]
 [ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/StartScreen/DieLinke_RGB.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -56,5 +57,12 @@ rect_scale = Vector2( 0.5, 0.5 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="MenuButton"]
 stream = ExtResource( 4 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 1430.0
+margin_top = 900.0
+margin_right = 1924.0
+margin_bottom = 1047.0
+texture = ExtResource( 6 )
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
 [connection signal="finished" from="MenuButton/Sound" to="MenuButton" method="_on_Sound_finished"]
