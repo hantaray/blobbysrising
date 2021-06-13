@@ -117,6 +117,16 @@ func updateLevelInfo():
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/PanamaBKF/Panama_BKF_offen.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
 
+	if currentLevel == "Peace":
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Taube/Taube_1.png")
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
+		
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Utzi.png")
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Panzer/Panzer_1.png")
+
 
 
 func updateMedal(score):

@@ -116,6 +116,9 @@ func update_highscore(level):
 	if level == "Redis":
 		if score > GamePlayData.highscore_redis:
 			GamePlayData.highscore_redis = score
+	if level == "Peace":
+		if score > GamePlayData.highscore_peace:
+			GamePlayData.highscore_peace = score
 
 func check_game_over():
 	if lifes <= 0:
@@ -150,6 +153,12 @@ func check_level_goal_reached(level):
 			GamePlayData.score_goal_redis_reached = true
 #			get_tree().change_scene(MainScript.levelselection_path)
 			get_tree().call_group("HUD", "showWinScreen")
+	if level == "Peace":
+		if score >= GamePlayData.score_goal_peace and \
+		!GamePlayData.score_goal_peace_reached:
+			GamePlayData.score_goal_peace_reached = true
+#			get_tree().change_scene(MainScript.levelselection_path)
+			get_tree().call_group("HUD", "showWinScreen")
 
 func save_game():
 	var save_game = File.new()
@@ -160,14 +169,17 @@ func save_game():
 		"score_goal_street_reached" : GamePlayData.score_goal_street_reached,
 		"score_goal_city_reached" : GamePlayData.score_goal_city_reached,
 		"score_goal_redis_reached" : GamePlayData.score_goal_redis_reached,
+		"score_goal_peace_reached" : GamePlayData.score_goal_peace_reached,
 		"highscore_forest" : GamePlayData.highscore_forest,
 		"highscore_street" : GamePlayData.highscore_street,
 		"highscore_city" : GamePlayData.highscore_city,
 		"highscore_redis" : GamePlayData.highscore_redis,
+		"highscore_peace" : GamePlayData.highscore_peace,
 		"locked_forest" : GamePlayData.locked_forest,
 		"locked_street" : GamePlayData.locked_street,
 		"locked_city" : GamePlayData.locked_city,
-		"locked_redis" : GamePlayData.locked_redis
+		"locked_redis" : GamePlayData.locked_redis,
+		"locked_peace" : GamePlayData.locked_peace
 	}
 	# Store the save dictionary as a new line in the save file.
 	save_game.store_line(to_json(save_data))
@@ -184,14 +196,17 @@ func load_game():
 			GamePlayData.score_goal_street_reached = data["score_goal_street_reached"]
 			GamePlayData.score_goal_city_reached = data["score_goal_city_reached"]
 			GamePlayData.score_goal_redis_reached = data["score_goal_redis_reached"]
+			GamePlayData.score_goal_peace_reached = data["score_goal_peace_reached"]
 			GamePlayData.highscore_forest = data["highscore_forest"]
 			GamePlayData.highscore_street = data["highscore_street"]
 			GamePlayData.highscore_city = data["highscore_city"]
 			GamePlayData.highscore_redis = data["highscore_redis"]
+			GamePlayData.highscore_peace = data["highscore_peace"]
 			GamePlayData.locked_forest = data["locked_forest"]
 			GamePlayData.locked_street = data["locked_street"]
 			GamePlayData.locked_city = data["locked_city"]
 			GamePlayData.locked_redis = data["locked_redis"]
+			GamePlayData.locked_peace = data["locked_peace"]
 		else:
 			printerr("Corrupted data!")
 	else:

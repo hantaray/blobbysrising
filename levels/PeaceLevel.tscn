@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Main_JustJump.gd" type="Script" id=1]
+[ext_resource path="res://characters/players/Player_JustJump_Movement.tscn" type="PackedScene" id=2]
+[ext_resource path="res://backgrounds/BackgroundWoods.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ScreenBorder.tscn" type="PackedScene" id=4]
+[ext_resource path="res://SpawnPath.tscn" type="PackedScene" id=5]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://EnemySpawnTimer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MobDestructionBorder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio/jump_11.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/Background/SubwayLevel.wav" type="AudioStream" id=10]
+
+[node name="PeaceLevel" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="SpawnPath" parent="." instance=ExtResource( 5 )]
+position = Vector2( -300, 0 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
+
+[node name="MobDestructionBorder" parent="." instance=ExtResource( 8 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Sound" type="AudioStreamPlayer" parent="Player"]
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 9 )
+
+[node name="EnemySpawnTimer" parent="." instance=ExtResource( 7 )]
+[connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
