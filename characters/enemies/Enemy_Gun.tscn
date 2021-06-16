@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Enemy_BouncyBlob.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Utzi.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Gun_K.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 102.566
-height = 21.3745
+radius = 54.0228
+height = 106.918
 
-[node name="enemy_bouncyblob" type="Area2D"]
+[node name="enemy_gun" type="Area2D"]
 collision_layer = 2
 collision_mask = 2147483673
 script = ExtResource( 1 )
@@ -21,4 +21,5 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource( 1 )
+
 [connection signal="body_entered" from="." to="." method="_on_Enemy_BouncyBlob_body_entered"]

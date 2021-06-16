@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mietenfalle_zu.png-175c6698ad82c2e17e9d66fb0449e86a.stex"
+path="res://.import/Koffer_2_K.png-ab8b21165f059089fdd104d91236a414.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Gegner/Klappe/Mietenfalle_zu.png"
-dest_files=[ "res://.import/Mietenfalle_zu.png-175c6698ad82c2e17e9d66fb0449e86a.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Freunde/Koffer/Koffer_2_K.png"
+dest_files=[ "res://.import/Koffer_2_K.png-ab8b21165f059089fdd104d91236a414.stex" ]
 
 [params]
 
