@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Houses/layer_2.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Houses/layer_3.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Houses/layer_4.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Houses/layer_1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Caring/Layer_2_Pflege.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Caring/Layer_4_Pflege.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Caring/Layer_3_Pflege.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Caring/Layer_1_Pflege.png" type="Texture" id=4]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 scroll_ignore_camera_zoom = true
@@ -13,7 +13,6 @@ motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 7680, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
-rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -24,7 +23,6 @@ motion_scale = Vector2( 0.25, 1 )
 motion_mirroring = Vector2( 7680, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
-rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -35,8 +33,7 @@ motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 7680, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer3"]
-rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,8 +43,7 @@ motion_scale = Vector2( 0.75, 1 )
 motion_mirroring = Vector2( 7680, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer4"]
-rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -126,6 +126,17 @@ func updateLevelInfo():
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Utzi.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
 		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Panzer/Panzer_1.png")
+		
+	if currentLevel == "Caring":
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Lohnbrief/Lohnbrief_auf_K.png")
+		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Patientenschluessel/Patientenschluessel.png")
+		
+		
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Coroni/Coroni.png")
+		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
 
 
 

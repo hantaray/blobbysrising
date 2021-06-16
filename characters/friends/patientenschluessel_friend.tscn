@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/friend_deckel.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Patientenschluessel/Patientenschluessel.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "move",
+"speed": 4.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 102.976
+
+[sub_resource type="Animation" id=3]
+resource_name = "move"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -52.9 ]
+}
+
+[node name="patientenschluessel_friend" type="Area2D"]
+position = Vector2( 0, -20 )
+rotation = -0.334322
+collision_layer = 4
+script = ExtResource( 1 )
+speed_x = -150
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -90.6119
+margin_top = -120.816
+margin_right = 107.388
+margin_bottom = 149.184
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "move"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.76837e-07, 18.8774 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "move"
+anims/move = SubResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]

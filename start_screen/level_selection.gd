@@ -3,7 +3,7 @@ extends Control
 var scene_path_to_load
 
 func _ready():
-	get_node("Music").play()
+#	get_node("Music").play()
 	MainScript.current_level = 1
 	update_buttons()
 #	$Menu/CenterRow/JumpButton.grab_focus()
@@ -19,6 +19,8 @@ func _ready():
 	btn4.connect("pressed", self, "_on_Button_pressed", [btn4.scene_to_load])
 	var btn5 = $Camera/CenterContainer5.get_node("PeaceLevel")
 	btn5.connect("pressed", self, "_on_Button_pressed", [btn5.scene_to_load])
+	var btn6 = $Camera/CenterContainer6.get_node("CaringButton")
+	btn6.connect("pressed", self, "_on_Button_pressed", [btn6.scene_to_load])
 	MainScript.save_game()
 
 
@@ -92,6 +94,17 @@ func update_buttons():
 	else:
 		peaceBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_peace) + " Punkte")
 	updateMedals(peaceBtn, GamePlayData.highscore_peace)
+	
+	var caringBtn =  $Camera/CenterContainer6/CaringButton
+	if GamePlayData.locked_caring: 
+		caringBtn.modulate = Color(1, 1, 1, 0.75)
+		caringBtn.set_disabled(true)
+		
+	if GamePlayData.highscore_caring < GamePlayData.score_goal_caring:
+		caringBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_caring) + " / " + str(GamePlayData.score_goal_caring) + " Punkte")
+	else:
+		caringBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_caring) + " Punkte")
+	updateMedals(caringBtn, GamePlayData.highscore_caring)
 
 func updateMedals(button, score):
 	if score >= GamePlayData.medal_goal_1:
@@ -122,6 +135,7 @@ func showNextLevel():
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		MainScript.current_level = 2
 		$Camera/PrevLevelButton.set_visible(true)
 	elif MainScript.current_level == 2:
@@ -130,6 +144,7 @@ func showNextLevel():
 		$Camera/CenterContainer3.set_visible(true)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		MainScript.current_level = 3
 	elif MainScript.current_level == 3:
 		$Camera/CenterContainer.set_visible(false)
@@ -137,6 +152,7 @@ func showNextLevel():
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(true)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		$Camera/PrevLevelButton.set_visible(true)
 		MainScript.current_level = 4
 		$Camera/PrevLevelButton.set_visible(true)
@@ -146,16 +162,28 @@ func showNextLevel():
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(true)
+		$Camera/CenterContainer6.set_visible(false)
 		$Camera/PrevLevelButton.set_visible(true)
 		MainScript.current_level = 5
-		$Camera/NextLevelButton.set_visible(false)
 		$Camera/PrevLevelButton.set_visible(true)
 	elif MainScript.current_level == 5:
 		$Camera/CenterContainer.set_visible(false)
 		$Camera/CenterContainer2.set_visible(false)
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
-		$Camera/CenterContainer5.set_visible(true)
+		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(true)
+		$Camera/PrevLevelButton.set_visible(true)
+		MainScript.current_level = 6
+		$Camera/NextLevelButton.set_visible(false)
+		$Camera/PrevLevelButton.set_visible(true)
+	elif MainScript.current_level == 6:
+		$Camera/CenterContainer.set_visible(false)
+		$Camera/CenterContainer2.set_visible(false)
+		$Camera/CenterContainer3.set_visible(false)
+		$Camera/CenterContainer4.set_visible(false)
+		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(true)
 		$Camera/PrevLevelButton.set_visible(true)
 		
 func showPrevLevel():
@@ -165,6 +193,7 @@ func showPrevLevel():
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		$Camera/NextLevelButton.set_visible(true)
 	elif MainScript.current_level == 2:
 		$Camera/CenterContainer.set_visible(true)
@@ -172,6 +201,7 @@ func showPrevLevel():
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		$Camera/PrevLevelButton.set_visible(false)
 		$Camera/NextLevelButton.set_visible(true)
 		MainScript.current_level = 1
@@ -181,6 +211,7 @@ func showPrevLevel():
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		MainScript.current_level = 2
 	elif MainScript.current_level == 4:
 		$Camera/CenterContainer.set_visible(false)
@@ -188,6 +219,7 @@ func showPrevLevel():
 		$Camera/CenterContainer3.set_visible(true)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		MainScript.current_level = 3
 	elif MainScript.current_level == 5:
 		$Camera/CenterContainer.set_visible(false)
@@ -195,7 +227,16 @@ func showPrevLevel():
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(true)
 		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(false)
 		MainScript.current_level = 4
+	elif MainScript.current_level == 6:
+		$Camera/CenterContainer.set_visible(false)
+		$Camera/CenterContainer2.set_visible(false)
+		$Camera/CenterContainer3.set_visible(false)
+		$Camera/CenterContainer4.set_visible(false)
+		$Camera/CenterContainer5.set_visible(true)
+		$Camera/CenterContainer6.set_visible(false)
+		MainScript.current_level = 5
 		$Camera/NextLevelButton.set_visible(true)
 
 
