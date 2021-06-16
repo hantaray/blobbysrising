@@ -3,7 +3,7 @@ extends Node2D
 
 var enemyTank = preload("res://characters/enemies/enemy_tank.tscn")
 var friendDove = preload("res://characters/friends/friend_dove.tscn")
-var enemyBouncyBlob = preload("res://characters/enemies/enemy_bouncyblob.tscn")
+var enemyBouncyBlob = preload("res://characters/enemies/Enemy_Gun.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 

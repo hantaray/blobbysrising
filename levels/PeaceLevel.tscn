@@ -36,4 +36,5 @@ stream = ExtResource( 10 )
 stream = ExtResource( 9 )
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 7 )]
+
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]

@@ -1,19 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_Links.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_rechts.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_K.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/friend_station_sign.gd" type="Script" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "move",
 "speed": 6.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 83.9176
+radius = 85.3391
 
 [node name="friend_station_sign" type="Area2D"]
 collision_layer = 4
@@ -28,4 +27,5 @@ animation = "move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
 [connection signal="body_entered" from="." to="." method="_on_friend_station_sign_body_entered"]

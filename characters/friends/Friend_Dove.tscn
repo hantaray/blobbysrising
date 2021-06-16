@@ -9,9 +9,12 @@ collision_mask = 2147483649
 script = ExtResource( 1 )
 speed_x = -200
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -70.9631, -28.1746, -68, -36, -52.1618, -42.7666, -28, -44, -20, -56, -12, -60, 24, -64, 60, -64, 44, -8, 56, -8, 48, 16, 56, 16, 72, 36, 56, 56, 32, 56, 28, 64, 12, 40, 16, 32, -8, 40, -28, 40, -44, 36, -52, 28, -56, 20, -56.9323, 9.9891, -56, 4, -59.3175, -3.62076, -58.3354, -8.81215, -64, -16, -70.5422, -15.2663 )
-
 [node name="Friend_Dove_Animation" parent="." instance=ExtResource( 2 )]
+frame = 1
 playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 1.15, 1.15 )
+polygon = PoolVector2Array( -68.1119, -21.6912, -66.7071, -33.7943, -52.1618, -42.7666, -28, -44, -20, -56, -12, -60, 24, -64, 60.3746, -62.647, 44, -8, 54.8634, -9.26404, 48, 16, 56, 16, 72, 36, 56, 56, 32, 56, 28, 64, 12, 40, 16, 32, -8.24519, 40.9851, -27.4803, 40.5528, -41.8527, 34.9336, -49.5251, 27.6934, -54.0637, 19.4806, -55.6847, 10.2953, -56, 4, -59.3175, -3.62076, -58.3354, -8.81215, -64, -16, -69.4086, -15.0994 )
+
 [connection signal="body_entered" from="." to="." method="_on_Friend_Dove_body_entered"]
