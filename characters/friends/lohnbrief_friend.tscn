@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Lohnbrief/Lohnbrief_zu_K.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Lohnbrief/Lohnbrief_auf_K.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area2dFriend
+
+
+
+func _on_deckel_friend_body_entered(body):
+	friend_collides(body)
+"
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "move",
+"speed": 4.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 99.1164
+
+[node name="lohnbrief_friend" type="Area2D"]
+collision_layer = 4
+script = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "move"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 7.55092 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]

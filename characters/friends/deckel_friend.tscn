@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/friend_deckel.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_unten.png" type="Texture" id=2]
@@ -12,7 +12,11 @@ animations = [ {
 "speed": 4.0
 } ]
 
+[sub_resource type="CircleShape2D" id=2]
+radius = 102.441
+
 [node name="deckel_friend" type="Area2D"]
+position = Vector2( 0, -20 )
 collision_layer = 4
 script = ExtResource( 1 )
 speed_x = -150
@@ -20,9 +24,9 @@ speed_x = -150
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "move"
-frame = 1
 playing = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -107.855, 86.6906, -101.845, -17.9611, -58.711, -70.2866, 9.8784, -86.9037, 53.0119, -83.0146, 56.5475, -58.6194, 88, -48, 108.873, -22.5573, 109.226, 87.3977 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.76837e-07, 7.55092 )
+shape = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]
