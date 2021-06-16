@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Player_UpDown_Animation.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Blob/blob_bike/blob_bike_oben.png" type="Texture" id=2]
@@ -6,23 +6,24 @@
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Blob/blob_bike/blob_bike_mitte.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Blob/blob_bike/Bike_bitter_blob.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Blob/blob_bike/Bike_bitter_blob_2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Blob/blob_bike/Happy_blob_Bike.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "idle",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "hitEnemy",
 "speed": 9.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "hitFriend",
-"speed": 5.0
+"speed": 7.0
 } ]
 
 [node name="Player_UpDown_Animation" type="AnimatedSprite"]

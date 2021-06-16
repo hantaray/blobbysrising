@@ -1,13 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch_2_K.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch_2.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/enemy_schlagloch.gd" type="Script" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 96.7985
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
@@ -15,16 +12,22 @@ animations = [ {
 "speed": 4.0
 } ]
 
+[sub_resource type="CircleShape2D" id=2]
+radius = 74.902
+
 [node name="enemy_schlagloch" type="Area2D"]
 collision_layer = 2
 script = ExtResource( 3 )
 speed_x = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+position = Vector2( -0.28894, -0.288956 )
+frames = SubResource( 1 )
 animation = "idle"
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 5, 0 )
+shape = SubResource( 2 )
+
 [connection signal="body_entered" from="." to="." method="_on_enemy_schlagloch_body_entered"]

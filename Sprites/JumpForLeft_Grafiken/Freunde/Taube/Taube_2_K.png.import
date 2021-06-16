@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Privatisierung.png-d93a78b9ce4d75e990a24213711507f6.stex"
+path="res://.import/Taube_2_K.png-212e26a13ebd67b878bf6e240d033263.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Gegner/Klappe/Privatisierung.png"
-dest_files=[ "res://.import/Privatisierung.png-d93a78b9ce4d75e990a24213711507f6.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Freunde/Taube/Taube_2_K.png"
+dest_files=[ "res://.import/Taube_2_K.png-212e26a13ebd67b878bf6e240d033263.stex" ]
 
 [params]
 

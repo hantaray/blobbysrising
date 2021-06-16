@@ -1,12 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Enemy_InterBlobExpress.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Inter_blob_express.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/inter_blob_express_quetschie.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Zug_K.png" type="Texture" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "idle",
 "speed": 4.5
@@ -25,5 +24,6 @@ animation = "idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -110, 100 )
-polygon = PoolVector2Array( -200, 64, -208, 40, -136, -48, -24, -48, -8, -72, 40, -72, 112, -96, 128, -48, 194.086, -46.29, 208, 0, 184, 72, 160, 72, 152, 80, 40, 80, 32, 96, 0, 96, -32, 80, -112, 80, -112, 72, -184, 72 )
+polygon = PoolVector2Array( -194.531, 37.9218, -193.945, 5.21368, -133.256, -61.66, -26.1804, -115.391, 37.6791, -115.146, 70.8081, -94.2874, 90.4401, -66.6799, 128.17, -66.3732, 178.784, -58.7045, 200.87, -35.0847, 182.158, 42.8297, 154.551, 43.75, 140.747, 56.9402, 101.79, 54.793, 68.9676, 98.0447, 13.7526, 118.904, -29.8058, 117.37, -63.5483, 108.781, -108.334, 51.4187, -156.494, 49.5782 )
+
 [connection signal="body_entered" from="." to="." method="_on_InterBlobExpress_body_entered"]
