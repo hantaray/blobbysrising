@@ -73,6 +73,7 @@ jump={
 
 [input_devices]
 
+pointing/ios/touch_delay=0.005
 pointing/emulate_touch_from_mouse=true
 
 [layer_names]
