@@ -75,24 +75,24 @@ func updateLevelInfo():
 	if currentLevel == "Subway":
 		
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_Links.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Screw/Schraube_unten.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Screw/Schraube_2_K.png")
 		
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Ticket/Ticket_auf.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Ticket/Ticket_1_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Inter_blob_express.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Zug_K.png")
 		
 	if currentLevel == "City":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_oben.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_1_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
 		
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietenfalle_auf.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Mietenfalle/Mietenfalle_1_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privatisierung.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privat_K.png")
 		
 	if currentLevel == "Street":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
@@ -109,23 +109,23 @@ func updateLevelInfo():
 		
 	if currentLevel == "Redis":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/Money.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/Money_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/more_money.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/more_money_K.png")
 		
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/PanamaBKF/Panama_BKF_offen.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/PanamaBKF/Panama_BKF_offen_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
 
 	if currentLevel == "Peace":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Taube/Taube_1.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Taube/Taube_2_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
 		
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Utzi.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Gun_K.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Panzer/Panzer_1.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Panzer/Panzer_1_K.png")
 		
 	if currentLevel == "Caring":
 		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
@@ -135,7 +135,7 @@ func updateLevelInfo():
 		
 		
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Coroni/Coroni.png")
+		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Coroni/coroni.png")
 		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
 
 
