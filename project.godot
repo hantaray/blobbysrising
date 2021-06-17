@@ -73,7 +73,6 @@ jump={
 
 [input_devices]
 
-pointing/ios/touch_delay=0.005
 pointing/emulate_touch_from_mouse=true
 
 [layer_names]
@@ -89,4 +88,3 @@ pointing/emulate_touch_from_mouse=true
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-vram_compression/import_pvrtc=true
