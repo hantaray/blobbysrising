@@ -28,5 +28,5 @@ animations = [ {
 
 [node name="Player_UpDown_Animation" type="AnimatedSprite"]
 frames = SubResource( 1 )
-animation = "hitFriend"
+animation = "idle"
 script = ExtResource( 1 )
