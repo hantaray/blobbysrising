@@ -15,11 +15,25 @@ func _process(delta: float) -> void:
 
 func friend_collides(body):
 	if body.get_collision_layer_bit(0):
-		MainScript.add_perfect_collect_counter()
-		MainScript.increase_score()
-		get_tree().call_group("Player", "play_friend_hit_animation")
-		get_tree().call_group("Player", "play_friend_hit_sound")
-		queue_free()
+		if is_in_group("collectible_item"):
+			get_tree().call_group("Player", "collect_item", name)
+			get_tree().call_group("Player", "play_friend_hit_sound")
+			queue_free()
+		else:
+			if is_in_group("pflege_blob"):
+				get_tree().call_group("Player", "give_item")
+				var player = get_tree().get_nodes_in_group("Player")
+				if player[0].item_collected:
+					MainScript.add_perfect_collect_counter()
+					MainScript.increase_score()
+					get_node("AnimatedSprite").play("move_happy")
+					get_tree().call_group("Player", "play_friend_hit_sound")
+			else:
+				MainScript.add_perfect_collect_counter()
+				MainScript.increase_score()
+				get_tree().call_group("Player", "play_friend_hit_animation")
+				get_tree().call_group("Player", "play_friend_hit_sound")
+				queue_free()
 	elif body.get_collision_layer_bit(4):
 #		MainScript.reset_perfect_collect()
 		queue_free()
