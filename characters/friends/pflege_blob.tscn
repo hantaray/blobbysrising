@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/PflegeBlob/Pflege_blob_unhappy_2_K.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/Patientenschluessel/Patientenschluessel.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/PflegeBlob/Pflege_blob_happy_1_K.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/PflegeBlob/Pflege_blob_happy_2_K.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Freunde/PflegeBlob/Pflege_blob_unhappy_1_K.png" type="Texture" id=5]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area2dFriend
+
+
+
+func _on_deckel_friend_body_entered(body):
+	friend_collides(body)
+"
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "move_sad",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "move_happy",
+"speed": 4.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 102.976
+
+[node name="pflege_blob" type="Area2D" groups=[
+"pflege_blob",
+]]
+position = Vector2( 0, -20 )
+collision_layer = 4
+script = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -90.6119
+margin_top = -120.816
+margin_right = 107.388
+margin_bottom = 149.184
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1, 20 )
+frames = SubResource( 2 )
+animation = "move_sad"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.76837e-07, 18.8774 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]

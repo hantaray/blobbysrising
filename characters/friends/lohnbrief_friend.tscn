@@ -23,17 +23,19 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=3]
 radius = 99.1164
 
-[node name="lohnbrief_friend" type="Area2D"]
+[node name="lohnbrief_friend" type="Area2D" groups=[
+"collectible_item",
+]]
 collision_layer = 4
 script = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "move"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 7.55092 )
 shape = SubResource( 3 )
-
 [connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]
