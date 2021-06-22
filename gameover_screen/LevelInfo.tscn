@@ -16,13 +16,13 @@
 [ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=14]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/wiederholen.png" type="Texture" id=15]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 size = 150
 outline_color = Color( 1, 0.596078, 0, 1 )
 use_filter = true
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=5]
 size = 100
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
@@ -66,9 +66,10 @@ __meta__ = {
 }
 
 [node name="PauseLabel" type="Label" parent="TextureRect"]
+visible = false
 margin_right = 1607.0
 margin_bottom = 199.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
 text = "Pause"
@@ -103,7 +104,7 @@ margin_bottom = 244.0
 margin_top = 55.0
 margin_right = 607.0
 margin_bottom = 188.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
 text = "Sammel ein: "
