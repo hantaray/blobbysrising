@@ -40,6 +40,7 @@ stream = ExtResource( 9 )
 stream = ExtResource( 8 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
 [connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]
 [connection signal="timeout" from="FriendSpawnTimer2" to="." method="_on_FriendSpawnTimer2_timeout"]

@@ -104,24 +104,20 @@ func play_enemy_hit_sound():
 	sound.play()
 	
 func collect_item(item):
-	item_collected = true
-	if item == \"lohnbrief_friend\":
+	if item.is_in_group(\"lohnbrief\"):
 		$Lohnbrief.set_visible(true)
 		$PSchluessel.set_visible(false)
-	elif item == \"patientenschluessel_friend\":
+		item_collected = true
+	elif item.is_in_group(\"patientenschluessel\"):
 		$PSchluessel.set_visible(true)
 		$Lohnbrief.set_visible(false)
+		item_collected = true
 		
 func give_item():
-	var item_passed = false
 	if item_collected:
 		item_collected = false
 		$PSchluessel.set_visible(false)
 		$Lohnbrief.set_visible(false)
-		item_passed = true
-	else:
-		item_passed = false
-	return item_passed
 	
 
 
@@ -173,4 +169,5 @@ texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="animate" from="." to="Player_Lane_Animation" method="_on_Player_Lane_animate"]
