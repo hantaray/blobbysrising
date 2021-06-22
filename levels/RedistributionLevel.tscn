@@ -40,5 +40,6 @@ autostart = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
 [connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]
