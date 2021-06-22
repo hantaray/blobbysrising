@@ -54,8 +54,10 @@ func showGameOverScreen():
 	
 func showPauseScreen():
 	get_tree().paused = true
+	updateLevelInfo(true)
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
-	$GameOverScreen.show()
+#	$GameOverScreen.show()
+	$LevelInfo.show()
 	
 func showWinScreen():
 	$GameOverScreen/Music.stream = load("res://Audio/levelcomplete_01.wav")
@@ -70,7 +72,14 @@ func showWinScreen():
 	MainScript.save_game()
 	$GameOverScreen.show()
 	
-func updateLevelInfo():
+func updateLevelInfo(pause):
+	if pause:
+		$LevelInfo/TextureRect/PauseLabel.set_visible(true)
+		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(true)
+	else:
+		$LevelInfo/TextureRect/PauseLabel.set_visible(false)
+		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(false)
+		
 	var currentLevel = MainScript.current_scene
 	if currentLevel == "Subway":
 		
