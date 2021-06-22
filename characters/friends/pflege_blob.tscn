@@ -17,15 +17,15 @@ func _on_deckel_friend_body_entered(body):
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "move_sad",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "move_happy",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "move_sad",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=3]
@@ -34,11 +34,11 @@ radius = 102.976
 [node name="pflege_blob" type="Area2D" groups=[
 "pflege_blob",
 ]]
-position = Vector2( 0, -20 )
 collision_layer = 4
 script = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 margin_left = -90.6119
 margin_top = -120.816
 margin_right = 107.388
@@ -49,13 +49,12 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 1, 20 )
+position = Vector2( 0, -10 )
 frames = SubResource( 2 )
 animation = "move_sad"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -4.76837e-07, 18.8774 )
 shape = SubResource( 3 )
+
 [connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]
