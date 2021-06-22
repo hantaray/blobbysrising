@@ -74,7 +74,7 @@ func showWinScreen():
 	
 func updateLevelInfo(pause):
 	if pause:
-		$LevelInfo/TextureRect/PauseLabel.set_visible(true)
+#		$LevelInfo/TextureRect/PauseLabel.set_visible(true)
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(true)
 	else:
 		$LevelInfo/TextureRect/PauseLabel.set_visible(false)
