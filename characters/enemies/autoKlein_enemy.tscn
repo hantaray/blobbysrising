@@ -24,10 +24,10 @@ speed_x = 800
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "move"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 2 )
 shape = SubResource( 2 )
+
 [connection signal="body_entered" from="." to="." method="_on_autoKlein_enemy_body_entered"]

@@ -74,6 +74,7 @@ __meta__ = {
 visible = false
 
 [node name="LevelInfo" parent="." instance=ExtResource( 5 )]
+
 [connection signal="button_down" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_button_down"]
 [connection signal="button_up" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_button_up"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

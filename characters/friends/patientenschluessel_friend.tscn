@@ -32,6 +32,7 @@ tracks/0/keys = {
 
 [node name="patientenschluessel_friend" type="Area2D" groups=[
 "collectible_item",
+"patientenschluessel",
 ]]
 position = Vector2( 0, -20 )
 rotation = -0.334322
@@ -61,4 +62,5 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "move"
 anims/move = SubResource( 3 )
+
 [connection signal="body_entered" from="." to="." method="_on_deckel_friend_body_entered"]
