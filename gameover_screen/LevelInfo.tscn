@@ -115,6 +115,8 @@ __meta__ = {
 margin_left = 611.0
 margin_right = 829.0
 margin_bottom = 244.0
+size_flags_horizontal = 5
+size_flags_vertical = 5
 texture = ExtResource( 2 )
 stretch_mode = 4
 
