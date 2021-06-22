@@ -180,6 +180,7 @@ margin_bottom = 556.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+
 [connection signal="pressed" from="Camera/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="Camera/PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
 [connection signal="finished" from="Camera/MenuButton/Sound" to="Camera/MenuButton" method="_on_Sound_finished"]
