@@ -26,9 +26,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="JumpForLeft"
+config/name="BlobbyRun"
 run/main_scene="res://levels/Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://BlobbyRun_icon.png"
 
 [autoload]
 
