@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://start_screen/buttons/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://start_screen/buttons/menu_button.gd" type="Script" id=2]
 [ext_resource path="res://start_screen/fonts/montserrat_eb_48.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privat_K.png" type="Texture" id=4]
 [ext_resource path="res://Items/Medals/1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start.png" type="Texture" id=6]
 
 [node name="LaneButton" instance=ExtResource( 1 )]
 margin_right = 780.0
 margin_bottom = 888.0
 rect_min_size = Vector2( 780, 888 )
-icon = ExtResource( 4 )
+icon = ExtResource( 6 )
 expand_icon = true
 script = ExtResource( 2 )
 
@@ -39,3 +40,12 @@ __meta__ = {
 visible = false
 margin_left = 50.0
 texture = null
+
+[node name="Lock" type="TextureRect" parent="." index="4"]
+visible = false
+margin_top = 40.0
+margin_right = 382.0
+margin_bottom = 444.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+stretch_mode = 4
