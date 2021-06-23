@@ -58,7 +58,7 @@ func _input(event):
 			var TouchPoint = event.get_position()
 			# UpMovement
 			# TopScreenBorder
-			if position.y > 200 \\
+			if position.y > 400 \\
 			and TouchPoint.y < position.y - shape_height*2 \\
 			and !(pauseBtnArea.has_point(TouchPoint)):
 				$MoveSound.play()
