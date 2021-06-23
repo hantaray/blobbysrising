@@ -42,8 +42,15 @@ func _on_FadeIn_fade_finished():
 func update_buttons():
 	var jumpBtn =  $Camera/CenterContainer/SubwayButton
 	if GamePlayData.locked_forest: 
-		jumpBtn.modulate = Color(1, 1, 1, 0.5)
+		jumpBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Bahn_start_grayscale.png")
+		jumpBtn.get_node("Lock").show()
 		jumpBtn.set_disabled(true)
+	else:
+		jumpBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Bahn_start.png")
+		jumpBtn.get_node("Lock").hide()
+		jumpBtn.set_disabled(false)
 		
 	if GamePlayData.highscore_forest < GamePlayData.score_goal_forest:
 		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " / " + str(GamePlayData.score_goal_forest) + " Punkte")
@@ -53,8 +60,15 @@ func update_buttons():
 	
 	var streetBtn =  $Camera/CenterContainer3/StreetLevel
 	if GamePlayData.locked_street: 
-		streetBtn.modulate = Color(1, 1, 1, 0.75)
+		streetBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Fahrrad_start_grayscale.png")
+		streetBtn.get_node("Lock").show()
 		streetBtn.set_disabled(true)
+	else:
+		streetBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Fahrrad_start.png")
+		streetBtn.get_node("Lock").hide()
+		streetBtn.set_disabled(false)
 		
 	if GamePlayData.highscore_street < GamePlayData.score_goal_street:
 		streetBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_street) + " / " + str(GamePlayData.score_goal_street) + " Punkte")
@@ -64,8 +78,15 @@ func update_buttons():
 	
 	var cityBtn =  $Camera/CenterContainer2/CityButton
 	if GamePlayData.locked_city: 
-		cityBtn.modulate = Color(1, 1, 1, 0.75)
+		cityBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start_grayscale.png")
+		cityBtn.get_node("Lock").show()
 		cityBtn.set_disabled(true)
+	else:
+		cityBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start.png")
+		cityBtn.get_node("Lock").hide()
+		cityBtn.set_disabled(false)
 		
 	if GamePlayData.highscore_city < GamePlayData.score_goal_city:
 		cityBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_city) + " / " + str(GamePlayData.score_goal_city) + " Punkte")
@@ -75,8 +96,15 @@ func update_buttons():
 	
 	var redisBtn =  $Camera/CenterContainer4/RedisLevel
 	if GamePlayData.locked_redis: 
-		redisBtn.modulate = Color(1, 1, 1, 0.75)
+		redisBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Umverteilung_start_grayscale.png")
+		redisBtn.get_node("Lock").show()
 		redisBtn.set_disabled(true)
+	else:
+		redisBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Umverteilung_start.png")
+		redisBtn.get_node("Lock").hide()
+		redisBtn.set_disabled(false)
 		
 	if GamePlayData.highscore_redis < GamePlayData.score_goal_redis:
 		redisBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_redis) + " / " + str(GamePlayData.score_goal_redis) + " Punkte")
@@ -86,8 +114,15 @@ func update_buttons():
 	
 	var peaceBtn =  $Camera/CenterContainer5/PeaceLevel
 	if GamePlayData.locked_peace: 
-		peaceBtn.modulate = Color(1, 1, 1, 0.75)
+		peaceBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Peace_start_grayscale.png")
+		peaceBtn.get_node("Lock").show()
 		peaceBtn.set_disabled(true)
+	else:
+		peaceBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Peace_start.png")
+		peaceBtn.get_node("Lock").hide()
+		peaceBtn.set_disabled(false)
 		
 	if GamePlayData.highscore_peace < GamePlayData.score_goal_peace:
 		peaceBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_peace) + " / " + str(GamePlayData.score_goal_peace) + " Punkte")
@@ -97,8 +132,15 @@ func update_buttons():
 	
 	var caringBtn =  $Camera/CenterContainer6/CaringButton
 	if GamePlayData.locked_caring: 
-		caringBtn.modulate = Color(1, 1, 1, 0.75)
+		caringBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Pflege_start_grayscale.png")
+		caringBtn.get_node("Lock").show()
 		caringBtn.set_disabled(true)
+	else:
+		caringBtn.icon = \
+			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Pflege_start.png")
+		caringBtn.get_node("Lock").hide()
+		caringBtn.set_disabled(false)
 		
 	if GamePlayData.highscore_caring < GamePlayData.score_goal_caring:
 		caringBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_caring) + " / " + str(GamePlayData.score_goal_caring) + " Punkte")

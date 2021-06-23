@@ -18,6 +18,7 @@ func friend_collides(body):
 		if is_in_group("collectible_item"):
 			get_tree().call_group("Player", "collect_item", self)
 			get_tree().call_group("Player", "play_friend_hit_sound")
+			queue_free()
 		else:
 			if is_in_group("pflege_blob"):
 				get_tree().call_group("Player", "give_item")
