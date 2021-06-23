@@ -15,6 +15,7 @@ func _on_PlayButton_pressed():
 func _on_MenuBotton_pressed():
 	MainScript.levelRestart = false
 	$CenterContainer2/HBoxContainer/MenuBotton/Sound.play()
+# warning-ignore:return_value_discarded
 	get_tree().change_scene(MainScript.levelselection_path)
 	get_tree().paused = false
 

@@ -8,7 +8,7 @@ var schloss_enemy = preload("res://characters/enemies/schloss_enemy.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPoints = [Vector2(2300, 115), Vector2(2300, 315), 
+var spawningPoints = [Vector2(2300, 315), 
 	Vector2(2300, 550), Vector2(2300, 765), Vector2(2300, 965)]
 
 func _enter_tree():
@@ -26,7 +26,7 @@ func _ready():
 
 
 func _on_EnemySpawnTimer_timeout():
-	var enemyPos = spawningPoints[randi() % 5]
+	var enemyPos = spawningPoints[randi() % 4]
 	var mob = deckel_friend.instance()	
 	# Make shure friend is spawned at least all 5 spawns
 	if noFriendSpawnCounter < 5:

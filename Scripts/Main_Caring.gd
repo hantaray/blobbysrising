@@ -9,7 +9,7 @@ var coroni_enemy = preload("res://characters/enemies/enemy_coroni.tscn")
 var prevMob = ""
 var noFriendSpawnCounter = 0
 
-var spawningPoints = [Vector2(2300, 115), Vector2(2300, 315), 
+var spawningPoints = [Vector2(2300, 315), 
 	Vector2(2300, 550), Vector2(2300, 765), Vector2(2300, 965)]
 
 func _enter_tree():
@@ -29,7 +29,7 @@ func _ready():
 
 
 func _on_EnemySpawnTimer_timeout():
-	var enemyPos = spawningPoints[randi() % 5]
+	var enemyPos = spawningPoints[randi() % 4]
 	var mob = coroni_enemy.instance()
 	add_child(mob)
 	mob.position = enemyPos
@@ -38,7 +38,7 @@ func _on_EnemySpawnTimer_timeout():
 
 func _on_FriendSpawnTimer_timeout():
 	var mob
-	var friendPos = spawningPoints[randi() % 5]
+	var friendPos = spawningPoints[randi() % 4]
 	var rndFactorSpawn = randi() % 2
 	if rndFactorSpawn == 0:
 		mob = patientenschluessel_friend.instance()
@@ -55,7 +55,7 @@ func _on_FriendSpawnTimer_timeout():
 
 func _on_FriendSpawnTimer2_timeout():
 	var mob
-	var friendPos = spawningPoints[randi() % 5]
+	var friendPos = spawningPoints[randi() % 4]
 	mob = pflege_blob_friend.instance()
 
 	add_child(mob)
