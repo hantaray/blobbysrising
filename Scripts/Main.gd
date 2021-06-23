@@ -23,6 +23,8 @@ var perfect_collect_counter = 0
 
 var save_data
 
+var levelRestart = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_game()

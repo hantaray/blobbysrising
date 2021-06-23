@@ -20,7 +20,8 @@ func _ready():
 	GamePlayData.playerSpeed  = 900
 	randomize()
 	$EnemySpawnTimer.start()
-	get_tree().paused = true
+	if !MainScript.levelRestart:
+		get_tree().paused = true
 	
 
 

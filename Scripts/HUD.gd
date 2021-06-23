@@ -1,13 +1,14 @@
 extends CanvasLayer
 
-
-
 onready var life_icon_list = $LiveLabel.get_children()
 
 var life_icon = preload("res://Items/LifeIcon1.tscn")
 
 func _ready():
 	MainScript.update_lives_hud()
+	if MainScript.levelRestart:
+		get_tree().paused = false
+		get_node("LevelInfo").hide()
 
 func update_score(score):
 	$HBoxContainer/ScoreLabel.text = 'Punkte: ' + str(score)
@@ -76,7 +77,6 @@ func showWinScreen():
 	
 func updateLevelInfo(pause):
 	if pause:
-#		$LevelInfo/TextureRect/PauseLabel.set_visible(true)
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(true)
 	else:
 		$LevelInfo/TextureRect/PauseLabel.set_visible(false)
@@ -171,7 +171,3 @@ func updateMedal(score):
 	if score >= GamePlayData.medal_goal_6:
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_3.png")
-
-
-
-

@@ -28,7 +28,8 @@ func _ready():
 	randomize()
 	$EnemySpawnTimer.start()
 	$FriendSpawnTimer.start()
-	get_tree().paused = true
+	if !MainScript.levelRestart:
+		get_tree().paused = true
 
 func _on_FriendSpawnTimer_timeout():
 	spawn_friend()

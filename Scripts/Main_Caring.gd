@@ -23,7 +23,8 @@ func _ready():
 	$EnemySpawnTimer.start()
 	$FriendSpawnTimer.start()
 	$FriendSpawnTimer2.start()
-	get_tree().paused = true
+	if !MainScript.levelRestart:
+		get_tree().paused = true
 	
 
 

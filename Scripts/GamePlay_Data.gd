@@ -12,11 +12,11 @@ var score_goal_caring_reached = false
 
 # levels unlocked
 var locked_forest = false
-var locked_city = true
-var locked_redis = true
-var locked_street = true
-var locked_peace = true
-var locked_caring = true
+var locked_city = false
+var locked_redis = false
+var locked_street = false
+var locked_peace = false
+var locked_caring = false
 
 # life
 const max_lifes = 8
