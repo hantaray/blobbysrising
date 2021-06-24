@@ -30,6 +30,8 @@ stream = ExtResource( 10 )
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 6 )]
 
+[node name="FriendSpawnTimer" parent="." instance=ExtResource( 6 )]
+
 [node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
 
 [node name="MobDestructionBorder" parent="." instance=ExtResource( 8 )]
@@ -38,3 +40,4 @@ stream = ExtResource( 10 )
 stream = ExtResource( 9 )
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
+[connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]

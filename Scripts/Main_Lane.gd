@@ -20,28 +20,31 @@ func _ready():
 	GamePlayData.playerSpeed  = 900
 	randomize()
 	$EnemySpawnTimer.start()
+	$FriendSpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
 	
 
 
 func _on_EnemySpawnTimer_timeout():
+	var mob
 	var enemyPos = spawningPoints[randi() % 4]
-	var mob = deckel_friend.instance()	
-	# Make shure friend is spawned at least all 5 spawns
-	if noFriendSpawnCounter < 5:
-		var rndFactorSpawn = randi() % 3
-		if rndFactorSpawn == 0:
-			mob = klappe_enemy.instance()
-			noFriendSpawnCounter += 1
-		elif rndFactorSpawn == 1:
-			mob = schloss_enemy.instance()
-			noFriendSpawnCounter += 1
-		if prevMob == "schloss_enemy":
-			mob = klappe_enemy.instance()
-	else:
-		noFriendSpawnCounter = 0
+	var rndFactorSpawn = randi() % 2
+	if rndFactorSpawn == 0:
+		mob = klappe_enemy.instance()
+	elif rndFactorSpawn == 1:
+		mob = schloss_enemy.instance()
+	if prevMob == "schloss_enemy":
+		mob = klappe_enemy.instance()
+			
 	prevMob = mob.name
 	add_child(mob)
 	mob.position = enemyPos
+	mob.position.x += $Player.position.x
+
+func _on_FriendSpawnTimer_timeout():
+	var friendPos = spawningPoints[randi() % 4]
+	var mob = deckel_friend.instance()
+	add_child(mob)
+	mob.position = friendPos
 	mob.position.x += $Player.position.x

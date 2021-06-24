@@ -16,26 +16,30 @@ func _ready():
 	GamePlayData.playerSpeed  = 900
 	randomize()
 	$EnemySpawnTimer.start()
+	$FriendSpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
 
 func _on_EnemySpawnTimer_timeout():
+	var mob
+	$SpawnPath/SpawnLocation.offset = randi()
+	var rndFactorSpawn = randi() % 2
+	if rndFactorSpawn == 0:
+		mob = enemyTank.instance()
+	elif rndFactorSpawn == 1:
+		mob = enemyBouncyBlob.instance()
+	if prevMob == "enemy_bouncyblob":
+		mob = enemyTank.instance()
+			
+	prevMob = mob.name
+	add_child(mob)
+	mob.position = $SpawnPath/SpawnLocation.position
+	mob.position.x += $Player.position.x
+
+
+func _on_FriendSpawnTimer_timeout():
 	$SpawnPath/SpawnLocation.offset = randi()
 	var mob = friendDove.instance()
-	# Make shure friend is spawned at least all 5 spawns
-	if noFriendSpawnCounter < 5:
-		var rndFactorSpawn = randi() % 3
-		if rndFactorSpawn == 0:
-			mob = enemyTank.instance()
-			noFriendSpawnCounter += 1
-		elif rndFactorSpawn == 1:
-			mob = enemyBouncyBlob.instance()
-			noFriendSpawnCounter += 1
-		if prevMob == "enemy_bouncyblob":
-			mob = enemyTank.instance()
-	else:
-		noFriendSpawnCounter = 0
-	prevMob = mob.name
 	add_child(mob)
 	mob.position = $SpawnPath/SpawnLocation.position
 	mob.position.x += $Player.position.x

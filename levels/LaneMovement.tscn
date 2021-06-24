@@ -15,6 +15,8 @@ script = ExtResource( 7 )
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 3 )]
 
+[node name="FriendSpawnTimer" parent="." instance=ExtResource( 3 )]
+
 [node name="SpawnPath" parent="." instance=ExtResource( 2 )]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
@@ -34,3 +36,4 @@ stream = ExtResource( 9 )
 stream = ExtResource( 8 )
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
+[connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]
