@@ -14,6 +14,10 @@
 script = ExtResource( 7 )
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 3 )]
+wait_time = 1.3
+
+[node name="FriendSpawnTimer" parent="." instance=ExtResource( 3 )]
+wait_time = 1.5
 
 [node name="SpawnPath" parent="." instance=ExtResource( 2 )]
 
@@ -34,3 +38,4 @@ stream = ExtResource( 9 )
 stream = ExtResource( 8 )
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
+[connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]

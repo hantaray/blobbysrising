@@ -13,9 +13,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 127.863, 94.6341 )
+extents = Vector2( 109, 82 )
 
 [node name="autoKlein_enemy" type="Area2D"]
+z_index = 1
 collision_layer = 2
 collision_mask = 21
 script = ExtResource( 3 )
@@ -24,7 +25,6 @@ speed_x = 0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "move"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

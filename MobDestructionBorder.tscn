@@ -1,23 +1,33 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scripts/ScreenBorder.gd" type="Script" id=1]
+[sub_resource type="GDScript" id=4]
+script/source = "extends StaticBody2D
 
-[sub_resource type="RectangleShape2D" id=1]
+# warning-ignore:unused_argument
+func _physics_process(delta):
+	var player = get_tree().get_nodes_in_group(\"Player\").front()
+	if player != null: 
+		position.x = player.position.x
+#	var playerPos = get_node('../Player').position
+#	position.x =  playerPos.x
+"
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="RectangleShape2D" id=3]
 
 [node name="MobDestructionBorder" type="StaticBody2D"]
 position = Vector2( 500, 500 )
 collision_layer = 16
 collision_mask = 6
-script = ExtResource( 1 )
+script = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2000, 0 )
 scale = Vector2( 1, 100 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 2800, 0 )
 scale = Vector2( 1, 100 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )

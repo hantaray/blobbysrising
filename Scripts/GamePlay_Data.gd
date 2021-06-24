@@ -11,12 +11,12 @@ var score_goal_peace_reached = false
 var score_goal_caring_reached = false
 
 # levels unlocked
-var locked_forest = false
-var locked_city = false
-var locked_redis = false
-var locked_street = false
+var locked_forest = true
+var locked_city = true
+var locked_redis = true
+var locked_street = true
 var locked_peace = false
-var locked_caring = false
+var locked_caring = true
 
 # life
 const max_lifes = 8
@@ -41,10 +41,10 @@ var enemyLkwSpeed = 1050
 var enemyCarSpeed = 1600
 
 # increase speed vars
-const speed_increase_just_jump = 50
-const speed_increase_lane = 50
-const speed_increase_redis = 50
-const speed_increase_up_down = 50
+const speed_increase_just_jump = 25
+const speed_increase_lane = 25
+const speed_increase_redis = 25
+const speed_increase_up_down = 25
 
 const increase_speed_every_score = 10
 const add_life_every_score = 20

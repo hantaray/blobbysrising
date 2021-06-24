@@ -7,7 +7,9 @@ var enemy_ticket = preload("res://characters/enemies/enemy_ticket.tscn")
 var friend_station_sign = preload("res://characters/friends/friend_station_sign.tscn")
 var friend_screw = preload("res://characters/friends/friend_screw.tscn")
 var prevMob = ""
-var noFriendSpawnCounter = 0
+var timeadded1 = false
+var timeadded2 = false
+var timeadded3 = false
 
 func _enter_tree():
 	MainScript.reset_level_data()
@@ -18,30 +20,47 @@ func _ready():
 	GamePlayData.playerSpeed  = 900
 	randomize()
 	$EnemySpawnTimer.start()
+	$FriendSpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
+		
+func _process(delta):
+	if MainScript.score >= 50 and !timeadded1:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.7
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.7
+		timeadded1 = true
+	if MainScript.score >= 100 and !timeadded2:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.3
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.3
+		timeadded2 = true
+	if MainScript.score >= 150 and !timeadded3:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
+		timeadded2 = true
 
 func _on_EnemySpawnTimer_timeout():
-	$SpawnPath/SpawnLocation.offset = randi()	
+	var mob
+	var rndFactorSpawn = randi() % 2
+	if rndFactorSpawn == 0:
+		mob = enemy_ticket.instance()
+	elif rndFactorSpawn == 1:
+		mob = enemy_interblobexpress.instance()
+	if prevMob == "enemy_interBlobExpress":
+		mob = enemy_ticket.instance()
+		
+	prevMob = mob.name
+	add_child(mob)
+	mob.position = $SpawnPath/SpawnLocation.position
+	mob.position.x += $Player.position.x
+
+
+func _on_FriendSpawnTimer_timeout():
+	$SpawnPath/SpawnLocation.offset = randi()
 	var mob = friend_station_sign.instance()
 	# rnd spawning for second friend
-	var rndFactorFriend = randi() % 3
+	var rndFactorFriend = randi() % 2
 	if rndFactorFriend == 0:
 		mob = friend_screw.instance()
-	# Make shure friend is spawned at least all 5 spawns
-	if noFriendSpawnCounter < 5:
-		var rndFactorSpawn = randi() % 3
-		if rndFactorSpawn == 0:
-			mob = enemy_ticket.instance()
-			noFriendSpawnCounter += 1
-		elif rndFactorSpawn == 1:
-			mob = enemy_interblobexpress.instance()
-			noFriendSpawnCounter += 1
-		if prevMob == "enemy_interBlobExpress":
-			mob = enemy_ticket.instance()
-	else:
-		noFriendSpawnCounter = 0
-	prevMob = mob.name
 	add_child(mob)
 	mob.position = $SpawnPath/SpawnLocation.position
 	mob.position.x += $Player.position.x

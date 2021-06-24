@@ -13,9 +13,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 110.141, 84.3863 )
+extents = Vector2( 86.0463, 73.3898 )
 
 [node name="autoKlein_enemy" type="Area2D"]
+z_index = 1
 collision_layer = 2
 collision_mask = 21
 script = ExtResource( 3 )

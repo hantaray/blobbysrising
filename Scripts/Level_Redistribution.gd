@@ -3,8 +3,10 @@ extends Node2D
 var enemy_panama_bkf = preload("res://characters/enemies/enemy_panama_bkf.tscn")
 var friend_koffer = preload("res://characters/friends/friend_koffer.tscn")
 var prevMob = ""
-var noFriendSpawnCounter = 0
 var prevMoneySpawn = Vector2(0,0)
+var timeadded1 = false
+var timeadded2 = false
+var timeadded3 = false
 
 func _enter_tree():
 	MainScript.reset_level_data()
@@ -17,6 +19,16 @@ func _ready():
 	$EnemySpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
+		
+func _process(delta):
+	if MainScript.score >= 100 and !timeadded2:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.1
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.1
+		timeadded2 = true
+	if MainScript.score >= 150 and !timeadded3:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
+		timeadded2 = true
 
 func _on_EnemySpawnTimer_timeout():
 	$SpawnPath/SpawnLocation.offset = randi()

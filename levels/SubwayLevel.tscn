@@ -29,6 +29,10 @@ position = Vector2( -300, 0 )
 stream = ExtResource( 10 )
 
 [node name="EnemySpawnTimer" parent="." instance=ExtResource( 6 )]
+wait_time = 1.1
+
+[node name="FriendSpawnTimer" parent="." instance=ExtResource( 6 )]
+wait_time = 0.8
 
 [node name="ScreenBorder" parent="." instance=ExtResource( 4 )]
 
@@ -38,3 +42,4 @@ stream = ExtResource( 10 )
 stream = ExtResource( 9 )
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
+[connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]

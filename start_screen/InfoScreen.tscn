@@ -37,10 +37,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CenterContainer"]
-margin_left = 330.0
-margin_top = 286.0
-margin_right = 1577.0
-margin_bottom = 358.0
+margin_left = 6775.0
+margin_top = 975.0
+margin_right = 8022.0
+margin_bottom = 1047.0
 size_flags_horizontal = 2
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -64,5 +64,6 @@ margin_top = 900.0
 margin_right = 1924.0
 margin_bottom = 1047.0
 texture = ExtResource( 6 )
+
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
 [connection signal="finished" from="MenuButton/Sound" to="MenuButton" method="_on_Sound_finished"]

@@ -13,9 +13,10 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 85.2155
+radius = 70.0235
 
 [node name="enemy_wolke" type="Area2D"]
+z_index = 1
 collision_layer = 2
 script = ExtResource( 3 )
 speed_x = 0
