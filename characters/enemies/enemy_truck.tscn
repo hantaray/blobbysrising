@@ -13,9 +13,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 222.829, 103.81 )
+extents = Vector2( 204.262, 76.0716 )
 
 [node name="enemy_truck" type="Area2D"]
+z_index = 1
 collision_layer = 2147483650
 collision_mask = 21
 script = ExtResource( 3 )

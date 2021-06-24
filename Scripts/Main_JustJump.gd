@@ -1,11 +1,13 @@
 extends Node2D
 
 
-var enemyTank = preload("res://characters/enemies/enemy_tank.tscn")
+var enemyTank = preload("res://characters/enemies/Enemy_Tank.tscn")
 var friendDove = preload("res://characters/friends/Friend_Dove.tscn")
 var enemyBouncyBlob = preload("res://characters/enemies/Enemy_Gun.tscn")
 var prevMob = ""
-var noFriendSpawnCounter = 0
+var timeadded1 = false
+var timeadded2 = false
+var timeadded3 = false
 
 func _enter_tree():
 	MainScript.reset_level_data()
@@ -19,6 +21,20 @@ func _ready():
 	$FriendSpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
+		
+func _process(delta):
+	if MainScript.score >= 50 and !timeadded1:
+#		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.7
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.3
+		timeadded1 = true
+	if MainScript.score >= 100 and !timeadded2:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.1
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.1
+		timeadded2 = true
+	if MainScript.score >= 150 and !timeadded3:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
+		timeadded2 = true
 
 func _on_EnemySpawnTimer_timeout():
 	var mob
@@ -28,7 +44,8 @@ func _on_EnemySpawnTimer_timeout():
 		mob = enemyTank.instance()
 	elif rndFactorSpawn == 1:
 		mob = enemyBouncyBlob.instance()
-	if prevMob == "enemy_bouncyblob":
+	print(prevMob)
+	if prevMob == "enemy_gun":
 		mob = enemyTank.instance()
 			
 	prevMob = mob.name

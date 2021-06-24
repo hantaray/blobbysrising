@@ -14,4 +14,5 @@ animations = [ {
 [node name="Enemy_Tank_Animation" type="AnimatedSprite"]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 playing = true

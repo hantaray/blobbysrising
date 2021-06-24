@@ -36,6 +36,6 @@ func friend_collides(body):
 				queue_free()
 	elif body.get_collision_layer_bit(4):
 #		MainScript.reset_perfect_collect()
-		queue_free()
-	
+		print(name, "die")
+		queue_free()	
 

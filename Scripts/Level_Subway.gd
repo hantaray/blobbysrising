@@ -7,7 +7,9 @@ var enemy_ticket = preload("res://characters/enemies/enemy_ticket.tscn")
 var friend_station_sign = preload("res://characters/friends/friend_station_sign.tscn")
 var friend_screw = preload("res://characters/friends/friend_screw.tscn")
 var prevMob = ""
-var noFriendSpawnCounter = 0
+var timeadded1 = false
+var timeadded2 = false
+var timeadded3 = false
 
 func _enter_tree():
 	MainScript.reset_level_data()
@@ -21,6 +23,20 @@ func _ready():
 	$FriendSpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
+		
+func _process(delta):
+	if MainScript.score >= 50 and !timeadded1:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.7
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.7
+		timeadded1 = true
+	if MainScript.score >= 100 and !timeadded2:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.3
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.3
+		timeadded2 = true
+	if MainScript.score >= 150 and !timeadded3:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
+		timeadded2 = true
 
 func _on_EnemySpawnTimer_timeout():
 	var mob
