@@ -9,17 +9,17 @@ func _ready():
 #	$Menu/CenterRow/JumpButton.grab_focus()
 #	for button in $CenterRow.get_children():
 #		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
-	var btn = $Camera/CenterContainer.get_node("SubwayButton")
+	var btn = $Camera/CenterContainer.get_node("LevelButton")
 	btn.connect("pressed", self, "_on_Button_pressed", [btn.scene_to_load])
-	var btn2 = $Camera/CenterContainer2.get_node("CityButton")
+	var btn2 = $Camera/CenterContainer2.get_node("LevelButton")
 	btn2.connect("pressed", self, "_on_Button_pressed", [btn2.scene_to_load])
-	var btn3 = $Camera/CenterContainer3.get_node("StreetLevel")
+	var btn3 = $Camera/CenterContainer3.get_node("LevelButton")
 	btn3.connect("pressed", self, "_on_Button_pressed", [btn3.scene_to_load])
-	var btn4 = $Camera/CenterContainer4.get_node("RedisLevel")
+	var btn4 = $Camera/CenterContainer4.get_node("LevelButton")
 	btn4.connect("pressed", self, "_on_Button_pressed", [btn4.scene_to_load])
-	var btn5 = $Camera/CenterContainer5.get_node("PeaceLevel")
+	var btn5 = $Camera/CenterContainer5.get_node("LevelButton")
 	btn5.connect("pressed", self, "_on_Button_pressed", [btn5.scene_to_load])
-	var btn6 = $Camera/CenterContainer6.get_node("CaringButton")
+	var btn6 = $Camera/CenterContainer6.get_node("LevelButton")
 	btn6.connect("pressed", self, "_on_Button_pressed", [btn6.scene_to_load])
 	MainScript.save_game()
 
@@ -27,7 +27,7 @@ func _ready():
 
 
 func _on_Button_pressed(scene_to_load):
-	$Camera/CenterContainer5/PeaceLevel/Sound.play()
+	$Camera/CenterContainer5/LevelButton/Sound.play()
 	MainScript.reset_level_data()
 	$Camera/FadeIn.show()
 	$Camera/FadeIn.fade_in()
@@ -40,7 +40,7 @@ func _on_FadeIn_fade_finished():
 	get_tree().change_scene(scene_path_to_load)
 	
 func update_buttons():
-	var jumpBtn =  $Camera/CenterContainer/SubwayButton
+	var jumpBtn =  $Camera/CenterContainer5/LevelButton
 	if GamePlayData.locked_forest: 
 		jumpBtn.icon = \
 			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Bahn_start_grayscale.png")
@@ -58,7 +58,7 @@ func update_buttons():
 		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " Punkte")
 	updateMedals(jumpBtn, GamePlayData.highscore_forest)
 	
-	var streetBtn =  $Camera/CenterContainer3/StreetLevel
+	var streetBtn =  $Camera/CenterContainer6/LevelButton
 	if GamePlayData.locked_street: 
 		streetBtn.icon = \
 			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Fahrrad_start_grayscale.png")
@@ -76,7 +76,7 @@ func update_buttons():
 		streetBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_street) + " Punkte")
 	updateMedals(streetBtn, GamePlayData.highscore_street)
 	
-	var cityBtn =  $Camera/CenterContainer2/CityButton
+	var cityBtn =  $Camera/CenterContainer2/LevelButton
 	if GamePlayData.locked_city: 
 		cityBtn.icon = \
 			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start_grayscale.png")
@@ -94,7 +94,7 @@ func update_buttons():
 		cityBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_city) + " Punkte")
 	updateMedals(cityBtn, GamePlayData.highscore_city)
 	
-	var redisBtn =  $Camera/CenterContainer4/RedisLevel
+	var redisBtn =  $Camera/CenterContainer3/LevelButton
 	if GamePlayData.locked_redis: 
 		redisBtn.icon = \
 			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Umverteilung_start_grayscale.png")
@@ -112,7 +112,7 @@ func update_buttons():
 		redisBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_redis) + " Punkte")
 	updateMedals(redisBtn, GamePlayData.highscore_redis)
 	
-	var peaceBtn =  $Camera/CenterContainer5/PeaceLevel
+	var peaceBtn =  $Camera/CenterContainer/LevelButton
 	if GamePlayData.locked_peace: 
 		peaceBtn.icon = \
 			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Peace_start_grayscale.png")
@@ -130,7 +130,7 @@ func update_buttons():
 		peaceBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_peace) + " Punkte")
 	updateMedals(peaceBtn, GamePlayData.highscore_peace)
 	
-	var caringBtn =  $Camera/CenterContainer6/CaringButton
+	var caringBtn =  $Camera/CenterContainer4/LevelButton
 	if GamePlayData.locked_caring: 
 		caringBtn.icon = \
 			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Pflege_start_grayscale.png")

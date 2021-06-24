@@ -32,20 +32,18 @@ script = ExtResource( 13 )
 [node name="CenterContainer" type="CenterContainer" parent="Camera"]
 margin_left = -960.0
 margin_top = -525.0
-margin_right = 962.0
+margin_right = 951.0
 margin_bottom = 444.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SubwayButton" parent="Camera/CenterContainer" instance=ExtResource( 10 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 571.0
+[node name="LevelButton" parent="Camera/CenterContainer" instance=ExtResource( 14 )]
+margin_left = 565.0
 margin_top = 40.0
-margin_right = 1351.0
+margin_right = 1345.0
 margin_bottom = 928.0
-scene_to_load = "res://levels/SubwayLevel.tscn"
+scene_to_load = "res://levels/PeaceLevel.tscn"
 
 [node name="CenterContainer2" type="CenterContainer" parent="Camera"]
 visible = false
@@ -57,7 +55,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CityButton" parent="Camera/CenterContainer2" instance=ExtResource( 8 )]
+[node name="LevelButton" parent="Camera/CenterContainer2" instance=ExtResource( 8 )]
 margin_left = 565.0
 margin_top = 40.0
 margin_right = 1345.0
@@ -74,13 +72,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StreetLevel" parent="Camera/CenterContainer3" instance=ExtResource( 6 )]
-margin_left = 585.0
+[node name="LevelButton" parent="Camera/CenterContainer3" instance=ExtResource( 12 )]
+margin_left = 565.0
 margin_top = 40.0
-margin_right = 1325.0
+margin_right = 1345.0
 margin_bottom = 928.0
-rect_min_size = Vector2( 740, 888 )
-scene_to_load = "res://levels/UpDownMovement.tscn"
+scene_to_load = "res://levels/RedistributionLevel.tscn"
 
 [node name="CenterContainer4" type="CenterContainer" parent="Camera"]
 visible = false
@@ -92,29 +89,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RedisLevel" parent="Camera/CenterContainer4" instance=ExtResource( 12 )]
+[node name="LevelButton" parent="Camera/CenterContainer4" instance=ExtResource( 15 )]
 margin_left = 565.0
 margin_top = 40.0
 margin_right = 1345.0
 margin_bottom = 928.0
-scene_to_load = "res://levels/RedistributionLevel.tscn"
+scene_to_load = "res://levels/CaringLevel.tscn"
 
 [node name="CenterContainer5" type="CenterContainer" parent="Camera"]
 visible = false
 margin_left = -960.0
 margin_top = -525.0
-margin_right = 951.0
+margin_right = 962.0
 margin_bottom = 444.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PeaceLevel" parent="Camera/CenterContainer5" instance=ExtResource( 14 )]
-margin_left = 565.0
+[node name="LevelButton" parent="Camera/CenterContainer5" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 571.0
 margin_top = 40.0
-margin_right = 1345.0
+margin_right = 1351.0
 margin_bottom = 928.0
-scene_to_load = "res://levels/PeaceLevel.tscn"
+scene_to_load = "res://levels/SubwayLevel.tscn"
 
 [node name="CenterContainer6" type="CenterContainer" parent="Camera"]
 visible = false
@@ -126,12 +125,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CaringButton" parent="Camera/CenterContainer6" instance=ExtResource( 15 )]
-margin_left = 565.0
+[node name="LevelButton" parent="Camera/CenterContainer6" instance=ExtResource( 6 )]
+margin_left = 585.0
 margin_top = 40.0
-margin_right = 1345.0
+margin_right = 1325.0
 margin_bottom = 928.0
-scene_to_load = "res://levels/CaringLevel.tscn"
+rect_min_size = Vector2( 740, 888 )
+scene_to_load = "res://levels/UpDownMovement.tscn"
 
 [node name="NextLevelButton" type="TextureButton" parent="Camera"]
 margin_left = 580.0
