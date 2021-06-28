@@ -40,6 +40,7 @@ GamePlayData="*res://Scripts/GamePlay_Data.gd"
 window/size/width=1920
 window/size/height=1080
 window/size/fullscreen=true
+window/handheld/orientation="sensor_landscape"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
