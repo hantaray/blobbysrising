@@ -29,25 +29,82 @@ __meta__ = {
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_top = 244.0
-margin_right = 1907.0
-margin_bottom = 889.0
+margin_left = 149.0
+margin_top = 2.0
+margin_right = 1798.0
+margin_bottom = 916.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CenterContainer"]
-margin_left = 6775.0
-margin_top = 975.0
-margin_right = 8022.0
-margin_bottom = 1047.0
+visible = false
+margin_left = 201.0
+margin_top = 346.0
+margin_right = 1448.0
+margin_bottom = 568.0
 size_flags_horizontal = 2
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
-text = "Das Spiel wurde erstellt für DieLinke."
+text = "Das Spiel wurde erstellt für DieLinke.
+
+"
 align = 2
 uppercase = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer"]
+margin_left = 24.0
+margin_top = 57.0
+margin_right = 1624.0
+margin_bottom = 857.0
+rect_min_size = Vector2( 1600, 800 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/ScrollContainer"]
+margin_right = 1500.0
+margin_bottom = 6222.0
+rect_min_size = Vector2( 1500, 800 )
+size_flags_horizontal = 2
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+text = "Das Spiel wurde erstellt für DieLinke.
+
+Levelinfos:
+
+Bahn
+
+Der Blob liebt es, mit Bus und Bahn zu fahren. Klar also, dass der ÖPNV funktionieren muss. Deshalb sammle Haltestellenschilder und Schrauben ein, damit Bus und Bahn für jeden erreichbar sind. Doch Vorsicht vor teuren Tickets und Zugausfällen. Die mag der Blob gar nicht. Bus und Bahn - direkt, nah, kostenfrei. Wenn du alles beachtest, kommen wir gemeinsam diesem Ziel näher. 
+
+Miete
+
+Wohnen muss bezahlbar sein. Ist doch klar. Und deshalb will der Blob nur eines: Bundesweit Deckel drauf! Während du also den Mietendeckel sammelst, solltest du Wuchermieten, die dir dein Erspartes auffressen, und Privatvermietern ausweichen. Und wenn nicht gedeckelt wird, dann wird halt enteignet, oder? Denn Wohnen ist ein Menschenrecht, kein Spekulationsobjekt.
+
+Bike
+
+Gesünder, schneller und vor allem ökologischer als auf dem Rad kommt man kaum ans Ziel. Klar, dass der Blob deshalb gerne in die Pedale tritt. Damit er das immer öfter machen kann, sammelst du am besten neue Radwegschilder auf. Aber Vorsicht im Straßenverkehr: Schlaglöcher, Autos, LKWs und Abgase können das Radvergnügen schnell verderben. Aber gemeinsam schaffen wir schon die Verkehrswende. 
+
+Umverteilung
+
+Ach, wie schön ist Panama, dachten sich nicht wenige Superreiche und schafften ihr Vermögen dahin, damit sie sich die Steuer sparen. Der Blob sieht das nicht ein und holt die Kohle zurück ins Land. Sammle also die Geldbündel ein, damit wir von der Kohle unser Gemeinwesen finanzieren können. Aber Vorsicht vor den Briefkastenfirmen, die wollen dir das nicht gönnen. Verteilen wir also gemeinsam den Reichtum um: Von oben nach unten. 
+
+Waffenexporte
+
+Was wäre die Welt ohne Frieden? Der Blob meint: Nichts. Und deshalb sammelt zusammen die Friedenstauben ein. Aber Achtung: Rütungsexporte gefährden den Frieden. Und deshalb solltest du dich vor Panzern und Waffen in Sicherheit bringen. Weil wir es aber extrem falsch finden, dass heute noch deutsche Rüstungsunternehmen bei so vielen kriegerischen Auseinandersetzungen mitverdienen, gibt es für uns nur eines: Waffenexporte verbieten!
+
+Gesundheit
+
+Die Pandemie hat eines gezeigt: Wir brauchen ein starkes öffentliches Gesundheitssystem. Und wie schaffen wir das? Der Blob meint: Mit einem vernünftigen Personalschlüssel in der Pflege und einem ordentlichen Plus in der Lohntüte für die Beschäftigten. Aber nach Jahren der Pandemie solltest du dringend dem Virus ausweichen, nicht, dass alles wieder von vorne beginnt. Bleib gesund!"
+autowrap = true
+uppercase = true
+percent_visible = -0.00917431
 __meta__ = {
 "_editor_description_": ""
 }
