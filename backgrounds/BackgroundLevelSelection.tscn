@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Level_Selection/Layer_1_LB.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Level_Selection/Layer_2_LB.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Level_Selection/Layer_4_LB.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Level_Selection/Layer_3_LB.png" type="Texture" id=4]
+
+[node name="BackgroundLevelSeletion" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 6000, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+margin_right = 3000.0
+margin_bottom = 545.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 6000, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.75, 1 )
+motion_mirroring = Vector2( 6000, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer3"]
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 1.1, 1 )
+motion_mirroring = Vector2( 6000, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer4"]
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
