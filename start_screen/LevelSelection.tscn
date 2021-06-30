@@ -8,7 +8,7 @@
 [ext_resource path="res://start_screen/buttons/UpDownButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/rechts.png" type="Texture" id=7]
 [ext_resource path="res://start_screen/buttons/LaneButton.tscn" type="PackedScene" id=8]
-[ext_resource path="res://backgrounds/BackgroundWoods.tscn" type="PackedScene" id=9]
+[ext_resource path="res://backgrounds/BackgroundLevelSelection.tscn" type="PackedScene" id=9]
 [ext_resource path="res://start_screen/buttons/JumpButton.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Audio/Background/StartScreen.wav" type="AudioStream" id=11]
 [ext_resource path="res://start_screen/buttons/RedisButton.tscn" type="PackedScene" id=12]
@@ -176,7 +176,7 @@ margin_top = -560.0
 margin_right = 1012.0
 margin_bottom = 556.0
 
-[node name="ParallaxBackground" parent="Camera" instance=ExtResource( 9 )]
+[node name="BackgroundLevelSeletion" parent="Camera" instance=ExtResource( 9 )]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

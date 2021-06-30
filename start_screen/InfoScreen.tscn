@@ -104,13 +104,17 @@ Gesundheit
 Die Pandemie hat eines gezeigt: Wir brauchen ein starkes öffentliches Gesundheitssystem. Und wie schaffen wir das? Der Blob meint: Mit einem vernünftigen Personalschlüssel in der Pflege und einem ordentlichen Plus in der Lohntüte für die Beschäftigten. Aber nach Jahren der Pandemie solltest du dringend dem Virus ausweichen, nicht, dass alles wieder von vorne beginnt. Bleib gesund!"
 autowrap = true
 uppercase = true
-percent_visible = -0.00917431
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="MenuButton" parent="." instance=ExtResource( 1 )]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 290.0
+margin_bottom = 290.0
 rect_scale = Vector2( 0.5, 0.5 )
+expand = true
 
 [node name="Sound" type="AudioStreamPlayer" parent="MenuButton"]
 stream = ExtResource( 4 )
@@ -121,6 +125,9 @@ margin_top = 900.0
 margin_right = 1924.0
 margin_bottom = 1047.0
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
 [connection signal="finished" from="MenuButton/Sound" to="MenuButton" method="_on_Sound_finished"]
