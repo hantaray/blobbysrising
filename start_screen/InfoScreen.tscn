@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/StartScreen/BG.png" type="Texture" id=3]
 [ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sprites/StartScreen/DieLinke_RGB.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/StartScreen/Die_Linke_Logo_Weiß.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -29,48 +29,31 @@ __meta__ = {
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 149.0
-margin_top = 2.0
-margin_right = 1798.0
-margin_bottom = 916.0
+margin_top = 23.8056
+margin_right = -122.0
+margin_bottom = -156.194
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="CenterContainer"]
-visible = false
-margin_left = 201.0
-margin_top = 346.0
-margin_right = 1448.0
-margin_bottom = 568.0
-size_flags_horizontal = 2
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 0
-text = "Das Spiel wurde erstellt für DieLinke.
-
-"
-align = 2
-uppercase = true
-__meta__ = {
-"_editor_description_": ""
-}
-
 [node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer"]
-margin_left = 24.0
-margin_top = 57.0
-margin_right = 1624.0
-margin_bottom = 857.0
-rect_min_size = Vector2( 1600, 800 )
+margin_left = 18.0
+margin_top = 25.0
+margin_right = 1630.0
+margin_bottom = 875.0
+rect_min_size = Vector2( 1600, 850 )
 scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CenterContainer/ScrollContainer"]
-margin_right = 1500.0
-margin_bottom = 6222.0
-rect_min_size = Vector2( 1500, 800 )
+margin_right = 1600.0
+margin_bottom = 5922.0
+rect_min_size = Vector2( 1600, 800 )
 size_flags_horizontal = 2
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -104,23 +87,32 @@ Gesundheit
 Die Pandemie hat eines gezeigt: Wir brauchen ein starkes öffentliches Gesundheitssystem. Und wie schaffen wir das? Der Blob meint: Mit einem vernünftigen Personalschlüssel in der Pflege und einem ordentlichen Plus in der Lohntüte für die Beschäftigten. Aber nach Jahren der Pandemie solltest du dringend dem Virus ausweichen, nicht, dass alles wieder von vorne beginnt. Bleib gesund!"
 autowrap = true
 uppercase = true
-percent_visible = -0.00917431
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="MenuButton" parent="." instance=ExtResource( 1 )]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 290.0
+margin_bottom = 290.0
 rect_scale = Vector2( 0.5, 0.5 )
+expand = true
 
 [node name="Sound" type="AudioStreamPlayer" parent="MenuButton"]
 stream = ExtResource( 4 )
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 1430.0
-margin_top = 900.0
-margin_right = 1924.0
-margin_bottom = 1047.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1409.04
+margin_top = 951.536
+margin_right = -10.9639
+margin_bottom = -15.4641
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
 [connection signal="finished" from="MenuButton/Sound" to="MenuButton" method="_on_Sound_finished"]

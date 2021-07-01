@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/arial-black.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+font_data = ExtResource( 1 )
+
+[node name="LevelText_City" type="Label"]
+margin_right = 1112.0
+margin_bottom = 687.0
+custom_fonts/font = SubResource( 1 )
+text = "Wohnen muss bezahlbar sein. Ist doch 
+klar. Und deshalb will der Blob nur 
+eines: Bundesweit Deckel drauf! Während 
+du also den Mietendeckel sammelst, 
+solltest du Wuchermieten, die dir dein 
+Erspartes auffressen,  und Privatvermietern 
+ausweichen. Und wenn nicht gedeckelt 
+wird, dann wird halt enteignet, oder? 
+Denn Wohnen ist ein Menschenrecht, 
+kein Spekulationsobjekt."
+__meta__ = {
+"_edit_use_anchors_": false
+}

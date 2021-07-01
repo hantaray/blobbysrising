@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/arial-black.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+font_data = ExtResource( 1 )
+
+[node name="LevelText_Peace" type="Label"]
+margin_right = 1301.0
+margin_bottom = 618.0
+custom_fonts/font = SubResource( 1 )
+text = "Gesünder, schneller und vor allem ökologischer 
+als auf dem Rad kommt man kaum ans Ziel. 
+Klar, dass der Blob deshalb gerne in die Pedale 
+tritt. Damit er das immer öfter machen kann, 
+sammelst du am besten neue Radwegschilder 
+auf. Aber Vorsicht im Straßenverkehr: 
+Schlaglöcher, Autos, LKWs und Abgase können 
+das Radvergnügen schnell verderben. Aber 
+gemeinsam schaffen wir schon die Verkehrswende."

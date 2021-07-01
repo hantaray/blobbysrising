@@ -83,71 +83,75 @@ func updateLevelInfo(pause):
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(false)
 		
 	var currentLevel = MainScript.current_scene
-	if currentLevel == "Subway":
-		
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Screw/Schraube_2_K.png")
-		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Ticket/Ticket_1_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Zug_K.png")
-		
-	if currentLevel == "City":
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_1_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
-		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Mietenfalle/Mietenfalle_1_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privat_K.png")
-		
-	if currentLevel == "Street":
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Fahrradschild/FS_ganz_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
-		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/truck/Blob_truck2_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/SpurBlocker/Spur_blocker_blinker_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect3.set_visible(true)
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect4.set_visible(true)
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.set_visible(true)
-		
-	if currentLevel == "Redis":
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/Money_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/more_money_K.png")
-		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/PanamaBKF/Panama_BKF_offen_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
-
-	if currentLevel == "Peace":
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Taube/Taube_2_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
-		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Gun_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Panzer/Panzer_1_K.png")
-		
-	if currentLevel == "Caring":
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Lohnbrief/Lohnbrief_auf_K.png")
-		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Patientenschluessel/Patientenschluessel.png")
-		
-		
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
-		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Coroni/coroni.png")
-		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
+	
+	# TODO
+	# !!!!!!!!!!!!! muss ersetzt werden mit tauschen der level Texte !!!!!!!!!!!!!!!!!!!!!!!!!!!
+	
+#	if currentLevel == "Subway":
+#
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Station_Sign/Haltestelle_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Screw/Schraube_2_K.png")
+#
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Ticket/Ticket_1_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/InterBlobExpress/Zug_K.png")
+#
+#	if currentLevel == "City":
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Deckel/Mietendeckel_1_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
+#
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Mietenfalle/Mietenfalle_1_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privat_K.png")
+#
+#	if currentLevel == "Street":
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Fahrradschild/FS_ganz_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
+#
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/truck/Blob_truck2_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/SpurBlocker/Spur_blocker_blinker_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect3.set_visible(true)
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect4.set_visible(true)
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer2/TextureRect5.set_visible(true)
+#
+#	if currentLevel == "Redis":
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/Money_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Geld/more_money_K.png")
+#
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/PanamaBKF/Panama_BKF_offen_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
+#
+#	if currentLevel == "Peace":
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Taube/Taube_2_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.set_visible(false)
+#
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Uzi/Gun_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Panzer/Panzer_1_K.png")
+#
+#	if currentLevel == "Caring":
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Lohnbrief/Lohnbrief_auf_K.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect2.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Freunde/Patientenschluessel/Patientenschluessel.png")
+#
+#
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect.texture = \
+#		load("res://Sprites/JumpForLeft_Grafiken/Gegner/Coroni/coroni.png")
+#		$LevelInfo/CenterContainer/VBoxContainer/DodgeContainer/VBoxContainer/HBoxContainer/TextureRect2.set_visible(false)
 
 
 

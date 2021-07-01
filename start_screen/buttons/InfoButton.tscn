@@ -13,8 +13,8 @@ font_data = ExtResource( 3 )
 [node name="InfoButton" type="TextureButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1360.0
-margin_bottom = -857.0
+margin_right = -1220.0
+margin_bottom = -801.0
 rect_min_size = Vector2( 560, 223 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )

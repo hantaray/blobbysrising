@@ -11,12 +11,8 @@ size = 150
 font_data = ExtResource( 3 )
 
 [node name="StartButton" type="TextureButton"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -460.123
-margin_top = -174.164
-margin_right = -1474.12
-margin_bottom = -919.164
+margin_right = 800.0
+margin_bottom = 296.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_min_size = Vector2( 502, 199 )
@@ -45,4 +41,5 @@ uppercase = true
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
 [connection signal="pressed" from="." to="." method="_on_StartButton_pressed"]

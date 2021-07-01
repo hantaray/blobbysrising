@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/arial-black.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+font_data = ExtResource( 1 )
+
+[node name="LevelText_PublicTransport" type="Label"]
+margin_right = 1234.0
+margin_bottom = 618.0
+custom_fonts/font = SubResource( 1 )
+text = "Der Blob liebt es, mit Bus und Bahn zu fahren. 
+Klar also, dass der ÖPNV funktionieren muss. 
+Deshalb sammle Haltestellenschilder und 
+Schrauben ein, damit Bus und Bahn für jeden 
+erreichbar sind. Doch Vorsicht vor teuren 
+Tickets und Zugausfällen. Die mag der Blob 
+gar nicht. Bus und Bahn - direkt, nah, kostenfrei. 
+Wenn du alles beachtest, kommen wir 
+gemeinsam diesem Ziel näher."
+__meta__ = {
+"_edit_use_anchors_": false
+}
