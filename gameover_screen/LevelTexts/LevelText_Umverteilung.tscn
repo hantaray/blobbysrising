@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/arial-black.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 46
+font_data = ExtResource( 1 )
+
+[node name="LevelText_Umverteilung" type="Label"]
+margin_right = 1242.0
+margin_bottom = 687.0
+custom_fonts/font = SubResource( 1 )
+text = "Ach, wie schön ist Panama, dachten sich nicht 
+wenige Superreiche und schafften ihr Vermögen 
+dahin, damit sie sich die Steuer sparen. 
+Der Blob sieht das nicht ein und holt die Kohle 
+zurück ins Land. Sammle also die Geldbündel 
+ein, damit wir von der Kohle unser 
+Gemeinwesen finanzieren können. Aber Vorsicht 
+vor den Briefkastenfirmen, die wollen dir das 
+nicht gönnen. Verteilen wir also gemeinsam 
+den Reichtum um: Von oben nach unten. "
+__meta__ = {
+"_edit_use_anchors_": false
+}

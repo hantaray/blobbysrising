@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Layer_2_LB.png-42945bfabc5f856619feea20f8fb5bb6.stex"
+path="res://.import/Anleitung_3_Lane.png-526d5cdedcf064b9d8a36c9d0cb57c78.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Level_Selection/Layer_2_LB.png"
-dest_files=[ "res://.import/Layer_2_LB.png-42945bfabc5f856619feea20f8fb5bb6.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Spiele_Anleitung/Anleitung_3_Lane.png"
+dest_files=[ "res://.import/Anleitung_3_Lane.png-526d5cdedcf064b9d8a36c9d0cb57c78.stex" ]
 
 [params]
 
