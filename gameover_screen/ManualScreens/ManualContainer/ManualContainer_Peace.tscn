@@ -22,6 +22,9 @@ margin_left = 57.0
 margin_right = 1424.0
 margin_bottom = 1290.0
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 1367.0
@@ -37,17 +40,18 @@ texture = ExtResource( 6 )
 [node name="Label" type="Label" parent="."]
 margin_top = 478.0
 margin_right = 1367.0
-margin_bottom = 643.0
+margin_bottom = 699.0
 custom_fonts/font = ExtResource( 4 )
-text = "Durch Antippen einer beliebigen Stelle des Bildschirms, 
+text = "Durch Antippen einer beliebigen Stelle des Bildschirms
 springt Blob nach oben.
-Je öfter Du tippst, desto höher springt Blob!"
+Je öfter Du tippst, desto höher springt Blob!
+"
 align = 1
 
 [node name="CollectContainer" type="HBoxContainer" parent="."]
-margin_top = 647.0
+margin_top = 703.0
 margin_right = 1367.0
-margin_bottom = 837.0
+margin_bottom = 893.0
 alignment = 1
 
 [node name="Label" type="Label" parent="CollectContainer"]
@@ -58,7 +62,7 @@ margin_bottom = 161.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
-text = "Sammel ein: "
+text = "Sammle ein: "
 __meta__ = {
 "_editor_description_": ""
 }
@@ -73,9 +77,9 @@ texture = ExtResource( 1 )
 stretch_mode = 4
 
 [node name="DodgeContainer" type="HBoxContainer" parent="."]
-margin_top = 841.0
+margin_top = 897.0
 margin_right = 1367.0
-margin_bottom = 1009.0
+margin_bottom = 1065.0
 alignment = 1
 
 [node name="Label" type="Label" parent="DodgeContainer"]
@@ -114,13 +118,13 @@ texture = ExtResource( 3 )
 stretch_mode = 4
 
 [node name="Label2" type="Label" parent="."]
-margin_top = 1013.0
+margin_top = 1069.0
 margin_right = 1367.0
-margin_bottom = 1290.0
+margin_bottom = 1346.0
 custom_fonts/font = ExtResource( 4 )
 text = "
-Mit jedem Levelstart bekommst Du 5 Leben.
-Immer nach 20 erspielten Punkten bekommst Du ein Leben geschenkt, 
-maximal 8 Leben sind möglich.
+Beim Level Start hast du 5 Leben.
+Nach 20 erspielten Punkten bekommst du ein Leben geschenkt.
+Maximal 8 Leben sind möglich.
 "
 align = 1

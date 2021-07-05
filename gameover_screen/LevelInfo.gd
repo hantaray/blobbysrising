@@ -5,6 +5,7 @@ func _ready():
 	get_tree().call_group("HUD", "updateLevelInfo", false)
 
 
+
 func _on_PlayButton_pressed():
 	MainScript.levelRestart = false
 	$CenterContainer2/HBoxContainer/PlayButton/Sound.play()

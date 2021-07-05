@@ -13,7 +13,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Was wäre die Welt ohne Frieden? Der Blob 
 meint: Nichts. Und deshalb sammelt zusammen 
 die Friedenstauben ein. Aber Achtung: 
-Rütungsexporte gefährden den Frieden. 
+Rüstungsexporte gefährden den Frieden. 
 Und deshalb solltest du dich vor Panzern 
 und Waffen in Sicherheit bringen. Weil wir 
 es aber extrem falsch finden, dass heute noch 
@@ -21,3 +21,6 @@ deutsche Rüstungsunternehmen bei so
 vielen kriegerischen Auseinandersetzungen 
 mitverdienen, gibt es für uns nur eines: 
 Waffenexporte verbieten!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

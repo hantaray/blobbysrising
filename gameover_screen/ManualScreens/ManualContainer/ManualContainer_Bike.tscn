@@ -30,47 +30,48 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 1941.0
+margin_right = 1487.0
 margin_bottom = 635.0
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
-margin_left = 396.0
-margin_right = 1545.0
+margin_left = 169.0
+margin_right = 1318.0
 margin_bottom = 635.0
 texture = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="."]
 margin_top = 639.0
-margin_right = 1941.0
-margin_bottom = 748.0
+margin_right = 1487.0
+margin_bottom = 804.0
 custom_fonts/font = ExtResource( 4 )
 text = "Du fährst auf dem Fahrradweg. 
-Halte deinen Finger auf der oberen oder unteren Spur um dort auszuweichen. "
+Halte deinen Finger auf der oberen oder unteren Spur um dort auszuweichen. 
+"
 align = 1
 
 [node name="CollectContainer" type="HBoxContainer" parent="."]
-margin_top = 752.0
-margin_right = 1941.0
-margin_bottom = 993.0
+margin_top = 808.0
+margin_right = 1487.0
+margin_bottom = 1049.0
 alignment = 1
 
 [node name="Label" type="Label" parent="CollectContainer"]
-margin_left = 547.0
+margin_left = 320.0
 margin_top = 54.0
-margin_right = 1154.0
+margin_right = 927.0
 margin_bottom = 187.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
-text = "Sammel ein: "
+text = "Sammle ein: "
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="TextureRect" type="TextureRect" parent="CollectContainer"]
-margin_left = 1158.0
-margin_right = 1393.0
+margin_left = 931.0
+margin_right = 1166.0
 margin_bottom = 241.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
@@ -78,18 +79,17 @@ texture = ExtResource( 6 )
 stretch_mode = 4
 
 [node name="DodgeContainer" type="HBoxContainer" parent="."]
-margin_top = 997.0
-margin_right = 1941.0
-margin_bottom = 1470.0
+margin_top = 1053.0
+margin_right = 1487.0
+margin_bottom = 1526.0
 alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="DodgeContainer"]
-margin_left = 298.0
-margin_right = 890.0
+margin_left = 71.0
+margin_right = 663.0
 margin_bottom = 473.0
 
 [node name="Label" type="Label" parent="DodgeContainer/VBoxContainer2"]
-margin_top = 40.0
 margin_right = 592.0
 margin_bottom = 133.0
 custom_fonts/font = SubResource( 2 )
@@ -101,8 +101,8 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="DodgeContainer"]
-margin_left = 894.0
-margin_right = 1643.0
+margin_left = 667.0
+margin_right = 1416.0
 margin_bottom = 473.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DodgeContainer/VBoxContainer"]
@@ -148,13 +148,13 @@ texture = ExtResource( 9 )
 stretch_mode = 4
 
 [node name="Label2" type="Label" parent="."]
-margin_top = 1474.0
-margin_right = 1941.0
-margin_bottom = 1751.0
+margin_top = 1530.0
+margin_right = 1487.0
+margin_bottom = 1807.0
 custom_fonts/font = ExtResource( 4 )
 text = "
-Mit jedem Levelstart bekommst Du 5 Leben.
-Immer nach 20 erspielten Punkten bekommst Du ein Leben geschenkt, 
-maximal 8 Leben sind möglich.
+Beim Level Start hast du 5 Leben.
+Nach 20 erspielten Punkten bekommst du ein Leben geschenkt.
+Maximal 8 Leben sind möglich.
 "
 align = 1
