@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Menu/Background/full_BG.png" type="Texture" id=1]
-[ext_resource path="res://gameover_screen/LevelTexts/LevelText_Peace.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/Anleitung.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Menu/Background/full_rahmen.png" type="Texture" id=5]
 [ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=7]
@@ -97,7 +96,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="LevelTextContainer" type="HBoxContainer" parent="."]
 margin_left = 200.674
 margin_top = 87.954
 margin_right = 1411.67
@@ -105,8 +104,6 @@ margin_bottom = 843.954
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="LevelText_Peace" parent="HBoxContainer" instance=ExtResource( 2 )]
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
 margin_left = 270.0

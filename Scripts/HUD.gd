@@ -81,12 +81,23 @@ func updateLevelInfo(pause):
 	else:
 		$LevelInfo/TextureRect/PauseLabel.set_visible(false)
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(false)
-		
 	var currentLevel = MainScript.current_scene
+	var current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Peace.tscn"
+	if currentLevel == "Subway":
+		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_PublicTransport.tscn"
+	if currentLevel == "City":
+		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_City.tscn"
+	if currentLevel == "Street":
+		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Bike.tscn"
+	if currentLevel == "Redis":
+		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Umverteilung.tscn"
+	if currentLevel == "Peace":
+		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Peace.tscn"
+	if currentLevel == "Caring":
+		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Care.tscn"
+	$LevelInfo/LevelTextContainer.add_child(load(current_level_text_path).instance())
 	
-	# TODO
-	# !!!!!!!!!!!!! muss ersetzt werden mit tauschen der level Texte !!!!!!!!!!!!!!!!!!!!!!!!!!!
-	
+#	var currentLevel = MainScript.current_scene
 #	if currentLevel == "Subway":
 #
 #		$LevelInfo/CenterContainer/VBoxContainer/CollectContainer/TextureRect.texture = \

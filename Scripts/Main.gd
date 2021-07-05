@@ -10,6 +10,7 @@ var current_scene_path
 var current_level = 1
 const gameover_path = "res://gameover_screen/GameOverScreen.tscn"
 
+
 #bool for pause button in game
 var pause_button_pressed = false
 
