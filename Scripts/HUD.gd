@@ -66,7 +66,7 @@ func showWinScreen():
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
-	$GameOverScreen/TextureRect/MenuLabel.text = "Level abgeschlossen"
+	$GameOverScreen/TextureRect/MenuLabel.text = "Du hast 100 Punkte erreicht.\nDas nächste Level wartet schon auf dich.\nSpiel erneut und knacke deinen Highscore."
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
