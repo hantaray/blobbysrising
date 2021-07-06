@@ -79,7 +79,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = 227.0
 margin_top = 117.0
-margin_right = 1720.0
+margin_right = 1735.0
 margin_bottom = 845.0
 scroll_horizontal_enabled = false
 __meta__ = {
@@ -87,7 +87,7 @@ __meta__ = {
 }
 
 [node name="ManualCenterContainer" type="CenterContainer" parent="ManualScrollContainer"]
-margin_right = 1493.0
+margin_right = 2233.0
 mouse_filter = 2
 size_flags_horizontal = 3
 __meta__ = {
