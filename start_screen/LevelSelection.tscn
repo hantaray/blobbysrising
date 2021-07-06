@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://start_screen/level_selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scripts/ScrollingBackground.gd" type="Script" id=13]
 [ext_resource path="res://start_screen/buttons/PeaceButton.tscn" type="PackedScene" id=14]
 [ext_resource path="res://start_screen/buttons/CaringButton.tscn" type="PackedScene" id=15]
+[ext_resource path="res://fonts/Font_Manual_Screen.tres" type="DynamicFont" id=16]
 
 [node name="LevelSelection" type="Control"]
 anchor_right = 1.0
@@ -178,6 +179,23 @@ margin_bottom = 556.0
 
 [node name="BackgroundLevelSeletion" parent="Camera" instance=ExtResource( 9 )]
 
+[node name="CheckButton" type="CheckButton" parent="Camera"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -899.594
+margin_top = 327.135
+margin_right = -585.594
+margin_bottom = 504.135
+custom_fonts/font = ExtResource( 16 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Musik: "
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 
@@ -185,3 +203,4 @@ stream = ExtResource( 11 )
 [connection signal="pressed" from="Camera/PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
 [connection signal="finished" from="Camera/MenuButton/Sound" to="Camera/MenuButton" method="_on_Sound_finished"]
 [connection signal="fade_finished" from="Camera/FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[connection signal="toggled" from="Camera/CheckButton" to="." method="_on_CheckButton_toggled"]

@@ -18,7 +18,8 @@ func _enter_tree():
 	MainScript.reset_level_data()
 
 func _ready():
-	get_node("Music").play()
+	if GamePlayData.music:
+		get_node("Music").play()
 	MainScript.current_scene = "Caring"
 	GamePlayData.playerSpeed  = 900
 	randomize()

@@ -197,7 +197,8 @@ func save_game():
 		"locked_city" : GamePlayData.locked_city,
 		"locked_redis" : GamePlayData.locked_redis,
 		"locked_peace" : GamePlayData.locked_peace,
-		"locked_caring" : GamePlayData.locked_caring
+		"locked_caring" : GamePlayData.locked_caring,
+		"music": GamePlayData.music
 	}
 	# Store the save dictionary as a new line in the save file.
 	save_game.store_line(to_json(save_data))
@@ -228,6 +229,7 @@ func load_game():
 			GamePlayData.locked_redis = data["locked_redis"]
 			GamePlayData.locked_peace = data["locked_peace"]
 			GamePlayData.locked_caring = data["locked_caring"]
+			GamePlayData.music = data["music"]
 		else:
 			printerr("Corrupted data!")
 	else:

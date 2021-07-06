@@ -3,7 +3,11 @@ extends Control
 var scene_path_to_load
 
 func _ready():
-	get_node("Music").play()
+	get_node("Camera/CheckButton").pressed = GamePlayData.music
+	
+	if GamePlayData.music:
+		get_node("Music").play()
+		
 	MainScript.current_level = 1
 	update_buttons()
 #	$Menu/CenterRow/JumpButton.grab_focus()
@@ -292,3 +296,13 @@ func _on_NextLevelButton_pressed():
 func _on_PrevLevelButton_pressed():
 	$Camera/PrevLevelButton/Sound.play()
 	showPrevLevel()
+
+func _on_CheckButton_toggled(button_pressed):
+	if button_pressed:
+		get_node("Music").play()
+		GamePlayData.music = true
+		MainScript.save_game()
+	else:
+		get_node("Music").stop()
+		GamePlayData.music = false
+		MainScript.save_game()

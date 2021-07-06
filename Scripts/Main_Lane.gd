@@ -31,7 +31,8 @@ func _process(delta):
 		timeadded2 = true
 
 func _ready():
-	get_node("Music").play()
+	if GamePlayData.music:
+		get_node("Music").play()
 	MainScript.current_scene = "City"
 	GamePlayData.playerSpeed  = 900
 	randomize()

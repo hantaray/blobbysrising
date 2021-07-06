@@ -29,6 +29,7 @@ _global_script_class_icons={
 config/name="BlobbyRun"
 run/main_scene="res://levels/Main.tscn"
 config/icon="res://BlobbyRun_icon.png"
+config/quit_on_go_back=false
 
 [autoload]
 
@@ -43,6 +44,10 @@ window/size/fullscreen=true
 window/handheld/orientation="sensor_landscape"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[global]
+
+lang=false
 
 [input]
 

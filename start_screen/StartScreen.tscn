@@ -3,10 +3,11 @@
 [ext_resource path="res://start_screen/buttons/InfoButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://start_screen/buttons/StartButton.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/StartScreen/BG.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/StartScreen/Die_Linke_Logo_Weiß.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/StartScreen/Die_Linke_Logo_White.png" type="Texture" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sprites/StartScreen/Überschrift.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/StartScreen/Ueberschrift.png" type="Texture" id=6]
 [ext_resource path="res://start_screen/buttons/StartButton.tscn" type="PackedScene" id=7]
+
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0

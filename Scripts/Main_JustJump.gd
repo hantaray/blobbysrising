@@ -13,7 +13,8 @@ func _enter_tree():
 	MainScript.reset_level_data()
 
 func _ready():
-	get_node("Music").play()
+	if GamePlayData.music:
+		get_node("Music").play()
 	MainScript.current_scene = "Peace"
 	GamePlayData.playerSpeed  = 900
 	randomize()
@@ -60,3 +61,15 @@ func _on_FriendSpawnTimer_timeout():
 	add_child(mob)
 	mob.position = $SpawnPath/SpawnLocation.position
 	mob.position.x += $Player.position.x
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		# quitting app or back-button on Android
+		if $HUD:
+			$HUD.showPauseScreen()
+	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT && OS.get_name().nocasecmp_to("windows") != 0:
+		# switched to different app
+		if $HUD:
+			$HUD.showPauseScreen()
+		
+		
