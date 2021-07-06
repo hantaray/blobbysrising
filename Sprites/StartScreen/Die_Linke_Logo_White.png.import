@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Die_Linke_Logo_Weiß.png-2b4e9b98ef694dc1d487088c8c18acaf.stex"
+path="res://.import/Die_Linke_Logo_White.png-5c34f91a5d9cb5a3c2f534009b6975f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/StartScreen/Die_Linke_Logo_Weiß.png"
-dest_files=[ "res://.import/Die_Linke_Logo_Weiß.png-2b4e9b98ef694dc1d487088c8c18acaf.stex" ]
+source_file="res://Sprites/StartScreen/Die_Linke_Logo_White.png"
+dest_files=[ "res://.import/Die_Linke_Logo_White.png-5c34f91a5d9cb5a3c2f534009b6975f8.stex" ]
 
 [params]
 

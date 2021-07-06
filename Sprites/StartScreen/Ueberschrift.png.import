@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Überschrift.png-8fb75ea379ddd7402436756b8ae75383.stex"
+path="res://.import/Ueberschrift.png-ac52bbdce36d1d5922442a38ac8468ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/StartScreen/Überschrift.png"
-dest_files=[ "res://.import/Überschrift.png-8fb75ea379ddd7402436756b8ae75383.stex" ]
+source_file="res://Sprites/StartScreen/Ueberschrift.png"
+dest_files=[ "res://.import/Ueberschrift.png-ac52bbdce36d1d5922442a38ac8468ee.stex" ]
 
 [params]
 

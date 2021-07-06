@@ -99,3 +99,6 @@ var medal_goal_6 = 220
 
 # save
 const FILE_NAME  = "user://savegame.save"
+
+# settings
+var music = true
