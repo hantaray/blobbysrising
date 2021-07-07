@@ -8,7 +8,8 @@ func _ready():
 	if GamePlayData.music:
 		get_node("Music").play()
 		
-	MainScript.current_level = 1
+#	MainScript.show_level = 1
+	showLevelButton()
 	update_buttons()
 #	$Menu/CenterRow/JumpButton.grab_focus()
 #	for button in $CenterRow.get_children():
@@ -175,73 +176,122 @@ func updateMedals(button, score):
 	
 
 func showNextLevel():
-	if MainScript.current_level == 1:
-		$Camera/CenterContainer.set_visible(false)
-		$Camera/CenterContainer2.set_visible(true)
-		$Camera/CenterContainer3.set_visible(false)
-		$Camera/CenterContainer4.set_visible(false)
-		$Camera/CenterContainer5.set_visible(false)
-		$Camera/CenterContainer6.set_visible(false)
-		MainScript.current_level = 2
-		$Camera/PrevLevelButton.set_visible(true)
-	elif MainScript.current_level == 2:
-		$Camera/CenterContainer.set_visible(false)
-		$Camera/CenterContainer2.set_visible(false)
-		$Camera/CenterContainer3.set_visible(true)
-		$Camera/CenterContainer4.set_visible(false)
-		$Camera/CenterContainer5.set_visible(false)
-		$Camera/CenterContainer6.set_visible(false)
-		MainScript.current_level = 3
-	elif MainScript.current_level == 3:
-		$Camera/CenterContainer.set_visible(false)
-		$Camera/CenterContainer2.set_visible(false)
-		$Camera/CenterContainer3.set_visible(false)
-		$Camera/CenterContainer4.set_visible(true)
-		$Camera/CenterContainer5.set_visible(false)
-		$Camera/CenterContainer6.set_visible(false)
-		$Camera/PrevLevelButton.set_visible(true)
-		MainScript.current_level = 4
-		$Camera/PrevLevelButton.set_visible(true)
-	elif MainScript.current_level == 4:
-		$Camera/CenterContainer.set_visible(false)
-		$Camera/CenterContainer2.set_visible(false)
-		$Camera/CenterContainer3.set_visible(false)
-		$Camera/CenterContainer4.set_visible(false)
-		$Camera/CenterContainer5.set_visible(true)
-		$Camera/CenterContainer6.set_visible(false)
-		$Camera/PrevLevelButton.set_visible(true)
-		MainScript.current_level = 5
-		$Camera/PrevLevelButton.set_visible(true)
-	elif MainScript.current_level == 5:
-		$Camera/CenterContainer.set_visible(false)
-		$Camera/CenterContainer2.set_visible(false)
-		$Camera/CenterContainer3.set_visible(false)
-		$Camera/CenterContainer4.set_visible(false)
-		$Camera/CenterContainer5.set_visible(false)
-		$Camera/CenterContainer6.set_visible(true)
-		$Camera/PrevLevelButton.set_visible(true)
-		MainScript.current_level = 6
-		$Camera/NextLevelButton.set_visible(false)
-		$Camera/PrevLevelButton.set_visible(true)
-	elif MainScript.current_level == 6:
-		$Camera/CenterContainer.set_visible(false)
-		$Camera/CenterContainer2.set_visible(false)
-		$Camera/CenterContainer3.set_visible(false)
-		$Camera/CenterContainer4.set_visible(false)
-		$Camera/CenterContainer5.set_visible(false)
-		$Camera/CenterContainer6.set_visible(true)
-		$Camera/PrevLevelButton.set_visible(true)
+	MainScript.show_level += 1
+	showLevelButton()
+#	if MainScript.current_level == 1:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(true)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		MainScript.current_level = 2
+#		$Camera/PrevLevelButton.set_visible(true)
+#	elif MainScript.current_level == 2:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(true)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		MainScript.current_level = 3
+#	elif MainScript.current_level == 3:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(true)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		$Camera/PrevLevelButton.set_visible(true)
+#		MainScript.current_level = 4
+#		$Camera/PrevLevelButton.set_visible(true)
+#	elif MainScript.current_level == 4:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(true)
+#		$Camera/CenterContainer6.set_visible(false)
+#		$Camera/PrevLevelButton.set_visible(true)
+#		MainScript.current_level = 5
+#		$Camera/PrevLevelButton.set_visible(true)
+#	elif MainScript.current_level == 5:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(true)
+#		$Camera/PrevLevelButton.set_visible(true)
+#		MainScript.current_level = 6
+#		$Camera/NextLevelButton.set_visible(false)
+#		$Camera/PrevLevelButton.set_visible(true)
+#	elif MainScript.current_level == 6:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(true)
+#		$Camera/PrevLevelButton.set_visible(true)
 		
 func showPrevLevel():
-	if MainScript.current_level == 1:
-		$Camera/CenterContainer.set_visible(true)
-		$Camera/CenterContainer2.set_visible(false)
-		$Camera/CenterContainer3.set_visible(false)
-		$Camera/CenterContainer4.set_visible(false)
-		$Camera/CenterContainer5.set_visible(false)
-		$Camera/CenterContainer6.set_visible(false)
-		$Camera/NextLevelButton.set_visible(true)
-	elif MainScript.current_level == 2:
+	MainScript.show_level -= 1
+	showLevelButton()
+#	if MainScript.current_level == 1:
+#		$Camera/CenterContainer.set_visible(true)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		$Camera/NextLevelButton.set_visible(true)
+#	elif MainScript.current_level == 2:
+#		$Camera/CenterContainer.set_visible(true)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		$Camera/PrevLevelButton.set_visible(false)
+#		$Camera/NextLevelButton.set_visible(true)
+#		MainScript.current_level = 1
+#	elif MainScript.current_level == 3:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(true)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		MainScript.current_level = 2
+#	elif MainScript.current_level == 4:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(true)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		MainScript.current_level = 3
+#	elif MainScript.current_level == 5:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(true)
+#		$Camera/CenterContainer5.set_visible(false)
+#		$Camera/CenterContainer6.set_visible(false)
+#		MainScript.current_level = 4
+#	elif MainScript.current_level == 6:
+#		$Camera/CenterContainer.set_visible(false)
+#		$Camera/CenterContainer2.set_visible(false)
+#		$Camera/CenterContainer3.set_visible(false)
+#		$Camera/CenterContainer4.set_visible(false)
+#		$Camera/CenterContainer5.set_visible(true)
+#		$Camera/CenterContainer6.set_visible(false)
+#		MainScript.current_level = 5
+#		$Camera/NextLevelButton.set_visible(true)
+		
+func showLevelButton():
+	if MainScript.show_level == 1:
 		$Camera/CenterContainer.set_visible(true)
 		$Camera/CenterContainer2.set_visible(false)
 		$Camera/CenterContainer3.set_visible(false)
@@ -250,41 +300,52 @@ func showPrevLevel():
 		$Camera/CenterContainer6.set_visible(false)
 		$Camera/PrevLevelButton.set_visible(false)
 		$Camera/NextLevelButton.set_visible(true)
-		MainScript.current_level = 1
-	elif MainScript.current_level == 3:
+	elif MainScript.show_level == 2:
 		$Camera/CenterContainer.set_visible(false)
 		$Camera/CenterContainer2.set_visible(true)
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
 		$Camera/CenterContainer6.set_visible(false)
-		MainScript.current_level = 2
-	elif MainScript.current_level == 4:
+		$Camera/PrevLevelButton.set_visible(true)
+		$Camera/NextLevelButton.set_visible(true)
+	elif MainScript.show_level == 3:
 		$Camera/CenterContainer.set_visible(false)
 		$Camera/CenterContainer2.set_visible(false)
 		$Camera/CenterContainer3.set_visible(true)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(false)
 		$Camera/CenterContainer6.set_visible(false)
-		MainScript.current_level = 3
-	elif MainScript.current_level == 5:
+		$Camera/PrevLevelButton.set_visible(true)
+		$Camera/NextLevelButton.set_visible(true)
+	elif MainScript.show_level == 4:
 		$Camera/CenterContainer.set_visible(false)
 		$Camera/CenterContainer2.set_visible(false)
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(true)
 		$Camera/CenterContainer5.set_visible(false)
 		$Camera/CenterContainer6.set_visible(false)
-		MainScript.current_level = 4
-	elif MainScript.current_level == 6:
+		$Camera/PrevLevelButton.set_visible(true)
+		$Camera/NextLevelButton.set_visible(true)
+	elif MainScript.show_level == 5:
 		$Camera/CenterContainer.set_visible(false)
 		$Camera/CenterContainer2.set_visible(false)
 		$Camera/CenterContainer3.set_visible(false)
 		$Camera/CenterContainer4.set_visible(false)
 		$Camera/CenterContainer5.set_visible(true)
 		$Camera/CenterContainer6.set_visible(false)
-		MainScript.current_level = 5
+		$Camera/PrevLevelButton.set_visible(true)
 		$Camera/NextLevelButton.set_visible(true)
-
+	elif MainScript.show_level == 6:
+		$Camera/CenterContainer.set_visible(false)
+		$Camera/CenterContainer2.set_visible(false)
+		$Camera/CenterContainer3.set_visible(false)
+		$Camera/CenterContainer4.set_visible(false)
+		$Camera/CenterContainer5.set_visible(false)
+		$Camera/CenterContainer6.set_visible(true)
+		$Camera/PrevLevelButton.set_visible(true)
+		$Camera/NextLevelButton.set_visible(false)
+	
 
 
 
