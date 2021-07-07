@@ -57,10 +57,11 @@ func update_buttons():
 		jumpBtn.get_node("Lock").hide()
 		jumpBtn.set_disabled(false)
 		
-	if GamePlayData.highscore_forest < GamePlayData.score_goal_forest:
-		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " / " + str(GamePlayData.score_goal_forest) + " Punkte")
+	if GamePlayData.highscore_forest < GamePlayData.score_goal_subway:
+		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " / " + str(GamePlayData.score_goal_subway) + " Punkte")
 	else:
 		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " Punkte")
+	MainScript.setMedalStartValue(GamePlayData.score_goal_subway)
 	updateMedals(jumpBtn, GamePlayData.highscore_forest)
 	
 	var streetBtn =  $Camera/CenterContainer6/LevelButton
@@ -79,6 +80,7 @@ func update_buttons():
 		streetBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_street) + " / " + str(GamePlayData.score_goal_street) + " Punkte")
 	else:
 		streetBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_street) + " Punkte")
+	MainScript.setMedalStartValue(GamePlayData.score_goal_street)
 	updateMedals(streetBtn, GamePlayData.highscore_street)
 	
 	var cityBtn =  $Camera/CenterContainer2/LevelButton
@@ -97,6 +99,7 @@ func update_buttons():
 		cityBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_city) + " / " + str(GamePlayData.score_goal_city) + " Punkte")
 	else:
 		cityBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_city) + " Punkte")
+	MainScript.setMedalStartValue(GamePlayData.score_goal_city)
 	updateMedals(cityBtn, GamePlayData.highscore_city)
 	
 	var redisBtn =  $Camera/CenterContainer3/LevelButton
@@ -115,6 +118,7 @@ func update_buttons():
 		redisBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_redis) + " / " + str(GamePlayData.score_goal_redis) + " Punkte")
 	else:
 		redisBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_redis) + " Punkte")
+	MainScript.setMedalStartValue(GamePlayData.score_goal_redis)
 	updateMedals(redisBtn, GamePlayData.highscore_redis)
 	
 	var peaceBtn =  $Camera/CenterContainer/LevelButton
@@ -133,6 +137,7 @@ func update_buttons():
 		peaceBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_peace) + " / " + str(GamePlayData.score_goal_peace) + " Punkte")
 	else:
 		peaceBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_peace) + " Punkte")
+	MainScript.setMedalStartValue(GamePlayData.score_goal_peace)
 	updateMedals(peaceBtn, GamePlayData.highscore_peace)
 	
 	var caringBtn =  $Camera/CenterContainer4/LevelButton
@@ -151,9 +156,12 @@ func update_buttons():
 		caringBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_caring) + " / " + str(GamePlayData.score_goal_caring) + " Punkte")
 	else:
 		caringBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_caring) + " Punkte")
+	MainScript.setMedalStartValue(GamePlayData.score_goal_caring)
 	updateMedals(caringBtn, GamePlayData.highscore_caring)
 
 func updateMedals(button, score):
+	print(GamePlayData.medal_goal_1)
+	print(GamePlayData.medal_goal_2)
 	if score >= GamePlayData.medal_goal_1:
 		button.get_node("Medal").set_visible(true)
 		button.get_node("Medal").texture = \
