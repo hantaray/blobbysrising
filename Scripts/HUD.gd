@@ -67,9 +67,9 @@ func showWinScreen():
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
-	$GameOverScreen/TextureRect/MenuLabel.text = "Du hast 100 Punkte erreicht.\nDas nächste Level wartet schon auf dich.\nSpiel erneut und knacke deinen Highscore."
+	$GameOverScreen/TextureRect/MenuLabel.text = "Gratulation!\n\nDu hast das Levelziel erreicht!\nDas nächste Level wurde frei geschaltet.\n\nSpiele dieses Level weiter, um den Highscore zu knacken\nund weitere Medallien frei zu schalten\noder gehe in das nächste Level."
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
-	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(true)
+	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(false)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
@@ -188,3 +188,21 @@ func updateMedal(score):
 	if score >= GamePlayData.medal_goal_6:
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_3.png")
+	if score >= GamePlayData.medal_goal_7:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_1.png")
+	if score >= GamePlayData.medal_goal_8:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_2.png")
+	if score >= GamePlayData.medal_goal_9:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_3.png")
+	if score >= GamePlayData.medal_goal_10:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_1.png")
+	if score >= GamePlayData.medal_goal_11:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_2.png")
+	if score >= GamePlayData.medal_goal_12:
+		$GameOverScreen/TextureRect/Medal.texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_3.png")

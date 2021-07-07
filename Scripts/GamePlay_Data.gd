@@ -82,12 +82,98 @@ var highscore_peace = 0
 var highscore_caring = 0
 
 # medals
-var medal_goal_1 = 120
-var medal_goal_2 = 140
-var medal_goal_3 = 160
-var medal_goal_4 = 180
-var medal_goal_5 = 200
-var medal_goal_6 = 220
+const medal_add = 25
+
+var medal_goal_1 = 100
+var medal_goal_2 = medal_goal_1 + medal_add
+var medal_goal_3 = medal_goal_1 + medal_add * 2
+var medal_goal_4 = medal_goal_1 + medal_add * 3
+var medal_goal_5 = medal_goal_1 + medal_add * 4
+var medal_goal_6 = medal_goal_1 + medal_add * 5
+var medal_goal_7 = medal_goal_1 + medal_add * 6
+var medal_goa_8 = medal_goal_1 + medal_add * 7
+var medal_goal_9 = medal_goal_1 + medal_add * 8
+var medal_goal_10 = medal_goal_1 + medal_add * 9
+var medal_goal_11 = medal_goal_1 + medal_add * 10
+var medal_goal_12 = medal_goal_1 + medal_add * 11
+
+#var medal_goal_forest_1 = score_goal_forest
+#var medal_goal_forest_2 = score_goal_forest + medal_add
+#var medal_goal_forest_3 = score_goal_forest + medal_add * 2
+#var medal_goal_forest_4 = score_goal_forest + medal_add * 3
+#var medal_goal_forest_5 = score_goal_forest + medal_add * 4
+#var medal_goal_forest_6 = score_goal_forest + medal_add * 5
+#var medal_goal_forest_7 = score_goal_forest + medal_add * 6
+#var medal_goal_forest_8 = score_goal_forest + medal_add * 7
+#var medal_goal_forest_9 = score_goal_forest + medal_add * 8
+#var medal_goal_forest_10 = score_goal_forest + medal_add * 9
+#var medal_goal_forest_11 = score_goal_forest + medal_add * 10
+#var medal_goal_forest_12 = score_goal_forest + medal_add * 11
+#
+#var medal_goal_street_1 = score_goal_street
+#var medal_goal_street_2 = score_goal_street + medal_add
+#var medal_goal_street_3 = score_goal_street + medal_add * 2
+#var medal_goal_street_4 = score_goal_street + medal_add * 3
+#var medal_goal_street_5 = score_goal_street + medal_add * 4
+#var medal_goal_street_6 = score_goal_street + medal_add * 5
+#var medal_goal_street_7 = score_goal_street + medal_add * 6
+#var medal_goal_street_8 = score_goal_street + medal_add * 7
+#var medal_goal_street_9 = score_goal_street + medal_add * 8
+#var medal_goal_street_10 = score_goal_street + medal_add * 9
+#var medal_goal_street_11 = score_goal_street + medal_add * 10
+#var medal_goal_street_12 = score_goal_street + medal_add * 11
+#
+#var medal_goal_redis_1 = score_goal_redis
+#var medal_goal_redis_2 = score_goal_redis + medal_add
+#var medal_goal_redis_3 = score_goal_redis + medal_add * 2
+#var medal_goal_redis_4 = score_goal_redis + medal_add * 3
+#var medal_goal_redis_5 = score_goal_redis + medal_add * 4
+#var medal_goal_redis_6 = score_goal_redis + medal_add * 5
+#var medal_goal_redis_7 = score_goal_redis + medal_add * 6
+#var medal_goal_redis_8 = score_goal_redis + medal_add * 7
+#var medal_goal_redis_9 = score_goal_redis + medal_add * 8
+#var medal_goal_redis_10 = score_goal_redis + medal_add * 9
+#var medal_goal_redis_11 = score_goal_redis + medal_add * 10
+#var medal_goal_redis_12 = score_goal_redis + medal_add * 11
+#
+#var medal_goal_city_1 = score_goal_city
+#var medal_goal_city_2 = score_goal_city + medal_add
+#var medal_goal_city_3 = score_goal_city + medal_add * 2
+#var medal_goal_city_4 = score_goal_city + medal_add * 3
+#var medal_goal_city_5 = score_goal_city + medal_add * 4
+#var medal_goal_city_6 = score_goal_city + medal_add * 5
+#var medal_goal_city_7 = score_goal_city + medal_add * 6
+#var medal_goal_city_8 = score_goal_city + medal_add * 7
+#var medal_goal_city_9 = score_goal_city + medal_add * 8
+#var medal_goal_city_10 = score_goal_city + medal_add * 9
+#var medal_goal_city_11 = score_goal_city + medal_add * 10
+#var medal_goal_city_12 = score_goal_city + medal_add * 11
+#
+#var medal_goal_peace_1 = score_goal_peace
+#var medal_goal_peace_2 = score_goal_peace + medal_add
+#var medal_goal_peace_3 = score_goal_peace + medal_add * 2
+#var medal_goal_peace_4 = score_goal_peace + medal_add * 3
+#var medal_goal_peace_5 = score_goal_peace + medal_add * 4
+#var medal_goal_peace_6 = score_goal_peace + medal_add * 5
+#var medal_goal_peace_7 = score_goal_peace + medal_add * 6
+#var medal_goal_peace_8 = score_goal_peace + medal_add * 7
+#var medal_goal_peace_9 = score_goal_peace + medal_add * 8
+#var medal_goal_peace_10 = score_goal_peace + medal_add * 9
+#var medal_goal_peace_11 = score_goal_peace + medal_add * 10
+#var medal_goal_peace_12 = score_goal_peace + medal_add * 11
+#
+#var medal_goal_caring_1 = score_goal_caring
+#var medal_goal_caring_2 = score_goal_caring + medal_add
+#var medal_goal_caring_3 = score_goal_caring + medal_add * 2
+#var medal_goal_caring_4 = score_goal_caring + medal_add * 3
+#var medal_goal_caring_5 = score_goal_caring + medal_add * 4
+#var medal_goal_caring_6 = score_goal_caring + medal_add * 5
+#var medal_goal_caring_7 = score_goal_caring + medal_add * 6
+#var medal_goal_caring_8 = score_goal_caring + medal_add * 7
+#var medal_goal_caring_9 = score_goal_caring + medal_add * 8
+#var medal_goal_caring_10 = score_goal_caring + medal_add * 9
+#var medal_goal_caring_11 = score_goal_caring + medal_add * 10
+#var medal_goal_caring_12 = score_goal_caring + medal_add * 11
 
 ## medals
 #var medal_goal_1 = 1
