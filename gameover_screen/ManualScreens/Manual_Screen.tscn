@@ -87,7 +87,7 @@ __meta__ = {
 }
 
 [node name="ManualCenterContainer" type="CenterContainer" parent="ManualScrollContainer"]
-margin_right = 2233.0
+margin_right = 1508.0
 mouse_filter = 2
 size_flags_horizontal = 3
 __meta__ = {

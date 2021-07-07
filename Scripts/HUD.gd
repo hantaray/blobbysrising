@@ -58,6 +58,7 @@ func showPauseScreen():
 	get_tree().paused = true
 	updateLevelInfo(true)
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
+	$GameOverScreen/TextureRect/MenuLabel.show()
 #	$GameOverScreen.show()
 	$LevelInfo.show()
 	
@@ -78,6 +79,7 @@ func showWinScreen():
 func updateLevelInfo(pause):
 	if pause:
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(true)
+		$LevelInfo/TextureRect/PauseLabel.set_visible(true)
 	else:
 		$LevelInfo/TextureRect/PauseLabel.set_visible(false)
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(false)
