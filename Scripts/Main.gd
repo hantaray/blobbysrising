@@ -135,9 +135,9 @@ func check_game_over():
 
 func check_level_goal_reached(level):
 	if level == "Subway":
-		if score >= GamePlayData.score_goal_forest and \
-		!GamePlayData.score_goal_forest_reached:
-			GamePlayData.score_goal_forest_reached = true
+		if score >= GamePlayData.score_goal_subway and \
+		!GamePlayData.score_goal_subway_reached:
+			GamePlayData.score_goal_subway_reached = true
 			GamePlayData.locked_street = false
 #			get_tree().change_scene(MainScript.levelselection_path)
 			MainScript.show_level += 1
@@ -186,7 +186,7 @@ func save_game():
 	save_game.open(GamePlayData.FILE_NAME, File.WRITE)
 	
 	save_data = {
-		"score_goal_forest_reached" : GamePlayData.score_goal_forest_reached,
+		"score_goal_subway_reached" : GamePlayData.score_goal_subway_reached,
 		"score_goal_street_reached" : GamePlayData.score_goal_street_reached,
 		"score_goal_city_reached" : GamePlayData.score_goal_city_reached,
 		"score_goal_redis_reached" : GamePlayData.score_goal_redis_reached,
@@ -217,7 +217,7 @@ func load_game():
 		var data = parse_json(file.get_as_text())
 		file.close()
 		if typeof(data) == TYPE_DICTIONARY:
-			GamePlayData.score_goal_forest_reached = data["score_goal_forest_reached"]
+			GamePlayData.score_goal_subway_reached = data["score_goal_subway_reached"]
 			GamePlayData.score_goal_street_reached = data["score_goal_street_reached"]
 			GamePlayData.score_goal_city_reached = data["score_goal_city_reached"]
 			GamePlayData.score_goal_redis_reached = data["score_goal_redis_reached"]
@@ -246,3 +246,19 @@ func set_enemy_can_hit_timer():
 	GamePlayData.enemy_can_hit = false
 	yield(get_tree().create_timer(GamePlayData.INVULNERABLE_TIME), "timeout")
 	GamePlayData.enemy_can_hit = true
+	
+	
+
+func setMedalStartValue(score_goal):	
+	GamePlayData.medal_goal_1 = score_goal
+	GamePlayData.medal_goal_2 = GamePlayData.medal_goal_1 +  GamePlayData.medal_add
+	GamePlayData.medal_goal_3 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 2
+	GamePlayData.medal_goal_4 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 3
+	GamePlayData.medal_goal_5 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 4
+	GamePlayData.medal_goal_6 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 5
+	GamePlayData.medal_goal_7 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 6
+	GamePlayData.medal_goal_8 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 7
+	GamePlayData.medal_goal_9 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 8
+	GamePlayData.medal_goal_10 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 9
+	GamePlayData.medal_goal_11 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 10
+	GamePlayData.medal_goal_12 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 11

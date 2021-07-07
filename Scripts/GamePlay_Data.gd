@@ -3,7 +3,7 @@ extends Node
 #### GamePlayData ####
 
 
-var score_goal_forest_reached = false
+var score_goal_subway_reached = false
 var score_goal_city_reached = false
 var score_goal_redis_reached = false
 var score_goal_street_reached = false
@@ -59,19 +59,19 @@ var add_life_if_bigger_than = 20
 var perfect_collect_limit = 5
 
 # level score goals
-#var score_goal_forest = 250 160
+#var score_goal_subway = 250 160
 #var score_goal_city = 130 238
 #var score_goal_street = 130  277
 #var score_goal_redis = 150 195
 #
-var score_goal_forest = 100
+var score_goal_subway = 100
 var score_goal_city = 100
 var score_goal_street = 100
 var score_goal_redis = 100
 var score_goal_peace = 100
 var score_goal_caring = 100
 
-#var score_goal_forest = 20
+#var score_goal_subway = 20
 #var score_goal_street = 20
 #var score_goal_redis = 20
 #var score_goal_city = 20
@@ -100,18 +100,21 @@ var medal_goal_10 = medal_goal_1 + medal_add * 9
 var medal_goal_11 = medal_goal_1 + medal_add * 10
 var medal_goal_12 = medal_goal_1 + medal_add * 11
 
-#var medal_goal_forest_1 = score_goal_forest
-#var medal_goal_forest_2 = score_goal_forest + medal_add
-#var medal_goal_forest_3 = score_goal_forest + medal_add * 2
-#var medal_goal_forest_4 = score_goal_forest + medal_add * 3
-#var medal_goal_forest_5 = score_goal_forest + medal_add * 4
-#var medal_goal_forest_6 = score_goal_forest + medal_add * 5
-#var medal_goal_forest_7 = score_goal_forest + medal_add * 6
-#var medal_goal_forest_8 = score_goal_forest + medal_add * 7
-#var medal_goal_forest_9 = score_goal_forest + medal_add * 8
-#var medal_goal_forest_10 = score_goal_forest + medal_add * 9
-#var medal_goal_forest_11 = score_goal_forest + medal_add * 10
-#var medal_goal_forest_12 = score_goal_forest + medal_add * 11
+
+
+
+#var medal_goal_forest_1 = score_goal_subway
+#var medal_goal_forest_2 = score_goal_subway + medal_add
+#var medal_goal_forest_3 = score_goal_subway + medal_add * 2
+#var medal_goal_forest_4 = score_goal_subway + medal_add * 3
+#var medal_goal_forest_5 = score_goal_subway + medal_add * 4
+#var medal_goal_forest_6 = score_goal_subway + medal_add * 5
+#var medal_goal_forest_7 = score_goal_subway + medal_add * 6
+#var medal_goal_forest_8 = score_goal_subway + medal_add * 7
+#var medal_goal_forest_9 = score_goal_subway + medal_add * 8
+#var medal_goal_forest_10 = score_goal_subway + medal_add * 9
+#var medal_goal_forest_11 = score_goal_subway + medal_add * 10
+#var medal_goal_forest_12 = score_goal_subway + medal_add * 11
 #
 #var medal_goal_street_1 = score_goal_street
 #var medal_goal_street_2 = score_goal_street + medal_add
