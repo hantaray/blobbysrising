@@ -11,6 +11,7 @@
 margin_right = 780.0
 margin_bottom = 888.0
 rect_min_size = Vector2( 780, 888 )
+focus_mode = 0
 icon = ExtResource( 4 )
 expand_icon = true
 script = ExtResource( 2 )

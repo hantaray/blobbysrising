@@ -61,6 +61,7 @@ margin_left = 565.0
 margin_top = 40.0
 margin_right = 1345.0
 margin_bottom = 928.0
+focus_mode = 0
 scene_to_load = "res://levels/LaneMovement.tscn"
 
 [node name="CenterContainer3" type="CenterContainer" parent="Camera"]
@@ -78,6 +79,8 @@ margin_left = 565.0
 margin_top = 40.0
 margin_right = 1345.0
 margin_bottom = 928.0
+focus_mode = 0
+enabled_focus_mode = 0
 scene_to_load = "res://levels/RedistributionLevel.tscn"
 
 [node name="CenterContainer4" type="CenterContainer" parent="Camera"]
@@ -95,6 +98,8 @@ margin_left = 565.0
 margin_top = 40.0
 margin_right = 1345.0
 margin_bottom = 928.0
+focus_mode = 0
+enabled_focus_mode = 0
 scene_to_load = "res://levels/CaringLevel.tscn"
 
 [node name="CenterContainer5" type="CenterContainer" parent="Camera"]
@@ -114,6 +119,8 @@ margin_left = 571.0
 margin_top = 40.0
 margin_right = 1351.0
 margin_bottom = 928.0
+focus_mode = 0
+enabled_focus_mode = 0
 scene_to_load = "res://levels/SubwayLevel.tscn"
 
 [node name="CenterContainer6" type="CenterContainer" parent="Camera"]
@@ -132,6 +139,8 @@ margin_top = 40.0
 margin_right = 1325.0
 margin_bottom = 928.0
 rect_min_size = Vector2( 740, 888 )
+focus_mode = 0
+enabled_focus_mode = 0
 scene_to_load = "res://levels/UpDownMovement.tscn"
 
 [node name="NextLevelButton" type="TextureButton" parent="Camera"]
@@ -186,10 +195,12 @@ margin_left = -899.594
 margin_top = 327.135
 margin_right = -585.594
 margin_bottom = 504.135
+focus_mode = 0
 custom_fonts/font = ExtResource( 16 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
 text = "Musik: "
 expand_icon = true
 __meta__ = {
