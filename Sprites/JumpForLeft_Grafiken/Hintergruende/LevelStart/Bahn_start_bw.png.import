@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Umverteilung_start_grayscale.png-2ee8a768178e21b6dc7e45f3c4082268.stex"
+path="res://.import/Bahn_start_bw.png-8682a5edd582c8afc1aaf0d04a502811.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Umverteilung_start_grayscale.png"
-dest_files=[ "res://.import/Umverteilung_start_grayscale.png-2ee8a768178e21b6dc7e45f3c4082268.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Bahn_start_bw.png"
+dest_files=[ "res://.import/Bahn_start_bw.png-8682a5edd582c8afc1aaf0d04a502811.stex" ]
 
 [params]
 
