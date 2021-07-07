@@ -8,6 +8,7 @@ const levelselection_path = "res://start_screen/LevelSelection.tscn"
 var current_scene
 var current_scene_path
 var current_level = 1
+var show_level = 1
 const gameover_path = "res://gameover_screen/GameOverScreen.tscn"
 
 
@@ -139,6 +140,7 @@ func check_level_goal_reached(level):
 			GamePlayData.score_goal_forest_reached = true
 			GamePlayData.locked_street = false
 #			get_tree().change_scene(MainScript.levelselection_path)
+			MainScript.show_level += 1
 			get_tree().call_group("HUD", "showWinScreen")
 	if level == "City":
 		if score >= GamePlayData.score_goal_city and \
@@ -146,6 +148,7 @@ func check_level_goal_reached(level):
 			GamePlayData.score_goal_city_reached = true
 			GamePlayData.locked_redis = false
 #			get_tree().change_scene(MainScript.levelselection_path)
+			MainScript.show_level += 1
 			get_tree().call_group("HUD", "showWinScreen")
 	if level == "Street":
 		if score >= GamePlayData.score_goal_street and \
@@ -159,6 +162,7 @@ func check_level_goal_reached(level):
 			GamePlayData.score_goal_redis_reached = true
 			GamePlayData.locked_caring = false
 #			get_tree().change_scene(MainScript.levelselection_path)
+			MainScript.show_level += 1
 			get_tree().call_group("HUD", "showWinScreen")
 	if level == "Peace":
 		if score >= GamePlayData.score_goal_peace and \
@@ -166,6 +170,7 @@ func check_level_goal_reached(level):
 			GamePlayData.locked_city = false
 			GamePlayData.score_goal_peace_reached = true
 #			get_tree().change_scene(MainScript.levelselection_path)
+			MainScript.show_level += 1
 			get_tree().call_group("HUD", "showWinScreen")
 	if level == "Caring":
 		if score >= GamePlayData.score_goal_caring and \
@@ -173,6 +178,7 @@ func check_level_goal_reached(level):
 			GamePlayData.locked_forest = false
 			GamePlayData.score_goal_caring_reached = true
 #			get_tree().change_scene(MainScript.levelselection_path)
+			MainScript.show_level += 1
 			get_tree().call_group("HUD", "showWinScreen")
 
 func save_game():

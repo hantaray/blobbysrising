@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fahrrad_start_grayscale.png-00e8ba20c81b4ccf3c17afa61d1ddc75.stex"
+path="res://.import/Peace_start_bw.png-ce0fc515d87efc019ac3a06e90401c77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Fahrrad_start_grayscale.png"
-dest_files=[ "res://.import/Fahrrad_start_grayscale.png-00e8ba20c81b4ccf3c17afa61d1ddc75.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Peace_start_bw.png"
+dest_files=[ "res://.import/Peace_start_bw.png-ce0fc515d87efc019ac3a06e90401c77.stex" ]
 
 [params]
 
