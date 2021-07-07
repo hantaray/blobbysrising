@@ -87,6 +87,7 @@ margin_right = 692.864
 margin_bottom = 1352.86
 
 [node name="ScoreContainer" type="CenterContainer" parent="TextureRect"]
+visible = false
 margin_left = 27.9797
 margin_top = 215.007
 margin_right = 1529.98

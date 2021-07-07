@@ -66,12 +66,12 @@ func showWinScreen():
 	$GameOverScreen/Music.stream = load("res://Audio/levelcomplete_01.wav")
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
-	get_node("HBoxContainer").hide()
+#	get_node("HBoxContainer").hide()
 	$GameOverScreen/TextureRect/MenuLabel.text = "Gratulation!\n\nDu hast das Levelziel erreicht!\nDas nächste Level wurde frei geschaltet.\n\nSpiele dieses Level weiter, um den Highscore zu knacken\nund weitere Medallien frei zu schalten\noder gehe in das nächste Level."
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(false)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
-	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
+#	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	MainScript.save_game()
 	$GameOverScreen.show()
