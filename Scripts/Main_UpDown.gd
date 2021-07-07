@@ -26,15 +26,16 @@ func _ready():
 	if GamePlayData.music:
 		get_node("Music").play()
 	MainScript.current_scene = "Street"
-	GamePlayData.playerSpeed  = 900
-	GamePlayData.enemyCarSpeed  = 1200
-	GamePlayData.enemyTruckSpeed  = 1200
+	GamePlayData.playerSpeed  = GamePlayData.player_start_speed
+	GamePlayData.enemyCarSpeed  = GamePlayData.enemy_car_start_speed
+	GamePlayData.enemyTruckSpeed  = GamePlayData.enemy_truck_start_speed
 	randomize()
 	$EnemySpawnTimer.start()
 	$FriendSpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
 		
+# warning-ignore:unused_argument
 func _process(delta):
 #	if MainScript.score >= 50 and !timeadded1:
 #		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.7

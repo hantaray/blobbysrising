@@ -16,7 +16,7 @@ func _ready():
 	if GamePlayData.music:
 		get_node("Music").play()
 	MainScript.current_scene = "Peace"
-	GamePlayData.playerSpeed  = 900
+	GamePlayData.playerSpeed  = GamePlayData.player_start_speed
 	randomize()
 	$EnemySpawnTimer.start()
 	$FriendSpawnTimer.start()

@@ -35,10 +35,13 @@ var enemy_speed_y = 0
 var friend_speed_x = -100
 var friend_speed_y = 0
 
-var playerSpeed = 900
-var enemyTruckSpeed = 1600
+const player_start_speed = 900
+var playerSpeed = player_start_speed
+const enemy_truck_start_speed = 1600
+var enemyTruckSpeed = enemy_truck_start_speed
 var enemyLkwSpeed = 1050
-var enemyCarSpeed = 1600
+const enemy_car_start_speed = 1600
+var enemyCarSpeed = enemy_car_start_speed
 
 # increase speed vars
 const speed_increase_just_jump = 25
