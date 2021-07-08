@@ -30,36 +30,36 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 1487.0
+margin_right = 1477.0
 margin_bottom = 635.0
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
-margin_left = 169.0
-margin_right = 1318.0
+margin_left = 164.0
+margin_right = 1313.0
 margin_bottom = 635.0
 texture = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="."]
 margin_top = 639.0
-margin_right = 1487.0
+margin_right = 1477.0
 margin_bottom = 804.0
 custom_fonts/font = ExtResource( 4 )
-text = "Du fährst auf dem Fahrradweg. 
-Halte deinen Finger auf der oberen oder unteren Spur um dort auszuweichen. 
+text = "Du fährst auf dem Fahrradweg.
+Halte deinen Finger auf der oberen oder unteren Spur um dort auszuweichen.
 "
 align = 1
 
 [node name="CollectContainer" type="HBoxContainer" parent="."]
 margin_top = 808.0
-margin_right = 1487.0
+margin_right = 1477.0
 margin_bottom = 1049.0
 alignment = 1
 
 [node name="Label" type="Label" parent="CollectContainer"]
-margin_left = 320.0
+margin_left = 315.0
 margin_top = 54.0
-margin_right = 927.0
+margin_right = 922.0
 margin_bottom = 187.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -70,8 +70,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="CollectContainer"]
-margin_left = 931.0
-margin_right = 1166.0
+margin_left = 926.0
+margin_right = 1161.0
 margin_bottom = 241.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
@@ -80,13 +80,13 @@ stretch_mode = 4
 
 [node name="DodgeContainer" type="HBoxContainer" parent="."]
 margin_top = 1053.0
-margin_right = 1487.0
+margin_right = 1477.0
 margin_bottom = 1526.0
 alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="DodgeContainer"]
-margin_left = 71.0
-margin_right = 663.0
+margin_left = 66.0
+margin_right = 658.0
 margin_bottom = 473.0
 
 [node name="Label" type="Label" parent="DodgeContainer/VBoxContainer2"]
@@ -101,8 +101,8 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="DodgeContainer"]
-margin_left = 667.0
-margin_right = 1416.0
+margin_left = 662.0
+margin_right = 1411.0
 margin_bottom = 473.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DodgeContainer/VBoxContainer"]
@@ -149,7 +149,7 @@ stretch_mode = 4
 
 [node name="Label2" type="Label" parent="."]
 margin_top = 1530.0
-margin_right = 1487.0
+margin_right = 1477.0
 margin_bottom = 1807.0
 custom_fonts/font = ExtResource( 4 )
 text = "

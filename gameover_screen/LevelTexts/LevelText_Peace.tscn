@@ -10,16 +10,16 @@ font_data = ExtResource( 1 )
 margin_right = 1211.0
 margin_bottom = 756.0
 custom_fonts/font = SubResource( 1 )
-text = "Was wäre die Welt ohne Frieden? Der Blob 
-meint: Nichts. Und deshalb sammelt zusammen 
-die Friedenstauben ein. Aber Achtung: 
-Rüstungsexporte gefährden den Frieden. 
-Und deshalb solltest du dich vor Panzern 
-und Waffen in Sicherheit bringen. Weil wir 
-es aber extrem falsch finden, dass heute noch 
-deutsche Rüstungsunternehmen bei so 
-vielen kriegerischen Auseinandersetzungen 
-mitverdienen, gibt es für uns nur eines: 
+text = "Was wäre die Welt ohne Frieden? Blob
+meint: Nichts. Und deshalb sammelt zusammen
+die Friedenstauben ein. Aber Achtung:
+Rüstungsexporte gefährden den Frieden.
+Darum solltest du dich vor Panzern
+und Waffen in Sicherheit bringen. Weil wir
+es aber extrem falsch finden, dass heute noch
+deutsche Rüstungsunternehmen bei so
+vielen kriegerischen Auseinandersetzungen
+mitverdienen, gibt es für uns nur eines:
 Waffenexporte verbieten!"
 __meta__ = {
 "_edit_use_anchors_": false

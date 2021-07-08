@@ -12,10 +12,13 @@ margin_bottom = 618.0
 custom_fonts/font = SubResource( 1 )
 text = "Die Pandemie hat eines gezeigt: Wir brauchen 
 ein starkes öffentliches Gesundheitssystem. 
-Und wie schaffen wir das? Der Blob meint: 
+Und wie schaffen wir das? Blob meint: 
 Mit einem vernünftigen Personalschlüssel in 
 der Pflege und einem ordentlichen Plus in 
 der Lohntüte für die Beschäftigten. Aber nach 
 Jahren der Pandemie solltest du dringend dem 
 Virus ausweichen, nicht, dass alles wieder von 
 vorne beginnt. Bleib gesund!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

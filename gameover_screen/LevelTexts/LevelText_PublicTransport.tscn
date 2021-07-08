@@ -10,15 +10,15 @@ font_data = ExtResource( 1 )
 margin_right = 1234.0
 margin_bottom = 618.0
 custom_fonts/font = SubResource( 1 )
-text = "Der Blob liebt es, mit Bus und Bahn zu fahren. 
+text = "Blob liebt es, mit Bus und Bahn zu fahren. 
 Klar also, dass der ÖPNV funktionieren muss. 
 Deshalb sammle Haltestellenschilder und 
-Schrauben ein, damit Bus und Bahn für jeden 
+Schrauben ein, damit Bus und Bahn für alle 
 erreichbar sind. Doch Vorsicht vor teuren 
-Tickets und Zugausfällen. Die mag der Blob 
+Tickets und Zugausfällen. Die mag Blob 
 gar nicht. Bus und Bahn - direkt, nah, kostenfrei. 
 Wenn du alles beachtest, kommen wir 
-gemeinsam diesem Ziel näher."
+gemeinsam diesem Ziel näher. "
 __meta__ = {
 "_edit_use_anchors_": false
 }
