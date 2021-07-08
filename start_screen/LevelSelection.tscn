@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://start_screen/level_selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
@@ -15,7 +15,8 @@
 [ext_resource path="res://Scripts/ScrollingBackground.gd" type="Script" id=13]
 [ext_resource path="res://start_screen/buttons/PeaceButton.tscn" type="PackedScene" id=14]
 [ext_resource path="res://start_screen/buttons/CaringButton.tscn" type="PackedScene" id=15]
-[ext_resource path="res://fonts/Font_Manual_Screen.tres" type="DynamicFont" id=16]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/Laut_aus.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/Laut_an.png" type="Texture" id=17]
 
 [node name="LevelSelection" type="Control"]
 anchor_right = 1.0
@@ -188,21 +189,19 @@ margin_bottom = 556.0
 
 [node name="BackgroundLevelSeletion" parent="Camera" instance=ExtResource( 9 )]
 
-[node name="CheckButton" type="CheckButton" parent="Camera"]
+[node name="CheckButton" type="TextureButton" parent="Camera"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = -899.594
-margin_top = 327.135
-margin_right = -585.594
-margin_bottom = 504.135
+margin_left = -919.599
+margin_top = 337.036
+margin_right = -688.599
+margin_bottom = 568.036
+rect_scale = Vector2( 0.75, 0.75 )
 focus_mode = 0
-custom_fonts/font = ExtResource( 16 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = true
 enabled_focus_mode = 0
-text = "Musik: "
-expand_icon = true
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
