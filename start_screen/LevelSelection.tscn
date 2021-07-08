@@ -195,14 +195,6 @@ margin_bottom = -307.404
 [node name="Sound" type="AudioStreamPlayer" parent="Camera/MenuButton"]
 stream = ExtResource( 3 )
 
-[node name="FadeIn" parent="Camera" instance=ExtResource( 5 )]
-margin_left = -1860.0
-margin_top = -1064.0
-margin_right = 1978.0
-margin_bottom = 1027.0
-
-[node name="BackgroundLevelSeletion" parent="Camera" instance=ExtResource( 9 )]
-
 [node name="CheckButton" type="TextureButton" parent="Camera"]
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -220,11 +212,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="FadeIn" parent="Camera" instance=ExtResource( 5 )]
+visible = false
+margin_left = -1860.0
+margin_top = -1064.0
+margin_right = 1978.0
+margin_bottom = 1027.0
+
+[node name="BackgroundLevelSeletion" parent="Camera" instance=ExtResource( 9 )]
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 
 [connection signal="pressed" from="Camera/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="Camera/PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
 [connection signal="finished" from="Camera/MenuButton/Sound" to="Camera/MenuButton" method="_on_Sound_finished"]
-[connection signal="fade_finished" from="Camera/FadeIn" to="." method="_on_FadeIn_fade_finished"]
 [connection signal="toggled" from="Camera/CheckButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="fade_finished" from="Camera/FadeIn" to="." method="_on_FadeIn_fade_finished"]
