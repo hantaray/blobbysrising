@@ -179,7 +179,24 @@ func updateMedals(button, score):
 	if score >= GamePlayData.medal_goal_6:
 		button.get_node("Medal").texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_3.png")
-	
+	if score >= GamePlayData.medal_goal_7:
+		button.get_node("Medal").texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_1.png")
+	if score >= GamePlayData.medal_goal_8:
+		button.get_node("Medal").texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_2.png")
+	if score >= GamePlayData.medal_goal_9:
+		button.get_node("Medal").texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_3.png")
+	if score >= GamePlayData.medal_goal_10:
+		button.get_node("Medal").texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_1.png")
+	if score >= GamePlayData.medal_goal_11:
+		button.get_node("Medal").texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_2.png")
+	if score >= GamePlayData.medal_goal_12:
+		button.get_node("Medal").texture = \
+			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_3.png")
 
 func showNextLevel():
 	MainScript.show_level += 1
