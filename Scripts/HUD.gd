@@ -9,9 +9,9 @@ func _ready():
 	if MainScript.levelRestart:
 		get_tree().paused = false
 		get_node("LevelInfo").hide()
-
+	$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_peace)
 func update_score(score):
-	$HBoxContainer/ScoreLabel.text = 'Punkte: ' + str(score)
+	$HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text = 'Punkte: ' + str(score)
 
 func update_lives_hud(lifes):
 	delete_children($LiveLabel)
@@ -35,9 +35,9 @@ func _on_TextureButton_button_up():
 	
 func update_perfcoll_label(perfcoll_multiplier):
 	if perfcoll_multiplier > 1:
-		$HBoxContainer/PerfectCollLabel.text = 'x ' + str(perfcoll_multiplier)
+		$HBoxContainer/VBoxContainer/HBoxContainer/PerfectCollLabel.text = ' x ' + str(perfcoll_multiplier)
 	else:
-		$HBoxContainer/PerfectCollLabel.text = ''
+		$HBoxContainer/VBoxContainer/HBoxContainer/PerfectCollLabel.text = ''
 	
 func showGameOverScreen():
 	$GameOverScreen/Music.stream = load("res://Audio/gameover_01.wav")
@@ -47,8 +47,8 @@ func showGameOverScreen():
 	$GameOverScreen/TextureRect/MenuLabel.text = "Game Over"
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(true)
-	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
-	updateMedal(int($HBoxContainer/ScoreLabel.text))
+	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text)
+	updateMedal(int($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text))
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	MainScript.save_game()
@@ -70,7 +70,7 @@ func showWinScreen():
 	$GameOverScreen/TextureRect/MenuLabel.text = "Gratulation!\n\nDu hast das Levelziel erreicht!\nDas nächste Level wurde frei geschaltet.\n\nSpiele dieses Level weiter, um den Highscore zu knacken\nund weitere Medallien frei zu schalten\noder gehe in das nächste Level."
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(false)
-	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/ScoreLabel.text)
+	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text)
 #	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	MainScript.save_game()
