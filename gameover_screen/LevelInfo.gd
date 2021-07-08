@@ -29,7 +29,7 @@ func _on_ReplayButton_pressed():
 		get_tree().change_scene(MainScript.current_scene_path)
 		get_tree().paused = false
 
-
 func _on_Manual_Button_pressed():
-	get_tree().change_scene("res://gameover_screen/ManualScreens/Manual_Screen.tscn")
+	get_tree().call_group("HUD", "showManualScreen")
+#	get_tree().change_scene("res://gameover_screen/ManualScreens/Manual_Screen.tscn")
 

@@ -76,6 +76,10 @@ func showWinScreen():
 	MainScript.save_game()
 	$GameOverScreen.show()
 	
+func showManualScreen():
+	get_tree().paused = true
+	$Manual.show()
+	
 func updateLevelInfo(pause):
 	if pause:
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(true)
