@@ -25,6 +25,7 @@ func _ready():
 	pauseBtnArea = Rect2(0,0, pauseBtn.get_normal_texture().get_height(), \
 							pauseBtn.get_normal_texture().get_width())
 	add_to_group('Player')
+	$Player_UpDown_Animation.play("idle")
  
 
 # warning-ignore:unused_argument
@@ -33,7 +34,7 @@ func _physics_process(delta):
 	move_forward()
 	apply_gravity()
 # warning-ignore:return_value_discarded
-	animate()
+#	animate()
 	move_and_slide(motion, UP)
 
 func _input(event):
@@ -75,12 +76,16 @@ func animate():
 
 func play_enemy_hit_animation():
 	showEnemyHitAnimation = true
+	$Player_UpDown_Animation.play("hitEnemy")
 	yield(get_tree().create_timer(enemyHitAnimationTime), "timeout")
+	$Player_UpDown_Animation.play("idle")
 	showEnemyHitAnimation = false
 
 func play_friend_hit_animation():
 	showFriendHitAnimation = true
+	$Player_UpDown_Animation.play("hitFriend")
 	yield(get_tree().create_timer(friendHitAnimationTime), "timeout")
+	$Player_UpDown_Animation.play("idle")
 	showFriendHitAnimation = false
 
 func play_friend_hit_sound():

@@ -24,5 +24,6 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Player_UpDown_Animation" parent="." instance=ExtResource( 1 )]
+frame = 2
 
 [connection signal="animate" from="." to="Player_UpDown_Animation" method="_on_Player_UpDown_animate"]
