@@ -196,11 +196,10 @@ margin_bottom = -307.404
 stream = ExtResource( 3 )
 
 [node name="FadeIn" parent="Camera" instance=ExtResource( 5 )]
-visible = false
-margin_left = -1016.0
-margin_top = -560.0
-margin_right = 1012.0
-margin_bottom = 556.0
+margin_left = -1860.0
+margin_top = -1064.0
+margin_right = 1978.0
+margin_bottom = 1027.0
 
 [node name="BackgroundLevelSeletion" parent="Camera" instance=ExtResource( 9 )]
 
