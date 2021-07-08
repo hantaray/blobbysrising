@@ -2,22 +2,26 @@
 
 [ext_resource path="res://start_screen/buttons/InfoButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://start_screen/buttons/StartButton.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/StartScreen/BG.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/StartScreen/BG_upscale.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/StartScreen/Die_Linke_Logo_White.png" type="Texture" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/StartScreen/Ueberschrift.png" type="Texture" id=6]
 [ext_resource path="res://start_screen/buttons/StartButton.tscn" type="PackedScene" id=7]
 
 [node name="TitleScreen" type="Control"]
-margin_right = 1920.0
-margin_bottom = 1080.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -940.484
+margin_top = 7.8811
+margin_right = 979.516
+margin_bottom = 7.8811
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -27,8 +31,9 @@ __meta__ = {
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
 anchor_right = 1.0
+anchor_bottom = 1.0
 margin_top = 20.0
-margin_bottom = 292.0
+margin_bottom = -788.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,11 +65,10 @@ rect_scale = Vector2( 1, 1 )
 script = ExtResource( 2 )
 
 [node name="CenterContainer3" type="CenterContainer" parent="."]
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-margin_top = 119.02
-margin_bottom = 398.02
+anchor_bottom = 1.0
+margin_top = 659.02
+margin_bottom = -141.98
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -77,10 +81,12 @@ margin_right = 1310.0
 margin_bottom = 279.0
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1400.04
-margin_top = 949.354
+margin_left = -519.96
+margin_top = -130.646
 margin_right = -17.7556
 margin_bottom = -17.6461
 texture = ExtResource( 4 )

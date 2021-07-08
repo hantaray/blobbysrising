@@ -32,10 +32,12 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 161.0
 margin_top = 84.0
-margin_right = 1775.0
-margin_bottom = 989.0
+margin_right = -145.0
+margin_bottom = -91.0
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -43,10 +45,12 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = -10.0
 margin_top = -31.0
-margin_right = 1635.0
-margin_bottom = 929.0
+margin_right = 21.0
+margin_bottom = 24.0
 texture = ExtResource( 5 )
 expand = true
 __meta__ = {
@@ -68,10 +72,12 @@ __meta__ = {
 }
 
 [node name="Manual_Button" type="TextureButton" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 1482.5
 margin_top = 310.721
-margin_right = 1671.5
-margin_bottom = 506.721
+margin_right = -248.5
+margin_bottom = -573.279
 rect_scale = Vector2( 2, 2 )
 texture_normal = ExtResource( 3 )
 __meta__ = {
@@ -79,19 +85,23 @@ __meta__ = {
 }
 
 [node name="LevelTextContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 200.674
 margin_top = 87.954
-margin_right = 1411.67
-margin_bottom = 843.954
+margin_right = -508.33
+margin_bottom = -236.046
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CenterContainer2" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 270.0
 margin_top = 858.0
-margin_right = 1646.0
-margin_bottom = 1056.0
+margin_right = -274.0
+margin_bottom = -24.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

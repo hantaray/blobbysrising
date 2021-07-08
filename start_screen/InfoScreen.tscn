@@ -2,11 +2,10 @@
 
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://fonts/arial-black.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Sprites/StartScreen/BG.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/StartScreen/BG_upscale.png" type="Texture" id=3]
 [ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/StartScreen/Die_Linke_Logo_White.png" type="Texture" id=6]
-
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -20,8 +19,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -912.375
+margin_right = 1007.62
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -32,19 +33,19 @@ __meta__ = {
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 149.0
-margin_top = 23.8056
+margin_left = 170.0
+margin_top = 24.0
 margin_right = -122.0
-margin_bottom = -156.194
+margin_bottom = -174.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer"]
-margin_left = 18.0
-margin_top = 25.0
-margin_right = 1630.0
-margin_bottom = 875.0
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 1620.0
+margin_bottom = 866.0
 rect_min_size = Vector2( 1600, 850 )
 scroll_horizontal_enabled = false
 __meta__ = {
@@ -93,21 +94,22 @@ __meta__ = {
 }
 
 [node name="MenuButton" parent="." instance=ExtResource( 1 )]
-margin_left = 15.0
-margin_top = 15.0
-margin_right = 290.0
-margin_bottom = 290.0
-rect_scale = Vector2( 0.5, 0.5 )
-expand = true
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 210.0
+margin_bottom = 210.0
+rect_scale = Vector2( 0.8, 0.8 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="MenuButton"]
 stream = ExtResource( 4 )
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1409.04
-margin_top = 951.536
+margin_left = -510.96
+margin_top = -128.464
 margin_right = -10.9639
 margin_bottom = -15.4641
 texture = ExtResource( 6 )
