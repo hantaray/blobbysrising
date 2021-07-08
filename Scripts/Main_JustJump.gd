@@ -45,7 +45,6 @@ func _on_EnemySpawnTimer_timeout():
 		mob = enemyTank.instance()
 	elif rndFactorSpawn == 1:
 		mob = enemyBouncyBlob.instance()
-	print(prevMob)
 	if prevMob == "enemy_gun":
 		mob = enemyTank.instance()
 			

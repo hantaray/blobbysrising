@@ -13,7 +13,7 @@ var score_goal_caring_reached = false
 # levels unlocked
 var locked_forest = true
 var locked_city = true
-var locked_redis = true
+var locked_redis = false
 var locked_street = true
 var locked_peace = false
 var locked_caring = true

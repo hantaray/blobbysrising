@@ -9,7 +9,6 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var music = get_tree().get_root().get_child(0)
-	print(music)
 	music.stream = load("res://Audio/Casual Theme #1 (Looped).wav")
 	music.play()
 

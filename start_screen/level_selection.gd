@@ -160,8 +160,6 @@ func update_buttons():
 	updateMedals(caringBtn, GamePlayData.highscore_caring)
 
 func updateMedals(button, score):
-	print(GamePlayData.medal_goal_1)
-	print(GamePlayData.medal_goal_2)
 	if score >= GamePlayData.medal_goal_1:
 		button.get_node("Medal").set_visible(true)
 		button.get_node("Medal").texture = \
