@@ -12,9 +12,9 @@ var score_goal_caring_reached = false
 
 # levels unlocked
 var locked_forest = true
-var locked_city = true
+var locked_city = false
 var locked_redis = false
-var locked_street = true
+var locked_street = false
 var locked_peace = false
 var locked_caring = true
 
@@ -23,10 +23,10 @@ const max_lifes = 8
 
 # blob is hit and invulnarable
 var enemy_can_hit = true
-const INVULNERABLE_TIME = 1.5
+const INVULNERABLE_TIME = 1
 
 # friend hit animation time
-const FRIEND_HIT_ANIMATION_TIME = 1.5
+const FRIEND_HIT_ANIMATION_TIME = 1
 
 # movement vars
 var enemy_speed_x = -100
