@@ -12,7 +12,7 @@
 [ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
-size = 50
+size = 150
 outline_color = Color( 1, 0.596078, 0, 1 )
 use_filter = true
 font_data = ExtResource( 7 )
@@ -68,6 +68,7 @@ __meta__ = {
 visible = false
 margin_right = 1541.0
 margin_bottom = 728.0
+rect_scale = Vector2( 0.980265, 0.935632 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
@@ -80,31 +81,31 @@ __meta__ = {
 }
 
 [node name="Medal" parent="TextureRect" instance=ExtResource( 8 )]
-visible = false
-margin_left = 129.864
-margin_top = 343.861
-margin_right = 692.864
-margin_bottom = 1352.86
+margin_left = 106.08
+margin_top = 215.427
+margin_right = 669.08
+margin_bottom = 1224.43
 
 [node name="ScoreContainer" type="CenterContainer" parent="TextureRect"]
-visible = false
 margin_left = 27.9797
 margin_top = 215.007
 margin_right = 1529.98
 margin_bottom = 706.007
+rect_scale = Vector2( 0.980421, 1.2047 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScoreLabel" type="Label" parent="TextureRect/ScoreContainer"]
 visible = false
-margin_left = 751.0
+margin_left = 619.0
 margin_top = 179.0
-margin_right = 751.0
+margin_right = 883.0
 margin_bottom = 312.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
+text = "Score"
 align = 1
 valign = 1
 __meta__ = {
