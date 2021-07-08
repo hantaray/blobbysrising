@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://gameover_screen/GameOverScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gameover_screen/LevelInfo.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=6]
+[ext_resource path="res://gameover_screen/ManualScreens/Manual_Screen.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -13,14 +14,14 @@ outline_size = 2
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 80
 outline_size = 4
 outline_color = Color( 0.898039, 1, 0, 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 40
 outline_size = 2
 use_filter = true
@@ -73,7 +74,7 @@ __meta__ = {
 margin_left = 383.0
 margin_right = 383.0
 margin_bottom = 106.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,7 +84,7 @@ __meta__ = {
 margin_top = 110.0
 margin_right = 383.0
 margin_bottom = 163.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Highscore: 0"
 __meta__ = {
@@ -107,6 +108,9 @@ __meta__ = {
 visible = false
 
 [node name="LevelInfo" parent="." instance=ExtResource( 5 )]
+
+[node name="Manual" parent="." instance=ExtResource( 7 )]
+visible = false
 
 [connection signal="button_down" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_button_down"]
 [connection signal="button_up" from="HBoxContainer/TextureButton" to="." method="_on_TextureButton_button_up"]

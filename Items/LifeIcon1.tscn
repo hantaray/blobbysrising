@@ -7,7 +7,6 @@ load_path = "res://.import/Blob_2.png-d5cd0edb11e79feac0366c01cfb7c8bc.stex"
 [node name="LifeIcon1" type="TextureRect"]
 margin_right = 142.0
 margin_bottom = 163.0
-rect_scale = Vector2( 0.5, 0.5 )
 texture = SubResource( 1 )
 stretch_mode = 5
 __meta__ = {

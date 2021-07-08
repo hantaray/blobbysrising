@@ -19,5 +19,6 @@ func _ready():
 
 
 func _on_BackButton_pressed():
-	get_tree().change_scene(MainScript.current_scene_path)
+	hide()
+#	get_tree().change_scene(MainScript.current_scene_path)
 
