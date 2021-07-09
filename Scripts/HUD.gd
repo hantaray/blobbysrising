@@ -9,7 +9,7 @@ func _ready():
 	if MainScript.levelRestart:
 		get_tree().paused = false
 		get_node("LevelInfo").hide()
-	$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_peace)
+	
 func update_score(score):
 	$HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text = 'Punkte: ' + str(score)
 
@@ -98,21 +98,27 @@ func updateLevelInfo(pause):
 	if currentLevel == "Subway":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_PublicTransport.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Train.tscn"
+		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_forest)
 	if currentLevel == "City":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_City.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_City.tscn"
+		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_city)
 	if currentLevel == "Street":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Bike.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Bike.tscn"
+		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_street)
 	if currentLevel == "Redis":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Umverteilung.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Umverteilung.tscn"
+		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_redis)
 	if currentLevel == "Peace":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Peace.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Peace.tscn"
+		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_peace)
 	if currentLevel == "Caring":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Care.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Care.tscn"
+		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_caring)
 	delete_children($LevelInfo/LevelTextContainer)
 	$LevelInfo/LevelTextContainer.add_child(load(current_level_text_path).instance())
 	delete_children($Manual/ManualScrollContainer/ManualCenterContainer)
