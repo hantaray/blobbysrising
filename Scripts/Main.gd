@@ -86,7 +86,8 @@ func reset_score() :
 	reset_perfect_collect()
 
 func increase_score_add():
-	score_add += 1
+	if score_add < 8:
+		score_add += 1
 	update_perfcoll_label()
 	
 func add_perfect_collect_counter():
