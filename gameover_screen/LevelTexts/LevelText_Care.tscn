@@ -7,8 +7,10 @@ size = 46
 font_data = ExtResource( 1 )
 
 [node name="LevelText_Care" type="Label"]
-margin_right = 1195.0
-margin_bottom = 618.0
+anchor_right = 0.622
+anchor_bottom = 0.572
+margin_right = 0.759888
+margin_bottom = 0.23999
 custom_fonts/font = SubResource( 1 )
 text = "Die Pandemie hat eines gezeigt: Wir brauchen 
 ein starkes öffentliches Gesundheitssystem. 
