@@ -12,9 +12,9 @@ var score_goal_caring_reached = false
 
 # levels unlocked
 var locked_forest = true
-var locked_city = false
-var locked_redis = false
-var locked_street = false
+var locked_city = true
+var locked_redis = true
+var locked_street = true
 var locked_peace = false
 var locked_caring = true
 
@@ -67,7 +67,7 @@ var perfect_collect_limit = 5
 var score_goal_subway = 110
 var score_goal_city = 110
 var score_goal_street = 100
-var score_goal_redis = 100
+var score_goal_redis = 120
 var score_goal_peace = 120
 var score_goal_caring = 100
 

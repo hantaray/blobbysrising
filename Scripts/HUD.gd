@@ -67,7 +67,6 @@ func showWinScreen():
 	$GameOverScreen/Music.stream = load("res://Audio/levelcomplete_01.wav")
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
-	print(MainScript.current_scene)
 	if MainScript.current_scene == "Street":
 		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast alle Levelziele erreicht!\n\nVersuche die Highscores zu knacken\num weitere Medaillen frei zu schalten."
 	else:
