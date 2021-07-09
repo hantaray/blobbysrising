@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://start_screen/level_selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
@@ -14,9 +14,15 @@
 [ext_resource path="res://start_screen/buttons/RedisButton.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/ScrollingBackground.gd" type="Script" id=13]
 [ext_resource path="res://start_screen/buttons/PeaceButton.tscn" type="PackedScene" id=14]
-[ext_resource path="res://start_screen/buttons/CaringButton.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Peace_start.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/Laut_aus.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/Laut_an.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Miete_start.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Umverteilung_start.png" type="Texture" id=19]
+[ext_resource path="res://start_screen/buttons/CaringButton.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Pflege_start.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Bahn_start.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Fahrrad_start.png" type="Texture" id=23]
 
 [node name="LevelSelection" type="Control"]
 anchor_right = 1.0
@@ -47,6 +53,7 @@ margin_left = 565.0
 margin_top = 40.0
 margin_right = 1345.0
 margin_bottom = 928.0
+icon = ExtResource( 15 )
 scene_to_load = "res://levels/PeaceLevel.tscn"
 
 [node name="CenterContainer2" type="CenterContainer" parent="Camera"]
@@ -67,6 +74,7 @@ margin_top = 40.0
 margin_right = 1345.0
 margin_bottom = 928.0
 focus_mode = 0
+icon = ExtResource( 18 )
 scene_to_load = "res://levels/LaneMovement.tscn"
 
 [node name="CenterContainer3" type="CenterContainer" parent="Camera"]
@@ -88,6 +96,7 @@ margin_right = 1345.0
 margin_bottom = 928.0
 focus_mode = 0
 enabled_focus_mode = 0
+icon = ExtResource( 19 )
 scene_to_load = "res://levels/RedistributionLevel.tscn"
 
 [node name="CenterContainer4" type="CenterContainer" parent="Camera"]
@@ -102,13 +111,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LevelButton" parent="Camera/CenterContainer4" instance=ExtResource( 15 )]
+[node name="LevelButton" parent="Camera/CenterContainer4" instance=ExtResource( 20 )]
 margin_left = 565.0
 margin_top = 40.0
 margin_right = 1345.0
 margin_bottom = 928.0
 focus_mode = 0
 enabled_focus_mode = 0
+icon = ExtResource( 21 )
 scene_to_load = "res://levels/CaringLevel.tscn"
 
 [node name="CenterContainer5" type="CenterContainer" parent="Camera"]
@@ -132,6 +142,7 @@ margin_right = 1351.0
 margin_bottom = 928.0
 focus_mode = 0
 enabled_focus_mode = 0
+icon = ExtResource( 22 )
 scene_to_load = "res://levels/SubwayLevel.tscn"
 
 [node name="CenterContainer6" type="CenterContainer" parent="Camera"]
@@ -154,6 +165,7 @@ margin_bottom = 928.0
 rect_min_size = Vector2( 740, 888 )
 focus_mode = 0
 enabled_focus_mode = 0
+icon = ExtResource( 23 )
 scene_to_load = "res://levels/UpDownMovement.tscn"
 
 [node name="NextLevelButton" type="TextureButton" parent="Camera"]
