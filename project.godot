@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="BlobbyRun"
+config/name="Blobby's Rising"
 run/main_scene="res://levels/Main.tscn"
 config/icon="res://BlobbyRun_icon.png"
 config/quit_on_go_back=false

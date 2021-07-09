@@ -7,7 +7,7 @@
 [ext_resource path="res://SpawnPath.tscn" type="PackedScene" id=5]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://EnemySpawnTimer.tscn" type="PackedScene" id=7]
-[ext_resource path="res://MobDestructionBorder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MobDestructionBorder_left.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Audio/jump_11.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/Background/SubwayLevel.wav" type="AudioStream" id=10]
 
