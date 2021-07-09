@@ -16,8 +16,8 @@ var timeadded3 = false
 
 var spawningPointsFriend = [Vector2(1400, 250), \
 							Vector2(1400, 820)]
-var spawningPointsEnemy = [Vector2(-1400, 250), \
-							Vector2(-1400, 820)]
+var spawningPointsEnemy = [Vector2(-1500, 250), \
+							Vector2(-1500, 820)]
 
 func _enter_tree():
 	MainScript.reset_level_data()
