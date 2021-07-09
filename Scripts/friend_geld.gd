@@ -23,6 +23,9 @@ func _on_friend_geld_body_entered(body):
 
 
 
+# warning-ignore:unused_argument
+# warning-ignore:unused_argument
+# warning-ignore:unused_argument
 func _on_friend_geld_area_shape_entered(area_id, area, area_shape, self_shape):
 	if area.get_collision_layer_bit(1):
 		queue_free()

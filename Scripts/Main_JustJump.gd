@@ -23,6 +23,7 @@ func _ready():
 	if !MainScript.levelRestart:
 		get_tree().paused = true
 		
+# warning-ignore:unused_argument
 func _process(delta):
 	if MainScript.score >= 50 and !timeadded1:
 #		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.7
@@ -34,7 +35,7 @@ func _process(delta):
 		timeadded2 = true
 	if MainScript.score >= 150 and !timeadded3:
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
-		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
+#		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
 		timeadded2 = true
 
 func _on_EnemySpawnTimer_timeout():
