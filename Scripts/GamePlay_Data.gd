@@ -64,11 +64,11 @@ var perfect_collect_limit = 5
 #var score_goal_street = 130  277
 #var score_goal_redis = 150 195
 #
-var score_goal_subway = 100
-var score_goal_city = 100
+var score_goal_subway = 110
+var score_goal_city = 110
 var score_goal_street = 100
 var score_goal_redis = 100
-var score_goal_peace = 100
+var score_goal_peace = 120
 var score_goal_caring = 100
 
 #var score_goal_subway = 20
@@ -85,7 +85,7 @@ var highscore_peace = 0
 var highscore_caring = 0
 
 # medals
-const medal_add = 25
+const medal_add = 50
 
 var medal_goal_1 = 100
 var medal_goal_2 = medal_goal_1 + medal_add
