@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Menu/Background/full_BG.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/weiter.png" type="Texture" id=2]
@@ -18,6 +18,12 @@ use_filter = true
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 50
+outline_color = Color( 1, 0.596078, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
 size = 100
 use_filter = true
 font_data = ExtResource( 7 )
@@ -82,7 +88,24 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="WinLabel" type="Label" parent="TextureRect"]
+visible = false
+margin_right = 1541.0
+margin_bottom = 728.0
+rect_scale = Vector2( 0.980265, 0.935632 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/shadow_offset_y = 5
+text = "Pause"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
 [node name="Medal" parent="TextureRect" instance=ExtResource( 8 )]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 106.08
@@ -108,7 +131,7 @@ margin_left = 619.0
 margin_top = 179.0
 margin_right = 883.0
 margin_bottom = 312.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_constants/shadow_offset_y = 5
 text = "Score"

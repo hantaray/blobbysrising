@@ -44,6 +44,7 @@ func showGameOverScreen():
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
+	$GameOverScreen/TextureRect/WinLabel.set_visible(false)
 	$GameOverScreen/TextureRect/MenuLabel.text = "Game Over"
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(true)
@@ -67,8 +68,12 @@ func showWinScreen():
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
 #	get_node("HBoxContainer").hide()
-	$GameOverScreen/TextureRect/MenuLabel.text = "Gratulation!\n\nDu hast das Levelziel erreicht!\nDas nächste Level wurde frei geschaltet.\n\nSpiele dieses Level weiter, um den Highscore zu knacken\nund weitere Medallien frei zu schalten\noder gehe in das nächste Level."
-	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
+	print(MainScript.current_scene)
+	if MainScript.current_scene == "Street":
+		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast alle Levelziele erreicht!\n\nVersuche die Highscores zu knacken\num weitere Medaillen frei zu schalten."
+	else:
+		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast das Levelziel erreicht!\nDas nächste Level wurde frei geschaltet.\n\nSpiele dieses Level weiter, um den Highscore zu knacken\nund weitere Medaillen frei zu schalten\noder gehe in das nächste Level."
+	$GameOverScreen/TextureRect/WinLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(false)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text)
 #	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
@@ -88,7 +93,6 @@ func updateLevelInfo(pause):
 		$LevelInfo/TextureRect/PauseLabel.set_visible(false)
 		$LevelInfo/CenterContainer2/HBoxContainer/ReplayButton.set_visible(false)
 	var currentLevel = MainScript.current_scene
-	print(MainScript.current_scene)
 	var current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Peace.tscn"
 	var manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Peace.tscn"
 	if currentLevel == "Subway":

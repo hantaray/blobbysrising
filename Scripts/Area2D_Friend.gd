@@ -27,6 +27,7 @@ func friend_collides(body):
 					MainScript.add_perfect_collect_counter()
 					MainScript.increase_score()
 					get_node("AnimatedSprite").play("move_happy")
+					get_tree().call_group("Player", "play_friend_hit_animation")
 					get_tree().call_group("Player", "play_friend_hit_sound")
 			else:
 				MainScript.add_perfect_collect_counter()
