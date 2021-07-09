@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[sub_resource type="GDScript" id=4]
+[sub_resource type="GDScript" id=1]
 script/source = "extends StaticBody2D
 
 # warning-ignore:unused_argument
@@ -12,7 +12,7 @@ func _physics_process(delta):
 #	position.x =  playerPos.x
 "
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=2]
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -20,14 +20,15 @@ func _physics_process(delta):
 position = Vector2( 500, 500 )
 collision_layer = 16
 collision_mask = 6
-script = SubResource( 4 )
+script = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2000, 0 )
 scale = Vector2( 1, 100 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 2800, 0 )
 scale = Vector2( 1, 100 )
 shape = SubResource( 3 )
+disabled = true

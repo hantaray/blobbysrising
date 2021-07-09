@@ -17,7 +17,7 @@ radius = 118.809
 height = 181.03
 
 [node name="enemy_panama_bkf" type="Area2D"]
-scale = Vector2( 0.75, 0.75 )
+scale = Vector2( 0.25, 0.25 )
 z_index = 1
 collision_layer = 2147483650
 script = ExtResource( 3 )
