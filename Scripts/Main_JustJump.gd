@@ -35,7 +35,7 @@ func _process(delta):
 		timeadded2 = true
 	if MainScript.score >= 150 and !timeadded3:
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
-		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
+#		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
 		timeadded2 = true
 
 func _on_EnemySpawnTimer_timeout():

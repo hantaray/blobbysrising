@@ -21,6 +21,7 @@ func _ready():
 	if !MainScript.levelRestart:
 		get_tree().paused = true
 		
+# warning-ignore:unused_argument
 func _process(delta):
 	if MainScript.score >= 100 and !timeadded2:
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.1

@@ -1,9 +1,18 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Redistribution/Layer_3.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Redistribution/Layer_4_UV_Neu.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Redistribution/Layer_1.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Redistribution/Layer_2.png" type="Texture" id=4]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/Layer_1.png-219e7a31a787b37bdea6000a7ce226aa.stex"
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/Layer_2.png-36d603306173db4e33a3989db9a254a2.stex"
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/Layer_3.png-cff795b938fcf39f712b1ae1609494d9.stex"
 
 [node name="BackgroundRedistribution" type="ParallaxBackground"]
 scroll_ignore_camera_zoom = true
@@ -16,7 +25,7 @@ motion_mirroring = Vector2( 7680, 0 )
 margin_right = 3840.0
 margin_bottom = 545.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
+texture = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -29,7 +38,7 @@ motion_mirroring = Vector2( 7680, 0 )
 margin_right = 3840.0
 margin_bottom = 545.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 4 )
+texture = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -42,7 +51,7 @@ motion_mirroring = Vector2( 7680, 0 )
 margin_right = 3840.0
 margin_bottom = 545.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 1 )
+texture = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -26,9 +26,11 @@ _global_script_class_icons={
 
 [application]
 
-config/name="BlobbyRun"
+config/name="Blobby's Rising"
 run/main_scene="res://levels/Main.tscn"
-config/icon="res://BlobbyRun_icon.png"
+boot_splash/image="res://Sprites/SplashScreen/android/drawable-hdpi/Lade Bildschirm.png"
+boot_splash/bg_color=Color( 1, 0, 0, 1 )
+config/icon="res://Sprites/Icon.PNG"
 
 [autoload]
 

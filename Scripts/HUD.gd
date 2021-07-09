@@ -68,7 +68,8 @@ func showWinScreen():
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	if MainScript.current_scene == "Street":
-		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast alle Levelziele erreicht!\n\nVersuche die Highscores zu knacken\num weitere Medaillen frei zu schalten."
+#		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast alle Levelziele erreicht!\n\nVersuche die Highscores zu knacken\num weitere Medaillen frei zu schalten."
+		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast alle Levelziele erreicht\nund Blobby's Welt etwas gerechter gemacht!\nVersuche die Highscores zu knacken\nund weitere Medaillen frei zu schalten.\nDenn eines ist klar,\ndie erreichten Ziele waren nur ein Anfang!"
 	else:
 		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast das Levelziel erreicht!\nDas nächste Level wurde frei geschaltet.\n\nSpiele dieses Level weiter, um den Highscore zu knacken\nund weitere Medaillen frei zu schalten\noder gehe in das nächste Level."
 	$GameOverScreen/TextureRect/WinLabel.set_visible(true)
