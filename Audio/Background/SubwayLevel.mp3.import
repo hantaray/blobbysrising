@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SubwayLevel.mp3-36b4d8d10e5b6fb1da7f44bb70c8d5b3.mp3str"
+
+[deps]
+
+source_file="res://Audio/Background/SubwayLevel.mp3"
+dest_files=[ "res://.import/SubwayLevel.mp3-36b4d8d10e5b6fb1da7f44bb70c8d5b3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

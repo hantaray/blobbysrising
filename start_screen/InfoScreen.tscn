@@ -3,7 +3,7 @@
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://fonts/arial-black.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Sprites/StartScreen/BG_upscale.png" type="Texture" id=3]
-[ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/ui_click_rollover_misc_01.mp3" type="AudioStream" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/StartScreen/Die_Linke_Logo_White.png" type="Texture" id=6]
 

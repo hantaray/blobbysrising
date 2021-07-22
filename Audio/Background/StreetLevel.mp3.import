@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/StreetLevel.mp3-5f862845e1b1fbdf8cc89742a2ebe0a3.mp3str"
+
+[deps]
+
+source_file="res://Audio/Background/StreetLevel.mp3"
+dest_files=[ "res://.import/StreetLevel.mp3-5f862845e1b1fbdf8cc89742a2ebe0a3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -40,7 +40,7 @@ func update_perfcoll_label(perfcoll_multiplier):
 		$HBoxContainer/VBoxContainer/HBoxContainer/PerfectCollLabel.text = ''
 	
 func showGameOverScreen():
-	$GameOverScreen/Music.stream = load("res://Audio/gameover_01.wav")
+	$GameOverScreen/Music.stream = load("res://Audio/gameover_01.mp3")
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	get_node("HBoxContainer").hide()
@@ -64,7 +64,7 @@ func showPauseScreen():
 	$LevelInfo.show()
 	
 func showWinScreen():
-	$GameOverScreen/Music.stream = load("res://Audio/levelcomplete_01.wav")
+	$GameOverScreen/Music.stream = load("res://Audio/levelcomplete_01.mp3")
 	$GameOverScreen/Music.play()
 	get_tree().paused = true
 	if MainScript.current_scene == "Street":

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=1]
+[ext_resource path="res://Audio/ui_click_rollover_misc_01.mp3" type="AudioStream" id=1]
 [ext_resource path="res://start_screen/buttons/InfoButton.gd" type="Script" id=2]
 [ext_resource path="res://fonts/roboto-slab.bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/StartScreen/Info_.png" type="Texture" id=4]

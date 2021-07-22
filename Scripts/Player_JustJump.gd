@@ -76,12 +76,12 @@ func play_friend_hit_animation():
 
 func play_friend_hit_sound():
 	var sound = get_node("Sound")
-	sound.stream = load("res://Audio/collect.wav")
+	sound.stream = load("res://Audio/collect.mp3")
 	sound.play()
 
 func play_enemy_hit_sound():
 	var sound = get_node("Sound")
-	sound.stream = load("res://Audio/hit.wav")
+	sound.stream = load("res://Audio/hit.mp3")
 	sound.play()
 
 func increase_move_speed():

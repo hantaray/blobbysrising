@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CityLevel.mp3-dc70b8dea3735417973877d70252dd7e.mp3str"
+
+[deps]
+
+source_file="res://Audio/Background/CityLevel.mp3"
+dest_files=[ "res://.import/CityLevel.mp3-dc70b8dea3735417973877d70252dd7e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
