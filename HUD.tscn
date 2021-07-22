@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/pause.png" type="Texture" id=3]
 [ext_resource path="res://gameover_screen/GameOverScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gameover_screen/LevelInfo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/ui_click_rollover_misc_01.mp3" type="AudioStream" id=6]
 [ext_resource path="res://gameover_screen/ManualScreens/Manual_Screen.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]

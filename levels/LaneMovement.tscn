@@ -7,8 +7,8 @@
 [ext_resource path="res://MobDestructionBorder_left.tscn" type="PackedScene" id=5]
 [ext_resource path="res://backgrounds/BackgroundHouses.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Main_Lane.gd" type="Script" id=7]
-[ext_resource path="res://Audio/Background/CityLevel.wav" type="AudioStream" id=8]
-[ext_resource path="res://Audio/whoosh_01.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/Background/CityLevel.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Audio/whoosh_01.mp3" type="AudioStream" id=9]
 
 [node name="LaneMovement" type="Node2D"]
 script = ExtResource( 7 )
@@ -36,6 +36,7 @@ stream = ExtResource( 9 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+bus = "Music"
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
 [connection signal="timeout" from="FriendSpawnTimer" to="." method="_on_FriendSpawnTimer_timeout"]

@@ -11,12 +11,12 @@ var score_goal_peace_reached = false
 var score_goal_caring_reached = false
 
 # levels unlocked
-var locked_forest = true
-var locked_city = true
-var locked_redis = true
-var locked_street = true
+var locked_forest = false
+var locked_city = false
+var locked_redis = false
+var locked_street = false
 var locked_peace = false
-var locked_caring = true
+var locked_caring = false
 
 # life
 const max_lifes = 8
@@ -193,4 +193,5 @@ var medal_goal_12 = medal_goal_1 + medal_add * 11
 const FILE_NAME  = "user://savegame.save"
 
 # settings
+var sound = true
 var music = true

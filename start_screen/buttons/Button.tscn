@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=1]
+[ext_resource path="res://Audio/ui_click_rollover_misc_01.mp3" type="AudioStream" id=1]
 [ext_resource path="res://start_screen/fonts/montserrat_eb_48.tres" type="DynamicFont" id=2]
 
 [node name="MenuButton" type="Button"]

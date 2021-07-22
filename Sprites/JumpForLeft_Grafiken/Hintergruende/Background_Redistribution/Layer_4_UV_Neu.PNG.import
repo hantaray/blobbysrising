@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Layer_4_UV_Neu.png-4a758e39748a55ea0e49c6eed9090e34.stex"
+path="res://.import/Layer_4_UV_Neu.PNG-f68e8a20e3a73a19bcdf2bb4f007fbcd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Redistribution/Layer_4_UV_Neu.png"
-dest_files=[ "res://.import/Layer_4_UV_Neu.png-4a758e39748a55ea0e49c6eed9090e34.stex" ]
+source_file="res://Sprites/JumpForLeft_Grafiken/Hintergruende/Background_Redistribution/Layer_4_UV_Neu.PNG"
+dest_files=[ "res://.import/Layer_4_UV_Neu.PNG-f68e8a20e3a73a19bcdf2bb4f007fbcd.stex" ]
 
 [params]
 

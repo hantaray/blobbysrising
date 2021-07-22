@@ -13,8 +13,8 @@
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Schlagloch/Schlagloch_2_K.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/truck/Blob_Truck_K.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/menu.png" type="Texture" id=13]
-[ext_resource path="res://Audio/ui_click_rollover_misc_01.wav" type="AudioStream" id=14]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/wiederholen.png" type="Texture" id=15]
+[ext_resource path="res://Audio/ui_click_rollover_misc_01.mp3" type="AudioStream" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -240,7 +240,7 @@ margin_bottom = 198.0
 texture_normal = ExtResource( 13 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="CenterContainer2/HBoxContainer/MenuBotton"]
-stream = ExtResource( 14 )
+stream = ExtResource( 16 )
 
 [node name="PlayButton" type="TextureButton" parent="CenterContainer2/HBoxContainer"]
 margin_left = 594.0
@@ -249,7 +249,7 @@ margin_bottom = 198.0
 texture_normal = ExtResource( 9 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="CenterContainer2/HBoxContainer/PlayButton"]
-stream = ExtResource( 14 )
+stream = ExtResource( 16 )
 
 [node name="ReplayButton" type="TextureButton" parent="CenterContainer2/HBoxContainer"]
 margin_left = 1184.0
@@ -258,7 +258,7 @@ margin_bottom = 198.0
 texture_normal = ExtResource( 15 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="CenterContainer2/HBoxContainer/ReplayButton"]
-stream = ExtResource( 14 )
+stream = ExtResource( 16 )
 
 [connection signal="pressed" from="CenterContainer2/HBoxContainer/MenuBotton" to="." method="_on_MenuBotton_pressed"]
 [connection signal="pressed" from="CenterContainer2/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
