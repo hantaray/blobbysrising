@@ -38,6 +38,7 @@ stream = ExtResource( 10 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+bus = "Music"
 
 [node name="MobDestructionBorder2" parent="." instance=ExtResource( 11 )]
 

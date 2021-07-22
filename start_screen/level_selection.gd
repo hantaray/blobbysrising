@@ -3,7 +3,8 @@ extends Control
 var scene_path_to_load
 
 func _ready():
-	get_node("Camera/CheckButton").pressed = GamePlayData.music
+	get_node("Camera/SoundButton").pressed = GamePlayData.sound
+	get_node("Camera/MusicButton").pressed = GamePlayData.music
 	
 	if GamePlayData.music:
 		get_node("Music").play()
@@ -381,12 +382,40 @@ func _on_PrevLevelButton_pressed():
 	$Camera/PrevLevelButton/Sound.play()
 	showPrevLevel()
 
-func _on_CheckButton_toggled(button_pressed):
+func _on_SoundButton_toggled(button_pressed):
+	var master_sound = AudioServer.get_bus_index("Master")
+	var music_sound = AudioServer.get_bus_index("Music")
 	if button_pressed:
+		AudioServer.set_bus_mute(master_sound, false)
+#		if get_node("Camera/MusicButton").pressed:
+		AudioServer.set_bus_mute(music_sound, false)
+		get_node("Music").play()
+#		if get_node("Camera/MusicButton").pressed:
+		GamePlayData.music = true
+		GamePlayData.sound = true
+	else:
+		AudioServer.set_bus_mute(master_sound, true)
+		AudioServer.set_bus_mute(music_sound, true)
+		GamePlayData.music = false
+		GamePlayData.sound = false
+		
+	MainScript.save_game()
+	get_node("Camera/MusicButton").pressed = GamePlayData.music
+
+func _on_MusicButton_toggled(button_pressed):
+	var music_sound = AudioServer.get_bus_index("Music")
+	if button_pressed:
+		AudioServer.set_bus_mute(music_sound, false)
 		get_node("Music").play()
 		GamePlayData.music = true
-		MainScript.save_game()
 	else:
+		AudioServer.set_bus_mute(music_sound, true)
 		get_node("Music").stop()
 		GamePlayData.music = false
-		MainScript.save_game()
+		
+	MainScript.save_game()
+
+func _on_MusicButton_pressed():
+	if !get_node("Camera/SoundButton").pressed:
+		get_node("Camera/SoundButton/AnimationPlayer").play("Alert")
+		get_node("Camera/MusicButton").pressed = false

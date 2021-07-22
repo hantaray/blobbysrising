@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://start_screen/level_selection.gd" type="Script" id=1]
 [ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
@@ -14,10 +14,40 @@
 [ext_resource path="res://Scripts/ScrollingBackground.gd" type="Script" id=13]
 [ext_resource path="res://start_screen/buttons/PeaceButton.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Audio/ui_click_rollover_misc_01.mp3" type="AudioStream" id=15]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/Laut_aus.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/JumpForLeft_Grafiken/Buttons/Laut_an.png" type="Texture" id=17]
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Umverteilung_start.png" type="Texture" id=19]
 [ext_resource path="res://start_screen/buttons/CaringButton.tscn" type="PackedScene" id=20]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/Laut_aus.png-7fcbf39e6fc514b8eddd2c55396b5a7f.stex"
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/Laut_an.png-7d8a248977b5f8c7311cc19f31b8a963.stex"
+
+[sub_resource type="Animation" id=5]
+resource_name = "Alert"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/Mukke_aus.png-e15cc56cdbf95aba81545ce31e54e1bf.stex"
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/Mukke_an.png-49a918eeb3106924466178cb08b788b8.stex"
 
 [node name="LevelSelection" type="Control"]
 anchor_right = 1.0
@@ -197,19 +227,40 @@ margin_bottom = -307.404
 [node name="Sound" type="AudioStreamPlayer" parent="Camera/MenuButton"]
 stream = ExtResource( 15 )
 
-[node name="CheckButton" type="TextureButton" parent="Camera"]
+[node name="SoundButton" type="TextureButton" parent="Camera"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = -919.599
-margin_top = 337.036
-margin_right = -688.599
-margin_bottom = 568.036
+margin_left = -900.0
+margin_top = 340.0
+margin_right = -669.0
+margin_bottom = 571.0
 rect_scale = Vector2( 0.75, 0.75 )
 focus_mode = 0
 toggle_mode = true
+pressed = true
 enabled_focus_mode = 0
-texture_normal = ExtResource( 16 )
-texture_pressed = ExtResource( 17 )
+texture_normal = SubResource( 1 )
+texture_pressed = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/SoundButton"]
+anims/Alert = SubResource( 5 )
+
+[node name="MusicButton" type="TextureButton" parent="Camera"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -650.0
+margin_top = 340.0
+margin_right = -419.0
+margin_bottom = 571.0
+focus_mode = 0
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 0
+texture_normal = SubResource( 3 )
+texture_pressed = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -225,9 +276,12 @@ margin_bottom = 1027.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+bus = "Music"
 
 [connection signal="pressed" from="Camera/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="Camera/PrevLevelButton" to="." method="_on_PrevLevelButton_pressed"]
 [connection signal="finished" from="Camera/MenuButton/Sound" to="Camera/MenuButton" method="_on_Sound_finished"]
-[connection signal="toggled" from="Camera/CheckButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="toggled" from="Camera/SoundButton" to="." method="_on_SoundButton_toggled"]
+[connection signal="pressed" from="Camera/MusicButton" to="." method="_on_MusicButton_pressed"]
+[connection signal="toggled" from="Camera/MusicButton" to="." method="_on_MusicButton_toggled"]
 [connection signal="fade_finished" from="Camera/FadeIn" to="." method="_on_FadeIn_fade_finished"]

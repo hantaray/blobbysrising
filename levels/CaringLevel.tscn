@@ -38,6 +38,7 @@ stream = ExtResource( 9 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+bus = "Music"
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 

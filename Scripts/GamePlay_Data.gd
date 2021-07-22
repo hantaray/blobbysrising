@@ -193,4 +193,5 @@ var medal_goal_12 = medal_goal_1 + medal_add * 11
 const FILE_NAME  = "user://savegame.save"
 
 # settings
+var sound = true
 var music = true

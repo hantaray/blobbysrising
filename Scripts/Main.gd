@@ -30,6 +30,8 @@ var levelRestart = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_game()
+	set_audio()
+	
 # warning-ignore:return_value_discarded
 	# here change to test screen
 	get_tree().change_scene(startscreen_path)
@@ -205,7 +207,8 @@ func save_game():
 		"locked_redis" : GamePlayData.locked_redis,
 		"locked_peace" : GamePlayData.locked_peace,
 		"locked_caring" : GamePlayData.locked_caring,
-		"music": GamePlayData.music
+		"music": GamePlayData.music,
+		"sound": GamePlayData.sound
 	}
 	# Store the save dictionary as a new line in the save file.
 	save_game.store_line(to_json(save_data))
@@ -237,6 +240,7 @@ func load_game():
 			GamePlayData.locked_peace = data["locked_peace"]
 			GamePlayData.locked_caring = data["locked_caring"]
 			GamePlayData.music = data["music"]
+			GamePlayData.sound = data["sound"]
 		else:
 			printerr("Corrupted data!")
 	else:
@@ -263,3 +267,17 @@ func setMedalStartValue(score_goal):
 	GamePlayData.medal_goal_10 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 9
 	GamePlayData.medal_goal_11 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 10
 	GamePlayData.medal_goal_12 = GamePlayData.medal_goal_1 + GamePlayData.medal_add * 11
+
+
+func set_audio():
+	var master_sound = AudioServer.get_bus_index("Master")
+	var music_sound = AudioServer.get_bus_index("Music")
+	if GamePlayData.sound:
+		AudioServer.set_bus_mute(master_sound, false)
+	else:
+		AudioServer.set_bus_mute(master_sound, true)
+		
+	if GamePlayData.music:
+		AudioServer.set_bus_mute(music_sound, false)
+	else:
+		AudioServer.set_bus_mute(music_sound, true)
