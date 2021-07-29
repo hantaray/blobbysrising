@@ -40,6 +40,10 @@ func _ready():
 	$FriendSpawnTimer.start()
 	if !MainScript.levelRestart:
 		get_tree().paused = true
+	if GamePlayData.show_manual and !GamePlayData.score_goal_city_reached:
+		get_tree().call_group("HUD", "showManualScreen")
+		GamePlayData.show_manual = false
+		MainScript.save_game()
 	
 
 
