@@ -72,6 +72,7 @@ func showWinScreen():
 		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast alle Levelziele erreicht\nund Blobby's Welt etwas gerechter gemacht!\nVersuche die Highscores zu knacken\nund weitere Medaillen frei zu schalten.\nDenn eines ist klar,\ndie erreichten Ziele waren nur ein Anfang!"
 	else:
 		$GameOverScreen/TextureRect/WinLabel.text = "Gratulation!\n\nDu hast das Levelziel erreicht!\nDas nächste Level wurde frei geschaltet.\n\nSpiele dieses Level weiter, um den Highscore zu knacken\nund weitere Medaillen frei zu schalten\noder gehe in das nächste Level."
+		GamePlayData.show_manual = true
 	$GameOverScreen/TextureRect/WinLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(false)
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(false)
@@ -84,6 +85,9 @@ func showWinScreen():
 func showManualScreen():
 	get_tree().paused = true
 	$Manual.show()
+	
+func hideLevelInfo():
+	$LevelInfo.hide()
 	
 func updateLevelInfo(pause):
 	if pause:

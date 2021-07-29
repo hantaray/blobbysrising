@@ -59,22 +59,19 @@ var add_life_if_bigger_than = 20
 var perfect_collect_limit = 5
 
 # level score goals
-#var score_goal_subway = 250 160
-#var score_goal_city = 130 238
-#var score_goal_street = 130  277
-#var score_goal_redis = 150 195
-#
-var score_goal_subway = 110
-var score_goal_city = 110
-var score_goal_street = 100
-var score_goal_redis = 120
-var score_goal_peace = 120
-var score_goal_caring = 100
+#var score_goal_subway = 110
+#var score_goal_city = 110
+#var score_goal_street = 100
+#var score_goal_redis = 120
+#var score_goal_peace = 120
+#var score_goal_caring = 100
 
-#var score_goal_subway = 20
-#var score_goal_street = 20
-#var score_goal_redis = 20
-#var score_goal_city = 20
+var score_goal_subway = 20
+var score_goal_city = 20
+var score_goal_street = 20
+var score_goal_redis = 20
+var score_goal_peace = 20
+var score_goal_caring = 20
 
 # highscore
 var highscore_forest = 0
@@ -195,3 +192,5 @@ const FILE_NAME  = "user://savegame.save"
 # settings
 var sound = true
 var music = true
+
+var show_manual = true
