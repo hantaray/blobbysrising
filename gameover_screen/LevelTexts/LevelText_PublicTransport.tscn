@@ -4,6 +4,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 46
+outline_size = 3
 font_data = ExtResource( 1 )
 
 [node name="LevelText_PublicTransport" type="Label"]
@@ -12,6 +13,7 @@ anchor_bottom = 0.572
 margin_right = -0.560059
 margin_bottom = 0.23999
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0.643137, 0, 0, 1 )
 text = "Blob liebt es, mit Bus und Bahn zu fahren. 
 Klar also, dass der ÖPNV funktionieren muss. 
 Deshalb sammle Haltestellenschilder und 

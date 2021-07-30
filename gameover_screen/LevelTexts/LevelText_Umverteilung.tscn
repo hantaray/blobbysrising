@@ -4,6 +4,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 46
+outline_size = 3
 font_data = ExtResource( 1 )
 
 [node name="LevelText_Umverteilung" type="Label"]
@@ -12,6 +13,7 @@ anchor_bottom = 0.636
 margin_right = -0.23999
 margin_bottom = 0.119934
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0.643137, 0, 0, 1 )
 text = "Ach, wie schön ist Panama, dachten sich nicht 
 wenige Superreiche und schafften ihr Vermögen 
 dahin, damit sie sich die Steuer sparen. 
