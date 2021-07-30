@@ -11,8 +11,10 @@ flags = 4
 load_path = "res://.import/Umverteilung_start.png-492869fc2e00883ff8998eced059684c.stex"
 
 [node name="RedisLevel" instance=ExtResource( 1 )]
-margin_right = 780.0
-margin_bottom = 888.0
+anchor_right = 0.406
+anchor_bottom = 0.822
+margin_right = 0.47998
+margin_bottom = 0.23999
 rect_min_size = Vector2( 780, 888 )
 icon = SubResource( 1 )
 expand_icon = true
@@ -25,8 +27,8 @@ text = ""
 [node name="HighScoreLabel" type="Label" parent="." index="1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 842.871
-margin_bottom = 33.8713
+margin_top = 842.0
+margin_bottom = 33.0003
 size_flags_horizontal = 2
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )

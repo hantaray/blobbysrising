@@ -25,7 +25,7 @@ load_path = "res://.import/Laut_aus.png-7fcbf39e6fc514b8eddd2c55396b5a7f.stex"
 flags = 4
 load_path = "res://.import/Laut_an.png-7d8a248977b5f8c7311cc19f31b8a963.stex"
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "Alert"
 length = 0.25
 tracks/0/type = "value"
@@ -41,11 +41,11 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="StreamTexture" id=3]
+[sub_resource type="StreamTexture" id=4]
 flags = 4
 load_path = "res://.import/Mukke_aus.png-e15cc56cdbf95aba81545ce31e54e1bf.stex"
 
-[sub_resource type="StreamTexture" id=4]
+[sub_resource type="StreamTexture" id=5]
 flags = 4
 load_path = "res://.import/Mukke_an.png-49a918eeb3106924466178cb08b788b8.stex"
 
@@ -81,7 +81,6 @@ margin_bottom = 928.0
 scene_to_load = "res://levels/PeaceLevel.tscn"
 
 [node name="CenterContainer2" type="CenterContainer" parent="Camera"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -960.0
@@ -149,7 +148,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -960.0
 margin_top = -525.0
-margin_right = 962.0
+margin_right = 951.0
 margin_bottom = 444.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -158,9 +157,9 @@ __meta__ = {
 [node name="LevelButton" parent="Camera/CenterContainer5" instance=ExtResource( 10 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 571.0
+margin_left = 565.0
 margin_top = 40.0
-margin_right = 1351.0
+margin_right = 1345.0
 margin_bottom = 928.0
 focus_mode = 0
 enabled_focus_mode = 0
@@ -179,11 +178,10 @@ __meta__ = {
 }
 
 [node name="LevelButton" parent="Camera/CenterContainer6" instance=ExtResource( 6 )]
-margin_left = 585.0
+margin_left = 565.0
 margin_top = 40.0
-margin_right = 1325.0
+margin_right = 1345.0
 margin_bottom = 928.0
-rect_min_size = Vector2( 740, 888 )
 focus_mode = 0
 enabled_focus_mode = 0
 scene_to_load = "res://levels/UpDownMovement.tscn"
@@ -246,7 +244,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera/SoundButton"]
-anims/Alert = SubResource( 5 )
+anims/Alert = SubResource( 3 )
 
 [node name="MusicButton" type="TextureButton" parent="Camera"]
 anchor_top = 1.0
@@ -259,8 +257,8 @@ focus_mode = 0
 toggle_mode = true
 pressed = true
 enabled_focus_mode = 0
-texture_normal = SubResource( 3 )
-texture_pressed = SubResource( 4 )
+texture_normal = SubResource( 4 )
+texture_pressed = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
