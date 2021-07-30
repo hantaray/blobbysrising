@@ -25,10 +25,10 @@ func _process(delta):
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.2
 		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.2
 		timeadded2 = true
-	if MainScript.score >= 150 and !timeadded3:
+	if MainScript.score >= 150 and MainScript.score < 320:
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
 		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
-		timeadded2 = true
+#		timeadded2 = true
 
 func _ready():
 	if GamePlayData.music:
