@@ -23,8 +23,8 @@ text = ""
 [node name="HighScoreLabel" type="Label" parent="." index="1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 842.871
-margin_bottom = 33.8713
+margin_top = 842.0
+margin_bottom = 33.0003
 size_flags_horizontal = 2
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )

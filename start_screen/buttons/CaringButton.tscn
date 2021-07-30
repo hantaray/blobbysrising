@@ -8,8 +8,10 @@
 [ext_resource path="res://Sprites/JumpForLeft_Grafiken/Gegner/Schloss/Privat_K.png" type="Texture" id=6]
 
 [node name="LaneButton" instance=ExtResource( 1 )]
-margin_right = 780.0
-margin_bottom = 888.0
+anchor_right = 0.406
+anchor_bottom = 0.822
+margin_right = 0.47998
+margin_bottom = 0.23999
 rect_min_size = Vector2( 780, 888 )
 icon = ExtResource( 4 )
 expand_icon = true
@@ -20,9 +22,10 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ""
 
 [node name="HighScoreLabel" type="Label" parent="." index="1"]
-margin_top = 847.627
-margin_right = 780.0
-margin_bottom = 926.627
+anchor_right = 1.0
+anchor_bottom = 0.999
+margin_top = 842.0
+margin_bottom = 33.8879
 size_flags_horizontal = 2
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )

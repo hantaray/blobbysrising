@@ -11,10 +11,10 @@ flags = 4
 load_path = "res://.import/Privat_K.png-61f7cb486c589dbb32d1ef8de37f99d3.stex"
 
 [node name="JumpButton" instance=ExtResource( 1 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -1140.0
-margin_bottom = -192.0
+anchor_right = 0.406
+anchor_bottom = 0.822
+margin_right = 0.47998
+margin_bottom = 0.23999
 rect_min_size = Vector2( 780, 888 )
 icon = ExtResource( 4 )
 expand_icon = true
@@ -29,8 +29,8 @@ valign = 1
 [node name="HighScoreLabel" type="Label" parent="." index="1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 847.094
-margin_bottom = 50.094
+margin_top = 842.0
+margin_bottom = 33.0
 size_flags_horizontal = 2
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
