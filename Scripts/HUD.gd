@@ -49,7 +49,8 @@ func showGameOverScreen():
 	$GameOverScreen/TextureRect/MenuLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.set_visible(true)
 	$GameOverScreen/TextureRect/ScoreContainer/ScoreLabel.text = str($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text)
-	updateMedal(int($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text))
+	if MainScript.current_highscore < int($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text):
+		updateMedal(int($HBoxContainer/VBoxContainer/HBoxContainer/ScoreLabel.text))
 	$GameOverScreen/TextureRect/CenterContainer/HBoxContainer/ResumeButton.hide()
 	$GameOverScreen/TextureRect.self_modulate = Color(1, 1, 1, 0.75)
 	MainScript.save_game()
@@ -102,27 +103,33 @@ func updateLevelInfo(pause):
 	if currentLevel == "Subway":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_PublicTransport.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Train.tscn"
-		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_forest)
+		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_subway)
+		MainScript.current_highscore = GamePlayData.highscore_subway
 	if currentLevel == "City":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_City.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_City.tscn"
 		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_city)
+		MainScript.current_highscore = GamePlayData.highscore_city
 	if currentLevel == "Street":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Bike.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Bike.tscn"
 		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_street)
+		MainScript.current_highscore = GamePlayData.highscore_street
 	if currentLevel == "Redis":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Umverteilung.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Umverteilung.tscn"
 		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_redis)
+		MainScript.current_highscore = GamePlayData.highscore_redis
 	if currentLevel == "Peace":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Peace.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Peace.tscn"
 		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_peace)
+		MainScript.current_highscore = GamePlayData.highscore_peace
 	if currentLevel == "Caring":
 		current_level_text_path = "res://gameover_screen/LevelTexts/LevelText_Care.tscn"
 		manual_container_path = "res://gameover_screen/ManualScreens/ManualContainer/ManualContainer_Care.tscn"
 		$HBoxContainer/VBoxContainer/HighScoreLabel.text = "Highscore: " + str(GamePlayData.highscore_caring)
+		MainScript.current_highscore = GamePlayData.highscore_caring
 	delete_children($LevelInfo/LevelTextContainer)
 	$LevelInfo/LevelTextContainer.add_child(load(current_level_text_path).instance())
 	delete_children($Manual/ManualScrollContainer/ManualCenterContainer)
@@ -132,40 +139,57 @@ func updateLevelInfo(pause):
 
 
 func updateMedal(score):
-	if score >= GamePlayData.medal_goal_1:
+	
+	# if score >= GamePlayData.medal_goal_1 && curent_highscore < GamePlayData.medal_goal_1
+	print("medal goal: " + str(GamePlayData.medal_goal_2))
+	print("current highs: " + str(MainScript.current_highscore))
+	print("score " + str(score))
+	
+	if (score >= GamePlayData.medal_goal_1 and MainScript.current_highscore < GamePlayData.medal_goal_1):
 		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Gold_1.png")
-	if score >= GamePlayData.medal_goal_2:
+	if (score >= GamePlayData.medal_goal_2 and MainScript.current_highscore < GamePlayData.medal_goal_2):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Gold_2.png")
-	if score >= GamePlayData.medal_goal_3:
+	if (score >= GamePlayData.medal_goal_3 and MainScript.current_highscore < GamePlayData.medal_goal_3):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Gold_3.png")
-	if score >= GamePlayData.medal_goal_4:
+	if (score >= GamePlayData.medal_goal_4 and MainScript.current_highscore < GamePlayData.medal_goal_4):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_1.png")
-	if score >= GamePlayData.medal_goal_5:
+	if (score >= GamePlayData.medal_goal_5 and MainScript.current_highscore < GamePlayData.medal_goal_5):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_2.png")
-	if score >= GamePlayData.medal_goal_6:
+	if (score >= GamePlayData.medal_goal_6 and MainScript.current_highscore < GamePlayData.medal_goal_6):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/Rubin_3.png")
-	if score >= GamePlayData.medal_goal_7:
+	if (score >= GamePlayData.medal_goal_7 and MainScript.current_highscore < GamePlayData.medal_goal_7):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_1.png")
-	if score >= GamePlayData.medal_goal_8:
+	if (score >= GamePlayData.medal_goal_8 and MainScript.current_highscore < GamePlayData.medal_goal_8):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_2.png")
-	if score >= GamePlayData.medal_goal_9:
+	if (score >= GamePlayData.medal_goal_9 and MainScript.current_highscore < GamePlayData.medal_goal_9):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/B_3.png")
-	if score >= GamePlayData.medal_goal_10:
+	if (score >= GamePlayData.medal_goal_10 and MainScript.current_highscore < GamePlayData.medal_goal_10):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_1.png")
-	if score >= GamePlayData.medal_goal_11:
+	if (score >= GamePlayData.medal_goal_11 and MainScript.current_highscore < GamePlayData.medal_goal_11):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_2.png")
-	if score >= GamePlayData.medal_goal_12:
+	if (score >= GamePlayData.medal_goal_12 and MainScript.current_highscore < GamePlayData.medal_goal_12):
+		$GameOverScreen/TextureRect/Medal.set_visible(true)
 		$GameOverScreen/TextureRect/Medal.texture = \
 			load("res://Sprites/JumpForLeft_Grafiken/Items/Medals/SR_3.png")

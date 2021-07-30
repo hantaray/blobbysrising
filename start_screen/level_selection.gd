@@ -47,7 +47,7 @@ func _on_FadeIn_fade_finished():
 	
 func update_buttons():
 	var jumpBtn =  $Camera/CenterContainer5/LevelButton
-	if GamePlayData.locked_forest: 
+	if GamePlayData.locked_subway: 
 		jumpBtn.icon = \
 			load("res://Sprites/JumpForLeft_Grafiken/Hintergruende/LevelStart/Bahn_start_bw.png")
 		jumpBtn.get_node("Lock").show()
@@ -58,12 +58,12 @@ func update_buttons():
 		jumpBtn.get_node("Lock").hide()
 		jumpBtn.set_disabled(false)
 		
-	if GamePlayData.highscore_forest < GamePlayData.score_goal_subway:
-		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " / " + str(GamePlayData.score_goal_subway) + " Punkte")
+	if GamePlayData.highscore_subway < GamePlayData.score_goal_subway:
+		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_subway) + " / " + str(GamePlayData.score_goal_subway) + " Punkte")
 	else:
-		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_forest) + " Punkte")
+		jumpBtn.get_node("HighScoreLabel").set_text(str(GamePlayData.highscore_subway) + " Punkte")
 	MainScript.setMedalStartValue(GamePlayData.score_goal_subway)
-	updateMedals(jumpBtn, GamePlayData.highscore_forest)
+	updateMedals(jumpBtn, GamePlayData.highscore_subway)
 	
 	var streetBtn =  $Camera/CenterContainer6/LevelButton
 	if GamePlayData.locked_street: 

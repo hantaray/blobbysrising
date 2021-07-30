@@ -10,6 +10,8 @@ var current_scene_path
 var current_level = 1
 var show_level = 1
 const gameover_path = "res://gameover_screen/GameOverScreen.tscn"
+# to compare score with highscore for medal view in gameover screen
+var current_highscore = 0
 
 
 #bool for pause button in game
@@ -112,8 +114,8 @@ func game_over():
 
 func update_highscore(level):
 	if level == "Subway":
-		if score > GamePlayData.highscore_forest:
-			GamePlayData.highscore_forest = score
+		if score > GamePlayData.highscore_subway:
+			GamePlayData.highscore_subway = score
 	if level == "City":
 		if score > GamePlayData.highscore_city:
 			GamePlayData.highscore_city = score
@@ -178,7 +180,7 @@ func check_level_goal_reached(level):
 	if level == "Caring":
 		if score >= GamePlayData.score_goal_caring and \
 		!GamePlayData.score_goal_caring_reached:
-			GamePlayData.locked_forest = false
+			GamePlayData.locked_subway = false
 			GamePlayData.score_goal_caring_reached = true
 #			get_tree().change_scene(MainScript.levelselection_path)
 			MainScript.show_level += 1
@@ -195,13 +197,13 @@ func save_game():
 		"score_goal_redis_reached" : GamePlayData.score_goal_redis_reached,
 		"score_goal_peace_reached" : GamePlayData.score_goal_peace_reached,
 		"score_goal_caring_reached" : GamePlayData.score_goal_caring_reached,
-		"highscore_forest" : GamePlayData.highscore_forest,
+		"highscore_subway" : GamePlayData.highscore_subway,
 		"highscore_street" : GamePlayData.highscore_street,
 		"highscore_city" : GamePlayData.highscore_city,
 		"highscore_redis" : GamePlayData.highscore_redis,
 		"highscore_peace" : GamePlayData.highscore_peace,
 		"highscore_caring" : GamePlayData.highscore_caring,
-		"locked_forest" : GamePlayData.locked_forest,
+		"locked_subway" : GamePlayData.locked_subway,
 		"locked_street" : GamePlayData.locked_street,
 		"locked_city" : GamePlayData.locked_city,
 		"locked_redis" : GamePlayData.locked_redis,
@@ -228,13 +230,13 @@ func load_game():
 			GamePlayData.score_goal_redis_reached = data["score_goal_redis_reached"]
 			GamePlayData.score_goal_peace_reached = data["score_goal_peace_reached"]
 			GamePlayData.score_goal_caring_reached = data["score_goal_caring_reached"]
-			GamePlayData.highscore_forest = data["highscore_forest"]
+			GamePlayData.highscore_subway = data["highscore_subway"]
 			GamePlayData.highscore_street = data["highscore_street"]
 			GamePlayData.highscore_city = data["highscore_city"]
 			GamePlayData.highscore_redis = data["highscore_redis"]
 			GamePlayData.highscore_peace = data["highscore_peace"]
 			GamePlayData.highscore_caring = data["highscore_caring"]
-			GamePlayData.locked_forest = data["locked_forest"]
+			GamePlayData.locked_subway = data["locked_subway"]
 			GamePlayData.locked_street = data["locked_street"]
 			GamePlayData.locked_city = data["locked_city"]
 			GamePlayData.locked_redis = data["locked_redis"]

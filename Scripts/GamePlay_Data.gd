@@ -11,7 +11,7 @@ var score_goal_peace_reached = false
 var score_goal_caring_reached = false
 
 # levels unlocked
-var locked_forest = false
+var locked_subway = false
 var locked_city = false
 var locked_redis = false
 var locked_street = false
@@ -74,12 +74,14 @@ var score_goal_peace = 20
 var score_goal_caring = 20
 
 # highscore
-var highscore_forest = 0
+var highscore_subway = 0
 var highscore_street = 0
 var highscore_redis = 0
 var highscore_city = 0
 var highscore_peace = 0
 var highscore_caring = 0
+
+
 
 # medals
 const medal_add = 50
