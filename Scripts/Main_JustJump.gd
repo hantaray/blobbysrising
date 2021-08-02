@@ -38,10 +38,18 @@ func _process(delta):
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.1
 		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.1
 		timeadded2 = true
-	if MainScript.score >= 150 and MainScript.score < 300:
-		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
+	if MainScript.score >= 150:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.001
 #		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
-#		timeadded2 = true
+		timeadded3 = true
+	if MainScript.score >= 240 and MainScript.score < 250:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.001
+		
+	if MainScript.score >= 360  and MainScript.score < 370:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.001
+		
+	if MainScript.score >= 500:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.001
 
 func _on_EnemySpawnTimer_timeout():
 	var mob

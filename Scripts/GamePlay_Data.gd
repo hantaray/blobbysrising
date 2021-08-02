@@ -11,12 +11,12 @@ var score_goal_peace_reached = false
 var score_goal_caring_reached = false
 
 # levels unlocked
-var locked_subway = false
-var locked_city = false
-var locked_redis = false
-var locked_street = false
+var locked_subway = true
+var locked_city = true
+var locked_redis = true
+var locked_street = true
 var locked_peace = false
-var locked_caring = false
+var locked_caring = true
 
 # life
 const max_lifes = 8
@@ -59,19 +59,19 @@ var add_life_if_bigger_than = 20
 var perfect_collect_limit = 5
 
 # level score goals
-#var score_goal_subway = 110
-#var score_goal_city = 110
-#var score_goal_street = 100
-#var score_goal_redis = 120
-#var score_goal_peace = 120
-#var score_goal_caring = 100
+var score_goal_subway = 110
+var score_goal_city = 110
+var score_goal_street = 100
+var score_goal_redis = 120
+var score_goal_peace = 120
+var score_goal_caring = 100
 
-var score_goal_subway = 20
-var score_goal_city = 20
-var score_goal_street = 20
-var score_goal_redis = 20
-var score_goal_peace = 20
-var score_goal_caring = 20
+#var score_goal_subway = 20
+#var score_goal_city = 20
+#var score_goal_street = 20
+#var score_goal_redis = 20
+#var score_goal_peace = 20
+#var score_goal_caring = 20
 
 # highscore
 var highscore_subway = 0
