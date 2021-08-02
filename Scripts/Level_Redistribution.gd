@@ -35,6 +35,12 @@ func _process(delta):
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
 		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
 #		timeadded2 = true
+	if MainScript.score >= 350 and MainScript.score < 360:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time /  1.001
+		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time /  1.001
+#		timeadded2 = true
+	if MainScript.score >= 500:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.001
 
 func _on_EnemySpawnTimer_timeout():
 	$SpawnPath/SpawnLocation.offset = randi()

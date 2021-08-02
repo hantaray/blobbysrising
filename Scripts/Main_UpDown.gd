@@ -49,10 +49,13 @@ func _process(delta):
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.1
 		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.1
 		timeadded2 = true
-	if MainScript.score >= 150 and MainScript.score < 370:
+	if MainScript.score >= 150 and MainScript.score < 280:
 		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.0005
 #		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
 #		timeadded2 = true
+	if MainScript.score >= 500:
+		$EnemySpawnTimer.wait_time = $EnemySpawnTimer.wait_time / 1.001
+#		$FriendSpawnTimer.wait_time = $FriendSpawnTimer.wait_time / 1.0005
 
 func _on_FriendSpawnTimer_timeout():
 	spawn_friend()
