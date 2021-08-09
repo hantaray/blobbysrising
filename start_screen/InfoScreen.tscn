@@ -52,63 +52,34 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CenterContainer/ScrollContainer"]
-margin_right = 1059.0
-margin_bottom = 2441.0
+margin_right = 1018.0
+margin_bottom = 1078.0
 rect_min_size = Vector2( 800, 800 )
 size_flags_horizontal = 2
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
-text = "Impressum
+text = "
+Impressum
 
-Unternehmen: DIE LINKE. Parteivorstand
-Name: Jörg Schindler
-die Anschrift: Kleine Alexanderstraße 28, 10178 Berlin
-
-E-Mail-Adresse: bundesgeschaeftsstelle@die-linke.de
-Telefonnummer (nicht zwingend): (030) 24 009 550
-
-
+DIE LINKE. Parteivorstand
+Jörg Schindler
+Kleine Alexanderstraße 28, 10178 Berlin
+bundesgeschaeftsstelle@die-linke.de
+(030) 24 009 550
 
 
+Bei der Nutzung des Spiels werden durch 
+uns keine personenbezogenen Daten genutzt 
+oder an Dritte weitergegeben. Allein für den 
+Download der App sind personenbezogene 
+Daten nach den Regelungen und in Verantwortung 
+des jeweiligen App-Stores erforderlich. 
+Deren Datenschutzhinweise sind dort nachzulesen.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Datenschutzhinweise unter
+https://www.die-linke.de/seitenfuss/datenschutz/
 
 "
 uppercase = true
