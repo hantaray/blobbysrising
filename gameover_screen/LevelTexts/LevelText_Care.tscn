@@ -10,7 +10,7 @@ font_data = ExtResource( 1 )
 [node name="LevelText_Care" type="Label"]
 anchor_right = 0.622
 anchor_bottom = 0.572
-margin_right = 0.759888
+margin_right = 0.76001
 margin_bottom = 0.23999
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_outline_modulate = Color( 0.643137, 0, 0, 1 )
