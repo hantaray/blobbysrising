@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Icon.png-2c3cef4a9068a1af63d84d4b54324d10.stex"
+path="res://.import/120.png-525a3e20ccecea5e45810622fd183962.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Icon.png"
-dest_files=[ "res://.import/Icon.png-2c3cef4a9068a1af63d84d4b54324d10.stex" ]
+source_file="res://Sprites/SplashScreen/ios/icon/120.png"
+dest_files=[ "res://.import/120.png-525a3e20ccecea5e45810622fd183962.stex" ]
 
 [params]
 
