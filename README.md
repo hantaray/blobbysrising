@@ -6,7 +6,7 @@
 
 
 
-![Screenshot](/screenshot_blobby.JPG?raw=true)
+![Screenshot](screenshot_blobby.jpg?raw=true)
 
 ## Description
 
@@ -14,5 +14,5 @@ Mobile-Game for iOS and Android made with [Godot](https://godotengine.org/) for 
 
 ## View
 
-[Blobby's Rising in the Play Store] (https://play.google.com/store/apps/details?id=org.antiKonTeck.BlobbysRising&pli=1)
-[Blobby's Rising in the App Store] (https://apps.apple.com/de/app/blobbys-rising/id1582138781)
+Blobby's Rising in the Play Store: (https://play.google.com/store/apps/details?id=org.antiKonTeck.BlobbysRising&pli=1)
+Blobby's Rising in the App Store: (https://apps.apple.com/de/app/blobbys-rising/id1582138781)
