@@ -1,3 +1,9 @@
+<p align="center">
+
+<h1 align="center" style="margin-top: 0px;">*** Blobby's Rising ***</h1>
+
+</p>
+
 ![Screenshot](screenshot_blobby.jpg?raw=true)
 
 ## Description
